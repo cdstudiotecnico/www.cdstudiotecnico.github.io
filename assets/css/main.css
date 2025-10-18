@@ -203,7 +203,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Navigation Menu
+# Navigation Menui
 --------------------------------------------------------------*/
 /* Desktop Navigation */
 @media (min-width: 1200px) {
@@ -722,7 +722,7 @@ section,
 
 .hero h2 {
   margin: 0;
-  font-size: 48px;
+  font-size: 28px;
   font-weight: 700;
 }
 
