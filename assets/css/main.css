@@ -722,13 +722,14 @@ section,
 
 .hero h2 {
   margin: 0;
-  font-size: 48px;
+  font-size: 34px;
   font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 .hero p {
   margin: 10px 0 0 0;
-  font-size: 24px;
+  font-size: 18px;
   color: var(--heading-color);
 }
 
@@ -753,11 +754,11 @@ section,
 
 @media (max-width: 768px) {
   .hero h2 {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .hero p {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
