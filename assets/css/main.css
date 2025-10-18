@@ -727,6 +727,10 @@ section,
   letter-spacing: 0.5px;
 }
 
+.hero h2 {
+  margin-bottom: 10px; /* aggiungi o aumenta leggermente */
+}
+
 .hero p {
   margin: 10px 0 0 0;
   font-size: 18px;
