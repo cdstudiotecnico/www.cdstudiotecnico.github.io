@@ -479,6 +479,21 @@ h6 {
       <a href="mailto:cdstudiotecnico@hotmail.com"><i class="bi bi-envelope"></i></a>
     </div>
 
+.footer .social-links {
+  margin-top: 12px;
+}
+
+.footer .social-links a {
+  color: #5b7b91;
+  font-size: 20px;
+  margin: 0 10px; /* spaziatura bilanciata */
+  transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+  color: #3e5f73;
+}
+
     <div class="footer-info mt-3">
       <p>
         Sede: Montelepre (PA) – Via <em>[Via Paolo Marchese, 3]</em><br>
