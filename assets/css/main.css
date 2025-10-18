@@ -466,46 +466,33 @@ h6 {
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
-.footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-size: 14px;
-  padding: 40px 0;
-  position: relative;
-}
+<footer id="footer" class="footer">
+  <div class="container text-center">
+    <p>
+      © <span id="year"></span> <strong>CD Studio Tecnico – Ing. Dario Cucchiara</strong><br>
+      Tutti i diritti riservati
+    </p>
 
-.footer .copyright p {
-  margin-bottom: 0;
-}
+    <div class="social-links d-flex justify-content-center">
+      <a href="https://www.facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/cd_studio.tecnico" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="mailto:cdstudiotecnico@hotmail.com"><i class="bi bi-envelope"></i></a>
+    </div>
 
-.footer .social-links {
-  margin-top: 20px;
-}
+    <div class="footer-info mt-3">
+      <p>
+        Sede: Montelepre (PA) – Via <em>[Via Paolo Marchese, 3]</em><br>
+        P.IVA: <em>[06513140829]</em><br>
+        Email: <a href="mailto:cdstudiotecnico@hotmail.com">info@cdstudiotecnico.it</a>
+      </p>
+    </div>
+  </div>
+</footer>
 
-.footer .social-links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
-  font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  margin: 0 5px;
-  transition: 0.3s;
-}
-
-.footer .social-links a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
-}
-
-.footer .credits {
-  margin-top: 10px;
-  font-size: 13px;
-  text-align: center;
-}
+<script>
+  // imposta automaticamente l’anno corrente
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 /*--------------------------------------------------------------
 # Preloader
