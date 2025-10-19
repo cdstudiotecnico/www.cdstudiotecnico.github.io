@@ -468,41 +468,35 @@ h6 {
 --------------------------------------------------------------*/
 <footer id="footer" class="footer">
   <div class="container text-center">
+
     <p>
       © <span id="year"></span> <strong>CD Studio Tecnico – Ing. Dario Cucchiara</strong><br>
       Tutti i diritti riservati
     </p>
 
     <div class="social-links d-flex justify-content-center">
-      <a href="https://www.facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
-      <a href="https://www.instagram.com/cd_studio.tecnico" target="_blank"><i class="bi bi-instagram"></i></a>
-      <a href="mailto:cdstudiotecnico@hotmail.com"><i class="bi bi-envelope"></i></a>
+      <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/cd_studio.tecnico" target="_blank" class="social-icon"><i class="bi bi-instagram"></i></a>
+      <a href="mailto:cdstudiotecnico@hotmail.com" class="social-icon"><i class="bi bi-envelope"></i></a>
     </div>
-
-.footer .social-links {
-  margin-top: 12px;
-}
-
-.footer .social-links a {
-  color: #5b7b91;
-  font-size: 20px;
-  margin: 0 10px; /* spaziatura bilanciata */
-  transition: 0.3s;
-}
-
-.footer .social-links a:hover {
-  color: #3e5f73;
-}
 
     <div class="footer-info mt-3">
       <p>
-        Sede: Montelepre (PA) – Via <em>[Via Paolo Marchese, 3]</em><br>
-        P.IVA: <em>[06513140829]</em><br>
-        Email: <a href="mailto:cdstudiotecnico@hotmail.com">info@cdstudiotecnico.it</a>
+        📍 Sede: Montelepre (PA) – Via <em>Paolo Marchese, 3</em><br>
+        💼 P.IVA: <em>06513140829</em><br>
+        ✉️ Email: <a href="mailto:cdstudiotecnico@hotmail.com">cdstudiotecnico@hotmail.com</a>
       </p>
     </div>
+
+    <p class="privacy"><a href="#">Privacy Policy</a></p>
+
   </div>
 </footer>
+
+<script>
+  // Imposta automaticamente l'anno corrente
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 <script>
   // imposta automaticamente l’anno corrente
