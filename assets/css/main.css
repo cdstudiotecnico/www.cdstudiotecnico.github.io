@@ -216,7 +216,7 @@ h6 {
 
 /* === Ottimizzazione Header CD Studio Tecnico === */
 #header .logo img {
-  max-height: 44px; /* leggermente più grande per equilibrio visivo */
+  max-height: 50px; /* leggermente più grande per equilibrio visivo */
   width: auto;
   object-fit: contain;
   margin-top: -2px;
