@@ -271,6 +271,37 @@ h6 {
   color: #5c7382;
 }
 
+/* === Logo su una sola riga === */
+#header .sitename {
+  white-space: nowrap !important;   /* impedisce il ritorno a capo */
+  font-size: clamp(1.2rem, 4vw, 1.8rem); /* ridimensiona automaticamente su mobile */
+  font-weight: 700;
+  color: #2d4a56;
+  display: inline-block;            /* forza il testo a restare in linea */
+  line-height: 1.1;
+}
+
+/* Allineamento e spaziatura */
+#header .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 100%;
+}
+
+#header {
+  padding-top: 14px;   /* aria sopra */
+  padding-bottom: 6px;
+}
+
+/* Sottotitolo armonizzato */
+#header .subtitle {
+  font-size: 13px;
+  margin-top: 4px;
+  color: #5c7382;
+}
+
 /*--------------------------------------------------------------
 # Navigation Menui
 --------------------------------------------------------------*/
