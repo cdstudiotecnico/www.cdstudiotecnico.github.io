@@ -208,6 +208,24 @@ h6 {
   border-bottom: 2px solid #4b6373;
 }
 
+/* Linea blu tecnico sotto l'header */
+#header::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, #55778a 0%, #4a6a7a 100%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+#header.scrolled::after {
+  opacity: 0.8;
+}
+
 /*--------------------------------------------------------------
 # Navigation Menui
 --------------------------------------------------------------*/
