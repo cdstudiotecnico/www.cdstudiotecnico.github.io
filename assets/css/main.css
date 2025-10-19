@@ -592,50 +592,64 @@ body {
   transform: translateY(0);
 }
 
-/* === HEADER CON LOGO E TESTO ALLINEATI A SINISTRA === */
+/* === HEADER ELEGANTE E BILANCIATO === */
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.header .container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 30px; /* margine elegante ai lati */
+}
+
 .header .logo {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* tutto a sinistra */
   gap: 10px;
   text-decoration: none;
 }
 
-.header .logo img {
-  height: 42px;
-  width: auto;
-}
-
 .header .logo-text {
-  text-align: left; /* testo allineato a sinistra */
+  text-align: left;
 }
 
 .header .logo-text .sitename {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: #2d4a56;
   margin: 0;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .header .logo-text .subtitle {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: #5c7382;
   margin: 0;
   line-height: 1.1;
 }
 
+.header .logo img {
+  height: 42px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.header .logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Menu allineato perfettamente a destra */
+.header .navmenu {
+  margin-left: auto;
+}
+
 /* === VERSIONE MOBILE === */
 @media (max-width: 768px) {
   .header .container-fluid {
-    justify-content: space-between;
-  }
-
-  .header .logo {
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start; /* sempre a sinistra anche su mobile */
-    gap: 8px;
+    padding: 10px 15px; /* margine più contenuto */
   }
 
   .header .logo img {
@@ -643,7 +657,7 @@ body {
   }
 
   .header .logo-text .sitename {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
   }
 
   .header .logo-text .subtitle {
