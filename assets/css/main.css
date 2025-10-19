@@ -794,6 +794,19 @@ body {
     width: 75px;
     opacity: 0.9;
   }
+
+/* Bordo inferiore dell’header */
+.header {
+  border-bottom: 1px solid #e0e6ea; /* grigio chiaro elegante */
+  background-color: #ffffff;        /* fondo bianco pulito */
+}
+
+  .header .logo img {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  margin-top: -2px; /* piccolo aggiustamento verticale */
+}
   
 /*--------------------------------------------------------------
 # Preloader
