@@ -1059,151 +1059,42 @@ section,
   margin-bottom: 0;
 }
 
-/* === HERO SECTION === */
+//* === HERO SECTION DEFINITIVA === */
+
 #hero {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") center center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-#hero .container {
-  position: relative;
-  z-index: 2;
-}
-
-#hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.7); /* leggero velo chiaro */
-  z-index: 1;
-}
-
-#hero h2 {
-  font-size: 2.2rem;
-  font-weight: 600;
-  color: #1a1a1a;
-  margin-bottom: 10px;
-}
-
-#hero p {
-  font-size: 1.1rem;
-  color: #5c7382;
-  margin-bottom: 25px;
-}
-
-#hero .btn-get-started {
-  background-color: #5c7382;
-  color: #fff;
-  padding: 10px 32px;
-  border-radius: 30px;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-}
-
-#hero .btn-get-started:hover {
-  background-color: #2d4a56;
-}
-
-/* === HERO CON IMMAGINE RESPONSIVA === */
-#hero {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url("../img/hero-bg.jpg") center center / cover no-repeat;
 }
 
-#hero .hero-bg {
+#hero::after {
+  content: "";
   position: absolute;
-  inset: 0;
-  z-index: 0;
-}
-
-#hero .hero-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  filter: brightness(0.9); /* leggero effetto per far risaltare il testo */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.55); /* leggera velatura per leggibilità */
 }
 
 #hero .container {
   position: relative;
   z-index: 2;
-  color: #1a1a1a;
-}
-
-#hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.65);
-  z-index: 1;
-}
-
-#hero h2 {
-  font-size: 2.2rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #1a1a1a;
-}
-
-#hero p {
-  font-size: 1.1rem;
-  color: #5c7382;
-  margin-bottom: 25px;
-}
-
-#hero .btn-get-started {
-  background-color: #5c7382;
-  color: #fff;
-  padding: 10px 32px;
-  border-radius: 30px;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-}
-
-#hero .btn-get-started:hover {
-  background-color: #2d4a56;
-}
-
-/* Mobile ottimizzato */
-@media (max-width: 768px) {
-  #hero h2 {
-    font-size: 1.6rem;
-  }
-
-  #hero p {
-    font-size: 1rem;
-  }
-
-  /* === CORREZIONE LAYOUT TESTO HERO === */
-#hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  padding: 0 15px;
-}
-
-#hero .container {
   max-width: 900px;
-  margin: 0 auto;
+  padding: 0 20px;
 }
 
 #hero h2 {
   font-size: 2.2rem;
   font-weight: 600;
   color: #1a1a1a;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
 }
 
 #hero p {
@@ -1228,11 +1119,14 @@ section,
   background-color: #2d4a56;
 }
 
-/* --- Ottimizzazioni responsive --- */
-@media (max-width: 768px) {
+/* === RESPONSIVE === */
+
+/* 📱 Verticale (mobile portrait) */
+@media (max-width: 768px) and (orientation: portrait) {
   #hero {
+    height: 100vh;
     justify-content: flex-start;
-    padding-top: 25vh;
+    padding-top: 20vh; /* alza il testo */
   }
 
   #hero h2 {
@@ -1242,14 +1136,16 @@ section,
   #hero p {
     font-size: 1rem;
   }
+}
 
+/* 📲 Orizzontale (mobile landscape) */
 @media (orientation: landscape) {
   #hero {
-    flex-direction: column;
+    height: 100vh;
     justify-content: center;
     text-align: center;
     align-items: center;
-    padding: 0 20px;
+    padding-top: 0;
   }
 
   #hero .container {
@@ -1263,7 +1159,7 @@ section,
   #hero p {
     font-size: 1.1rem;
   }
-  
+  }
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
