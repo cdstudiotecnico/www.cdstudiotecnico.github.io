@@ -1111,17 +1111,22 @@ section,
   background-color: #2d4a56;
 }
 
-/* === HERO REATTIVO CON FIX SAFARI ROTAZIONE === */
+/* === HERO REATTIVO E ROBUSTO PER MOBILE E ROTAZIONE === */
 #hero {
   position: relative;
   width: 100%;
-  min-height: 100dvh;
+  min-height: 100dvh; /* supporta correttamente il viewport su iOS */
+  background-image: url("../img/hero-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll; /* evita bug Safari */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: url("../img/hero-bg.jpg") center center / cover no-repeat;
-  transition: background-image 0.4s ease;
+  overflow: hidden;
+  transition: background-position 0.3s ease;
 }
 
 #hero::before {
@@ -1137,11 +1142,11 @@ section,
   z-index: 2;
 }
 
+/* iPhone Safari fix: forza repaint dopo rotazione */
 @supports (-webkit-touch-callout: none) {
   #hero {
-    background-attachment: scroll !important;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
   }
 
 /*--------------------------------------------------------------
