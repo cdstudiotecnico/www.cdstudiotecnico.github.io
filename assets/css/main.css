@@ -142,64 +142,70 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
-.header {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 15px 0;
-  transition: all 0.5s;
-  z-index: 997;
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+./* === Header Istituzionale CD Studio Tecnico === */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, #f9fafb 0%, #f3f6f7 100%);
+  border-bottom: 1px solid #cdd8dd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  z-index: 999;
+  transition: all 0.4s ease;
+  padding: 10px 0;
 }
 
-.header .logo {
-  line-height: 1;
+/* Effetto riduzione quando si scrolla */
+#header.scrolled {
+  background: #f8f9fa;
+  padding: 6px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-.header .logo img {
-  max-height: 36px;
-  margin-right: 8px;
-}
-
-.header .logo h1 {
-  font-size: 16px;
-  margin: 0;
-  font-weight: 300;
+/* Logo */
+#header .logo a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #2e4b5a;
   text-transform: uppercase;
-  color: var(--heading-color);
+  text-decoration: none;
+  font-size: 20px;
 }
 
-.header .header-social-links {
-  padding-right: 15px;
+#header .logo small {
+  display: block;
+  font-size: 12px;
+  color: #6b7c87;
+  font-weight: 400;
+  margin-top: -2px;
 }
 
-.header .header-social-links a {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  padding-left: 6px;
-  display: inline-block;
+/* Navbar */
+#navbar {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+#navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar a {
+  color: #3a5460;
   transition: 0.3s;
-  font-size: 16px;
+  text-decoration: none;
 }
 
-.header .header-social-links a:hover {
-  color: var(--accent-color);
-}
-
-.header .header-social-links a i {
-  line-height: 0px;
-}
-
-@media (max-width: 1200px) {
-  .header .logo {
-    order: 1;
-  }
-
-  .header .header-social-links {
-    order: 2;
-  }
-
-  .header .navmenu {
-    order: 3;
-  }
+#navbar a:hover,
+#navbar .active {
+  color: #1e3a47;
+  border-bottom: 2px solid #4b6373;
 }
 
 /*--------------------------------------------------------------
