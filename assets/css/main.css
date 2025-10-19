@@ -592,6 +592,54 @@ body {
   transform: translateY(0);
 }
 
+/* === Header – Allineamento logo + testo istituzionale === */
+#header .logo {
+  display: flex;
+  align-items: center;        /* allinea verticalmente logo e testo */
+  gap: 10px;                  /* spazio orizzontale tra logo e testo */
+}
+
+#header .logo img {
+  height: 50px;               /* dimensione equilibrata su desktop */
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+#header .sitename {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2d4a56;
+  margin: 0;
+  line-height: 1.2;
+}
+
+#header .subtitle {
+  font-size: 0.85rem;
+  color: #5c7382;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+}
+
+/* === Mobile ottimizzato === */
+@media (max-width: 768px) {
+  #header .logo {
+    flex-direction: column;   /* logo sopra, testo sotto su mobile */
+    align-items: center;
+    gap: 4px;
+  }
+
+  #header .logo img {
+    height: 45px;
+  }
+
+  #header .sitename {
+    font-size: 1.2rem;
+  }
+
+  #header .subtitle {
+    font-size: 0.8rem;
+  }
+
 /* --- Header (barra in alto) --- */
 .header .logo img {
   max-height: 40px;            /* Logo leggermente ridotto */
