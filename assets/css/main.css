@@ -1965,3 +1965,99 @@ section,
     background: #ffffff;
   }
 }
+
+/*--------------------------------------------------------------
+# FIX HERO ALIGNMENT & BLOCCO ORIZZONTALE
+--------------------------------------------------------------*/
+
+/* Allinea il testo al centro in tutte le modalità */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  color: #1a1a1a;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+/* Assicura che l'immagine resti proporzionata */
+.hero-section .hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/*--------------------------------------------------------------
+# BLOCCO LANDSCAPE (mantiene il sito sempre in verticale)
+--------------------------------------------------------------*/
+#rotate-warning {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  color: #2d4a56;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+  transition: opacity 0.4s ease-in-out;
+}
+
+#rotate-warning img.rotate-logo {
+  width: 90px;
+  height: auto;
+  margin-bottom: 1rem;
+  opacity: 0.85;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.15));
+  animation: fadeIn 1s ease-in-out;
+}
+
+#rotate-warning p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #2d4a56;
+  opacity: 0.9;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Quando il telefono è ruotato in orizzontale */
+@media screen and (orientation: landscape) {
+  #rotate-warning {
+    display: flex !important;
+  }
+
+  main,
+  header,
+  footer,
+  section,
+  .scroll-top {
+    display: none !important;
+  }
+
+  html,
+  body {
+    overflow: hidden;
+    height: 100%;
+    background: #ffffff;
+  }
+}
