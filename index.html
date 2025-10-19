@@ -1,9 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+
+  <!-- Blocca orientamento orizzontale -->
+  <meta name="screen-orientation" content="portrait">
+  <meta name="x5-orientation" content="portrait">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
   <title>CD Studio Tecnico</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
@@ -15,7 +22,9 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -29,10 +38,8 @@
 
   <!-- =======================================================
   * Template Name: Kelly
-  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
   * Updated: Aug 07 2024 with Bootstrap v5.3.3
   * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
 
@@ -42,12 +49,12 @@
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0 flex-row-reverse">
-  <img src="assets/img/logo-cdstudiotecnico.png" alt="Logo CD Studio Tecnico">
-  <div class="logo-text text-end me-2">
-    <h1 class="sitename mb-0">CD Studio Tecnico</h1>
-    <small class="subtitle">Ingegneria Civile, Edile & Ambientale</small>
-  </div>
-</a>
+        <img src="assets/img/logo-cdstudiotecnico.png" alt="Logo CD Studio Tecnico">
+        <div class="logo-text text-end me-2">
+          <h1 class="sitename mb-0">CD Studio Tecnico</h1>
+          <small class="subtitle">Ingegneria Civile, Edile & Ambientale</small>
+        </div>
+      </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
@@ -56,81 +63,54 @@
           <li><a href="resume.html">Resume</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
       <div class="header-social-links">
-        
         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        
       </div>
 
     </div>
-
   </header>
 
-<!-- Logo CD Studio Tecnico - sezione indipendente sotto la barra -->
+  <main class="main">
 
-<main class="main">
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <img src="assets/img/hero-bg.jpg" alt="Ingegneria e Territorio" class="hero-image">
 
-<main class="main">
+      <div class="hero-content" data-aos="fade-up">
+        <h2>Ing. Dario Cucchiara</h2>
+        <p>Servizi di Ingegneria e Consulenza Tecnica</p>
+        <a href="about.html" class="btn-get-started">Esplora</a>
+      </div>
+    </section>
 
- <!-- Hero Section -->
-<!-- Hero Section -->
-<section id="hero" class="hero-section">
-  <img src="assets/img/hero-bg.jpg" alt="Ingegneria e Territorio" class="hero-image">
-
-  <div class="hero-content" data-aos="fade-up">
-    <h2>Ing. Dario Cucchiara</h2>
-    <p>Servizi di Ingegneria e Consulenza Tecnica</p>
-    <a href="about.html" class="btn-get-started">Scopri di più</a>
-  </div>
-</section>
-  
-</main>
+  </main>
 
   <footer id="footer" class="footer">
-  <div class="container text-center">
-    <p>
-      © 2025 <strong>CD Studio Tecnico – Ing. Dario Cucchiara</strong><br>
-      Tutti i diritti riservati
-    </p>
-    <div class="social-links d-flex justify-content-center">
-      <a href="https://www.facebook.com/share/16KHMeYSAe/?mibextid=wwXIfr" target="_blank" class="social-icon"><i class="bi bi-facebook"></i></a>
-      <a href="https://www.instagram.com/cd_studio.tecnico" target="_blank" class="social-icon"><i class="bi bi-instagram"></i></a>
-      <a href="mailto:cdstudiotecnico@hotmail.com" class="social-icon"><i class="bi bi-envelope"></i></a>
+    <div class="container text-center">
+      <p>
+        © 2025 <strong>CD Studio Tecnico – Ing. Dario Cucchiara</strong><br>
+        Tutti i diritti riservati
+      </p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.facebook.com/share/16KHMeYSAe/?mibextid=wwXIfr" target="_blank" class="social-icon"><i
+            class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/cd_studio.tecnico" target="_blank" class="social-icon"><i
+            class="bi bi-instagram"></i></a>
+        <a href="mailto:cdstudiotecnico@hotmail.com" class="social-icon"><i class="bi bi-envelope"></i></a>
+      </div>
+      <p class="privacy"><a href="privacy.html">Privacy Policy</a></p>
     </div>
-    <p class="privacy"><a href="privacy.html">Privacy Policy</a></p>
-  </div>
-</footer>
-
-<script>
-  // imposta automaticamente l’anno corrente
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+  </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -149,33 +129,39 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-<script>
-  // Aggiunge l'animazione al footer quando entra in vista
-  document.addEventListener("DOMContentLoaded", function() {
-    const footer = document.querySelector('.footer');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          footer.classList.add('visible');
-        }
+  <!-- Animazione footer -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const footer = document.querySelector('.footer');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            footer.classList.add('visible');
+          }
+        });
       });
+      observer.observe(footer);
     });
-    observer.observe(footer);
-  });
-</script>
+  </script>
 
-<script>
-  // Effetto compatto header quando si scorre
-  window.addEventListener("scroll", function() {
-    const header = document.querySelector("#header");
-    if (window.scrollY > 100) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
-  });
-</script>
-  
+  <!-- Effetto header compatto -->
+  <script>
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector("#header");
+      if (window.scrollY > 100) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+  </script>
+
+  <!-- Schermata blocco orizzontale -->
+  <div id="rotate-warning">
+    <img src="assets/img/logo-cdstudiotecnico.png" alt="CD Studio Tecnico" class="rotate-logo">
+    <p>Ruota il dispositivo in verticale<br>per visualizzare correttamente il sito.</p>
+  </div>
+
 </body>
 
 </html>
