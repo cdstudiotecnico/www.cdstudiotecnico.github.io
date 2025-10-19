@@ -547,6 +547,19 @@ h6 {
   transform: scale(1.1);
 }
 
+/* === Animazione fade-in elegante per il footer === */
+
+.footer {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-in-out;
+}
+
+.footer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
