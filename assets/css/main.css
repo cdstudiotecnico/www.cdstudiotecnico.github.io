@@ -1111,44 +1111,32 @@ section,
   background-color: #2d4a56;
 }
 
-/* === CORREZIONE DEFINITIVA HERO IN LANDSCAPE (iOS + ANDROID) === */
-@media screen and (orientation: landscape) {
-  #hero {
-    min-height: 100svh; /* viewport dinamico stabile (nuovo standard) */
-    height: auto;
-    background: url("../img/hero-bg.jpg") center center / cover no-repeat fixed;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-
-  #hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(3px);
-    z-index: 1;
-  }
-
-  #hero .container {
-    position: relative;
-    z-index: 2;
-    padding: 5vh 5vw;
-  }
-
-  #hero h2 {
-    font-size: 1.7rem;
-  }
-
-  #hero p {
-    font-size: 1rem;
-  }
+/* === HERO REATTIVO CON FIX SAFARI ROTAZIONE === */
+#hero {
+  position: relative;
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url("../img/hero-bg.jpg") center center / cover no-repeat;
+  transition: background-image 0.4s ease;
 }
 
-/* === FIX SPECIFICO SAFARI iOS: forza ridisegno sfondo === */
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.75);
+  z-index: 1;
+}
+
+#hero .container {
+  position: relative;
+  z-index: 2;
+}
+
 @supports (-webkit-touch-callout: none) {
   #hero {
     background-attachment: scroll !important;
