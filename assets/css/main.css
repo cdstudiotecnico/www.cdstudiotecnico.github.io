@@ -192,8 +192,8 @@ h6 {
   color: #5c7382;
   font-weight: 400;
   letter-spacing: 0.4px;
-  margin-top: 4px;
-  margin-bottom: 16px; /* più aria sotto al sottotitolo */
+  margin-top: 3px;
+  margin-bottom: 6px; /* più aria sotto al sottotitolo */
 }
 
 /* Linea inferiore effetto satinato */
