@@ -1856,3 +1856,21 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/* === Fix Safari iOS: mantiene immagine visibile in orizzontale === */
+@supports (-webkit-touch-callout: none) {
+  @media (orientation: landscape) {
+    #hero {
+      background-image: url("../img/hero-bg.jpg") !important;
+      background-size: cover !important;
+      background-position: center center !important;
+      background-repeat: no-repeat !important;
+      background-attachment: scroll !important;
+      min-height: 100vh !important;
+      height: auto !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+  }
+}
