@@ -668,6 +668,26 @@ body {
   text-decoration: underline;
 }
 
+/* === LOGO INTERMEDIO (sotto header, sopra nome) === */
+.logo-intro {
+  text-align: center;
+  margin-top: 24px;   /* spazio sotto la barra */
+  margin-bottom: 14px; /* spazio sopra il nome */
+}
+
+.logo-intro img {
+  max-width: 160px;   /* proporzione ottimale su mobile e desktop */
+  height: auto;
+  opacity: 0.95;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
+}
+
+.logo-intro img:hover {
+  transform: scale(1.03);
+  opacity: 1;
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
