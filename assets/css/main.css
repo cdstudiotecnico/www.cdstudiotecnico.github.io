@@ -20,9 +20,9 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #4f5a60; /* Default color used for the majority of the text content across the entire website */
+  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #222222; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #5b7b91; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #34b7a7; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -142,143 +142,68 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
-./* === Header Istituzionale CD Studio Tecnico === */
-/* === Header Istituzionale CD Studio Tecnico - Versione Bilanciata === */
-#/* === HEADER FISSO E RAFFINATO === */
-#header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: linear-gradient(180deg, #ffffff 0%, #f5f7f8 100%);
-  border-bottom: 1px solid #cdd8dd;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  z-index: 1000;
-  transition: all 0.3s ease;
-  padding: 16px 0 10px 0;
+.header {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 15px 0;
+  transition: all 0.5s;
+  z-index: 997;
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
 
-/* Effetto compatto quando si scorre */
-#header.scrolled {
-  background: #f8f9fa;
-  padding: 10px 0 6px 0;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+.header .logo {
+  line-height: 1;
 }
 
-/* --- Logo e Testo --- */
-#header .logo {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  line-height: 1.2;
-  margin-left: 6px;
+.header .logo img {
+  max-height: 36px;
+  margin-right: 8px;
 }
 
-/* Nome studio in un’unica riga */
-#header .sitename {
-  white-space: nowrap !important;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  color: #2d4a56;
-  font-size: clamp(1.3rem, 3.2vw, 1.7rem);
+.header .logo h1 {
+  font-size: 32px;
   margin: 0;
-  margin-top: 2px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--heading-color);
 }
 
-/* Sottotitolo elegante */
-#header .subtitle {
-  font-size: 13px;
-  color: #5c7382;
-  font-weight: 400;
-  letter-spacing: 0.4px;
-  margin-top: 3px;
-  margin-bottom: 4px; /* più aria sotto al sottotitolo */
+.header .header-social-links {
+  padding-right: 15px;
 }
 
-/* Linea inferiore effetto satinato */
-#header::after {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 100%;
-  background: rgba(70, 100, 120, 0.20);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border-top: 1px solid rgba(255, 255, 255, 0.25);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08); /* ombra sfumata sotto la linea */
-}
-
-/* === Ottimizzazione Header CD Studio Tecnico === */
-#header .logo img {
-  max-height: 38px; /* leggermente più grande per equilibrio visivo */
-  width: auto;
-  object-fit: contain;
-  margin-top: -2px;
-  transition: transform 0.3s ease;
-}
-
-#header .logo img:hover {
-  transform: scale(1.03);
-}
-
-/* Spaziatura perfezionata tra sottotitolo e linea inferiore */
-#header .subtitle {
-  margin-top: 2px;
-  margin-bottom: 2px; /* ↓ ridotto, più compatto e armonico */
-  font-size: 13px;
-  line-height: 1.1;
-}
-
-/* Margine interno header leggermente ridotto per compattezza */
-#header {
-  padding: 14px 0 8px 0;
-}
-
-/* === Versione Mobile Ottimizzata === */
-@media (max-width: 768px) {
-  #header .logo img {
-    max-height: 40px; /* leggermente ridotto ma ben visibile */
-  }
-
-  #header .subtitle {
-    margin-top: 1px;
-    margin-bottom: 1px;
-    font-size: 12px;
-  }
-
-  #header {
-    padding: 12px 0 6px 0; /* meno aria sotto */
-  }
-
-/* --- Navbar --- */
-#navbar a {
-  color: #3a5460;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 500;
-  margin: 0 10px;
+.header .header-social-links a {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  padding-left: 6px;
+  display: inline-block;
   transition: 0.3s;
+  font-size: 16px;
 }
 
-#navbar a:hover,
-#navbar .active {
-  color: #1e3a47;
-  border-bottom: 2px solid #4b6373;
+.header .header-social-links a:hover {
+  color: var(--accent-color);
 }
 
-/* --- Compensazione per il corpo del sito --- */
-body {
-  padding-top: 90px; /* evita che il contenuto salga sotto la barra */
+.header .header-social-links a i {
+  line-height: 0px;
+}
+
+@media (max-width: 1200px) {
+  .header .logo {
+    order: 1;
+  }
+
+  .header .header-social-links {
+    order: 2;
+  }
+
+  .header .navmenu {
+    order: 3;
+  }
 }
 
 /*--------------------------------------------------------------
-# Navigation Menui
+# Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
 @media (min-width: 1200px) {
@@ -541,345 +466,47 @@ body {
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
-<footer id="footer" class="footer">
-  <div class="container text-center">
-
-    <p>
-      © <span id="year"></span> <strong>CD Studio Tecnico – Ing. Dario Cucchiara</strong><br>
-      Tutti i diritti riservati
-    </p>
-
-    <div class="social-links d-flex justify-content-center">
-      <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="bi bi-facebook"></i></a>
-      <a href="https://www.instagram.com/cd_studio.tecnico" target="_blank" class="social-icon"><i class="bi bi-instagram"></i></a>
-      <a href="mailto:cdstudiotecnico@hotmail.com" class="social-icon"><i class="bi bi-envelope"></i></a>
-    </div>
-
-    <div class="footer-info mt-3">
-      <p>
-        📍 Sede: Montelepre (PA) – Via <em>Paolo Marchese, 3</em><br>
-        💼 P.IVA: <em>06513140829</em><br>
-        ✉️ Email: <a href="mailto:cdstudiotecnico@hotmail.com">cdstudiotecnico@hotmail.com</a>
-      </p>
-    </div>
-
-    <p class="privacy"><a href="#">Privacy Policy</a></p>
-
-  </div>
-</footer>
-
-<script>
-  // Imposta automaticamente l'anno corrente
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
-<script>
-  // imposta automaticamente l’anno corrente
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
-/* Linea divisoria sopra il footer */
 .footer {
-  border-top: 1px solid #cfd8dc; /* sottile linea grigio-acciaio */
-  background-color: #f9fafb;
-  padding: 25px 0;
+  color: var(--default-color);
+  background-color: var(--background-color);
   font-size: 14px;
-  color: #4b6373;
-}
-
-.footer strong {
-  color: #2e4b5a;
-}
-
-.footer a {
-  color: #4b6373;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  color: #1e3a47;
-  text-decoration: underline;
-}
-
-/* Social icons armonizzate */
-.footer .social-icon {
-  background: #e6ebed;
-  color: #4b6373;
-  font-size: 18px;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 6px;
-  transition: 0.3s ease-in-out;
-}
-
-.footer .social-icon:hover {
-  background: #4b6373;
-  color: #fff;
-  transform: scale(1.1);
-}
-
-/* === Animazione fade-in elegante per il footer === */
-
-.footer {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease-in-out;
-}
-
-.footer.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* === HEADER ELEGANTE E BILANCIATO === */
-.header {
-  background-color: #ffffff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.header .container-fluid {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 30px; /* margine elegante ai lati */
-}
-
-.header .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-}
-
-/* Allineamento logo e testo su mobile */
-@media (max-width: 768px) {
-  .header .logo {
-    flex-direction: column;      /* logo sopra, testo sotto */
-    align-items: flex-start;     /* allinea tutto a sinistra */
-    text-align: left;
-  }
-
-  .header .logo-text {
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  .header .logo-text .sitename,
-  .header .logo-text .subtitle {
-    text-align: left;
-    display: block;
-  }
-
-.header .logo-text {
-  text-align: left;
-}
-
-.header .logo-text .sitename {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #2d4a56;
-  margin: 0;
-  line-height: 1.2;
-}
-
-.header .logo-text .subtitle {
-  font-size: 0.85rem;
-  color: #5c7382;
-  margin: 0;
-  line-height: 1.1;
-}
-
-.header .logo img {
-  height: 42px;
-  width: auto;
-  transition: transform 0.3s ease;
-}
-
-.header .logo img:hover {
-  transform: scale(1.05);
-}
-
-/* Menu allineato perfettamente a destra */
-.header .navmenu {
-  margin-left: auto;
-}
-
-/* === VERSIONE MOBILE === */
-@media (max-width: 768px) {
-  .header .container-fluid {
-    padding: 10px 15px; /* margine più contenuto */
-  }
-
-  .header .logo img {
-    height: 36px;
-  }
-
-  .header .logo-text .sitename {
-    font-size: 1.1rem;
-  }
-
-  .header .logo-text .subtitle {
-    font-size: 0.75rem;
-    
-  }
-
-/* --- Header (barra in alto) --- */
-.header .logo img {
-  max-height: 40px;            /* Logo leggermente ridotto */
-  margin-right: 12px;
-}
-
-.header .logo .logo-text .sitename {
-  font-size: 1.35rem;          /* Titolo – regolalo secondo preferenza */
-  line-height: 1.1;
-}
-
-.header .logo .logo-text .subtitle {
-  font-size: 0.75rem;          /* Sottotitolo più discreto */
-  line-height: 1.2;
-  color: #5c7382;              /* tono grigio-blu sobrio */
-}
-
-/* Se hai ancora icone social qui e vuoi rimuoverle */
-.header .header-social-links {
-  display: none;               /* nascondi icone social in header */
-}
-
-/* Spaziatura del navmenu */
-.header .navmenu {
-  margin-left: 24px;
-}
-
-/* --- Footer (parte bassa) --- */
-.footer {
-  font-size: 0.85rem;          /* Testo generale più piccolo */
-  line-height: 1.5;            /* Più spazio tra le righe */
-  padding: 30px 0;             /* Vertical padding maggiore */
-  color: #444444;              /* Colore testo sobrio */
+  padding: 40px 0;
+  position: relative;
 }
 
 .footer .copyright p {
-  margin-bottom: 12px;         /* Spazio dopo linee principali */
+  margin-bottom: 0;
 }
 
 .footer .social-links {
-  margin-top: 16px;            /* Spazio sopra icone social nel footer */
+  margin-top: 20px;
 }
 
 .footer .social-links a {
-  font-size: 20px;             /* Dimensione icone social uniforme */
-  margin: 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+  font-size: 16px;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  margin: 0 5px;
+  transition: 0.3s;
 }
 
-.footer .footer-info {
-  margin-top: 20px;
-  font-size: 0.8rem;           /* Dati studio (P.IVA, indirizzo) più piccoli */
-  color: #5c7382;
+.footer .social-links a:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
-.footer .footer-info em {
-  font-style: normal;
-}
-
-/* === Footer - distanza maggiore per Privacy Policy === */
-.footer .privacy {
-  font-size: 0.8rem;
-  margin-top: 18px;  /* ↑ aumenta distanza dalla riga sopra */
-  display: block;
+.footer .credits {
+  margin-top: 10px;
+  font-size: 13px;
   text-align: center;
-  color: #4a5a62;
 }
 
-.footer .privacy a {
-  color: #4a5a62;
-  text-decoration: none;
-}
-
-.footer .privacy a:hover {
-  text-decoration: underline;
-}
-
-/* === Logo CD Studio Tecnico - versione proporzionata e centrata === */
-.logo-intro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;      /* spazio sotto la barra */
-  margin-bottom: 10px;   /* spazio sopra Ing. Dario Cucchiara */
-}
-
-.logo-intro img {
-  width: 90px;           /* dimensione equilibrata */
-  height: auto;
-  opacity: 0.95;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.logo-intro img:hover {
-  transform: scale(1.03);
-  opacity: 1;
-}
-
-/* Mobile ottimizzato */
-@media (max-width: 480px) {
-  .logo-intro img {
-    width: 80px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-  }
-
-  /* === Sezione logo indipendente sotto l'header === */
-.logo-banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f9fafb; /* coordinato con l’header */
-  padding: 6px 0 4px 0; /* meno spazio verticale */
-  border-bottom: 1px solid #d6e0e3;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-}
-
-.logo-banner img {
-  width: 85px; /* più proporzionato su mobile */
-  height: auto;
-  opacity: 0.95;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.logo-banner img:hover {
-  transform: scale(1.03);
-  opacity: 1;
-}
-
-/* Ottimizzazione mobile */
-@media (max-width: 480px) {
-  .logo-banner {
-    padding: 4px 0 2px 0;
-  }
-  .logo-banner img {
-    width: 75px;
-    opacity: 0.9;
-  }
-
-/* Bordo inferiore dell’header */
-.header {
-  border-bottom: 1px solid #e0e6ea; /* grigio chiaro elegante */
-  background-color: #ffffff;        /* fondo bianco pulito */
-}
-
-  .header .logo img {
-  height: 42px;
-  width: auto;
-  object-fit: contain;
-  margin-top: -2px; /* piccolo aggiustamento verticale */
-}
-  
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -891,7 +518,7 @@ body {
   background-color: var(--background-color);
   transition: all 0.6s ease-out;
   width: 100%;
-  height: 100vh; tu
+  height: 100vh;
 }
 
 #preloader:before,
@@ -980,7 +607,7 @@ body {
 }
 
 .page-title h1 {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 400;
 }
 
@@ -1035,7 +662,7 @@ section,
 }
 
 .section-title h2 {
-  font-size: 12px;
+  font-size: 32px;
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -1059,143 +686,81 @@ section,
   margin-bottom: 0;
 }
 
-/* === HERO SECTION (fix per Safari mobile) === */
-#hero {
-  position: relative;
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
   width: 100%;
-  height: 100dvh; /* unità più stabile su iOS rispetto a 100vh */
-  background-image: url("../img/hero-bg.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  min-height: calc(100vh - 82px);
+  position: relative;
+  padding: 80px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  overflow: hidden;
 }
 
-#hero::after {
-  content: "";
+@media (max-width: 1200px) {
+  .hero {
+    min-height: calc(100vh - 68px);
+  }
+}
+
+.hero img {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.55);
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 
-#hero .container {
+.hero .container {
   position: relative;
-  z-index: 2;
-  max-width: 800px;
-  padding: 0 20px;
+  z-index: 3;
 }
 
-#hero h2 {
-  font-size: 2.2rem;
+.hero h2 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.hero p {
+  margin: 10px 0 0 0;
+  font-size: 24px;
+  color: var(--heading-color);
+}
+
+.hero .btn-get-started {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-family: var(--heading-font);
+  text-transform: uppercase;
   font-weight: 600;
-  color: #1a1a1a;
-  margin-bottom: 0.6rem;
-}
-
-#hero p {
-  font-size: 1.1rem;
-  color: #5c7382;
-  margin-bottom: 1.5rem;
-}
-
-#hero .btn-get-started {
+  font-size: 12px;
+  letter-spacing: 1px;
   display: inline-block;
-  background-color: #5c7382;
-  color: #fff;
-  padding: 10px 30px;
-  border-radius: 30px;
-  font-size: 0.95rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin-top: 30px;
 }
 
-#hero .btn-get-started:hover {
-  background-color: #2d4a56;
+.hero .btn-get-started:hover {
+  background: color-mix(in srgb, var(--accent-color) 90%, white 20%);
 }
 
-/* 📱 Verticale */
-@media (max-width: 768px) and (orientation: portrait) {
-  #hero {
-    height: 100dvh;
-    background-image: url("../img/hero-bg.jpg");
-    background-attachment: scroll; /* Safari-friendly */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 32px;
   }
-  #hero h2 {
-    font-size: 1.9rem;
-  }
-  #hero p {
-    font-size: 1.05rem;
+
+  .hero p {
+    font-size: 18px;
   }
 }
 
-/* 💻 Orizzontale */
-@media (orientation: landscape) {
-  #hero {
-    height: 100dvh;
-    background-image: url("../img/hero-bg.jpg"); /* forzato di nuovo */
-    background-attachment: scroll;
-    background-position: center center;
-  }
-  #hero .container {
-    max-width: 850px;
-  }
-  #hero h2 {
-    font-size: 2rem;
-  }
-  #hero p {
-    font-size: 1.1rem;
-  }
-}
-
-/* === FIX per Safari: in orizzontale usa immagine diretta === */
-@media (orientation: landscape) {
-  #hero {
-    position: relative;
-    overflow: hidden;
-  }
-
-  #hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: none; /* disattiva lo sfondo CSS */
-  }
-
-  #hero img.hero-fallback {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-  }
-
-  #hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.55);
-    z-index: 2;
-  }
-
-  #hero .container {
-    position: relative;
-    z-index: 3;
-  }
-}
-  
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
