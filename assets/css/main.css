@@ -592,18 +592,25 @@ body {
   transform: translateY(0);
 }
 
-/* === Header con logo a destra e testo allineato a sinistra === */
+/* === Header: layout coerente desktop e mobile === */
 .header .logo {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* testo a sinistra */
+  justify-content: space-between; /* mantiene testo e logo allineati */
   gap: 14px;
-  flex-direction: row-reverse; /* logo a destra */
+  flex-direction: row-reverse; /* logo a destra del testo */
+  flex-wrap: nowrap;
+  width: 100%;
+  max-width: 400px; /* impedisce allargamento su desktop */
 }
 
+/* Logo */
 .header .logo img {
   height: 42px;
   width: auto;
+  object-fit: contain;
+  margin-top: -2px;
+  flex-shrink: 0; /* evita che si riduca */
   transition: transform 0.3s ease;
 }
 
@@ -611,8 +618,10 @@ body {
   transform: scale(1.05);
 }
 
+/* Testo */
 .header .logo-text {
-  text-align: left; /* allineamento a sinistra */
+  text-align: left;
+  flex: 1;
 }
 
 .header .logo-text .sitename {
@@ -630,12 +639,13 @@ body {
   line-height: 1.1;
 }
 
-/* Mobile: logo sopra il testo */
+/* --- Mobile --- */
 @media (max-width: 768px) {
   .header .logo {
     flex-direction: column;
     align-items: center;
-    gap: 4px;
+    justify-content: center;
+    max-width: none; /* libera il layout su mobile */
   }
 
   .header .logo img {
@@ -643,7 +653,7 @@ body {
   }
 
   .header .logo-text {
-    text-align: center; /* su mobile torna centrato */
+    text-align: center;
   }
 
   .header .logo-text .sitename {
