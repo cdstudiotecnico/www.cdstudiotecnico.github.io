@@ -592,53 +592,58 @@ body {
   transform: translateY(0);
 }
 
-/* === Header – Allineamento logo + testo istituzionale === */
-#header .logo {
+/* === Header con logo e testo allineati === */
+.header .logo {
   display: flex;
-  align-items: center;        /* allinea verticalmente logo e testo */
-  gap: 10px;                  /* spazio orizzontale tra logo e testo */
+  align-items: center;
+  gap: 10px;
 }
 
-#header .logo img {
-  height: 50px;               /* dimensione equilibrata su desktop */
+.header .logo img {
+  height: 42px;
   width: auto;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
-#header .sitename {
-  font-size: 1.4rem;
+.header .logo img:hover {
+  transform: scale(1.05);
+}
+
+.header .logo-text .sitename {
+  font-size: 1.2rem;
   font-weight: 700;
   color: #2d4a56;
   margin: 0;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
-#header .subtitle {
-  font-size: 0.85rem;
+.header .logo-text .subtitle {
+  font-size: 0.8rem;
   color: #5c7382;
-  font-weight: 400;
-  letter-spacing: 0.4px;
+  margin: 0;
+  line-height: 1.1;
 }
 
-/* === Mobile ottimizzato === */
+/* Adattamento per mobile */
 @media (max-width: 768px) {
-  #header .logo {
-    flex-direction: column;   /* logo sopra, testo sotto su mobile */
+  .header .logo {
+    flex-direction: column;
     align-items: center;
     gap: 4px;
   }
 
-  #header .logo img {
-    height: 45px;
+  .header .logo img {
+    height: 38px;
   }
 
-  #header .sitename {
-    font-size: 1.2rem;
+  .header .logo-text .sitename {
+    font-size: 1rem;
   }
 
-  #header .subtitle {
-    font-size: 0.8rem;
+  .header .logo-text .subtitle {
+    font-size: 0.75rem;
   }
+} /* ← questa parentesi chiude il blocco mobile */
 
 /* --- Header (barra in alto) --- */
 .header .logo img {
