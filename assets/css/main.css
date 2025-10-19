@@ -1136,17 +1136,34 @@ section,
 @media (orientation: landscape) {
   #hero {
     height: 100vh;
+    min-height: 500px; /* forzatura utile per Safari */
+    background: url("../img/hero-bg.jpg") center center / cover no-repeat fixed;
+    display: flex;
+    align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative;
   }
+
+  #hero::after {
+    background: rgba(255, 255, 255, 0.55);
+  }
+
   #hero .container {
+    position: relative;
+    z-index: 2;
     max-width: 850px;
+    padding: 0 20px;
   }
+
   #hero h2 {
     font-size: 2rem;
+    margin-bottom: 0.5rem;
   }
+
   #hero p {
     font-size: 1.1rem;
+    margin-bottom: 1.5rem;
   }
 }
   
