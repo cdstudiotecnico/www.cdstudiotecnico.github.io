@@ -613,6 +613,64 @@ h6 {
   transform: translateY(0);
 }
 
+/* --- Header (barra in alto) --- */
+.header .logo img {
+  max-height: 40px;            /* Logo leggermente ridotto */
+  margin-right: 12px;
+}
+
+.header .logo .logo-text .sitename {
+  font-size: 1.35rem;          /* Titolo – regolalo secondo preferenza */
+  line-height: 1.1;
+}
+
+.header .logo .logo-text .subtitle {
+  font-size: 0.75rem;          /* Sottotitolo più discreto */
+  line-height: 1.2;
+  color: #5c7382;              /* tono grigio-blu sobrio */
+}
+
+/* Se hai ancora icone social qui e vuoi rimuoverle */
+.header .header-social-links {
+  display: none;               /* nascondi icone social in header */
+}
+
+/* Spaziatura del navmenu */
+.header .navmenu {
+  margin-left: 24px;
+}
+
+/* --- Footer (parte bassa) --- */
+.footer {
+  font-size: 0.85rem;          /* Testo generale più piccolo */
+  line-height: 1.5;            /* Più spazio tra le righe */
+  padding: 30px 0;             /* Vertical padding maggiore */
+  color: #444444;              /* Colore testo sobrio */
+}
+
+.footer .copyright p {
+  margin-bottom: 12px;         /* Spazio dopo linee principali */
+}
+
+.footer .social-links {
+  margin-top: 16px;            /* Spazio sopra icone social nel footer */
+}
+
+.footer .social-links a {
+  font-size: 20px;             /* Dimensione icone social uniforme */
+  margin: 0 8px;
+}
+
+.footer .footer-info {
+  margin-top: 20px;
+  font-size: 0.8rem;           /* Dati studio (P.IVA, indirizzo) più piccoli */
+  color: #5c7382;
+}
+
+.footer .footer-info em {
+  font-style: normal;
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
