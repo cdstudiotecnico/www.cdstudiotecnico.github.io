@@ -592,12 +592,13 @@ body {
   transform: translateY(0);
 }
 
-/* === Header con logo e testo allineati a sinistra === */
+/* === HEADER CON LOGO E TESTO ALLINEATI A SINISTRA === */
 .header .logo {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* allinea tutto a sinistra */
+  justify-content: flex-start; /* tutto a sinistra */
   gap: 10px;
+  text-decoration: none;
 }
 
 .header .logo img {
@@ -624,31 +625,30 @@ body {
   line-height: 1.1;
 }
 
-/* --- Mobile --- */
+/* === VERSIONE MOBILE === */
 @media (max-width: 768px) {
+  .header .container-fluid {
+    justify-content: space-between;
+  }
+
   .header .logo {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    max-width: none; /* libera il layout su mobile */
+    justify-content: flex-start; /* sempre a sinistra anche su mobile */
+    gap: 8px;
   }
 
   .header .logo img {
     height: 36px;
   }
 
-  .header .logo-text {
-    text-align: center;
-  }
-
   .header .logo-text .sitename {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
   .header .logo-text .subtitle {
     font-size: 0.75rem;
   }
-}
 
 /* --- Header (barra in alto) --- */
 .header .logo img {
