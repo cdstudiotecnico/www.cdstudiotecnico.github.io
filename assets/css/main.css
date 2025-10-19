@@ -592,22 +592,18 @@ body {
   transform: translateY(0);
 }
 
-/* === Header con logo e testo allineati === */
+/* === Header con logo a destra del testo === */
 .header .logo {
   display: flex;
   align-items: center;
-  justify-content: center; /* centro tutto in modo equilibrato */
-  gap: 10px;
+  justify-content: center;
+  gap: 8px;
+  flex-direction: row-reverse; /* logo a destra */
 }
 
 .header .logo img {
-  height: 42px;
+  height: 44px;
   width: auto;
-  transition: transform 0.3s ease;
-}
-
-.header .logo img:hover {
-  transform: scale(1.05);
 }
 
 .header .logo-text .sitename {
@@ -616,6 +612,7 @@ body {
   color: #2d4a56;
   margin: 0;
   line-height: 1.1;
+  text-align: right;
 }
 
 .header .logo-text .subtitle {
@@ -623,13 +620,10 @@ body {
   color: #5c7382;
   margin: 0;
   line-height: 1.1;
+  text-align: right;
 }
 
-#header {
-  padding: 12px 0;
-}
-
-/* Mobile */
+/* Mobile: logo sopra */
 @media (max-width: 768px) {
   .header .logo {
     flex-direction: column;
@@ -639,6 +633,10 @@ body {
 
   .header .logo img {
     height: 38px;
+  }
+
+  .header .logo-text {
+    text-align: center;
   }
 
   .header .logo-text .sitename {
