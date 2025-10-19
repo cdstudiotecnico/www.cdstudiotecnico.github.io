@@ -668,34 +668,35 @@ body {
   text-decoration: underline;
 }
 
-/* === Logo CD Studio Tecnico - posizionato in modo elegante === */
+/* === Logo CD Studio Tecnico - versione proporzionata e centrata === */
 .logo-intro {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 18px;      /* distanza sotto la barra */
-  margin-bottom: 16px;   /* distanza sopra “Ing. Dario Cucchiara” */
+  margin-top: 10px;      /* spazio sotto la barra */
+  margin-bottom: 10px;   /* spazio sopra Ing. Dario Cucchiara */
 }
 
 .logo-intro img {
-  width: 120px;          /* dimensione equilibrata */
+  width: 90px;           /* dimensione equilibrata */
   height: auto;
-  opacity: 0.92;
+  opacity: 0.95;
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .logo-intro img:hover {
-  transform: scale(1.04); /* leggero effetto di eleganza al passaggio */
+  transform: scale(1.03);
+  opacity: 1;
 }
 
-/* Ottimizzazione per mobile */
+/* Mobile ottimizzato */
 @media (max-width: 480px) {
   .logo-intro img {
-    width: 95px;
-    opacity: 0.9;
+    width: 80px;
+    margin-top: 8px;
+    margin-bottom: 8px;
   }
-}
 
 /*--------------------------------------------------------------
 # Preloader
@@ -708,7 +709,7 @@ body {
   background-color: var(--background-color);
   transition: all 0.6s ease-out;
   width: 100%;
-  height: 100vh;
+  height: 100vh; tu
 }
 
 #preloader:before,
