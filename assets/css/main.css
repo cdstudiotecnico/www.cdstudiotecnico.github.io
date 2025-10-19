@@ -1111,6 +1111,33 @@ section,
   background-color: #2d4a56;
 }
 
+/* === CORREZIONE SFONDO HERO IN ORIENTAMENTO ORIZZONTALE === */
+@media screen and (orientation: landscape) {
+  #hero {
+    height: 100dvh; /* usa viewport dinamico per adattarsi anche in rotazione */
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+
+  #hero::before {
+    background: rgba(255, 255, 255, 0.75); /* leggermente più chiaro per migliorare contrasto in landscape */
+  }
+
+  #hero .container {
+    padding: 4vh 5vw; /* riduce un po’ il margine interno, così il testo non si “schiaccia” */
+  }
+
+  #hero h2 {
+    font-size: 1.8rem;
+  }
+
+  #hero p {
+    font-size: 1rem;
+  }
+
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
