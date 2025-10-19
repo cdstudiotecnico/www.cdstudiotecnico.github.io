@@ -592,40 +592,25 @@ body {
   transform: translateY(0);
 }
 
-/* === Header: layout coerente desktop e mobile === */
+/* === Header con logo e testo allineati a sinistra === */
 .header .logo {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* mantiene testo e logo allineati */
-  gap: 14px;
-  flex-direction: row-reverse; /* logo a destra del testo */
-  flex-wrap: nowrap;
-  width: 100%;
-  max-width: 400px; /* impedisce allargamento su desktop */
+  justify-content: flex-start; /* allinea tutto a sinistra */
+  gap: 10px;
 }
 
-/* Logo */
 .header .logo img {
   height: 42px;
   width: auto;
-  object-fit: contain;
-  margin-top: -2px;
-  flex-shrink: 0; /* evita che si riduca */
-  transition: transform 0.3s ease;
 }
 
-.header .logo img:hover {
-  transform: scale(1.05);
-}
-
-/* Testo */
 .header .logo-text {
-  text-align: left;
-  flex: 1;
+  text-align: left; /* testo allineato a sinistra */
 }
 
 .header .logo-text .sitename {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #2d4a56;
   margin: 0;
