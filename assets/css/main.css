@@ -1124,28 +1124,6 @@ section,
   background-color: #2d4a56;
 }
 
-/* 📱 Verticale */
-@media (max-width: 768px) and (orientation: portrait) {
-  .hero-content h2 {
-    font
-/* 💻 Orizzontale */
-@media (orientation: landscape) {
-  #hero {
-    height: 100dvh;
-    background-image: url("../img/hero-bg.jpg"); /* forzato di nuovo */
-    background-attachment: scroll;
-    background-position: center center;
-  }
-  #hero .container {
-    max-width: 850px;
-  }
-  #hero h2 {
-    font-size: 2rem;
-  }
-  #hero p {
-    font-size: 1.1rem;
-  }
-
 /* === FIX per Safari: in orizzontale usa immagine diretta === */
 @media (orientation: landscape) {
   #hero {
