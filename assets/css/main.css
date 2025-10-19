@@ -206,53 +206,28 @@ h6 {
   border-bottom: 2px solid #4b6373;
 }
 
-/* Linea blu tecnico sotto l'header */
+/* === HEADER - Linea elegante con effetto vetro satinato === */
+.subtitle {
+  font-size: 13px;
+  color: #5c7382;
+  margin-top: 2px;
+  margin-bottom: 14px; /* più distacco dalla linea */
+}
+
 #header::after {
   content: "";
   display: block;
-  height: 3px;
+  height: 4px;
   width: 100%;
-  background: linear-gradient(90deg, #55778a 0%, #4a6a7a 100%);
+  background: rgba(70, 100, 120, 0.35); /* colore blu-grigio traslucido */
   position: absolute;
   bottom: 0;
   left: 0;
-  transition: opacity 0.3s ease;
-  opacity: 1;
-}
-
-#header.scrolled::after {
-  opacity: 0.85;
-}
-
-/* Ottimizzazione mobile */
-@media (max-width: 768px) {
-  .sitename {
-    font-size: 18px;
-  }
-  .subtitle {
-    font-size: 11.5px;
-  }
-  #navbar a {
-    font-size: 14px;
-  }
-}
-
-/* Linea blu tecnico sotto l'header */
-#header::after {
-  content: "";
-  display: block;
-  height: 3px;
-  width: 100%;
-  background: linear-gradient(90deg, #55778a 0%, #4a6a7a 100%);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transition: opacity 0.3s ease;
-  opacity: 1;
-}
-
-#header.scrolled::after {
-  opacity: 0.8;
+  backdrop-filter: blur(6px); /* effetto vetro satinato */
+  -webkit-backdrop-filter: blur(6px); /* compatibilità iOS/Safari */
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 /*--------------------------------------------------------------
