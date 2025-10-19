@@ -1184,6 +1184,86 @@ section,
     font-size: 1rem;
   }
 
+  /* === CORREZIONE LAYOUT TESTO HERO === */
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 0 15px;
+}
+
+#hero .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#hero h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+#hero p {
+  font-size: 1.1rem;
+  color: #5c7382;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+#hero .btn-get-started {
+  display: inline-block;
+  background-color: #5c7382;
+  color: #fff;
+  padding: 10px 32px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+#hero .btn-get-started:hover {
+  background-color: #2d4a56;
+}
+
+/* --- Ottimizzazioni responsive --- */
+@media (max-width: 768px) {
+  #hero {
+    justify-content: flex-start;
+    padding-top: 25vh;
+  }
+
+  #hero h2 {
+    font-size: 1.8rem;
+  }
+
+  #hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 600px) {
+  #hero {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-around;
+    padding: 3rem;
+  }
+
+  #hero .container {
+    max-width: 600px;
+  }
+
+  #hero h2 {
+    font-size: 1.8rem;
+  }
+
+  #hero p {
+    font-size: 1rem;
+  }
+
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
