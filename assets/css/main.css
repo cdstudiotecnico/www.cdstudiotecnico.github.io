@@ -214,6 +214,48 @@ h6 {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08); /* ombra sfumata sotto la linea */
 }
 
+/* === Ottimizzazione Header CD Studio Tecnico === */
+#header .logo img {
+  max-height: 44px; /* leggermente più grande per equilibrio visivo */
+  width: auto;
+  object-fit: contain;
+  margin-top: -2px;
+  transition: transform 0.3s ease;
+}
+
+#header .logo img:hover {
+  transform: scale(1.03);
+}
+
+/* Spaziatura perfezionata tra sottotitolo e linea inferiore */
+#header .subtitle {
+  margin-top: 2px;
+  margin-bottom: 2px; /* ↓ ridotto, più compatto e armonico */
+  font-size: 13px;
+  line-height: 1.1;
+}
+
+/* Margine interno header leggermente ridotto per compattezza */
+#header {
+  padding: 14px 0 8px 0;
+}
+
+/* === Versione Mobile Ottimizzata === */
+@media (max-width: 768px) {
+  #header .logo img {
+    max-height: 40px; /* leggermente ridotto ma ben visibile */
+  }
+
+  #header .subtitle {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    font-size: 12px;
+  }
+
+  #header {
+    padding: 12px 0 6px 0; /* meno aria sotto */
+  }
+
 /* --- Navbar --- */
 #navbar a {
   color: #3a5460;
