@@ -147,6 +147,21 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+<script>
+  // Aggiunge l'animazione al footer quando entra in vista
+  document.addEventListener("DOMContentLoaded", function() {
+    const footer = document.querySelector('.footer');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          footer.classList.add('visible');
+        }
+      });
+    });
+    observer.observe(footer);
+  });
+</script>
+  
 </body>
 
 </html>
