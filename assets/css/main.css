@@ -1001,8 +1001,8 @@ section,
 #hero {
   position: relative;
   width: 100%;
-  height: 100vh; /* Copre tutto lo schermo come nel mobile */
-  background: url("../img/hero-bg.jpg") center center/cover no-repeat; /* <-- metti qui la tua immagine */
+  height: 100vh;
+  background: url("../img/hero-bg.jpg") center center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
