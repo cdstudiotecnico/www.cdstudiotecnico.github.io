@@ -144,60 +144,82 @@ h6 {
 --------------------------------------------------------------*/
 ./* === Header Istituzionale CD Studio Tecnico === */
 /* === Header Istituzionale CD Studio Tecnico - Versione Bilanciata === */
+#/* === HEADER FISSO E RAFFINATO === */
 #header {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  background: linear-gradient(180deg, #f9fafb 0%, #f3f6f7 100%);
+  width: 100%;
+  background: linear-gradient(180deg, #ffffff 0%, #f5f7f8 100%);
   border-bottom: 1px solid #cdd8dd;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  z-index: 999;
-  transition: all 0.4s ease;
-  padding: 12px 0 10px 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  padding: 16px 0 10px 0;
 }
 
-/* Effetto riduzione quando si scrolla */
+/* Effetto compatto quando si scorre */
 #header.scrolled {
   background: #f8f9fa;
-  padding: 8px 0 6px 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 10px 0 6px 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
 }
 
-/* Logo e sottotitolo */
-.logo-text {
+/* --- Logo e Testo --- */
+#header .logo {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  line-height: 1.25;
+  justify-content: center;
+  line-height: 1.2;
   margin-left: 6px;
 }
 
-.sitename {
+/* Nome studio in un’unica riga */
+#header .sitename {
+  white-space: nowrap !important;
   font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.8px;
-  color: #2e4b5a;
-  text-transform: uppercase;
-  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #2d4a56;
+  font-size: clamp(1.3rem, 3.2vw, 1.7rem);
   margin: 0;
 }
 
-.subtitle {
+/* Sottotitolo elegante */
+#header .subtitle {
   font-size: 13px;
   color: #5c7382;
   font-weight: 400;
   letter-spacing: 0.4px;
-  margin-top: 2px;
+  margin-top: 3px;
+  margin-bottom: 10px;
 }
 
-/* Navbar */
+/* Linea inferiore effetto satinato */
+#header::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: rgba(70, 100, 120, 0.25);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* --- Navbar --- */
 #navbar a {
   color: #3a5460;
-  transition: 0.3s;
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
+  margin: 0 10px;
+  transition: 0.3s;
 }
 
 #navbar a:hover,
@@ -206,138 +228,9 @@ h6 {
   border-bottom: 2px solid #4b6373;
 }
 
-/* === HEADER - Linea elegante con effetto vetro satinato === */
-.subtitle {
-  font-size: 13px;
-  color: #5c7382;
-  margin-top: 2px;
-  margin-bottom: 14px; /* più distacco dalla linea */
-}
-
-#header::after {
-  content: "";
-  display: block;
-  height: 4px;
-  width: 100%;
-  background: rgba(70, 100, 120, 0.35); /* colore blu-grigio traslucido */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  backdrop-filter: blur(6px); /* effetto vetro satinato */
-  -webkit-backdrop-filter: blur(6px); /* compatibilità iOS/Safari */
-  border-top: 1px solid rgba(255, 255, 255, 0.25);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
-}
-
-/* === Header - Spazio superiore migliorato === */
-#header {
-  padding-top: 12px;  /* più aria sopra al titolo */
-  padding-bottom: 6px;
-}
-
-#header .logo h1 {
-  font-size: 1.8rem;  /* opzionale: leggermente ridotto per bilanciare */
-  margin-top: 6px;
-  margin-bottom: 2px;
-}
-
-#header .subtitle {
-  margin-top: 0;
-  margin-bottom: 14px;
-}
-
-/* === Logo in un'unica riga === */
-#header .logo h1 {
-  white-space: nowrap; /* evita il ritorno a capo */
-  font-size: 1.6rem;   /* leggermente più piccolo per non uscire dal layout */
-  letter-spacing: 0.5px;
-  margin: 0;
-}
-
-/* Miglior allineamento verticale */
-#header .logo {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  line-height: 1.2;
-}
-
-/* Sottotitolo armonizzato */
-#header .subtitle {
-  font-size: 13px;
-  margin-top: 2px;
-  color: #5c7382;
-}
-
-/* === Logo su una sola riga === */
-#header .sitename {
-  white-space: nowrap !important;   /* impedisce il ritorno a capo */
-  font-size: clamp(1.2rem, 4vw, 1.8rem); /* ridimensiona automaticamente su mobile */
-  font-weight: 700;
-  color: #2d4a56;
-  display: inline-block;            /* forza il testo a restare in linea */
-  line-height: 1.1;
-}
-
-/* Allineamento e spaziatura */
-#header .logo {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  max-width: 100%;
-}
-
-#header {
-  padding-top: 14px;   /* aria sopra */
-  padding-bottom: 6px;
-}
-
-/* Sottotitolo armonizzato */
-#header .subtitle {
-  font-size: 13px;
-  margin-top: 4px;
-  color: #5c7382;
-}
-
-/* === Navbar elegante fissa e opaca === */
-#header {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-  background-color: #ffffff; /* bianco pieno e pulito */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* ombra delicata */
-  transition: all 0.3s ease;
-  padding-top: 14px;
-  padding-bottom: 10px;
-}
-
-/* Logo e sottotitolo proporzionati e centrati verticalmente */
-#header .logo {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-/* Testo principale del logo */
-#header .sitename {
-  white-space: nowrap !important;
-  font-size: clamp(1.3rem, 3.5vw, 1.8rem);
-  font-weight: 700;
-  color: #2d4a56;
-  margin: 0;
-  line-height: 1.2;
-}
-
-/* Sottotitolo armonico */
-#header .subtitle {
-  font-size: 13px;
-  color: #5c7382;
-  margin-top: 2px;
+/* --- Compensazione per il corpo del sito --- */
+body {
+  padding-top: 90px; /* evita che il contenuto salga sotto la barra */
 }
 
 /*--------------------------------------------------------------
