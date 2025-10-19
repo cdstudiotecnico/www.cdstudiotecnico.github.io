@@ -174,20 +174,29 @@
   });
 </script>
 
-  <script>
-  // Fix per Safari iOS che perde lo sfondo dopo rotazione
-  window.addEventListener("orientationchange", function() {
-    const hero = document.getElementById("hero");
-    if (hero) {
-      setTimeout(() => {
-        // Forza Safari a ridisegnare lo sfondo
-        const current = hero.style.backgroundImage;
-        hero.style.backgroundImage = "none";
-        void hero.offsetHeight; // forza il repaint
-        hero.style.backgroundImage = current || 'url("../img/hero-bg.jpg")';
-      }, 300); // ritardo di 0.3s per permettere al viewport di stabilizzarsi
-    }
+<script>
+(function() {
+  const hero = document.getElementById("hero");
+  if (!hero) return;
+
+  function refreshHero() {
+    // Forza Safari a ridisegnare il background senza perderlo
+    const bg = getComputedStyle(hero).backgroundImage;
+    hero.style.backgroundImage = 'none';
+    requestAnimationFrame(() => {
+      hero.style.backgroundImage = bg;
+    });
+  }
+
+  // Quando ruoti lo schermo (o il viewport cambia altezza)
+  window.addEventListener("orientationchange", () => {
+    setTimeout(refreshHero, 500);
   });
+
+  window.addEventListener("resize", () => {
+    setTimeout(refreshHero, 500);
+  });
+})();
 </script>
   
 </body>
