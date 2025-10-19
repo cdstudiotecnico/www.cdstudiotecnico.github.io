@@ -1059,18 +1059,17 @@ section,
   margin-bottom: 0;
 }
 
-//* === HERO SECTION DEFINITIVA === */
-
+/* === HERO SECTION === */
 #hero {
   position: relative;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  background: url("../img/hero-bg.jpg") center center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: url("../img/hero-bg.jpg") center center / cover no-repeat;
+  overflow: hidden;
 }
 
 #hero::after {
@@ -1080,13 +1079,13 @@ section,
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.55); /* leggera velatura per leggibilità */
+  background: rgba(255, 255, 255, 0.55);
 }
 
 #hero .container {
   position: relative;
   z-index: 2;
-  max-width: 900px;
+  max-width: 800px;
   padding: 0 20px;
 }
 
@@ -1101,65 +1100,56 @@ section,
   font-size: 1.1rem;
   color: #5c7382;
   margin-bottom: 1.5rem;
-  line-height: 1.5;
 }
 
 #hero .btn-get-started {
   display: inline-block;
   background-color: #5c7382;
   color: #fff;
-  padding: 10px 32px;
+  padding: 10px 30px;
   border-radius: 30px;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
+  font-size: 0.95rem;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 #hero .btn-get-started:hover {
   background-color: #2d4a56;
 }
 
-/* === RESPONSIVE === */
-
-/* 📱 Verticale (mobile portrait) */
+/* 📱 Verticale */
 @media (max-width: 768px) and (orientation: portrait) {
   #hero {
     height: 100vh;
-    justify-content: flex-start;
-    padding-top: 20vh; /* alza il testo */
+    justify-content: center;
+    padding-top: 0;
   }
-
   #hero h2 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
-
   #hero p {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 }
 
-/* 📲 Orizzontale (mobile landscape) */
+/* 💻 Orizzontale */
 @media (orientation: landscape) {
   #hero {
     height: 100vh;
     justify-content: center;
     text-align: center;
-    align-items: center;
-    padding-top: 0;
   }
-
   #hero .container {
-    max-width: 800px;
+    max-width: 850px;
   }
-
   #hero h2 {
     font-size: 2rem;
   }
-
   #hero p {
     font-size: 1.1rem;
   }
-  }
+}
+  
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
