@@ -1244,26 +1244,25 @@ section,
   }
 }
 
-@media (orientation: landscape) and (max-height: 600px) {
+@media (orientation: landscape) {
   #hero {
-    flex-direction: row;
-    text-align: left;
-    justify-content: space-around;
-    padding: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0 15px;
   }
 
   #hero .container {
-    max-width: 600px;
+    max-width: 800px;
   }
 
   #hero h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   #hero p {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
-
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
