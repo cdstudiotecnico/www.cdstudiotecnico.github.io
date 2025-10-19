@@ -612,6 +612,25 @@ body {
   text-decoration: none;
 }
 
+/* Allineamento logo e testo su mobile */
+@media (max-width: 768px) {
+  .header .logo {
+    flex-direction: column;      /* logo sopra, testo sotto */
+    align-items: flex-start;     /* allinea tutto a sinistra */
+    text-align: left;
+  }
+
+  .header .logo-text {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .header .logo-text .sitename,
+  .header .logo-text .subtitle {
+    text-align: left;
+    display: block;
+  }
+
 .header .logo-text {
   text-align: left;
 }
@@ -662,6 +681,7 @@ body {
 
   .header .logo-text .subtitle {
     font-size: 0.75rem;
+    
   }
 
 /* --- Header (barra in alto) --- */
