@@ -646,6 +646,24 @@ h6 {
   font-style: normal;
 }
 
+/* === Footer - distanza maggiore per Privacy Policy === */
+.footer .privacy {
+  font-size: 0.8rem;
+  margin-top: 22px;  /* ↑ aumenta distanza dalla riga sopra */
+  display: block;
+  text-align: center;
+  color: #4a5a62;
+}
+
+.footer .privacy a {
+  color: #4a5a62;
+  text-decoration: none;
+}
+
+.footer .privacy a:hover {
+  text-decoration: underline;
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
