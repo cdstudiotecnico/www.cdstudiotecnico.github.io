@@ -163,15 +163,17 @@
   });
 </script>
 
-/* Effetto compatto header quando si scorre */
-window.addEventListener("scroll", function() {
-  const header = document.querySelector("#header");
-  if (window.scrollY > 100) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-  }
-});
+<script>
+  // Effetto compatto header quando si scorre
+  window.addEventListener("scroll", function() {
+    const header = document.querySelector("#header");
+    if (window.scrollY > 100) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+</script>
   
 </body>
 
