@@ -1059,12 +1059,15 @@ section,
   margin-bottom: 0;
 }
 
-/* === HERO SECTION === */
+/* === HERO SECTION (fix per Safari mobile) === */
 #hero {
   position: relative;
   width: 100%;
-  height: 100vh;
-  background: url("../img/hero-bg.jpg") center center / cover no-repeat;
+  height: 100dvh; /* unità più stabile su iOS rispetto a 100vh */
+  background-image: url("../img/hero-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1120,9 +1123,9 @@ section,
 /* 📱 Verticale */
 @media (max-width: 768px) and (orientation: portrait) {
   #hero {
-    height: 100vh;
-    justify-content: center;
-    padding-top: 0;
+    height: 100dvh;
+    background-image: url("../img/hero-bg.jpg");
+    background-attachment: scroll; /* Safari-friendly */
   }
   #hero h2 {
     font-size: 1.9rem;
@@ -1135,35 +1138,19 @@ section,
 /* 💻 Orizzontale */
 @media (orientation: landscape) {
   #hero {
-    height: 100vh;
-    min-height: 500px; /* forzatura utile per Safari */
-    background: url("../img/hero-bg.jpg") center center / cover no-repeat fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
+    height: 100dvh;
+    background-image: url("../img/hero-bg.jpg"); /* forzato di nuovo */
+    background-attachment: scroll;
+    background-position: center center;
   }
-
-  #hero::after {
-    background: rgba(255, 255, 255, 0.55);
-  }
-
   #hero .container {
-    position: relative;
-    z-index: 2;
     max-width: 850px;
-    padding: 0 20px;
   }
-
   #hero h2 {
     font-size: 2rem;
-    margin-bottom: 0.5rem;
   }
-
   #hero p {
     font-size: 1.1rem;
-    margin-bottom: 1.5rem;
   }
 }
   
