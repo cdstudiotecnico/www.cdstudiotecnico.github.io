@@ -1242,14 +1242,14 @@ section,
   #hero p {
     font-size: 1rem;
   }
-}
 
 @media (orientation: landscape) {
   #hero {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    padding: 0 15px;
+    align-items: center;
+    padding: 0 20px;
   }
 
   #hero .container {
@@ -1263,6 +1263,7 @@ section,
   #hero p {
     font-size: 1.1rem;
   }
+  
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
