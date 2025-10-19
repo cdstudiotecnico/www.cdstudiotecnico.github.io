@@ -503,6 +503,50 @@ h6 {
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
+/* Linea divisoria sopra il footer */
+.footer {
+  border-top: 1px solid #cfd8dc; /* sottile linea grigio-acciaio */
+  background-color: #f9fafb;
+  padding: 25px 0;
+  font-size: 14px;
+  color: #4b6373;
+}
+
+.footer strong {
+  color: #2e4b5a;
+}
+
+.footer a {
+  color: #4b6373;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #1e3a47;
+  text-decoration: underline;
+}
+
+/* Social icons armonizzate */
+.footer .social-icon {
+  background: #e6ebed;
+  color: #4b6373;
+  font-size: 18px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 6px;
+  transition: 0.3s ease-in-out;
+}
+
+.footer .social-icon:hover {
+  background: #4b6373;
+  color: #fff;
+  transform: scale(1.1);
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
