@@ -93,15 +93,57 @@
 
 <main class="main">
 
-   <!-- Hero Section -->
-<section id="hero" class="hero d-flex align-items-center justify-content-center">
-  <div class="container text-center position-relative" data-aos="zoom-out" data-aos-delay="100">
-    <h2>Ing. Dario Cucchiara</h2>
-    <p>Servizi di Ingegneria e Consulenza Tecnica</p>
-    <a href="about.html" class="btn-get-started scrollto">Esplora</a>
-  </div>
-</section>
-<!-- /Hero Section -->
+  /* === HERO SECTION === */
+#hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Copre tutto lo schermo come nel mobile */
+  background: url("../img/hero-bg.jpg") center center/cover no-repeat; /* <-- metti qui la tua immagine */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7); /* leggero velo chiaro */
+  z-index: 1;
+}
+
+#hero h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+#hero p {
+  font-size: 1.1rem;
+  color: #5c7382;
+  margin-bottom: 25px;
+}
+
+#hero .btn-get-started {
+  background-color: #5c7382;
+  color: #fff;
+  padding: 10px 32px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+#hero .btn-get-started:hover {
+  background-color: #2d4a56;
+}
 
   </main>
 
