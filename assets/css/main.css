@@ -1421,3 +1421,99 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/* ===============================
+   CD Studio Tecnico – Personalizzazioni
+   =============================== */
+
+/* Colori principali */
+:root {
+  --accent-color: #38a09d;
+  --heading-color: #2d4a56;
+  --default-color: #444;
+}
+
+/* Logo e testo header */
+.logo-text h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  color: var(--heading-color);
+  margin-bottom: 2px;
+}
+
+.logo-text .subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  color: #60757c;
+}
+
+.header .logo img {
+  height: 55px;
+}
+
+/* Hero */
+.hero-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(90%);
+}
+
+.hero-content h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  color: #ffffff;
+}
+
+.hero-content p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  color: #e6e6e6;
+}
+
+.btn-get-started {
+  background-color: var(--accent-color);
+  color: #fff;
+  border-radius: 50px;
+  padding: 12px 40px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.btn-get-started:hover {
+  background-color: color-mix(in srgb, var(--accent-color) 90%, white 15%);
+}
+
+/* Footer */
+.footer {
+  background-color: #f9f9f9;
+  padding: 40px 0;
+  color: var(--heading-color);
+}
+
+.footer .social-links a {
+  color: var(--heading-color);
+  font-size: 20px;
+  margin: 0 6px;
+  transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+  color: var(--accent-color);
+}
+
+/* Responsività */
+@media (max-width: 768px) {
+  .logo-text h1 {
+    font-size: 20px;
+  }
+  .hero-content h2 {
+    font-size: 32px;
+  }
+  .hero-content p {
+    font-size: 16px;
+  }
+}
