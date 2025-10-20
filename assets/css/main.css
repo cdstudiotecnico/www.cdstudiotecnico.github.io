@@ -1425,7 +1425,7 @@ section,
 /* Riduce solo la scritta "CD Studio Tecnico" su schermi stretti */
 @media (max-width: 576px) and (orientation: portrait) {
   .sitename {
-    font-size: 1.2rem !important;
+    font-size: 0.95rem !important;
     line-height: 1.1;
   }
 }
