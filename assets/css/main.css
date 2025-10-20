@@ -1421,11 +1421,3 @@ section,
 .starter-section {
   /* Add your styles here */
 }
-
-/* Riduce solo la scritta "CD Studio Tecnico" su schermi stretti */
-@media (max-width: 576px) and (orientation: portrait) {
-  .sitename {
-    font-size: 1.1rem !important;
-    line-height: 1.1;
-  }
-}
