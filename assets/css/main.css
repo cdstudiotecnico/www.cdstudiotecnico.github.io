@@ -1421,3 +1421,19 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/* Riduzione proporzionale su schermi piccoli */
+@media (max-width: 576px) {
+  .sitename {
+    font-size: 1.2rem !important;
+    line-height: 1.1;
+  }
+
+  .subtitle {
+    font-size: 0.75rem !important;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+  }
+}
