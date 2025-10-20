@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /assets/private/
+Allow: /
+Sitemap: https://www.cdstudiotecnico.it/sitemap.xml
