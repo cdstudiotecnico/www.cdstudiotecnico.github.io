@@ -713,7 +713,7 @@ section,
 .hero .container {
   position: relative;
   z-index: 3;
-  margin-top: -100px; /* porta il testo più in alto */
+  margin-top: -190px; /* aumenta da -100px a -190px → sposta tutto più in alto */
 }
 
 /* Testo */
@@ -761,8 +761,8 @@ section,
     padding-top: 60px; /* sale su mobile */
   }
   .hero .container {
-    margin-top: -70px;
-  }
+  margin-top: -130px; /* su smartphone sale proporzionatamente meno */
+}
   .hero h2 {
     font-size: 32px;
     margin-bottom: 4px;
