@@ -1465,3 +1465,46 @@ img[src*="profile-img"] {
     max-width: 260px; /* dimensione ottimale su desktop */
   }
 }
+
+/* --- Palette istituzionale CD Studio Tecnico --- */
+:root {
+  --accent-color: #4E7073;       /* verde petrolio */
+  --heading-color: #5F7E7B;      /* verde-grigio per titoli */
+  --default-color: #333333;      /* testi principali */
+  --background-color: #F8FAFA;   /* sfondo sezioni */
+  --surface-color: #FFFFFF;      /* box, card, sezioni interne */
+}
+
+/* Pulsanti */
+.btn,
+.hero .btn-get-started {
+  background-color: var(--accent-color);
+  border: none;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.btn:hover,
+.hero .btn-get-started:hover {
+  background-color: #6C8BAA; /* blu secondario logo */
+  color: #fff;
+}
+
+/* Footer */
+.footer {
+  background-color: #E8EFEF;
+  color: #333;
+}
+
+/* Link e hover */
+a {
+  color: var(--accent-color);
+}
+a:hover {
+  color: #6C8BAA;
+}
+
+/* Titoli */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+}
