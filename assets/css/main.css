@@ -1431,6 +1431,11 @@ section,
   border-radius: 8px;    /* bordi arrotondati */
 }
 
+.prontopro-section {
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
 /* --- Logo Ordine Ingegneri (versione leggermente ingrandita) --- */
 .logo-ordine {
   max-width: 230px;   /* aumentato da 180/200px → più visibile ma sobrio */
