@@ -1436,6 +1436,14 @@ section,
   margin-bottom: 25px;
 }
 
+/* --- Correzione realismo immagine About (profilo) --- */
+.about img,
+img[src*="profile-img"] {
+  filter: brightness(1.02) contrast(1.08) saturate(0.92) sepia(0.04);
+  -webkit-filter: brightness(1.02) contrast(1.08) saturate(0.92) sepia(0.04);
+  transition: all 0.3s ease-in-out;
+}
+
 /* --- Logo Ordine Ingegneri (versione leggermente ingrandita) --- */
 .logo-ordine {
   max-width: 230px;   /* aumentato da 180/200px → più visibile ma sobrio */
