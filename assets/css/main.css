@@ -1431,13 +1431,13 @@ section,
   border-radius: 8px;    /* bordi arrotondati */
 }
 
-/* --- Logo Ordine Ingegneri --- */
+/* --- Logo Ordine Ingegneri (versione leggermente ingrandita) --- */
 .logo-ordine {
-  max-width: 180px;   /* dimensione ideale per desktop */
-  width: 80%;         /* proporzionato per mobile */
+  max-width: 230px;   /* aumentato da 180/200px → più visibile ma sobrio */
+  width: 70%;         /* migliore resa su mobile */
   height: auto;
-  margin-top: 15px;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 25px;
   opacity: 0.95;
   transition: opacity 1s ease, transform 1.2s ease;
 }
@@ -1449,6 +1449,6 @@ section,
 
 @media (min-width: 992px) {
   .logo-ordine {
-    max-width: 200px; /* leggermente più grande su desktop */
+    max-width: 260px; /* dimensione ottimale su desktop */
   }
 }
