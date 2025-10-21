@@ -1524,3 +1524,22 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   color: var(--heading-color);
 }
+
+.hero h2,
+.hero p {
+  text-shadow: 0 1px 3px rgba(50, 70, 70, 0.45);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.25); /* leggero filtro bianco */
+  backdrop-filter: blur(2px);
+  z-index: 2;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
+}
