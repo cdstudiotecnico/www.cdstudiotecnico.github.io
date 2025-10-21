@@ -1447,7 +1447,7 @@ img[src*="profile-img"] {
 /* --- Logo Ordine Ingegneri (versione leggermente ingrandita) --- */
 .logo-ordine {
   max-width: 230px;   /* aumentato da 180/200px → più visibile ma sobrio */
-  width: 70%;         /* migliore resa su mobile */
+  width: 65%;         /* migliore resa su mobile */
   height: auto;
   margin-top: 20px;
   margin-bottom: 25px;
