@@ -1434,7 +1434,7 @@ section,
 /* --- Logo Ordine Ingegneri --- */
 .logo-ordine {
   max-width: 180px;   /* dimensione ideale per desktop */
-  width: 60%;         /* proporzionato per mobile */
+  width: 80%;         /* proporzionato per mobile */
   height: auto;
   margin-top: 15px;
   margin-bottom: 20px;
