@@ -687,25 +687,25 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# Hero Section (versione definitiva ottimizzata)
 --------------------------------------------------------------*/
-/* --- Regolazione estetica sezione Hero --- */
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* spinge il testo verso l'alto */
   text-align: center;
-  min-height: calc(100vh - 82px);
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
+  padding-top: 80px; /* equilibrio perfetto su desktop */
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: none !important; /* rimuove velatura bianca */
+  background: none !important; /* nessuna velatura bianca */
   backdrop-filter: none !important;
   z-index: 1;
 }
@@ -713,83 +713,17 @@ section,
 .hero .container {
   position: relative;
   z-index: 3;
-  top: -130px; /* alza il blocco testo complessivo */
+  margin-top: -100px; /* porta il testo più in alto */
 }
 
-.hero h2 {
-  margin: 0;
-  font-size: 48px;
-  font-weight: 700;
-  color: #3b4b4a;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
-  margin-bottom: 8px; /* avvicina alla seconda riga */
-}
-
-.hero p {
-  margin: 0;
-  font-size: 22px;
-  color: #4f6a6a;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-}
-
-.hero .btn-get-started {
-  margin-top: 22px; /* posiziona il pulsante subito sotto */
-  background-color: var(--accent-color);
-  border: none;
-  color: #fff;
-  transition: 0.3s ease;
-}
-
-.hero .btn-get-started:hover {
-  background-color: #6C8BAA;
-}
-
-/* Ottimizzazione su mobile */
-@media (max-width: 768px) {
-  .hero .container {
-    top: -90px;
-  }
-  .hero h2 {
-    font-size: 32px;
-    margin-bottom: 6px;
-  }
-  .hero p {
-    font-size: 18px;
-  }
-}
-
-/* --- Hero Section ottimizzata (posizionamento e stile pulito) --- */
-.hero {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  text-align: center;
-  min-height: calc(100vh - 82px);
-  position: relative;
-  padding-top: 140px; /* posizione del blocco principale */
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: none !important; /* rimuove la velatura bianca */
-  backdrop-filter: none !important;
-  z-index: 1;
-}
-
-.hero .container {
-  position: relative;
-  z-index: 3;
-}
-
+/* Testo */
 .hero h2 {
   margin: 0;
   font-size: 46px;
   font-weight: 700;
   color: #3b4b4a;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
-  margin-bottom: 6px; /* avvicina alla seconda riga */
+  margin-bottom: 6px; /* avvicina la seconda riga */
 }
 
 .hero p {
@@ -799,29 +733,35 @@ section,
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* Pulsante “Servizi” */
+/* Pulsante “SERVIZI” */
 .hero .btn-get-started {
-  margin-top: 18px;
+  display: inline-block;
+  margin-top: 16px;
   background-color: var(--accent-color);
   color: #fff;
   border: none;
-  border-radius: 50px; /* tondo come prima */
-  padding: 12px 34px;
+  border-radius: 40px;
+  padding: 10px 30px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.5px;
   font-family: var(--heading-font);
   text-transform: uppercase;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .hero .btn-get-started:hover {
   background-color: #6C8BAA;
+  transform: translateY(-2px);
 }
 
-/* --- Ottimizzazione Mobile --- */
+/* Ottimizzazione su mobile */
 @media (max-width: 768px) {
   .hero {
-    padding-top: 100px; /* regola proporzione su schermi piccoli */
+    padding-top: 60px; /* sale su mobile */
+  }
+  .hero .container {
+    margin-top: -70px;
   }
   .hero h2 {
     font-size: 32px;
@@ -831,11 +771,10 @@ section,
     font-size: 18px;
   }
   .hero .btn-get-started {
-    margin-top: 16px;
-    padding: 10px 28px;
+    padding: 9px 24px;
+    font-size: 13px;
   }
 }
-
 
 /*--------------------------------------------------------------
 # About Section
