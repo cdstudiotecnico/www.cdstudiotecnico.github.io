@@ -1421,3 +1421,12 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/* --- Sezione ProntoPro --- */
+.prontopro-shot {
+  max-width: 700px;      /* limita la dimensione su desktop */
+  width: 100%;           /* piena larghezza su mobile */
+  height: auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;    /* bordi arrotondati */
+}
