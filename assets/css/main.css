@@ -1439,8 +1439,8 @@ section,
 /* --- Correzione realismo immagine About (profilo) --- */
 .about img,
 img[src*="profile-img"] {
-  filter: brightness(1.02) contrast(1.08) saturate(0.92) sepia(0.04);
-  -webkit-filter: brightness(1.02) contrast(1.08) saturate(0.92) sepia(0.04);
+  filter: brightness(1.04) contrast(1.12) saturate(0.88) sepia(0.06) hue-rotate(-5deg) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.12));
+  -webkit-filter: brightness(1.04) contrast(1.12) saturate(0.88) sepia(0.06) hue-rotate(-5deg) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.12));
   transition: all 0.3s ease-in-out;
 }
 
