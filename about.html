@@ -469,38 +469,24 @@ Costruire il futuro significa rispettare il presente. L’ingegneria sostenibile
   <div class="container text-center">
     <h3>Il nostro profilo su ProntoPro</h3>
     <p class="mb-3">
-      Visualizza la nostra posizione ufficiale e il riconoscimento ottenuto su <strong>ProntoPro</strong>,
+      Visualizza la nostra posizione ufficiale <strong>ProntoPro</strong>,
       dove siamo il primo studio classificato nelle ricerche territoriali per servizi di ingegneria e pratiche urbanistiche.
     </p>
 
-    <div style="position:relative; width:100%; height:700px; overflow:hidden; border-radius:10px; box-shadow:0 0 15px rgba(0,0,0,0.1);">
-      <iframe id="prontopro-frame"
-        src="https://prontopro.it/partinico-pratiche-urbanistiche"
-        width="100%"
-        height="100%"
-        style="border:0;"
-        loading="lazy"
-        allowfullscreen>
-      </iframe>
-    </div>
+<section id="prontopro" class="section mt-5" data-aos="fade-up">
+  <div class="container text-center">
+    <h3><i class="bi bi-trophy-fill text-primary"></i> Riconoscimento su ProntoPro</h3>
+    <p class="mb-3">
+      Primo studio classificato nelle ricerche locali. Operiamo in tutta Italia anche in smart working.
+    </p>
+
+    <img
+      src="assets/img/prontopro.png"
+      alt="Scheda ProntoPro - CD Studio Tecnico Ing. Dario Cucchiara"
+      class="img-fluid shadow rounded prontopro-shot"
+      loading="lazy" decoding="async">
   </div>
 </section>
-
-<script>
-  // Attende il caricamento della pagina e poi effettua uno scroll automatico all'interno dell’iframe
-  window.addEventListener("load", function() {
-    const iframe = document.getElementById("prontopro-frame");
-    iframe.onload = function() {
-      // Ritarda lo scroll per permettere il caricamento completo della pagina
-      setTimeout(() => {
-        iframe.contentWindow.scrollTo({
-          top: 1800, // altezza approssimativa per arrivare alla tua sezione
-          behavior: "smooth"
-        });
-      }, 3000); // 3 secondi di attesa
-    };
-  });
-</script>
 
 </section><!-- /Testimonials Section -->
 
