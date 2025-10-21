@@ -1549,3 +1549,31 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   z-index: 3;
 }
+
+/* --- Regolazione posizione del testo Hero --- */
+.hero .container {
+  position: relative;
+  top: -80px; /* sposta il testo più in alto (valore regolabile) */
+  text-align: center;
+  z-index: 3;
+}
+
+@media (max-width: 768px) {
+  .hero .container {
+    top: -50px; /* meno spostamento su mobile */
+  }
+}
+
+/* Rimuove la velatura bianca, che toglie contrasto */
+.hero::before {
+  background: rgba(255, 255, 255, 0.05); /* da 0.25 a 0.05 o anche 0 */
+  backdrop-filter: none;
+}
+
+.hero h2,
+.hero p {
+  background: rgba(255, 255, 255, 0.15);
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 6px;
+}
