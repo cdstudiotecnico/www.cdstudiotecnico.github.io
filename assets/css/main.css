@@ -1444,6 +1444,24 @@ img[src*="profile-img"] {
   transition: all 0.3s ease-in-out;
 }
 
+/* Rimuovi ombra e bordo dalla card ProntoPro */
+.prontopro-shot {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  border-radius: 0;           /* togli bordi arrotondati */
+  box-shadow: none !important; /* rimuove rilievo */
+  background-color: var(--surface-color); /* sfondo coerente col resto del sito */
+  border: none;
+}
+
+.prontopro-section {
+  background-color: transparent;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
 /* --- Logo Ordine Ingegneri (versione leggermente ingrandita) --- */
 .logo-ordine {
   max-width: 230px;   /* aumentato da 180/200px → più visibile ma sobrio */
