@@ -1516,27 +1516,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #3b4b4a; /* tono più deciso ma coerente con logo */
 }
 
-.hero h2,
-.hero p {
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.35); /* ombra discreta */
-  position: relative;
-  z-index: 2;
-}
-
-/* aggiunge una leggera velatura scura solo dietro il testo */
-.hero .overlay-text {
-  position: relative;
-  display: inline-block;
-  padding: 4px 10px;
-  background: rgba(0, 0, 0, 0.25); /* ombra trasparente dietro il testo */
-  border-radius: 5px;
-}
-
 .hero p {
   color: #4f6a6a;
-}
-
-.hero .container {
-  position: relative;
-  z-index: 3;
 }
