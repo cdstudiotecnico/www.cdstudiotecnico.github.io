@@ -467,44 +467,67 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-size: 14px;
-  padding: 40px 0;
-  position: relative;
+  background-color: #E8EFEF; /* tono chiaro elegante, coerente con il logo */
+  color: #4F6664; /* grigio-verde sobrio */
+  font-size: 15px;
+  line-height: 1.6;
+  padding: 45px 0 30px;
+  text-align: center;
 }
 
-.footer .copyright p {
-  margin-bottom: 0;
+.footer a {
+  color: var(--accent-color);
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.footer a:hover {
+  color: #6C8BAA; /* blu-grigio logo */
 }
 
 .footer .social-links {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .footer .social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
-  font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  margin: 0 5px;
-  transition: 0.3s;
+  font-size: 18px;
+  color: #4F6664;
+  border: 1px solid rgba(79, 102, 100, 0.4);
+  margin: 0 6px;
+  transition: all 0.3s ease;
+  background-color: transparent;
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
+  background-color: var(--accent-color);
+  color: #fff;
   border-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.footer .copyright p,
+.footer .credits {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #4F6664;
 }
 
 .footer .credits {
-  margin-top: 10px;
-  font-size: 13px;
-  text-align: center;
+  margin-top: 15px;
+  font-style: normal;
+  font-weight: 500;
+  color: #3b4b4a;
+}
+
+.footer strong {
+  font-weight: 700;
+  color: var(--heading-color);
 }
 
 /*--------------------------------------------------------------
