@@ -723,38 +723,47 @@ section,
 .hero .container {
   position: relative;
   z-index: 3;
-  top: -90px; /* alza tutto il contenuto */
+  top: -80px; /* alza tutto il contenuto */
 }
 
 .hero h2 {
-  margin: 0;
-  font-size: 48px;
+  font-size: 42px;
   font-weight: 700;
+  color: var(--heading-color);
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+  margin-bottom: 6px;
 }
 
 .hero p {
-  margin: 10px 0 0 0;
-  font-size: 24px;
-  color: var(--heading-color);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text-muted);
+  letter-spacing: 0.3px;
+  margin-top: 0;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
 
 .hero .btn-get-started {
-  color: var(--contrast-color);
-  background: var(--accent-color);
+  color: #ffffff;
+  background-color: var(--accent-color);
   font-family: var(--heading-font);
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 12px 40px;
-  border-radius: 50px;
-  transition: 0.5s;
-  margin-top: 30px;
+  padding: 12px 38px;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+  margin-top: 28px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
 .hero .btn-get-started:hover {
-  background: color-mix(in srgb, var(--accent-color) 90%, white 20%);
+  background-color: #6C8BAA; /* tono blu-grigio coerente col logo */
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
@@ -1497,7 +1506,32 @@ img[src*="profile-img"] {
 /* Footer */
 .footer {
   background-color: #E8EFEF;
-  color: #333;
+  color: var(--footer-color);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.footer a {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.footer a:hover {
+  color: #6C8BAA;
+}
+
+.footer .social-links a {
+  color: var(--footer-color);
+  border-color: color-mix(in srgb, var(--footer-color), transparent 40%);
+}
+
+.footer .social-links a:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.footer p, .footer span {
+  color: var(--footer-color);
 }
 
 /* Link e hover */
