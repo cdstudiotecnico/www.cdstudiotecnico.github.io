@@ -723,7 +723,7 @@ section,
 .hero .container {
   position: relative;
   z-index: 3;
-  top: -120px; /* alza tutto il contenuto */
+  top: -90px; /* alza tutto il contenuto */
 }
 
 .hero h2 {
