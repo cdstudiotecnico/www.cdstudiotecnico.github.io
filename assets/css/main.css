@@ -1,6 +1,5 @@
 /*--------------------------------------------------------------
 # Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
@@ -765,13 +764,6 @@ section,
   letter-spacing: 0.3px;
   margin-top: 0;
   text-shadow: 0 2px 6px rgba(0,0,0,0.25);
-}
-
-.hero h2, .hero p {
-  background: rgba(255, 255, 255, 0.12); /* leggerissimo filtro bianco */
-  padding: 4px 10px;
-  border-radius: 6px;
-  display: inline-block;
 }
 
 .hero .btn-get-started {
