@@ -466,15 +466,17 @@ h6 {
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
+/* Footer – versione definitiva e coerente */
 .footer {
-  background-color: #E8EFEF; /* tono chiaro elegante, coerente con il logo */
-  color: #4F6664; /* grigio-verde sobrio */
+  background-color: #E8EFEF; /* tono istituzionale */
+  color: #4F6664; /* grigio-verde elegante */
   font-size: 15px;
   line-height: 1.6;
   padding: 45px 0 30px;
   text-align: center;
 }
 
+/* Link */
 .footer a {
   color: var(--accent-color);
   font-weight: 600;
@@ -482,9 +484,10 @@ h6 {
 }
 
 .footer a:hover {
-  color: #6C8BAA; /* blu-grigio logo */
+  color: #6C8BAA; /* blu-grigio del logo */
 }
 
+/* Social links */
 .footer .social-links {
   margin-top: 25px;
 }
@@ -511,11 +514,16 @@ h6 {
   transform: translateY(-2px);
 }
 
+/* Testi */
+.footer p,
+.footer span {
+  color: #4F6664;
+}
+
 .footer .copyright p,
 .footer .credits {
   margin-bottom: 6px;
   font-size: 14px;
-  color: #4F6664;
 }
 
 .footer .credits {
@@ -1524,37 +1532,6 @@ img[src*="profile-img"] {
 .hero .btn-get-started:hover {
   background-color: #6C8BAA; /* blu secondario logo */
   color: #fff;
-}
-
-/* Footer */
-.footer {
-  background-color: #E8EFEF;
-  color: var(--footer-color);
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-.footer a {
-  color: var(--accent-color);
-  font-weight: 600;
-}
-
-.footer a:hover {
-  color: #6C8BAA;
-}
-
-.footer .social-links a {
-  color: var(--footer-color);
-  border-color: color-mix(in srgb, var(--footer-color), transparent 40%);
-}
-
-.footer .social-links a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
-}
-
-.footer p, .footer span {
-  color: var(--footer-color);
 }
 
 /* Link e hover */
