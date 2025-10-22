@@ -193,6 +193,38 @@ h6 {
   }
 }
 
+/* Centratura e armonia del menu di navigazione */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 5%;
+}
+
+/* Navmenu centrato e bilanciato */
+.header .navmenu {
+  display: flex;
+  justify-content: center; /* centra il gruppo di link */
+  align-items: center;
+  flex: 1; /* bilancia tra logo e icone */
+  gap: 32px; /* distanza armoniosa tra voci */
+  margin: 0 5%; /* evita che il menu “si attacchi” ai bordi */
+}
+
+/* Link di navigazione */
+.header .navmenu a {
+  font-size: 15px;
+  font-weight: 500;
+  color: #2E3D3D; /* più elegante e tecnico */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header .navmenu a:hover,
+.header .navmenu .active {
+  color: var(--accent-color); /* stesso tono dei pulsanti */
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
