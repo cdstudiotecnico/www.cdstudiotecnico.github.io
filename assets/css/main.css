@@ -1616,7 +1616,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Uniformità titolo e sottotitolo header in tutte le pagine --- */
 .header .sitename {
-  font-size: 1.6rem;     /* prima era 1.8rem */
+  font-size: 1.3rem;     /* prima era 1.8rem */
   font-weight: 700;
   line-height: 1.1;      /* migliora compattezza verticale */
   margin: 0;
