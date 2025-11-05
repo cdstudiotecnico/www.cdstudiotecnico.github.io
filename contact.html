@@ -193,20 +193,17 @@ document.addEventListener("DOMContentLoaded", () => {
         headers: { 'Accept': 'application/json' }
       });
 
+      const data = await response.json().catch(() => ({}));
       loading.style.display = "none";
 
-      // ✅ Formspree restituisce 200 o 302 (redirect), entrambi validi
-      if (response.ok || response.status === 302) {
+      // ✅ Se "ok": true o status 200/302, consideriamo invio riuscito
+      if (response.ok || response.status === 302 || data.ok === true) {
         sent.style.display = "block";
         error.style.display = "none";
         form.reset();
       } else {
-        const data = await response.json().catch(() => ({}));
-        if (data.errors) {
-          error.textContent = data.errors.map(e => e.message).join(", ");
-        } else {
-          error.textContent = "Si è verificato un errore durante l'invio. Riprova più tardi.";
-        }
+        // 🔴 Altrimenti mostra errore
+        error.textContent = "Si è verificato un errore durante l'invio. Riprova più tardi.";
         error.style.display = "block";
       }
 
