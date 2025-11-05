@@ -1676,3 +1676,101 @@ h1, h2, h3, h4, h5, h6 {
   text-align: left !important;
   margin: 0;
 }
+
+/* --- PALETTE UNIFORMATA --- */
+:root {
+  --accent-color: #4E7073;
+  --secondary-color: #6C8BAA;
+  --heading-color: #2E3D3C;
+  --default-color: #445555;
+  --background-color: #F4F7F7;
+  --surface-color: #FFFFFF;
+  --contrast-color: #FFFFFF;
+}
+
+/* --- TESTI & FONT --- */
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--default-color);
+  background-color: var(--background-color);
+  letter-spacing: 0.3px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+  color: var(--heading-color);
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* --- HEADER (nome e sottotitolo) --- */
+.header .sitename {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  letter-spacing: 0.6px;
+}
+
+.header .subtitle {
+  font-size: 0.7rem;
+  color: color-mix(in srgb, var(--heading-color), transparent 45%);
+}
+
+/* --- MENU NAV --- */
+.navmenu a {
+  color: var(--heading-color);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+.navmenu a:hover,
+.navmenu .active {
+  color: var(--accent-color);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+  background-color: var(--background-color);
+}
+
+.hero h2 {
+  color: #2E3D3C;
+  font-size: 40px;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  font-weight: 700;
+}
+
+.hero p {
+  color: #5A6E6E;
+  font-size: 19px;
+  font-weight: 400;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+
+/* --- BOTTONI --- */
+.btn, .hero .btn-get-started {
+  background-color: var(--accent-color);
+  color: #fff;
+  border-radius: 40px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.btn:hover, .hero .btn-get-started:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* --- FOOTER --- */
+.footer {
+  background-color: #E9ECEC;
+  color: #4F6664;
+}
+
+.footer a:hover {
+  color: var(--secondary-color);
+}
