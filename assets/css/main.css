@@ -1706,14 +1706,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- HEADER (nome e sottotitolo) --- */
 .header .sitename {
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 0.5rem;
+  font-weight: 400;
   color: var(--heading-color);
   letter-spacing: 0.6px;
 }
 
 .header .subtitle {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   color: color-mix(in srgb, var(--heading-color), transparent 45%);
 }
 
@@ -1737,7 +1737,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero h2 {
   color: #2E3D3C;
-  font-size: 30px;
+  font-size: 33px;
   text-shadow: 0 3px 6px rgba(0,0,0,0.2);
   font-weight: 700;
 }
