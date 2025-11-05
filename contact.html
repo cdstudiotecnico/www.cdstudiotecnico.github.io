@@ -174,44 +174,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const loading = form.querySelector(".loading");
     const error = form.querySelector(".error-message");
     const sent = form.querySelector(".sent-message");
-    const rectangleWhite = form.querySelector(".rectangle-white");
-    const emailField = form.querySelector("#email-field");
-    const nameField = form.querySelector("#name-field");
-    const subjectField = form.querySelector("#subject-field");
-    const messageField = form.querySelector("#message-field");
 
-    // Reset dei messaggi
     loading.style.display = "block";
     error.style.display = "none";
     sent.style.display = "none";
-    rectangleWhite.style.display = "none"; // Nascondi il rettangolo bianco inizialmente
 
-    // Verifica che tutti i campi siano compilati
-    if (!nameField.value || !emailField.value || !subjectField.value || !messageField.value) {
-      loading.style.display = "none";
-      error.textContent = "❌ Tutti i campi sono obbligatori!";
-      error.style.display = "block";
-      setTimeout(() => {
-        error.style.display = "none";
-      }, 1000); // Nascondi il messaggio dopo 1 secondo
-      return;
-    }
-
-    // Verifica la validità dell'email
-    const email = emailField.value;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!emailRegex.test(email)) {
-      loading.style.display = "none";
-      error.textContent = "❌ Inserisci un'email valida.";
-      error.style.display = "block";
-      setTimeout(() => {
-        error.style.display = "none";
-      }, 1000); // Nascondi il messaggio dopo 1 secondo
-      return; // Non inviare il form se l'email non è valida
-    }
-
-    // Se i dati sono validi, continua con l'invio
     try {
       const response = await fetch(form.action, {
         method: "POST",
@@ -219,50 +186,20 @@ document.addEventListener("DOMContentLoaded", () => {
         headers: { 'Accept': 'application/json' }
       });
 
-      let data = await response.json();
-
-      // Se la risposta contiene "ok": true oppure se la risposta HTTP è positiva (200-299)
-      if (data.ok === true || data.next) {
-        sent.style.display = "block"; // Messaggio di successo
-        error.style.display = "none"; // Nascondi il messaggio di errore
+      loading.style.display = "none";
+      if (response.ok) {
+        sent.style.display = "block";
         form.reset();
-
-        // Nascondi il messaggio di successo dopo 5 secondi
-        setTimeout(() => {
-          sent.style.display = "none";
-        }, 5000); // 5000 millisecondi = 5 secondi
       } else {
-        error.textContent = "❌ Si è verificato un errore durante l'invio. Riprova più tardi.";
         error.style.display = "block";
-
-        // Nascondi il messaggio di errore dopo 1 secondo
-        setTimeout(() => {
-          error.style.display = "none";
-        }, 1000); // 1000 millisecondi = 1 secondo
       }
-
     } catch (err) {
-      // Se si verifica un errore
-      error.textContent = "❌ Errore di connessione o server non raggiungibile.";
+      loading.style.display = "none";
       error.style.display = "block";
-
-      // Mostra il rettangolo bianco sopra l'errore
-      setTimeout(() => {
-        rectangleWhite.style.display = "block"; // Mostra il rettangolo bianco
-      }, 1000); // Aggiungi ritardo di 1 secondo
-
-      // Nascondi entrambi i messaggi dopo 1 secondo
-      setTimeout(() => {
-        sent.style.display = "none";
-        error.style.display = "none";
-        rectangleWhite.style.display = "none"; // Nascondi il rettangolo bianco
-      }, 1000); // 1000 millisecondi = 1 secondo
     }
   });
 });
 </script>
-
-<div class="rectangle-white"></div>
 
 <!-- 💅 STILE PERSONALIZZATO -->
 <style>
