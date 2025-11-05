@@ -1182,6 +1182,41 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Effetti extra su icone servizi – CD Studio Tecnico
+--------------------------------------------------------------*/
+
+/* Effetto al passaggio del mouse */
+.services .service-item:hover .icon i {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 6px color-mix(in srgb, currentColor 70%, transparent));
+}
+
+/* Effetto di “respiro” continuo sulle icone */
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.services .service-item .icon i {
+  animation: iconPulse 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Ombra dolce sulle card per maggiore profondità */
+.services .service-item {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.services .service-item:hover {
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+}
+
+/*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
 .portfolio .portfolio-filters {
