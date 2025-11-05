@@ -1613,3 +1613,26 @@ h1, h2, h3, h4, h5, h6 {
 .hero p {
   color: #4f6a6a;
 }
+
+/* --- Uniformità titolo e sottotitolo header in tutte le pagine --- */
+.header .sitename {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #1c3f53;
+  line-height: 1.1;
+}
+
+.header .subtitle {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #6c757d;
+  letter-spacing: 0.5px;
+}
+
+/* Margini uniformi e spaziatura coerente col blocco Servizi */
+.header.light-background {
+  padding: 15px 0;
+  border-bottom: 1px solid #e8ecef;
+}
