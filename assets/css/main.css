@@ -1676,3 +1676,18 @@ h1, h2, h3, h4, h5, h6 {
   text-align: left !important;
   margin: 0;
 }
+
+<style>
+/* Rettangolo bianco sopra il messaggio di errore */
+.rectangle-white {
+  width: 100%;
+  height: 20px;
+  background-color: #fff; /* Colore bianco del rettangolo */
+  display: none; /* Nascondi inizialmente il rettangolo */
+  position: absolute;
+  top: -20px; /* Posiziona sopra il messaggio di errore */
+  left: 0;
+  border: 1px solid #ccc; /* Aggiungi bordo per il rettangolo */
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1); /* Leggera ombra per evidenziare il rettangolo */
+}
+</style>
