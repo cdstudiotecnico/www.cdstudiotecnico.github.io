@@ -1638,17 +1638,17 @@ h1, h2, h3, h4, h5, h6 {
 .header .sitename {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.8rem; /* ← più piccolo */
   line-height: 1.1;
   color: #1c3f53;
-  text-transform: none; /* mantiene la maiuscola/minuscola come scritta nel codice */
+  text-transform: none;
   margin: 0;
 }
 
 .header .subtitle {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: #6c757d;
   margin-top: 2px;
   letter-spacing: 0.4px;
