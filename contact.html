@@ -128,42 +128,6 @@
             </div>
           </div>
 
-<!-- 📬 FORM DI CONTATTO FUNZIONANTE -->
-<form action="https://formspree.io/f/xjkpnylz" method="POST" class="php-email-form" novalidate>
-
-  <div class="row gy-4">
-
-    <div class="col-md-6">
-      <label for="name-field" class="pb-2">Nome e Cognome</label>
-      <input type="text" name="name" id="name-field" class="form-control" required>
-    </div>
-
-    <div class="col-md-6">
-      <label for="email-field" class="pb-2">E-mail</label>
-      <input type="email" name="email" id="email-field" class="form-control" required>
-    </div>
-
-    <div class="col-md-12">
-      <label for="subject-field" class="pb-2">Oggetto</label>
-      <input type="text" name="subject" id="subject-field" class="form-control" required>
-    </div>
-
-    <div class="col-md-12">
-      <label for="message-field" class="pb-2">Messaggio</label>
-      <textarea name="message" id="message-field" class="form-control" rows="10" required></textarea>
-    </div>
-
-    <div class="col-md-12 text-center">
-      <div class="loading" style="display:none;">Invio in corso...</div>
-      <div class="error-message" style="display:none; color:red;">❌ Errore durante l'invio, riprova più tardi.</div>
-      <div class="sent-message" style="display:none; color:green;">✅ Messaggio inviato con successo! Ti risponderemo al più presto.</div>
-      <button type="submit" class="btn btn-primary px-4 py-2 mt-2">Invia</button>
-    </div>
-
-  </div>
-</form>
-
-<!-- ✨ SCRIPT JAVASCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".php-email-form");
@@ -175,6 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const error = form.querySelector(".error-message");
     const sent = form.querySelector(".sent-message");
 
+    // Reset stati iniziali
     loading.style.display = "block";
     error.style.display = "none";
     sent.style.display = "none";
@@ -187,19 +152,31 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       loading.style.display = "none";
-      if (response.ok) {
+
+      // 🔍 Formspree restituisce 200 OK o redirect 302: entrambi vanno considerati validi
+      if (response.ok || response.status === 302) {
         sent.style.display = "block";
+        error.style.display = "none";
         form.reset();
       } else {
+        const data = await response.json().catch(() => ({}));
+        if (data.errors) {
+          error.textContent = data.errors.map(e => e.message).join(", ");
+        } else {
+          error.textContent = "Si è verificato un errore durante l'invio. Riprova più tardi.";
+        }
         error.style.display = "block";
       }
+
     } catch (err) {
       loading.style.display = "none";
+      error.textContent = "Errore di connessione o server non raggiungibile.";
       error.style.display = "block";
     }
   });
 });
 </script>
+
 
         </div>
 
