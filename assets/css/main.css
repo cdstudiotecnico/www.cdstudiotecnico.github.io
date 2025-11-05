@@ -1217,6 +1217,33 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Bolla colorata dinamica sotto le icone – CD Studio Tecnico
+--------------------------------------------------------------*/
+.services .service-item .icon {
+  position: relative;
+  z-index: 1;
+}
+
+.services .service-item .icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background-color: color-mix(in srgb, currentColor 15%, transparent);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  transition: all 0.3s ease;
+}
+
+.services .service-item:hover .icon::before {
+  background-color: color-mix(in srgb, currentColor 25%, transparent);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
 .portfolio .portfolio-filters {
