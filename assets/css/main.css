@@ -1060,31 +1060,32 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Services Section
+# Services Section – CD Studio Tecnico (colori e icone aggiornati)
 --------------------------------------------------------------*/
 .services .service-item {
   background-color: var(--surface-color);
-  box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.08);
   height: 100%;
   padding: 60px 30px;
   text-align: center;
-  transition: 0.3s;
-  border-radius: 5px;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 .services .service-item .icon {
-  margin: 0 auto;
+  margin: 0 auto 15px auto;
   width: 100px;
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: ease-in-out 0.3s;
   position: relative;
+  transition: all 0.3s ease;
 }
 
 .services .service-item .icon i {
-  font-size: 36px;
+  font-size: 38px;
   transition: 0.5s;
   position: relative;
 }
@@ -1097,95 +1098,87 @@ section,
 
 .services .service-item .icon svg path {
   transition: 0.5s;
-  fill: color-mix(in srgb, var(--default-color), transparent 95%);
+  fill: #f2f4f7; /* sfondo neutro delle “gocce” */
 }
 
 .services .service-item h3 {
   font-weight: 700;
-  margin: 10px 0 15px 0;
-  font-size: 22px;
+  margin: 15px 0 12px 0;
+  font-size: 21px;
+  color: var(--heading-color);
 }
 
 .services .service-item p {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
 
 .services .service-item:hover {
-  box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
 }
 
+/* ——— PALETTE PERSONALIZZATA ——— */
 .services .service-item.item-cyan i {
-  color: #0dcaf0;
+  color: #0056b3; /* blu ingegneria */
 }
-
 .services .service-item.item-cyan:hover .icon i {
   color: #fff;
 }
-
 .services .service-item.item-cyan:hover .icon path {
-  fill: #0dcaf0;
+  fill: #0056b3;
 }
 
 .services .service-item.item-orange i {
-  color: #fd7e14;
+  color: #e67e22; /* ambra tecnico */
 }
-
 .services .service-item.item-orange:hover .icon i {
   color: #fff;
 }
-
 .services .service-item.item-orange:hover .icon path {
-  fill: #fd7e14;
+  fill: #e67e22;
 }
 
 .services .service-item.item-teal i {
-  color: #20c997;
+  color: #00897b; /* verde petrolio */
 }
-
 .services .service-item.item-teal:hover .icon i {
   color: #fff;
 }
-
 .services .service-item.item-teal:hover .icon path {
-  fill: #20c997;
+  fill: #00897b;
 }
 
 .services .service-item.item-red i {
-  color: #df1529;
+  color: #c0392b; /* rosso sicurezza */
 }
-
 .services .service-item.item-red:hover .icon i {
   color: #fff;
 }
-
 .services .service-item.item-red:hover .icon path {
-  fill: #df1529;
+  fill: #c0392b;
 }
 
 .services .service-item.item-indigo i {
-  color: #6610f2;
+  color: #34495e; /* blu grafite */
 }
-
 .services .service-item.item-indigo:hover .icon i {
   color: #fff;
 }
-
 .services .service-item.item-indigo:hover .icon path {
-  fill: #6610f2;
+  fill: #34495e;
 }
 
 .services .service-item.item-pink i {
-  color: #f3268c;
+  color: #7f8c8d; /* grigio tecnico */
 }
-
 .services .service-item.item-pink:hover .icon i {
   color: #fff;
 }
-
 .services .service-item.item-pink:hover .icon path {
-  fill: #f3268c;
+  fill: #7f8c8d;
 }
 
 /*--------------------------------------------------------------
