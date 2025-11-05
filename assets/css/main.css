@@ -1636,3 +1636,23 @@ h1, h2, h3, h4, h5, h6 {
   padding: 15px 0;
   border-bottom: 1px solid #e8ecef;
 }
+
+/* --- Stile uniforme per nome e sottotitolo in header --- */
+.header .sitename {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.1;
+  color: #1c3f53;
+  text-transform: none; /* mantiene la maiuscola/minuscola come scritta nel codice */
+  margin: 0;
+}
+
+.header .subtitle {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-top: 2px;
+  letter-spacing: 0.4px;
+}
