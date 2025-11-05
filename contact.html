@@ -171,7 +171,7 @@
 
 <!-- ✨ SCRIPT JAVASCRIPT -->
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".php-email-form");
 
   form.addEventListener("submit", async (e) => {
@@ -228,7 +228,7 @@
       // Nascondi il caricamento
       loading.style.display = "none";
 
-      // Se la risposta contiene "ok": true oppure se la risposta HTTP è positiva (200-299)
+      // Se la risposta contiene "ok": true, il form è stato inviato correttamente
       if (data.ok === true) {
         sent.style.display = "block"; // Messaggio di successo
         error.style.display = "none"; // Nascondi il messaggio di errore
@@ -239,7 +239,7 @@
           sent.style.display = "none";
         }, 5000); // 5000 millisecondi = 5 secondi
       } else {
-        // Se la risposta contiene una chiave next (che punta a una pagina di ringraziamento), non fare nulla
+        // Se la risposta contiene "next", considera l'invio come positivo
         if (data.next) {
           sent.style.display = "block"; // Messaggio di successo
           error.style.display = "none"; // Nascondi il messaggio di errore
@@ -274,7 +274,7 @@
     }
   });
 });
-  </script>
+</script>
 
 <!-- 💅 STILE PERSONALIZZATO -->
 <style>
