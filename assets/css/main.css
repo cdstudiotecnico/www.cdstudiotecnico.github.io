@@ -1637,8 +1637,8 @@ h1, h2, h3, h4, h5, h6 {
 /* --- Stile uniforme per nome e sottotitolo in header --- */
 .header .sitename {
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 0.8rem; /* ← più piccolo */
+  font-weight: 400;
+  font-size: 0.7rem; /* ← più piccolo */
   line-height: 1.1;
   color: #1c3f53;
   text-transform: none;
@@ -1647,8 +1647,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .header .subtitle {
   font-family: "Raleway", sans-serif;
-  font-weight: 300;
-  font-size: 0.7rem;
+  font-weight: 500;
+  font-size: 0.6rem;
   color: #6c757d;
   margin-top: 2px;
   letter-spacing: 0.4px;
@@ -1744,7 +1744,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero p {
   color: #5A6E6E;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   text-shadow: 0 1px 4px rgba(0,0,0,0.15);
 }
