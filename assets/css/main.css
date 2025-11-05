@@ -1676,3 +1676,51 @@ h1, h2, h3, h4, h5, h6 {
   text-align: left !important;
   margin: 0;
 }
+
+<style>
+/* Rettangolo sopra il messaggio di errore */
+.rectangle-error {
+  width: 100%;
+  height: 10px;
+  background-color: #f8d7da; /* Colore rosso del messaggio di errore */
+  display: none; /* Nascondi inizialmente il rettangolo */
+  position: absolute;
+  top: -10px; /* Posiziona sopra il messaggio di errore */
+  left: 0;
+}
+
+/* Messaggio di errore */
+.php-email-form .error-message {
+  display: none;
+  color: #842029;
+  background: #f8d7da;
+  border: 1px solid #f5c2c7;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  margin-top: 15px;
+  position: relative;
+}
+
+/* Messaggio di successo */
+.php-email-form .sent-message {
+  display: none;
+  color: #0f5132;
+  background: #d1e7dd;
+  border: 1px solid #badbcc;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+</style>
+
+<!-- Messaggio di errore con rettangolo sopra -->
+<div class="php-email-form">
+  <div class="error-message">
+    ❌ Si è verificato un errore durante l'invio. Riprova più tardi.
+  </div>
+  <!-- Rettangolo sopra il messaggio di errore -->
+  <div class="rectangle-error"></div>
+</div>
+
