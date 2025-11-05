@@ -206,37 +206,25 @@ document.addEventListener("DOMContentLoaded", () => {
         headers: { 'Accept': 'application/json' }
       });
 
-      let data = {};
-      try {
-        data = await response.json();
-      } catch (errorParsingJson) {
-        console.error("Errore parsing JSON", errorParsingJson);
-      }
+      let data = await response.json();
 
+      // Nascondi il caricamento
       loading.style.display = "none";
 
       // Se la risposta contiene "ok": true oppure se la risposta HTTP è positiva (200-299)
-      if (data.ok === true || response.ok || response.status === 302) {
-        sent.style.display = "block";
-        error.style.display = "none";
+      if (data.ok === true) {
+        sent.style.display = "block"; // Messaggio di successo
+        error.style.display = "none"; // Nascondi il messaggio di errore
         form.reset();
 
-        // Nascondi entrambi i messaggi dopo 2 secondi
+        // Nascondi il messaggio di successo dopo 2 secondi
         setTimeout(() => {
           sent.style.display = "none";
-          error.style.display = "none";
         }, 2000);
-
       } else {
-        // Mostra messaggio di errore se la risposta non è valida
+        // In caso di errore nel server, mostra il messaggio di errore
         error.textContent = "❌ Si è verificato un errore durante l'invio. Riprova più tardi.";
         error.style.display = "block";
-
-        // Nascondi entrambi i messaggi dopo 2 secondi
-        setTimeout(() => {
-          sent.style.display = "none";
-          error.style.display = "none";
-        }, 2000);
       }
 
     } catch (err) {
