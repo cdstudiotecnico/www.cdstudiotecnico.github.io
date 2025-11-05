@@ -195,6 +195,10 @@ document.addEventListener("DOMContentLoaded", () => {
       loading.style.display = "none";
       error.textContent = "❌ Inserisci un'email valida.";
       error.style.display = "block";
+      // Nascondi il messaggio di errore dopo 1 secondo
+      setTimeout(() => {
+        error.style.display = "none";
+      }, 1000); // 1000 millisecondi = 1 secondo
       return; // Non inviare il form se l'email non è valida
     }
 
@@ -217,14 +221,19 @@ document.addEventListener("DOMContentLoaded", () => {
         error.style.display = "none"; // Nascondi il messaggio di errore
         form.reset();
 
-        // Nascondi il messaggio di successo dopo 2 secondi
+        // Nascondi il messaggio di successo dopo 5 secondi
         setTimeout(() => {
           sent.style.display = "none";
-        }, 2000);
+        }, 5000); // 5000 millisecondi = 5 secondi
       } else {
         // In caso di errore nel server, mostra il messaggio di errore
         error.textContent = "❌ Si è verificato un errore durante l'invio. Riprova più tardi.";
         error.style.display = "block";
+
+        // Nascondi il messaggio di errore dopo 1 secondo
+        setTimeout(() => {
+          error.style.display = "none";
+        }, 1000); // 1000 millisecondi = 1 secondo
       }
 
     } catch (err) {
@@ -232,11 +241,11 @@ document.addEventListener("DOMContentLoaded", () => {
       error.textContent = "❌ Errore di connessione o server non raggiungibile.";
       error.style.display = "block";
 
-      // Nascondi entrambi i messaggi dopo 2 secondi
+      // Nascondi entrambi i messaggi dopo 1 secondo
       setTimeout(() => {
         sent.style.display = "none";
         error.style.display = "none";
-      }, 2000);
+      }, 1000); // 1000 millisecondi = 1 secondo
     }
   });
 });
