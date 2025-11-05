@@ -193,16 +193,22 @@ document.addEventListener("DOMContentLoaded", () => {
         headers: { 'Accept': 'application/json' }
       });
 
-      const data = await response.json().catch(() => ({}));
+      let data = {};
+      try {
+        data = await response.json();
+      } catch {
+        // Se non è JSON, non importa
+      }
+
       loading.style.display = "none";
 
-      // ✅ Se "ok": true o status 200/302, consideriamo invio riuscito
-      if (response.ok || response.status === 302 || data.ok === true) {
+      // ✅ Se la risposta contiene "ok": true → invio riuscito
+      if (data.ok === true || response.ok || response.status === 302) {
         sent.style.display = "block";
         error.style.display = "none";
         form.reset();
       } else {
-        // 🔴 Altrimenti mostra errore
+        // 🔴 Solo errori reali
         error.textContent = "Si è verificato un errore durante l'invio. Riprova più tardi.";
         error.style.display = "block";
       }
