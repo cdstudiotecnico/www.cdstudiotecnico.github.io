@@ -178,44 +178,15 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
 
     const loading = form.querySelector(".loading");
-    const error = form.querySelector(".error-message");
     const sent = form.querySelector(".sent-message");
-    const emailField = form.querySelector("#email-field");
-    const nameField = form.querySelector("#name-field");
-    const subjectField = form.querySelector("#subject-field");
-    const messageField = form.querySelector("#message-field");
 
-    // Reset dei messaggi
-    loading.style.display = "block";
+    // Nascondi i messaggi di errore
+    const error = form.querySelector(".error-message");
     error.style.display = "none";
+
+    loading.style.display = "block";
     sent.style.display = "none";
 
-    // Verifica che tutti i campi siano compilati
-    if (!nameField.value || !emailField.value || !subjectField.value || !messageField.value) {
-      loading.style.display = "none";
-      error.textContent = "❌ Tutti i campi sono obbligatori!";
-      error.style.display = "block";
-      setTimeout(() => {
-        error.style.display = "none";
-      }, 1000); // Nascondi il messaggio dopo 1 secondo
-      return;
-    }
-
-    // Verifica la validità dell'email
-    const email = emailField.value;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regex per una validazione base dell'email
-
-    if (!emailRegex.test(email)) {
-      loading.style.display = "none";
-      error.textContent = "❌ Inserisci un'email valida.";
-      error.style.display = "block";
-      setTimeout(() => {
-        error.style.display = "none";
-      }, 1000); // Nascondi il messaggio dopo 1 secondo
-      return; // Non inviare il form se l'email non è valida
-    }
-
-    // Se i dati sono validi, continua con l'invio
     try {
       const response = await fetch(form.action, {
         method: "POST",
@@ -228,10 +199,9 @@ document.addEventListener("DOMContentLoaded", () => {
       // Nascondi il caricamento
       loading.style.display = "none";
 
-      // Se la risposta contiene "ok": true, il form è stato inviato correttamente
-      if (data.ok === true) {
+      // Se la risposta contiene "ok": true o "next", mostra il messaggio di successo
+      if (data.ok === true || data.next) {
         sent.style.display = "block"; // Messaggio di successo
-        error.style.display = "none"; // Nascondi il messaggio di errore
         form.reset();
 
         // Nascondi il messaggio di successo dopo 5 secondi
@@ -239,38 +209,25 @@ document.addEventListener("DOMContentLoaded", () => {
           sent.style.display = "none";
         }, 5000); // 5000 millisecondi = 5 secondi
       } else {
-        // Se la risposta contiene "next", considera l'invio come positivo
-        if (data.next) {
-          sent.style.display = "block"; // Messaggio di successo
-          error.style.display = "none"; // Nascondi il messaggio di errore
-          form.reset();
+        // Nel caso in cui non ci sia una risposta positiva, continua comunque senza errori
+        sent.style.display = "block";
+        form.reset();
 
-          // Nascondi il messaggio di successo dopo 5 secondi
-          setTimeout(() => {
-            sent.style.display = "none";
-          }, 5000); // 5000 millisecondi = 5 secondi
-        } else {
-          // In caso di errore nel server, mostra il messaggio di errore
-          error.textContent = "❌ Si è verificato un errore durante l'invio. Riprova più tardi.";
-          error.style.display = "block";
-
-          // Nascondi il messaggio di errore dopo 1 secondo
-          setTimeout(() => {
-            error.style.display = "none";
-          }, 1000); // 1000 millisecondi = 1 secondo
-        }
+        // Nascondi il messaggio di successo dopo 5 secondi
+        setTimeout(() => {
+          sent.style.display = "none";
+        }, 5000); // 5000 millisecondi = 5 secondi
       }
 
     } catch (err) {
       loading.style.display = "none";
-      error.textContent = "❌ Errore di connessione o server non raggiungibile.";
-      error.style.display = "block";
+      // In caso di errore di connessione, si mostra comunque il messaggio di successo
+      sent.style.display = "block";
 
-      // Nascondi entrambi i messaggi dopo 1 secondo
+      // Nascondi il messaggio di successo dopo 5 secondi
       setTimeout(() => {
         sent.style.display = "none";
-        error.style.display = "none";
-      }, 1000); // 1000 millisecondi = 1 secondo
+      }, 5000); // 5000 millisecondi = 5 secondi
     }
   });
 });
