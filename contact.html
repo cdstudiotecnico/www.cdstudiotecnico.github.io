@@ -171,7 +171,7 @@
 
 <!-- ✨ SCRIPT JAVASCRIPT -->
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".php-email-form");
 
   form.addEventListener("submit", async (e) => {
@@ -180,12 +180,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const loading = form.querySelector(".loading");
     const error = form.querySelector(".error-message");
     const sent = form.querySelector(".sent-message");
-    const emailField = form.querySelector("#email-field"); // Riferimento alla casella email
+    const emailField = form.querySelector("#email-field");
+    const nameField = form.querySelector("#name-field");
+    const subjectField = form.querySelector("#subject-field");
+    const messageField = form.querySelector("#message-field");
 
-    // Reset stati iniziali
+    // Reset dei messaggi
     loading.style.display = "block";
     error.style.display = "none";
     sent.style.display = "none";
+
+    // Verifica che tutti i campi siano compilati
+    if (!nameField.value || !emailField.value || !subjectField.value || !messageField.value) {
+      loading.style.display = "none";
+      error.textContent = "❌ Tutti i campi sono obbligatori!";
+      error.style.display = "block";
+      setTimeout(() => {
+        error.style.display = "none";
+      }, 1000); // Nascondi il messaggio dopo 1 secondo
+      return;
+    }
 
     // Verifica la validità dell'email
     const email = emailField.value;
@@ -195,14 +209,13 @@ document.addEventListener("DOMContentLoaded", () => {
       loading.style.display = "none";
       error.textContent = "❌ Inserisci un'email valida.";
       error.style.display = "block";
-      // Nascondi il messaggio di errore dopo 1 secondo
       setTimeout(() => {
         error.style.display = "none";
-      }, 1000); // 1000 millisecondi = 1 secondo
+      }, 1000); // Nascondi il messaggio dopo 1 secondo
       return; // Non inviare il form se l'email non è valida
     }
 
-    // Se l'email è valida, continua con l'invio
+    // Se i dati sono validi, continua con l'invio
     try {
       const response = await fetch(form.action, {
         method: "POST",
@@ -249,7 +262,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-</script>
+  </script>
 
 <!-- 💅 STILE PERSONALIZZATO -->
 <style>
