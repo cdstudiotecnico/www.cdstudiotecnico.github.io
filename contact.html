@@ -180,12 +180,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const loading = form.querySelector(".loading");
     const error = form.querySelector(".error-message");
     const sent = form.querySelector(".sent-message");
+    const emailField = form.querySelector("#email-field"); // Riferimento alla casella email
 
     // Reset stati iniziali
     loading.style.display = "block";
     error.style.display = "none";
     sent.style.display = "none";
 
+    // Verifica la validità dell'email
+    const email = emailField.value;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regex per una validazione base dell'email
+
+    if (!emailRegex.test(email)) {
+      loading.style.display = "none";
+      error.textContent = "❌ Inserisci un'email valida.";
+      error.style.display = "block";
+      return; // Non inviare il form se l'email non è valida
+    }
+
+    // Se l'email è valida, continua con l'invio
     try {
       const response = await fetch(form.action, {
         method: "POST",
@@ -215,8 +228,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 2000);
 
       } else {
-        // Mostra messaggio di errore
-        error.textContent = "Si è verificato un errore durante l'invio. Riprova più tardi.";
+        // Mostra messaggio di errore se la risposta non è valida
+        error.textContent = "❌ Si è verificato un errore durante l'invio. Riprova più tardi.";
         error.style.display = "block";
 
         // Nascondi entrambi i messaggi dopo 2 secondi
@@ -228,7 +241,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     } catch (err) {
       loading.style.display = "none";
-      error.textContent = "Errore di connessione o server non raggiungibile.";
+      error.textContent = "❌ Errore di connessione o server non raggiungibile.";
       error.style.display = "block";
 
       // Nascondi entrambi i messaggi dopo 2 secondi
