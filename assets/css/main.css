@@ -1,256 +1,1787 @@
-/* ===========================================================
-   CD Studio Tecnico — Theme CSS (clean & unified)
-   Palette allineata alla copertina astratta teal
-   =========================================================== */
-
-/* ---------- Variables (ONE root only) ---------- */
-:root{
-  /* Fonts */
-  --font-base: "Roboto", system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-  --font-head: "Raleway", sans-serif;
-  --font-nav:  "Poppins", sans-serif;
-
-  /* Brand palette */
-  --brand:        #4E7073; /* teal petrolio */
-  --brand-600:    #3f5b5d;
-  --brand-300:    #6C8BAA; /* blu-grigio secondario */
-  --ink:          #2E3D3C; /* heading */
-  --text:         #445555; /* testi */
-  --muted:        #6f8584; /* sottotitoli, meta */
-  --bg:           #F6F9F8; /* fondo morbido */
-  --surface:      #FFFFFF; /* card/box */
-  --border:       color-mix(in srgb, var(--ink), transparent 86%);
-  --success:      #1b7b5e;
-  --danger:       #c94444;
-  --white:        #FFF;
-
-  /* Effects */
-  --radius: 12px;
-  --shadow-1: 0 4px 14px rgba(18, 38, 32, .06);
-  --shadow-2: 0 10px 34px rgba(18, 38, 32, .12);
-
-  /* Rhythm */
-  --space-1: .5rem;
-  --space-2: .75rem;
-  --space-3: 1rem;
-  --space-4: 1.5rem;
-  --space-5: 2rem;
-
-  /* Nav sizes */
-  --nav-h: 68px;
+/*--------------------------------------------------------------
+# Font & Color Variables
+--------------------------------------------------------------*/
+/* Fonts */
+:root {
+  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway",  sans-serif;
+  --nav-font: "Poppins",  sans-serif;
 }
 
-/* ---------- Base ---------- */
-html{scroll-behavior:smooth}
-body{
-  font: 16px/1.6 var(--font-base);
-  color: var(--text);
-  background: var(--bg);
-  letter-spacing:.2px;
-}
-h1,h2,h3,h4,h5,h6{
-  font-family: var(--font-head);
-  color: var(--ink);
-  letter-spacing:.4px;
-  margin:0 0 .6em;
-}
-a{
-  color: var(--brand);
-  text-decoration:none;
-  transition: color .25s ease, opacity .25s ease;
-}
-a:hover{color: var(--brand-300)}
-img{max-width:100%;height:auto;display:block}
-
-/* ---------- Header ---------- */
-.header{
-  height: var(--nav-h);
-  display:flex; align-items:center;
-  background: var(--white);
-  box-shadow: var(--shadow-1);
-  z-index: 997;
-}
-.header .container-fluid{display:flex;align-items:center;justify-content:space-between}
-.header .logo{line-height:1;display:flex;gap:.6rem;align-items:center}
-.header .logo img{max-height:32px}
-.header .sitename{
-  font-family: var(--font-nav);
-  font-weight:500;
-  font-size:.8rem;       /* più compatto */
-  color:#1c3f53;
-  margin:0;
-}
-.header .subtitle{
-  font-family: var(--font-head);
-  font-weight:400;
-  font-size:.7rem;
-  color: var(--muted);
-  margin-top:-2px;
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root { 
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #222222; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #34b7a7; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
-/* ---------- Nav ---------- */
-.navmenu ul{display:flex;gap:1rem;align-items:center;margin:0;padding:0;list-style:none}
-.navmenu a{
-  font: 500 15px/1 var(--font-nav);
-  color: var(--ink);
-  position:relative;
-  padding:.35rem .25rem;
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+  --nav-color: #444444;  /* The default color of the main navmenu links */
+  --nav-hover-color: #34b7a7; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #34b7a7; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
-.navmenu a:before{
-  content:""; position:absolute; left:0; bottom:-8px; height:2px; width:0;
-  background: var(--brand); transition:width .25s ease; visibility:hidden;
-}
-.navmenu a:hover, .navmenu .active{color:var(--brand)}
-.navmenu a:hover:before, .navmenu .active:before{width:26px; visibility:visible}
 
-/* Mobile toggle (keep icons from template) */
-@media (max-width:1199px){
-  .mobile-nav-toggle{font-size:28px;color:var(--ink)}
-  .navmenu ul{display:none}
-  .mobile-nav-active .navmenu ul{
-    display:block; position:fixed; inset:72px 16px 16px; background:var(--white);
-    border:1px solid var(--border); border-radius:10px; padding:10px; box-shadow:var(--shadow-2);
+/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+
+.light-background {
+  --background-color: #e9e8e6;
+  --surface-color: #ffffff;
+}
+
+.dark-background {
+  --background-color: #060606;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #252525;
+  --contrast-color: #ffffff;
+}
+
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# General Styling & Shared Classes
+--------------------------------------------------------------*/
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+/* PHP Email Form Messages
+------------------------------*/
+.php-email-form .error-message {
+  display: none;
+  background: #df1529;
+  color: #ffffff;
+  text-align: left;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.php-email-form .sent-message {
+  display: none;
+  color: #ffffff;
+  background: #059652;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.php-email-form .loading {
+  display: none;
+  background: var(--surface-color);
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+}
+
+.php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid var(--accent-color);
+  border-top-color: var(--surface-color);
+  animation: php-email-form-loading 1s linear infinite;
+}
+
+@keyframes php-email-form-loading {
+  0% {
+    transform: rotate(0deg);
   }
-  .navmenu ul li{padding:.6rem .2rem}
-  .navmenu a{font-size:17px}
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-/* ---------- Hero ---------- */
-.hero{
-  min-height: calc(100vh - var(--nav-h));
-  position:relative; display:flex; align-items:center; justify-content:center;
-  padding: var(--space-5) 0;
-  background: var(--bg);
-}
-.hero img{
-  position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1;
-}
-.hero .container{position:relative; z-index:2; text-align:center; transform: translateY(-46px);}
-.hero h2{
-  font-size: 40px; font-weight:700; color:#2E3D3C;
-  text-shadow: 0 3px 8px rgba(0,0,0,.25); margin-bottom:.4rem;
-}
-.hero p{
-  font-size:19px; color:#516a69;
-  text-shadow: 0 2px 6px rgba(0,0,0,.18); margin:0;
-}
-@media (max-width:768px){
-  .hero h2{font-size:32px}
-  .hero p{font-size:17px}
+/*--------------------------------------------------------------
+# Global Header
+--------------------------------------------------------------*/
+.header {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 15px 0;
+  transition: all 0.5s;
+  z-index: 997;
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
 
-/* ---------- Buttons (global) ---------- */
-.btn,
-.hero .btn-get-started{
-  display:inline-block; padding:12px 32px; border-radius: 999px;
-  font: 600 13px var(--font-head); text-transform:uppercase; letter-spacing:1px;
-  color:var(--white); background:var(--brand);
-  box-shadow: 0 3px 10px rgba(0,0,0,.15);
-  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+.header .logo {
+  line-height: 1;
 }
-.btn:hover,
-.hero .btn-get-started:hover{
-  background: var(--brand-300);
+
+.header .logo img {
+  max-height: 36px;
+  margin-right: 8px;
+}
+
+.header .logo h1 {
+  font-size: 32px;
+  margin: 0;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--heading-color);
+}
+
+.header .header-social-links {
+  padding-right: 15px;
+}
+
+.header .header-social-links a {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  padding-left: 6px;
+  display: inline-block;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.header .header-social-links a:hover {
+  color: var(--accent-color);
+}
+
+.header .header-social-links a i {
+  line-height: 0px;
+}
+
+@media (max-width: 1200px) {
+  .header .logo {
+    order: 1;
+  }
+
+  .header .header-social-links {
+    order: 2;
+  }
+
+  .header .navmenu {
+    order: 3;
+  }
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+@media (min-width: 1200px) {
+  .navmenu {
+    padding: 0;
+  }
+
+  .navmenu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+
+  .navmenu li {
+    position: relative;
+  }
+
+  .navmenu>ul>li {
+    white-space: nowrap;
+    padding: 15px 14px;
+  }
+
+  .navmenu>ul>li:last-child {
+    padding-right: 0;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: var(--nav-color);
+    font-size: 15px;
+    padding: 0 2px;
+    font-family: var(--nav-font);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+    position: relative;
+  }
+
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    transition: 0.3s;
+  }
+
+  .navmenu>ul>li>a:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background-color: var(--nav-hover-color);
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .navmenu a:hover:before,
+  .navmenu li:hover>a:before,
+  .navmenu .active:before {
+    visibility: visible;
+    width: 25px;
+  }
+
+  .navmenu li:hover>a,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--nav-hover-color);
+  }
+
+  .navmenu .dropdown ul {
+    margin: 0;
+    padding: 10px 0;
+    background: var(--nav-dropdown-background-color);
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    left: 14px;
+    top: 130%;
+    opacity: 0;
+    transition: 0.3s;
+    border-radius: 4px;
+    z-index: 99;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .navmenu .dropdown ul li {
+    min-width: 200px;
+  }
+
+  .navmenu .dropdown ul a {
+    padding: 10px 20px;
+    font-size: 15px;
+    text-transform: none;
+    color: var(--nav-dropdown-color);
+  }
+
+  .navmenu .dropdown ul a i {
+    font-size: 12px;
+  }
+
+  .navmenu .dropdown ul a:hover,
+  .navmenu .dropdown ul .active:hover,
+  .navmenu .dropdown ul li:hover>a {
+    color: var(--nav-dropdown-hover-color);
+  }
+
+  .navmenu .dropdown:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+
+  .navmenu .dropdown .dropdown ul {
+    top: 0;
+    left: -90%;
+    visibility: hidden;
+  }
+
+  .navmenu .dropdown .dropdown:hover>ul {
+    opacity: 1;
+    top: 0;
+    left: -100%;
+    visibility: visible;
+  }
+}
+
+/* Mobile Navigation */
+@media (max-width: 1199px) {
+  .mobile-nav-toggle {
+    color: var(--nav-color);
+    font-size: 28px;
+    line-height: 0;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .navmenu {
+    padding: 0;
+    z-index: 9997;
+  }
+
+  .navmenu ul {
+    display: none;
+    list-style: none;
+    position: absolute;
+    inset: 60px 20px 20px 20px;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 6px;
+    background-color: var(--nav-mobile-background-color);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    box-shadow: none;
+    overflow-y: auto;
+    transition: 0.3s;
+    z-index: 9998;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: var(--nav-dropdown-color);
+    padding: 10px 20px;
+    font-family: var(--nav-font);
+    font-size: 17px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  }
+
+  .navmenu a i:hover,
+  .navmenu a:focus i:hover {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+  }
+
+  .navmenu a:hover,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--nav-dropdown-hover-color);
+  }
+
+  .navmenu .active i,
+  .navmenu .active:focus i {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    transform: rotate(180deg);
+  }
+
+  .navmenu .dropdown ul {
+    position: static;
+    display: none;
+    z-index: 99;
+    padding: 10px 0;
+    margin: 10px 20px;
+    background-color: var(--nav-dropdown-background-color);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .navmenu .dropdown ul ul {
+    background-color: rgba(33, 37, 41, 0.1);
+  }
+
+  .navmenu .dropdown>.dropdown-active {
+    display: block;
+    background-color: rgba(33, 37, 41, 0.03);
+  }
+
+  .mobile-nav-active {
+    overflow: hidden;
+  }
+
+  .mobile-nav-active .mobile-nav-toggle {
+    color: #fff;
+    position: absolute;
+    font-size: 32px;
+    top: 15px;
+    right: 15px;
+    margin-right: 0;
+    z-index: 9999;
+  }
+
+  .mobile-nav-active .navmenu {
+    position: fixed;
+    overflow: hidden;
+    inset: 0;
+    background: rgba(33, 37, 41, 0.8);
+    transition: 0.3s;
+  }
+
+  .mobile-nav-active .navmenu>ul {
+    display: block;
+  }
+}
+
+/*--------------------------------------------------------------
+# Global Footer
+--------------------------------------------------------------*/
+/* Footer – versione definitiva e coerente */
+.footer {
+  background-color: #E8EFEF; /* tono istituzionale */
+  color: #4F6664; /* grigio-verde elegante */
+  font-size: 15px;
+  line-height: 1.6;
+  padding: 45px 0 30px;
+  text-align: center;
+}
+
+/* Link */
+.footer a {
+  color: var(--accent-color);
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.footer a:hover {
+  color: #6C8BAA; /* blu-grigio del logo */
+}
+
+/* Social links */
+.footer .social-links {
+  margin-top: 25px;
+}
+
+.footer .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #4F6664;
+  border: 1px solid rgba(79, 102, 100, 0.4);
+  margin: 0 6px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.footer .social-links a:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+  border-color: var(--accent-color);
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,0,0,.22);
 }
 
-/* ---------- Sections ---------- */
-.section{padding: 60px 0; background: var(--bg)}
-.section-title{ text-align:center; margin-bottom: 34px;}
-.section-title h2{font-size:30px; position:relative; padding-bottom:14px}
-.section-title h2:after{
-  content:""; position:absolute; left:50%; transform:translateX(-50%);
-  bottom:0; width:56px; height:3px; background:var(--brand);
+/* Testi */
+.footer p,
+.footer span {
+  color: #4F6664;
 }
-.section-title p{color:var(--muted); margin:0}
 
-/* ---------- Cards / Surfaces ---------- */
-.card{
-  background: var(--surface); border:1px solid var(--border); border-radius: var(--radius);
-  box-shadow: var(--shadow-1); padding: 28px;
+.footer .copyright p,
+.footer .credits {
+  margin-bottom: 6px;
+  font-size: 14px;
 }
-.card:hover{box-shadow: var(--shadow-2); transform:translateY(-2px); transition:.25s}
 
-/* ---------- Services ---------- */
-.services .service-item{ composes: card; /* mental model */ }
-.services .service-item{
-  text-align:center; padding: 48px 26px;
+.footer .credits {
+  margin-top: 15px;
+  font-style: normal;
+  font-weight: 500;
+  color: #3b4b4a;
 }
-.services .service-item .icon{
-  width:96px; height:96px; margin:0 auto 14px; border-radius:50%;
-  display:grid; place-items:center; position:relative;
-}
-.services .service-item .icon::before{
-  content:""; position:absolute; inset:0; border-radius:50%;
-  background: color-mix(in srgb, var(--brand) 16%, transparent);
-  filter: blur(.5px);
-}
-.services .service-item i{font-size:36px; color:var(--brand); position:relative}
-.services .service-item h3{font-size:20px; font-weight:700; margin: 12px 0}
-.services .service-item p{font-size:14px; color: color-mix(in srgb, var(--text), transparent 20%)}
-.services .service-item:hover i{transform:scale(1.12); transition:.3s}
 
-/* ---------- Contact ---------- */
-.contact .info-wrap{ background:var(--surface); border:1px solid var(--border); border-radius: var(--radius); box-shadow:var(--shadow-1); padding:24px}
-.contact .info-item{ display:flex; gap:12px; align-items:flex-start; margin-bottom:22px}
-.contact .info-item i{
-  width:44px; height:44px; border-radius:50%; display:grid; place-items:center;
-  background: color-mix(in srgb, var(--brand) 10%, transparent); color: var(--brand);
+.footer strong {
+  font-weight: 700;
+  color: var(--heading-color);
 }
-.contact .info-item h3{font:700 18px var(--font-head); margin:0 0 4px}
-.contact .info-item p{font-size:14px; margin:0}
 
-.contact .php-email-form{
-  background:var(--surface); border:1px solid var(--border);
-  border-radius: var(--radius); box-shadow:var(--shadow-1); padding:24px;
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background-color: var(--background-color);
+  transition: all 0.6s ease-out;
+  width: 100%;
+  height: 100vh;
 }
+
+#preloader:before,
+#preloader:after {
+  content: "";
+  position: absolute;
+  border: 4px solid var(--accent-color);
+  border-radius: 50%;
+  animation: animate-preloader 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+#preloader:after {
+  animation-delay: -0.5s;
+}
+
+@keyframes animate-preloader {
+  0% {
+    width: 10px;
+    height: 10px;
+    top: calc(50% - 5px);
+    left: calc(50% - 5px);
+    opacity: 1;
+  }
+
+  100% {
+    width: 72px;
+    height: 72px;
+    top: calc(50% - 36px);
+    left: calc(50% - 36px);
+    opacity: 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# Scroll Top Button
+--------------------------------------------------------------*/
+.scroll-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: -15px;
+  z-index: 99999;
+  background-color: var(--accent-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.scroll-top i {
+  font-size: 24px;
+  color: var(--contrast-color);
+  line-height: 0;
+}
+
+.scroll-top:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--contrast-color);
+}
+
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 15px;
+}
+
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
+
+/*--------------------------------------------------------------
+# Global Page Titles & Breadcrumbs
+--------------------------------------------------------------*/
+.page-title {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 25px 0;
+  position: relative;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.page-title h1 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.page-title .breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.page-title .breadcrumbs ol li+li {
+  padding-left: 10px;
+}
+
+.page-title .breadcrumbs ol li+li::before {
+  content: "/";
+  display: inline-block;
+  padding-right: 10px;
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+/*--------------------------------------------------------------
+# Global Sections
+--------------------------------------------------------------*/
+section,
+.section {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 60px 0;
+  scroll-margin-top: 100px;
+  overflow: clip;
+}
+
+@media (max-width: 1199px) {
+
+  section,
+  .section {
+    scroll-margin-top: 66px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Global Section Titles
+--------------------------------------------------------------*/
+.section-title {
+  text-align: center;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title h2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--accent-color);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+  width: 100%;
+  min-height: calc(100vh - 82px);
+  position: relative;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .hero {
+    min-height: calc(100vh - 68px);
+  }
+}
+
+.hero img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
+  top: -65px; /* alza tutto il contenuto */
+}
+
+.hero h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1F2E2E; /* verde-grigio scuro, ottima leggibilità */
+  letter-spacing: 0.5px;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.35); /* ombra più profonda e morbida */
+  margin-bottom: 6px;
+}
+
+.hero p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #2E4A4A; /* tono medio-scuro coerente col titolo */
+  letter-spacing: 0.3px;
+  margin-top: 0;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+.hero .btn-get-started {
+  color: #ffffff;
+  background-color: var(--accent-color);
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 38px;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+  margin-top: 28px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.hero .btn-get-started:hover {
+  background-color: #6C8BAA; /* tono blu-grigio coerente col logo */
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+}
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.about .content h2 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.about .content ul strong {
+  margin-right: 10px;
+}
+
+.about .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: var(--accent-color);
+  line-height: 0;
+}
+
+/*--------------------------------------------------------------
+# Skills Section
+--------------------------------------------------------------*/
+.skills .progress {
+  height: 60px;
+  display: block;
+  background: none;
+  border-radius: 0;
+}
+
+.skills .progress .skill {
+  color: var(--heading-color);
+  padding: 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: var(--heading-font);
+}
+
+.skills .progress .skill .val {
+  float: right;
+  font-style: normal;
+}
+
+.skills .progress-bar-wrap {
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  height: 10px;
+}
+
+.skills .progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Stats Section
+--------------------------------------------------------------*/
+.stats .stats-item {
+  padding: 30px;
+  width: 100%;
+}
+
+.stats .stats-item span {
+  color: var(--heading-color);
+  font-size: 48px;
+  display: block;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.stats .stats-item span:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: var(--accent-color);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.stats .stats-item p {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  padding: 0;
+  margin: 0;
+  font-family: var(--heading-font);
+  font-weight: 500;
+}
+
+/*--------------------------------------------------------------
+# Testimonials Section
+--------------------------------------------------------------*/
+.testimonials .section-header {
+  margin-bottom: 40px;
+}
+
+.testimonials .testimonials-carousel,
+.testimonials .testimonials-slider {
+  overflow: hidden;
+}
+
+.testimonials .testimonial-item {
+  text-align: center;
+}
+
+.testimonials .testimonial-item .testimonial-img {
+  width: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--background-color);
+  margin: 0 auto;
+}
+
+.testimonials .testimonial-item h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+}
+
+.testimonials .testimonial-item h4 {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  margin: 0 0 15px 0;
+}
+
+.testimonials .testimonial-item .stars {
+  margin-bottom: 15px;
+}
+
+.testimonials .testimonial-item .stars i {
+  color: #ffc107;
+  margin: 0 1px;
+}
+
+.testimonials .testimonial-item .quote-icon-left,
+.testimonials .testimonial-item .quote-icon-right {
+  color: color-mix(in srgb, var(--accent-color), transparent 50%);
+  font-size: 26px;
+  line-height: 0;
+}
+
+.testimonials .testimonial-item .quote-icon-left {
+  display: inline-block;
+  left: -5px;
+  position: relative;
+}
+
+.testimonials .testimonial-item .quote-icon-right {
+  display: inline-block;
+  right: -5px;
+  position: relative;
+  top: 10px;
+  transform: scale(-1, -1);
+}
+
+.testimonials .testimonial-item p {
+  font-style: italic;
+  margin: 0 auto 15px auto;
+}
+
+.testimonials .swiper-wrapper {
+  height: auto;
+}
+
+.testimonials .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+}
+
+@media (min-width: 992px) {
+  .testimonials .testimonial-item p {
+    width: 80%;
+  }
+}
+
+/*--------------------------------------------------------------
+# Resume Section
+--------------------------------------------------------------*/
+.resume .resume-title {
+  color: var(--heading-color);
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid var(--accent-color);
+  position: relative;
+}
+
+.resume .resume-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+  font-size: 16px;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: var(--background-color);
+  border: 2px solid var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Services Section – CD Studio Tecnico (colori e icone aggiornati)
+--------------------------------------------------------------*/
+.services .service-item {
+  background-color: var(--surface-color);
+  box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  padding: 60px 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.services .service-item .icon {
+  margin: 0 auto 15px auto;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.services .service-item .icon i {
+  font-size: 38px;
+  transition: 0.5s;
+  position: relative;
+}
+
+.services .service-item .icon svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.services .service-item .icon svg path {
+  transition: 0.5s;
+  fill: #f2f4f7; /* sfondo neutro delle “gocce” */
+}
+
+.services .service-item h3 {
+  font-weight: 700;
+  margin: 15px 0 12px 0;
+  font-size: 21px;
+  color: var(--heading-color);
+}
+
+.services .service-item p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.services .service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* ——— PALETTE PERSONALIZZATA ——— */
+.services .service-item.item-cyan i {
+  color: #0056b3; /* blu ingegneria */
+}
+.services .service-item.item-cyan:hover .icon i {
+  color: #fff;
+}
+.services .service-item.item-cyan:hover .icon path {
+  fill: #0056b3;
+}
+
+.services .service-item.item-orange i {
+  color: #e67e22; /* ambra tecnico */
+}
+.services .service-item.item-orange:hover .icon i {
+  color: #fff;
+}
+.services .service-item.item-orange:hover .icon path {
+  fill: #e67e22;
+}
+
+.services .service-item.item-teal i {
+  color: #00897b; /* verde petrolio */
+}
+.services .service-item.item-teal:hover .icon i {
+  color: #fff;
+}
+.services .service-item.item-teal:hover .icon path {
+  fill: #00897b;
+}
+
+.services .service-item.item-red i {
+  color: #c0392b; /* rosso sicurezza */
+}
+.services .service-item.item-red:hover .icon i {
+  color: #fff;
+}
+.services .service-item.item-red:hover .icon path {
+  fill: #c0392b;
+}
+
+.services .service-item.item-indigo i {
+  color: #34495e; /* blu grafite */
+}
+.services .service-item.item-indigo:hover .icon i {
+  color: #fff;
+}
+.services .service-item.item-indigo:hover .icon path {
+  fill: #34495e;
+}
+
+.services .service-item.item-pink i {
+  color: #7f8c8d; /* grigio tecnico */
+}
+.services .service-item.item-pink:hover .icon i {
+  color: #fff;
+}
+.services .service-item.item-pink:hover .icon path {
+  fill: #7f8c8d;
+}
+
+/*--------------------------------------------------------------
+# Effetti extra su icone servizi – CD Studio Tecnico
+--------------------------------------------------------------*/
+
+/* Effetto al passaggio del mouse */
+.services .service-item:hover .icon i {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 6px color-mix(in srgb, currentColor 70%, transparent));
+}
+
+/* Effetto di “respiro” continuo sulle icone */
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.services .service-item .icon i {
+  animation: iconPulse 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Ombra dolce sulle card per maggiore profondità */
+.services .service-item {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.services .service-item:hover {
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+}
+
+/*--------------------------------------------------------------
+# Bolla colorata dinamica sotto le icone – CD Studio Tecnico
+--------------------------------------------------------------*/
+.services .service-item .icon {
+  position: relative;
+  z-index: 1;
+}
+
+.services .service-item .icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background-color: color-mix(in srgb, currentColor 15%, transparent);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  transition: all 0.3s ease;
+}
+
+.services .service-item:hover .icon::before {
+  background-color: color-mix(in srgb, currentColor 25%, transparent);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/*--------------------------------------------------------------
+# Allineamento professionale servizi – CD Studio Tecnico
+--------------------------------------------------------------*/
+.services .service-item h3,
+.services .service-item p {
+  text-align: left;
+}
+
+/*--------------------------------------------------------------
+# Portfolio Section
+--------------------------------------------------------------*/
+.portfolio .portfolio-filters {
+  padding: 0;
+  margin: 0 auto 20px auto;
+  list-style: none;
+  text-align: center;
+}
+
+.portfolio .portfolio-filters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 20px 10px 20px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 5px;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  font-family: var(--heading-font);
+}
+
+.portfolio .portfolio-filters li:hover,
+.portfolio .portfolio-filters li.filter-active {
+  color: var(--contrast-color);
+  background-color: var(--accent-color);
+}
+
+.portfolio .portfolio-filters li:first-child {
+  margin-left: 0;
+}
+
+.portfolio .portfolio-filters li:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 575px) {
+  .portfolio .portfolio-filters li {
+    font-size: 14px;
+    margin: 0 0 10px 0;
+  }
+}
+
+.portfolio .portfolio-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio .portfolio-item .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: -100%;
+  z-index: 3;
+  transition: all ease-in-out 0.5s;
+  background: color-mix(in srgb, var(--surface-color), transparent 10%);
+  padding: 15px;
+}
+
+.portfolio .portfolio-item .portfolio-info h4 {
+  font-size: 18px;
+  font-weight: 600;
+  padding-right: 50px;
+}
+
+.portfolio .portfolio-item .portfolio-info p {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  font-size: 14px;
+  margin-bottom: 0;
+  padding-right: 50px;
+}
+
+.portfolio .portfolio-item .portfolio-info .preview-link,
+.portfolio .portfolio-item .portfolio-info .details-link {
+  position: absolute;
+  right: 50px;
+  font-size: 24px;
+  top: calc(50% - 14px);
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  transition: 0.3s;
+  line-height: 0;
+}
+
+.portfolio .portfolio-item .portfolio-info .preview-link:hover,
+.portfolio .portfolio-item .portfolio-info .details-link:hover {
+  color: var(--accent-color);
+}
+
+.portfolio .portfolio-item .portfolio-info .details-link {
+  right: 14px;
+  font-size: 28px;
+}
+
+.portfolio .portfolio-item:hover .portfolio-info {
+  opacity: 1;
+  bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details Section
+--------------------------------------------------------------*/
+.portfolio-details .portfolio-details-slider img {
+  width: 100%;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+  opacity: 1;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+}
+
+.portfolio-details .portfolio-info {
+  background-color: var(--surface-color);
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.portfolio-details .portfolio-info ul li+li {
+  margin-top: 10px;
+}
+
+.portfolio-details .portfolio-description {
+  padding-top: 30px;
+}
+
+.portfolio-details .portfolio-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-description p {
+  padding: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+.contact .info-wrap {
+  background-color: var(--surface-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+@media (max-width: 575px) {
+  .contact .info-wrap {
+    padding: 20px;
+  }
+}
+
+.contact .info-item {
+  margin-bottom: 40px;
+}
+
+.contact .info-item i {
+  font-size: 20px;
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  margin-right: 15px;
+}
+
+.contact .info-item h3 {
+  padding: 0;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.contact .info-item p {
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.contact .info-item:hover i {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.contact .php-email-form {
+  background-color: var(--surface-color);
+  height: 100%;
+  padding: 30px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 575px) {
+  .contact .php-email-form {
+    padding: 20px;
+  }
+}
+
 .contact .php-email-form input[type=text],
 .contact .php-email-form input[type=email],
-.contact .php-email-form textarea{
-  width:100%; font-size:14px; color:var(--text);
-  background:var(--surface); border:1px solid color-mix(in srgb, var(--ink), transparent 82%);
-  padding:10px 12px; border-radius:8px; outline:none; transition:border-color .2s ease, box-shadow .2s ease;
-}
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus{
-  border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 18%, transparent);
+.contact .php-email-form textarea {
+  font-size: 14px;
+  padding: 10px 15px;
+  box-shadow: none;
+  border-radius: 0;
+  color: var(--default-color);
+  background-color: var(--surface-color);
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
-/* Form status (unificato) */
-.php-email-form .loading,
-.php-email-form .error-message,
-.php-email-form .sent-message{
-  display:none; border-radius:10px; padding:12px 14px; margin-top:12px; font-weight:600
+.contact .php-email-form input[type=text]:focus,
+.contact .php-email-form input[type=email]:focus,
+.contact .php-email-form textarea:focus {
+  border-color: var(--accent-color);
 }
-.php-email-form .loading{background: #fff4d6; color:#7a5c14}
-.php-email-form .error-message{background:#fde8e8; color: var(--danger)}
-.php-email-form .sent-message{background:#e5f6ef; color: var(--success)}
 
-/* ---------- Footer ---------- */
-.footer{
-  background:#E9ECEC; color:#4F6664; text-align:center; padding: 40px 0 28px;
+.contact .php-email-form input[type=text]::placeholder,
+.contact .php-email-form input[type=email]::placeholder,
+.contact .php-email-form textarea::placeholder {
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
-.footer a{ color:var(--brand)}
-.footer a:hover{ color:var(--brand-300) }
-.footer .social-links{ display:flex; gap:12px; justify-content:center; margin:18px 0}
-.footer .social-links a{
-  width:42px; height:42px; border-radius:50%; display:grid; place-items:center;
-  border:1px solid rgba(79,102,100,.4); background:transparent; color:#4F6664; transition:.25s;
-}
-.footer .social-links a:hover{ background:var(--brand); color:#fff; border-color:var(--brand); transform:translateY(-2px)}
 
-/* ---------- Utilities ---------- */
-.light-background{ --bg:#EDEFEF; --surface:#fff }
-.dark-background{ --bg:#060606; --text:#fff; --ink:#fff; --surface:#252525 }
-.page-title{ background:var(--white); border-bottom:1px solid var(--border); padding:22px 0}
-.scroll-top{
-  position:fixed; right:16px; bottom:-14px; opacity:0; visibility:hidden; z-index:9999;
-  width:44px; height:44px; border-radius:50%; background:var(--brand); display:grid; place-items:center;
-  color:#fff; transition:all .3s ease;
+.contact .php-email-form button[type=submit] {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  border: 0;
+  padding: 10px 30px;
+  transition: 0.4s;
+  border-radius: 50px;
 }
-.scroll-top.active{bottom:16px; opacity:1; visibility:visible}
-.scroll-top:hover{ background:var(--brand-300)}
 
-/* Remove AOS delay on mobile (keep behavior) */
-@media (max-width:768px){ [data-aos-delay]{ transition-delay:0 !important } }
+.contact .php-email-form button[type=submit]:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 25%);
+}
+
+/*--------------------------------------------------------------
+# Starter Section Section
+--------------------------------------------------------------*/
+.starter-section {
+  /* Add your styles here */
+}
+
+/* --- Sezione ProntoPro --- */
+.prontopro-shot {
+  max-width: 700px;      /* limita la dimensione su desktop */
+  width: 100%;           /* piena larghezza su mobile */
+  height: auto;
+}
+
+.prontopro-section {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+/* --- Correzione realismo immagine About (profilo) --- */
+.about img,
+img[src*="profile-img"] {
+  filter: brightness(1.04) contrast(1.12) saturate(0.88) sepia(0.06) hue-rotate(-5deg) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.12));
+  -webkit-filter: brightness(1.04) contrast(1.12) saturate(0.88) sepia(0.06) hue-rotate(-5deg) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.12));
+  transition: all 0.3s ease-in-out;
+}
+
+/* --- Logo Ordine Ingegneri (versione leggermente ingrandita) --- */
+.logo-ordine {
+  max-width: 200px;   /* aumentato da 180/200px → più visibile ma sobrio */
+  width: 70%;         /* migliore resa su mobile */
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  opacity: 0.95;
+  transition: opacity 1s ease, transform 1.2s ease;
+}
+
+.logo-ordine.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (min-width: 992px) {
+  .logo-ordine {
+    max-width: 260px; /* dimensione ottimale su desktop */
+  }
+}
+
+/* --- Palette istituzionale CD Studio Tecnico --- */
+:root {
+  --accent-color: #4E7073;       /* verde petrolio */
+  --heading-color: #5F7E7B;      /* verde-grigio per titoli */
+  --default-color: #333333;      /* testi principali */
+  --background-color: #F8FAFA;   /* sfondo sezioni */
+  --surface-color: #FFFFFF;      /* box, card, sezioni interne */
+}
+
+/* Pulsanti */
+.btn,
+.hero .btn-get-started {
+  background-color: var(--accent-color);
+  border: none;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.btn:hover,
+.hero .btn-get-started:hover {
+  background-color: #6C8BAA; /* blu secondario logo */
+  color: #fff;
+}
+
+/* Link e hover */
+a {
+  color: var(--accent-color);
+}
+a:hover {
+  color: #6C8BAA;
+}
+
+/* Titoli */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+}
+
+.hero h2,
+.hero p {
+  text-shadow: 0 1px 3px rgba(50, 70, 70, 0.45);
+}
+
+.hero h2 {
+  color: #3b4b4a; /* tono più deciso ma coerente con logo */
+}
+
+.hero p {
+  color: #4f6a6a;
+}
+
+/* --- Uniformità titolo e sottotitolo header in tutte le pagine --- */
+.header .sitename {
+  font-size: 1.2rem;     /* prima era 1.8rem */
+  font-weight: 700;
+  line-height: 1.1;      /* migliora compattezza verticale */
+  margin: 0;
+}
+
+.header .subtitle {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-top: -4px; /* riduce spazio tra nome e sottotitolo */
+}
+
+/* Margini uniformi e spaziatura coerente col blocco Servizi */
+.header.light-background {
+  padding: 15px 0;
+  border-bottom: 1px solid #e8ecef;
+}
+
+/* --- Stile uniforme per nome e sottotitolo in header --- */
+.header .sitename {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 0.7rem; /* ← più piccolo */
+  line-height: 1.1;
+  color: #1c3f53;
+  text-transform: none;
+  margin: 0;
+}
+
+.header .subtitle {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 0.6rem;
+  color: #6c757d;
+  margin-top: 2px;
+  letter-spacing: 0.4px;
+}
+
+/* Allineamento sinistro sezione contatti */
+.contact .info-wrap {
+  text-align: left !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+
+.contact .info-item {
+  justify-content: flex-start !important;
+  text-align: left !important;
+}
+
+.contact .info-item i {
+  margin-right: 12px;
+  color: #0056b3; /* opzionale: armonizza colore icone */
+}
+
+.contact .info-item h3,
+.contact .info-item p {
+  text-align: left !important;
+  margin: 0;
+}
+
+/* --- PALETTE UNIFORMATA --- */
+:root {
+  --accent-color: #4E7073;
+  --secondary-color: #6C8BAA;
+  --heading-color: #2E3D3C;
+  --default-color: #445555;
+  --background-color: #F4F7F7;
+  --surface-color: #FFFFFF;
+  --contrast-color: #FFFFFF;
+}
+
+/* --- TESTI & FONT --- */
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--default-color);
+  background-color: var(--background-color);
+  letter-spacing: 0.3px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+  color: var(--heading-color);
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* --- HEADER (nome e sottotitolo) --- */
+.header .sitename {
+  font-size: 0.5rem;
+  font-weight: 400;
+  color: var(--heading-color);
+  letter-spacing: 0.6px;
+}
+
+.header .subtitle {
+  font-size: 0.9rem;
+  color: color-mix(in srgb, var(--heading-color), transparent 45%);
+}
+
+/* --- MENU NAV --- */
+.navmenu a {
+  color: var(--heading-color);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+.navmenu a:hover,
+.navmenu .active {
+  color: var(--accent-color);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+  background-color: var(--background-color);
+}
+
+.hero h2 {
+  color: #2E3D3C;
+  font-size: 33px;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  font-weight: 700;
+}
+
+.hero p {
+  color: #5A6E6E;
+  font-size: 16px;
+  font-weight: 400;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+
+/* --- BOTTONI --- */
+.btn, .hero .btn-get-started {
+  background-color: var(--accent-color);
+  color: #fff;
+  border-radius: 40px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.btn:hover, .hero .btn-get-started:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* --- FOOTER --- */
+.footer {
+  background-color: #E9ECEC;
+  color: #4F6664;
+}
+
+.footer a:hover {
+  color: var(--secondary-color);
+}
+
+/* Riduzione nome in header su mobile */
+@media (max-width: 768px) {
+  .header .sitename {
+    font-size: 0.9rem;   /* era ~1.2rem */
+    line-height: 1.1;
+  }
+  .header .subtitle {
+    font-size: 0.7rem;   /* sottotitolo proporzionato */
+  }
+}
