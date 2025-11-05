@@ -1244,6 +1244,14 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Allineamento professionale servizi – CD Studio Tecnico
+--------------------------------------------------------------*/
+.services .service-item h3,
+.services .service-item p {
+  text-align: left;
+}
+
+/*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
 .portfolio .portfolio-filters {
