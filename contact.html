@@ -177,16 +177,45 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const loading = form.querySelector(".loading");
     const sent = form.querySelector(".sent-message");
-
-    // Nascondi i messaggi di errore
     const error = form.querySelector(".error-message");
+    const rectangleError = form.querySelector(".rectangle-error");
+
+    // Nascondi il rettangolo e il messaggio di errore
+    rectangleError.style.display = "none";
     error.style.display = "none";
 
-    loading.style.display = "block";
     sent.style.display = "none";
 
+    // Verifica che tutti i campi siano compilati
+    const nameField = form.querySelector("#name-field");
+    const emailField = form.querySelector("#email-field");
+    const subjectField = form.querySelector("#subject-field");
+    const messageField = form.querySelector("#message-field");
+
+    if (!nameField.value || !emailField.value || !subjectField.value || !messageField.value) {
+      error.textContent = "❌ Tutti i campi sono obbligatori!";
+      error.style.display = "block";
+      setTimeout(() => {
+        error.style.display = "none";
+      }, 1000); // Nascondi il messaggio dopo 1 secondo
+      return;
+    }
+
+    // Verifica la validità dell'email
+    const email = emailField.value;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+      error.textContent = "❌ Inserisci un'email valida.";
+      error.style.display = "block";
+      setTimeout(() => {
+        error.style.display = "none";
+      }, 1000); // Nascondi il messaggio dopo 1 secondo
+      return; // Non inviare il form se l'email non è valida
+    }
+
+    // Se i dati sono validi, continua con l'invio
     try {
       const response = await fetch(form.action, {
         method: "POST",
@@ -196,12 +225,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       let data = await response.json();
 
-      // Nascondi il caricamento
-      loading.style.display = "none";
-
-      // Se la risposta contiene "ok": true o "next", mostra il messaggio di successo
+      // Se la risposta contiene "ok": true oppure se la risposta HTTP è positiva (200-299)
       if (data.ok === true || data.next) {
         sent.style.display = "block"; // Messaggio di successo
+        error.style.display = "none"; // Nascondi il messaggio di errore
         form.reset();
 
         // Nascondi il messaggio di successo dopo 5 secondi
@@ -209,25 +236,30 @@ document.addEventListener("DOMContentLoaded", () => {
           sent.style.display = "none";
         }, 5000); // 5000 millisecondi = 5 secondi
       } else {
-        // Nel caso in cui non ci sia una risposta positiva, continua comunque senza errori
-        sent.style.display = "block";
-        form.reset();
+        error.textContent = "❌ Si è verificato un errore durante l'invio. Riprova più tardi.";
+        error.style.display = "block";
 
-        // Nascondi il messaggio di successo dopo 5 secondi
+        // Nascondi il messaggio di errore dopo 1 secondo
         setTimeout(() => {
-          sent.style.display = "none";
-        }, 5000); // 5000 millisecondi = 5 secondi
+          error.style.display = "none";
+        }, 1000); // 1000 millisecondi = 1 secondo
       }
 
     } catch (err) {
-      loading.style.display = "none";
-      // In caso di errore di connessione, si mostra comunque il messaggio di successo
-      sent.style.display = "block";
+      // Se si verifica un errore
+      error.textContent = "❌ Errore di connessione o server non raggiungibile.";
+      error.style.display = "block";
 
-      // Nascondi il messaggio di successo dopo 5 secondi
+      // Mostra il rettangolo sopra l'errore
       setTimeout(() => {
-        sent.style.display = "none";
-      }, 5000); // 5000 millisecondi = 5 secondi
+        rectangleError.style.display = "block"; // Mostra il rettangolo
+      }, 1000); // Aggiungi ritardo di 1 secondo
+
+      // Nascondi entrambi i messaggi dopo 1 secondo
+      setTimeout(() => {
+        error.style.display = "none";
+        rectangleError.style.display = "none"; // Nascondi il rettangolo
+      }, 1000); // 1000 millisecondi = 1 secondo
     }
   });
 });
