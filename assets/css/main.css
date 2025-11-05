@@ -1637,7 +1637,7 @@ h1, h2, h3, h4, h5, h6 {
 /* --- Stile uniforme per nome e sottotitolo in header --- */
 .header .sitename {
   font-family: "Poppins", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 0.9rem;
   line-height: 1.1;
   color: #1c3f53;
@@ -1647,7 +1647,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header .subtitle {
   font-family: "Raleway", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 0.8rem;
   color: #6c757d;
   margin-top: 2px;
