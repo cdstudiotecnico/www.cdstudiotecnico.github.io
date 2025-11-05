@@ -171,24 +171,24 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const sent = form.querySelector(".sent-message");
+    const loading = form.querySelector(".loading");
     const error = form.querySelector(".error-message");
-    const rectangleError = form.querySelector(".rectangle-error");
+    const sent = form.querySelector(".sent-message");
     const rectangleWhite = form.querySelector(".rectangle-white");
-
-    // Nascondi il rettangolo bianco e il messaggio di errore
-    rectangleWhite.style.display = "none";
-    rectangleError.style.display = "none";
-    error.style.display = "none";
-    sent.style.display = "none";
-
-    // Verifica che tutti i campi siano compilati
-    const nameField = form.querySelector("#name-field");
     const emailField = form.querySelector("#email-field");
+    const nameField = form.querySelector("#name-field");
     const subjectField = form.querySelector("#subject-field");
     const messageField = form.querySelector("#message-field");
 
+    // Reset dei messaggi
+    loading.style.display = "block";
+    error.style.display = "none";
+    sent.style.display = "none";
+    rectangleWhite.style.display = "none"; // Nascondi il rettangolo bianco inizialmente
+
+    // Verifica che tutti i campi siano compilati
     if (!nameField.value || !emailField.value || !subjectField.value || !messageField.value) {
+      loading.style.display = "none";
       error.textContent = "❌ Tutti i campi sono obbligatori!";
       error.style.display = "block";
       setTimeout(() => {
@@ -202,6 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailRegex.test(email)) {
+      loading.style.display = "none";
       error.textContent = "❌ Inserisci un'email valida.";
       error.style.display = "block";
       setTimeout(() => {
@@ -248,19 +249,20 @@ document.addEventListener("DOMContentLoaded", () => {
       // Mostra il rettangolo bianco sopra l'errore
       setTimeout(() => {
         rectangleWhite.style.display = "block"; // Mostra il rettangolo bianco
-        rectangleError.style.display = "block"; // Mostra anche il rettangolo rosso
       }, 1000); // Aggiungi ritardo di 1 secondo
 
       // Nascondi entrambi i messaggi dopo 1 secondo
       setTimeout(() => {
+        sent.style.display = "none";
         error.style.display = "none";
         rectangleWhite.style.display = "none"; // Nascondi il rettangolo bianco
-        rectangleError.style.display = "none"; // Nascondi anche il rettangolo rosso
       }, 1000); // 1000 millisecondi = 1 secondo
     }
   });
 });
 </script>
+
+<div class="rectangle-white"></div>
 
 <!-- 💅 STILE PERSONALIZZATO -->
 <style>
