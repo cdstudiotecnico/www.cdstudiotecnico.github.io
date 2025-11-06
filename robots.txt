@@ -7,6 +7,9 @@ Allow: /
 User-agent: facebot
 Allow: /
 
+User-agent: facebookexternalhit
+Allow: /
+
 User-agent: Twitterbot
 Allow: /
 
