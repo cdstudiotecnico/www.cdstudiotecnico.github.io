@@ -1,4 +1,7 @@
 User-agent: *
-Disallow: /assets/private/
 Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
 Sitemap: https://www.cdstudiotecnico.it/sitemap.xml
