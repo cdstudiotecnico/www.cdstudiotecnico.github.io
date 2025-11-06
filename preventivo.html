@@ -1,96 +1,121 @@
-<main class="main">
+<!DOCTYPE html>
+<html lang="it">
 
-  <!-- Preventivo Section -->
-  <section id="preventivo" class="contact section">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>CD Studio Tecnico – Ing. Dario Cucchiara | Richiedi Preventivo</title>
 
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-      <div class="section-title" data-aos="fade-up" style="text-align: center; margin-top: 20px; margin-bottom: 25px;">
-        <img src="assets/img/logo.png" alt="Logo CD Studio Tecnico" 
-             class="img-fluid" 
-             style="max-width: 260px; margin-top: 5px; margin-bottom: 10px; filter: drop-shadow(0 3px 8px rgba(0,0,0,0.2));">
-        <h2>Richiedi il Tuo Preventivo</h2>
-        <p>Compila il modulo sottostante per richiedere un preventivo personalizzato.</p>
-        <!-- Aggiunta del link alla privacy -->
-        <p><a href="privacy.html" target="_blank">Privacy Policy</a></p>
+  <!-- SEO Ottimizzazione -->
+  <meta name="description" content="Richiedi un preventivo personalizzato per i servizi offerti da CD Studio Tecnico – Ing. Dario Cucchiara, primo studio su ProntoPro per servizi di ingegneria, pratiche urbanistiche e consulenze tecniche.">
+  <meta name="keywords" content="preventivo, ingegneria, consulenza tecnica, servizi edilizi, pratiche urbanistiche, CD Studio Tecnico">
+  <meta name="author" content="Ing. Dario Cucchiara">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CD Studio Tecnico – Ing. Dario Cucchiara | Richiedi Preventivo">
+  <meta property="og:description" content="Richiedi un preventivo personalizzato per i servizi offerti da CD Studio Tecnico, consulenze e pratiche online.">
+  <meta property="og:url" content="https://cdstudiotecnico.it/richiesta-preventivo">
+  <meta property="og:image" content="https://cdstudiotecnico.it/assets/img/logo-cdstudio.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="contact-page">
+
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0 text-decoration-none">
+        <div class="d-flex flex-column">
+          <h1 class="sitename mb-0">Ing. Dario Cucchiara</h1>
+          <span class="subtitle">Ingegneria Civile, Edile & Ambientale</span>
+        </div>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Curriculum</a></li>
+          <li><a href="services.html">Servizi</a></li>
+          <li><a href="preventivo.html">Richiedi Preventivo</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contatti</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a href="mailto:cdstudiotecnico@hotmail.com" class="email"><i class="bi bi-envelope"></i></a>
+        <a href="tel:+393289250353" class="phone"><i class="bi bi-telephone"></i></a>
       </div>
     </div>
+  </header>
 
-    <!-- Form di Contatto per Preventivo -->
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-      <form action="https://formspree.io/f/xjkpnylz" method="POST" class="php-email-form" novalidate>
+  <main class="main">
 
-        <div class="row gy-4">
+    <!-- Preventivo Section -->
+    <section id="preventivo" class="contact section">
 
-          <!-- Nome e Cognome -->
-          <div class="col-md-6">
-            <label for="name-field" class="pb-2">Nome e Cognome</label>
-            <input type="text" name="name" id="name-field" class="form-control" required>
-          </div>
-
-          <!-- Email -->
-          <div class="col-md-6">
-            <label for="email-field" class="pb-2">e-mail</label>
-            <input type="email" name="email" id="email-field" class="form-control" required>
-          </div>
-
-          <!-- Servizio Richiesto -->
-          <div class="col-md-12">
-            <label for="service-field" class="pb-2">Seleziona il Servizio Richiesto</label>
-            <select name="service" id="service-field" class="form-control" required>
-              <option value="Seleziona">Seleziona</option>
-              <option value="Perizie Tecniche">Perizie Tecniche</option>
-              <option value="Accertamenti di Prevenzione Incendi">Accertamenti di Prevenzione Incendi</option>
-              <option value="Certificazione Energetica">Certificazione Energetica</option>
-              <option value="Progettazione Civile e Impiantistica">Progettazione Civile e Impiantistica</option>
-              <option value="Consulenza Tecnica Ambientale">Consulenza Tecnica Ambientale</option>
-              <option value="Gestione Rifiuti e Impianti di Depurazione">Gestione Rifiuti e Impianti di Depurazione</option>
-              <option value="Sicurezza nei Luoghi di Lavoro">Sicurezza nei Luoghi di Lavoro</option>
-              <option value="Studi di Impatto Ambientale">Studi di Impatto Ambientale</option>
-              <option value="Progettazione Strutturale">Progettazione Strutturale</option>
-              <option value="Diagnosi Energetiche e Certificazioni APE">Diagnosi Energetiche e Certificazioni APE</option>
-              <option value="Ristrutturazioni Edilizie">Ristrutturazioni Edilizie</option>
-              <option value="Consultazione Notarile">Consultazione Notarile</option>
-              <option value="Pratiche Urbanistiche e Catastali">Pratiche Urbanistiche e Catastali</option>
-              <option value="Installazione Impianti Termici e Fotovoltaici">Installazione Impianti Termici e Fotovoltaici</option>
-              <option value="Controllo della Qualità dell'Acqua">Controllo della Qualità dell'Acqua</option>
-              <option value="Rilevamenti e Studi Geologici">Rilevamenti e Studi Geologici</option>
-              <option value="Consulenza e Gestione Servizi Edilizi">Consulenza e Gestione Servizi Edilizi</option>
-              <option value="Valutazioni di Sostenibilità Ambientale">Valutazioni di Sostenibilità Ambientale</option>
-              <option value="Progettazione di Infrastrutture Viabili">Progettazione di Infrastrutture Viabili</option>
-              <option value="Servizi di Ristrutturazione e Restauro">Servizi di Ristrutturazione e Restauro</option>
-              <option value="Bonifica di Siti Contaminati">Bonifica di Siti Contaminati</option>
-              <option value="Progettazione di Impianti Elettrici">Progettazione di Impianti Elettrici</option>
-              <option value="Piani di Sicurezza Edilizia">Piani di Sicurezza Edilizia</option>
-              <option value="Redazione di Relazioni Acustiche">Redazione di Relazioni Acustiche</option>
-              <option value="Interventi di Recupero e Sostenibilità">Interventi di Recupero e Sostenibilità</option>
-            </select>
-          </div>
-
-          <!-- Oggetto -->
-          <div class="col-md-12">
-            <label for="subject-field" class="pb-2">Oggetto</label>
-            <input type="text" name="subject" id="subject-field" class="form-control" required>
-          </div>
-
-          <!-- Messaggio -->
-          <div class="col-md-12">
-            <label for="message-field" class="pb-2">Messaggio</label>
-            <textarea name="message" id="message-field" class="form-control" rows="10" required></textarea>
-          </div>
-
-          <!-- Messaggi e Pulsante -->
-          <div class="col-md-12 text-center">
-            <div class="loading" style="display:none;">Invio in corso...</div>
-            <div class="error-message" style="display:none; color:red;">❌ Errore durante l'invio, riprova più tardi.</div>
-            <div class="sent-message" style="display:none; color:green;">✅ Messaggio inviato con successo! Ti risponderemo al più presto.</div>
-            <button type="submit" class="btn btn-primary px-4 py-2 mt-2">Invia</button>
-          </div>
-
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <div class="section-title" data-aos="fade-up" style="text-align: center; margin-top: 20px; margin-bottom: 25px;">
+          <img src="assets/img/logo.png" alt="Logo CD Studio Tecnico" class="img-fluid" style="max-width: 260px; margin-top: 5px; margin-bottom: 10px; filter: drop-shadow(0 3px 8px rgba(0,0,0,0.2));">
+          <h2>Richiedi il Tuo Preventivo</h2>
+          <p>Compila il modulo sottostante per richiedere un preventivo personalizzato.</p>
         </div>
-      </form>
-    </div>
+      </div>
 
-  </section><!-- /Preventivo Section -->
+      <!-- Form di Contatto per Preventivo -->
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <form action="https://formspree.io/f/xjkpnylz" method="POST" class="php-email-form" novalidate>
 
-</main>
+          <div class="row gy-4">
+
+            <!-- Nome e Cognome -->
+            <div class="col-md-6">
+              <label for="name-field" class="pb-2">Nome e Cognome</label>
+              <input type="text" name="name" id="name-field" class="form-control" required>
+            </div>
+
+            <!-- Email -->
+            <div class="col-md-6">
+              <label for="email-field" class="pb-2">e-mail</label>
+              <input type="email" name="email" id="email-field" class="form-control" required>
+            </div>
+
+            <!-- Servizio Richiesto -->
+            <div class="col-md-12">
+              <label for="service-field" class="pb-2">Seleziona il Servizio Richiesto</label>
+              <select name="service" id="service-field" class="form-control" required>
+                <option value="Seleziona">Seleziona</option>
+                <option value="Perizie Tecniche">Perizie Tecniche</option>
+                <option value="Accertamenti di Prevenzione Incendi">Accertamenti di Prevenzione Incendi</option>
+                <option value="Certificazione Energetica">Certificazione Energetica</option>
+                <option value="Progettazione Civile e Impiantistica">Progettazione Civile e Impiantistica</option>
+                <option value="Consulenza Tecnica Ambientale">Consulenza Tecnica Ambientale</option>
+                <option value="Gestione Rifiuti e Impianti di Depurazione">Gestione Rifiuti e Impianti di Depurazione</option>
+                <option value="Sicurezza nei Luoghi di Lavoro">Sicurezza nei Luoghi di Lavoro</option>
+                <option value="Studi di Impatto Ambientale">Studi di Impatto Ambientale</option>
+                <option value="Progettazione Strutturale">Progettazione Strutturale</option>
+                <option value="Diagnosi Energetiche e Certificazioni APE">Diagnosi Energetiche e Certificazioni APE</option>
+                <option value="Ristrutturazioni Edilizie">Ristrutturazioni Edilizie</option>
+                <option value="Consultazione Notarile">Consultazione Notarile</option>
+                <option value="Pratiche Urbanistiche e Catastali
