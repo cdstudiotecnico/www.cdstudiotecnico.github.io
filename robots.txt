@@ -14,3 +14,7 @@ User-agent: Twitterbot
 Allow: /
 
 Sitemap: https://www.cdstudiotecnico.it/sitemap.xml
+
+User-agent: *
+Allow: /
+Sitemap: https://www.cdstudiotecnico.it/sitemap.xml
