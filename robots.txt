@@ -4,4 +4,10 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: facebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
 Sitemap: https://www.cdstudiotecnico.it/sitemap.xml
