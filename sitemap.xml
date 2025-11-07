@@ -7,16 +7,22 @@
   <url>
     <loc>https://www.cdstudiotecnico.it/about.html</loc>
   </url>
+    <url>
+    <loc>https://www.cdstudiotecnico.it/resume.html</loc>
+  </url>
   <url>
     <loc>https://www.cdstudiotecnico.it/services.html</loc>
   </url>
   <url>
     <loc>https://www.cdstudiotecnico.it/preventivo.html</loc>
   </url>
-  <url>
-    <loc>https://www.cdstudiotecnico.it/contact.html</loc>
+    <url>
+    <loc>https://www.cdstudiotecnico.it/portfolio.html</loc>
+  </url>
+    <url>
+    <loc>https://www.cdstudiotecnico.it/portfolio-details.html</loc>
   </url>
   <url>
-    <loc>https://www.cdstudiotecnico.it/portfolio.html</loc>
+    <loc>https://www.cdstudiotecnico.it/contact.html</loc>
   </url>
 </urlset>
