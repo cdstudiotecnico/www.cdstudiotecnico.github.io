@@ -161,45 +161,65 @@
   <main class="main">
 
     <!-- ======= Hero Section ======= -->
-<section id="hero" 
-  class="d-flex align-items-center justify-content-center position-relative" 
-  style="height: 100vh; background-image: url('assets/img/hero-bg.png'); background-size: cover; background-position: center; background-attachment: fixed;">
+<section id="hero"
+  class="d-flex align-items-center justify-content-center position-relative"
+  style="
+    min-height: 100vh;
+    background: url('assets/img/hero-bg.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+  ">
 
-  <!-- Overlay semitrasparente per contrasto elegante -->
+  <!-- Filtro chiaro sopra l'immagine per migliorare leggibilità -->
   <div style="
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.75), rgba(255,255,255,0.85));
+    background: rgba(255, 255, 255, 0.6);
     z-index: 1;">
   </div>
 
-  <div class="container text-center position-relative" data-aos="fade-up" style="z-index: 2;">
-    <h1 class="fw-bold" style="font-size: 2.6rem; color: #1a1a1a; letter-spacing: 0.5px;">CD STUDIO TECNICO</h1>
-    <p style="font-size: 1.1rem; color: #444; margin-bottom: 25px;">Servizi di Ingegneria e Consulenza Tecnica</p>
+  <div class="container text-center position-relative" style="z-index: 2;" data-aos="fade-up">
 
-    <a href="services.html" class="btn btn-dark px-4 py-2"
-      style="background-color: #356c6c; border: none; border-radius: 30px; font-weight: 500; transition: 0.3s;">
+    <!-- Titolo principale -->
+    <h1 class="fw-bold" style="font-size: 2.6rem; color: #1a1a1a; letter-spacing: 0.5px;">
+      CD STUDIO TECNICO
+    </h1>
+    <p style="font-size: 1.1rem; color: #444; margin-bottom: 25px;">
+      Servizi di Ingegneria e Consulenza Tecnica
+    </p>
+
+    <!-- Pulsante principale -->
+    <a href="services.html"
+      class="btn btn-dark px-4 py-2"
+      style="
+        background-color: #356c6c;
+        border: none;
+        border-radius: 30px;
+        font-weight: 500;
+        transition: 0.3s;
+      ">
       I NOSTRI SERVIZI
     </a>
 
-    <!-- Box Smart Engineering -->
-    <div class="mt-5 mx-auto" style="max-width: 850px;">
+    <!-- Box compatto Smart Engineering -->
+    <div class="mt-5 mx-auto" style="max-width: 640px;">
       <div style="
-        background: rgba(255,255,255,0.92);
-        border-radius: 18px;
-        padding: 45px 40px;
-        box-shadow: 0 10px 35px rgba(0,0,0,0.1);
-        backdrop-filter: blur(6px);
-        transition: transform 0.4s ease;">
-        
-        <i class="bi bi-globe-americas" style="font-size: 2.3rem; color: #356c6c; margin-bottom: 12px;"></i>
-        <h2 style="font-weight: 700; color: #2f4f4f; font-size: 1.6rem; margin-bottom: 20px;">Smart Engineering</h2>
-        <p style="font-size: 1.05rem; color: #444; line-height: 1.8; margin: 0 auto; max-width: 740px;">
-          Con sedi a <strong>Partinico</strong> e <strong>Montelepre</strong>, lo <strong>Studio Tecnico</strong> estende la propria attività in tutta Italia, 
-          offrendo <strong>servizi di ingegneria e consulenza tecnica</strong> gestiti in modalità <strong>smart working</strong>.  
-          La tecnologia ci permette di operare ovunque con precisione, rapidità e la stessa cura 
-          dedicata ai nostri clienti locali.
+        background: rgba(255,255,255,0.88);
+        border-radius: 14px;
+        padding: 25px 25px 30px 25px;
+        box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+        backdrop-filter: blur(4px);
+      ">
+        <i class="bi bi-globe-americas" style="font-size: 1.8rem; color: #356c6c; margin-bottom: 8px;"></i>
+        <h2 style="font-weight: 700; color: #2f4f4f; font-size: 1.4rem; margin-bottom: 12px;">
+          Smart Engineering
+        </h2>
+        <p style="font-size: 0.98rem; color: #444; line-height: 1.6; margin: 0 auto; max-width: 540px;">
+          Con sedi a <strong>Partinico</strong> e <strong>Montelepre</strong>, lo <strong>Studio Tecnico</strong> opera in tutta Italia,
+          offrendo <strong>servizi di ingegneria e consulenza tecnica</strong> in modalità <strong>smart working</strong>.
+          Operiamo ovunque con precisione, rapidità e la stessa cura riservata ai nostri clienti locali.
         </p>
       </div>
     </div>
