@@ -6,6 +6,7 @@
 # Regole generali per tutti i crawler
 User-agent: *
 Allow: /
+Crawl-delay: 5
 
 # ============================================================
 # Social Media Crawlers
@@ -50,7 +51,7 @@ Allow: /
 User-agent: Googlebot-Mobile
 Allow: /
 
-# Google AdsBot (per le tue campagne pubblicitarie)
+# Google AdsBot (per campagne pubblicitarie)
 User-agent: AdsBot-Google
 Allow: /
 
@@ -58,11 +59,6 @@ Allow: /
 # Sitemap principale
 # ============================================================
 Sitemap: https://www.cdstudiotecnico.it/sitemap.xml
-
-# ============================================================
-# Crawl Delay (protezione server da eccessive richieste)
-# ============================================================
-Crawl-delay: 5
 
 # ============================================================
 # Fine file
