@@ -1,36 +1,74 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Curriculum Vitae | CD Studio Tecnico – Ing. Dario Cucchiara</title>
-
-  <meta name="description" content="Curriculum professionale dell’Ing. Dario Cucchiara – Ingegnere Civile, Edile e Ambientale. Formazione, esperienze professionali e competenze tecniche.">
+  <meta name="description" content="Curriculum professionale dell’Ing. Dario Cucchiara – formazione, esperienze e competenze tecniche.">
   <meta name="author" content="Ing. Dario Cucchiara">
 
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
+
+  <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    body.resume-page {
+      background-color: #f6f8f9;
+    }
+
+    .resume-box {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+      padding: 40px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    .resume-item {
+      margin-bottom: 25px;
+    }
+
+    .resume-item h5 {
+      color: #356c6c;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .section-heading {
+      border-bottom: 2px solid #356c6c;
+      display: inline-block;
+      padding-bottom: 6px;
+      margin-bottom: 20px;
+      color: #356c6c;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  </style>
 </head>
 
 <body class="resume-page">
 
-  <!-- Header -->
+  <!-- ✅ HEADER ORIGINALE INVARIATO -->
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center text-decoration-none">
-        <div class="d-flex flex-column text-center w-100">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0 text-decoration-none">
+        <div class="d-flex flex-column">
           <h1 class="sitename mb-0">Ing. Dario Cucchiara</h1>
           <span class="subtitle">Ingegneria Civile, Edile & Ambientale</span>
         </div>
       </a>
 
-      <nav id="navmenu" class="navmenu text-center w-100">
-        <ul class="d-flex justify-content-center gap-4 list-unstyled m-0">
+      <nav id="navmenu" class="navmenu">
+        <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="resume.html" class="active">Curriculum</a></li>
@@ -39,130 +77,112 @@
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="contact.html">Contatti</a></li>
         </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <div class="header-social-links d-none d-xl-flex">
+      <div class="header-social-links">
         <a href="mailto:cdstudiotecnico@hotmail.com" class="email"><i class="bi bi-envelope"></i></a>
         <a href="tel:+393289250353" class="phone"><i class="bi bi-telephone"></i></a>
       </div>
+
     </div>
   </header>
+  <!-- ✅ FINE HEADER ORIGINALE -->
 
-  <!-- Main -->
-  <main class="main py-5">
+  <main class="main">
+    <div class="container" data-aos="fade-up">
+      <div class="resume-box">
 
-    <section id="resume" class="resume section py-4">
-      <div class="container" data-aos="fade-up" style="max-width:900px;">
-
-        <!-- Titolo -->
-        <div class="text-center mb-4">
-          <img src="assets/img/logo.png" alt="Logo CD Studio Tecnico" class="img-fluid mb-3" style="max-width:200px;">
+        <div class="text-center mb-5">
+          <img src="assets/img/logo.png" alt="Logo CD Studio Tecnico" class="img-fluid mb-3" style="max-width:180px;">
           <h2 class="fw-bold" style="color:#356c6c;">Curriculum Vitae</h2>
           <p class="text-muted">Un percorso costruito con impegno e passione, tra formazione, esperienze professionali e continua ricerca dell’eccellenza tecnica.</p>
         </div>
 
-        <!-- BOX CENTRALE -->
-        <div class="bg-white shadow-sm p-4 p-md-5 rounded-4">
+        <!-- 🔹 Formazione -->
+        <div class="mb-5">
+          <h3 class="section-heading">Formazione</h3>
 
-          <!-- Formazione -->
-          <div class="mb-5">
-            <h3 class="section-heading">Formazione</h3>
-            <div class="resume-item">
-              <h5>Laurea Magistrale in Ingegneria per l’Ambiente e il Territorio</h5>
-              <p class="fst-italic mb-1">Università degli Studi di Palermo – Scuola Politecnica</p>
-              <small class="text-muted">Novembre 2011 – Ottobre 2014</small>
-              <ul>
-                <li>Curriculum Difesa del Suolo (LM-35)</li>
-                <li>Tesi: “Erosione del fondo alveo in corrispondenza delle pile di viadotti stradali” – Relatore: Prof.ssa Ing. Angela Candela</li>
-              </ul>
-            </div>
-
-            <div class="resume-item">
-              <h5>Laurea in Ingegneria per l’Ambiente e il Territorio</h5>
-              <p class="fst-italic mb-1">Università degli Studi di Palermo – Scuola Politecnica</p>
-              <small class="text-muted">Novembre 2006 – Novembre 2011</small>
-              <ul>
-                <li>Curriculum Metodi e Tecnologie Ambientali</li>
-                <li>Tesi: “Analisi dello stato di qualità del bacino del fiume Nocella” – Relatore: Prof. Gaspare Viviani</li>
-              </ul>
-            </div>
-
-            <div class="resume-item">
-              <h5>Diploma di Maturità Scientifica</h5>
-              <p class="fst-italic mb-1">Liceo Scientifico Statale “S. Savarino”, Partinico</p>
-              <small class="text-muted">Settembre 2002 – Luglio 2006</small>
-            </div>
-          </div>
-
-          <!-- Esperienze Professionali -->
-          <div class="mb-5">
-            <h3 class="section-heading">Esperienze Professionali</h3>
-
-            <div class="resume-item">
-              <h5>Abilitazione alla Professione di Ingegnere</h5>
-              <p class="fst-italic mb-1">Università degli Studi di Palermo</p>
-              <small class="text-muted">Gennaio 2015</small>
-              <ul><li>Ingegnere Civile e Ambientale (Sez. A)</li></ul>
-            </div>
-
-            <div class="resume-item">
-              <h5>Abilitazione Professionista Antincendio</h5>
-              <p class="fst-italic mb-1">Ordine degli Ingegneri di Palermo</p>
-              <small class="text-muted">Marzo 2018</small>
-            </div>
-
-            <div class="resume-item">
-              <h5>Responsabile Tecnico</h5>
-              <p class="fst-italic mb-1">Settore Impiantistica e Sicurezza Cantieri</p>
-              <small class="text-muted">dal 2019 – oggi</small>
-            </div>
-          </div>
-
-          <!-- Competenze -->
-          <div>
-            <h3 class="section-heading">Competenze Linguistiche e Digitali</h3>
+          <div class="resume-item">
+            <h5>Laurea Magistrale in Ingegneria per l’Ambiente e il Territorio</h5>
+            <p><em>Università degli Studi di Palermo – Scuola Politecnica</em><br><small>2011 – 2014</small></p>
             <ul>
-              <li>Lingua Inglese – livello B2</li>
-              <li>Software CAD, GIS, Pregeo, DOCFA, Termo, EC700, e software di modellazione 3D</li>
-              <li>Ottima padronanza del pacchetto Microsoft Office e strumenti cloud professionali</li>
+              <li>Curriculum Difesa del Suolo (LM-35)</li>
+              <li>Tesi: “Erosione del fondo alveo in corrispondenza delle pile di viadotti stradali”</li>
             </ul>
           </div>
+
+          <div class="resume-item">
+            <h5>Laurea in Ingegneria per l’Ambiente e il Territorio</h5>
+            <p><em>Università degli Studi di Palermo</em><br><small>2006 – 2011</small></p>
+            <ul>
+              <li>Curriculum Metodi e Tecnologie Ambientali</li>
+              <li>Tesi: “Analisi dello stato di qualità del bacino del fiume Nocella”</li>
+            </ul>
+          </div>
+
+          <div class="resume-item">
+            <h5>Diploma di Maturità Scientifica</h5>
+            <p><em>Liceo Scientifico Statale “S. Savarino”, Partinico</em><br><small>2002 – 2006</small></p>
+          </div>
         </div>
+
+        <!-- 🔹 Esperienze Professionali -->
+        <div class="mb-5">
+          <h3 class="section-heading">Esperienze Professionali</h3>
+
+          <div class="resume-item">
+            <h5>Abilitazione alla Professione di Ingegnere</h5>
+            <p><em>Università degli Studi di Palermo</em><br><small>Gennaio 2015</small></p>
+            <ul><li>Iscritto all’Ordine degli Ingegneri di Palermo n. 9233</li></ul>
+          </div>
+
+          <div class="resume-item">
+            <h5>Abilitazione Professionista Antincendio</h5>
+            <p><em>Ordine degli Ingegneri di Palermo</em><br><small>Marzo 2018</small></p>
+          </div>
+
+          <div class="resume-item">
+            <h5>Responsabile Tecnico</h5>
+            <p><em>Settore Impiantistica e Sicurezza Cantieri</em><br><small>dal 2019 – oggi</small></p>
+          </div>
+        </div>
+
+        <!-- 🔹 Competenze -->
+        <div>
+          <h3 class="section-heading">Competenze Linguistiche e Digitali</h3>
+          <ul>
+            <li>Lingua Inglese – livello B2</li>
+            <li>Software: AutoCAD, Revit, Pregeo, DOCFA, Termo, EC700</li>
+            <li>Ottima padronanza del pacchetto Office e strumenti cloud</li>
+          </ul>
+        </div>
+
       </div>
-    </section>
+    </div>
   </main>
 
-  <!-- Footer -->
+  <!-- ✅ FOOTER IDENTICO ALLE ALTRE PAGINE -->
   <footer id="footer" class="footer light-background">
-    <div class="container text-center">
-      <p><strong>Sede Operativa:</strong> Via J.F. Kennedy n. 42, Partinico (PA)</p>
-      <p><strong>Sede Legale:</strong> Via P. Marchese n. 3, Montelepre (PA)</p>
-      <p><strong>P.IVA:</strong> 06513140829</p>
-      <div class="social-links d-flex justify-content-center mt-3">
+    <div class="container">
+      <div class="copyright text-center">
+        <p><span>Sede Operativa:</span> <strong>Via J.F. Kennedy n. 42, Partinico (PA)</strong></p>
+        <p><span>Sede Legale:</span> <strong class="px-1 sitename">Via P. Marchese n. 3, Montelepre (PA)</strong></p>
+        <p><span>P.IVA:</span> <strong>06513<span style="display:none;">-</span>140829</strong></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
         <a href="https://www.facebook.com/share/1BKxwNRBsj/?mibextid=wwXIfr" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/cd_studio.tecnico" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.instagram.com/cd_studio.tecnico?igsh=M2d2d2NvdnAwdDgz&utm_source=qr" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
         <a href="mailto:cdstudiotecnico@hotmail.com" class="email"><i class="bi bi-envelope"></i></a>
         <a href="tel:+393289250353" class="phone"><i class="bi bi-telephone"></i></a>
       </div>
-      <p class="mt-3">Designed by <strong>Ing. Dario Cucchiara</strong></p>
+      <div class="credits">
+        <p>Designed by <strong>Ing. Dario Cucchiara</strong></p>
+      </div>
     </div>
   </footer>
 
-  <!-- Script -->
+  <!-- Vendor JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/js/main.js"></script>
-
-  <!-- STILE EXTRA -->
-  <style>
-  .resume-item { margin-bottom: 20px; }
-  .section-heading {
-    border-bottom: 2px solid #356c6c;
-    padding-bottom: 6px;
-    margin-bottom: 15px;
-    color: #356c6c;
-    font-weight: 600;
-  }
-  </style>
-</body>
-</html>
+  <sc
