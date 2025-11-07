@@ -1,20 +1,18 @@
+# CD Studio Tecnico – Ing. Dario Cucchiara
+# robots.txt ottimizzato per Google, Bing, Facebook, Twitter e altri crawler
+
 User-agent: *
 Allow: /
 
+# Autorizzazioni specifiche per i bot dei social network
 User-agent: facebookexternalhit
 Allow: /
 
 User-agent: facebot
 Allow: /
 
-User-agent: facebookexternalhit
-Allow: /
-
 User-agent: Twitterbot
 Allow: /
 
-Sitemap: https://www.cdstudiotecnico.it/sitemap.xml
-
-User-agent: *
-Allow: /
+# Sitemap principale
 Sitemap: https://www.cdstudiotecnico.it/sitemap.xml
