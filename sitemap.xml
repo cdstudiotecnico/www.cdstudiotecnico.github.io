@@ -1,28 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Homepage -->
   <url>
-    <loc>https://www.cdstudiotecnico.it/</loc>
+    <loc>https://www.cdstudiotecnico.it/index.html</loc>
     <priority>1.0</priority>
   </url>
+
+  <!-- Altre pagine del sito -->
   <url>
     <loc>https://www.cdstudiotecnico.it/about.html</loc>
+    <priority>0.8</priority>
   </url>
     <url>
     <loc>https://www.cdstudiotecnico.it/resume.html</loc>
+      <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.cdstudiotecnico.it/services.html</loc>
+    <priority>0.9</priority
   </url>
   <url>
     <loc>https://www.cdstudiotecnico.it/preventivo.html</loc>
+    <priority>0.8</priority>
   </url>
     <url>
     <loc>https://www.cdstudiotecnico.it/portfolio.html</loc>
+      <priority>0.7</priority>
   </url>
     <url>
     <loc>https://www.cdstudiotecnico.it/portfolio-details.html</loc>
+      <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.cdstudiotecnico.it/contact.html</loc>
+    <priority>0.8</priority>
   </url>
+  
 </urlset>
