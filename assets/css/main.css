@@ -1764,6 +1764,18 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.6px;
 }
 
+.no-wrap-title {
+  white-space: nowrap;         /* Impedisce l’andata a capo */
+  overflow: hidden;            /* Evita rotture strane */
+  text-overflow: ellipsis;     /* Se mai servisse, aggiunge "…" */
+}
+
+@media (max-width: 480px) {
+  .no-wrap-title {
+    font-size: 1.8rem;  /* Riduce solo leggermente su schermi piccoli */
+  }
+}
+
 .header .subtitle {
   font-size: 0.9rem;
   color: color-mix(in srgb, var(--heading-color), transparent 45%);
