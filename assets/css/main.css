@@ -1001,62 +1001,112 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Resume Section
+# Resume Section – Layout Elegante CD Studio Tecnico
 --------------------------------------------------------------*/
-.resume .resume-title {
-  color: var(--heading-color);
-  font-size: 26px;
+
+/* Contenitore principale del curriculum */
+.resume {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 30px;
+  background: var(--surface-color);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+/* Titolo principale */
+.resume .section-title h2 {
+  text-align: center;
   font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.resume .resume-item {
-  padding: 0 0 20px 20px;
-  margin-top: -2px;
-  border-left: 2px solid var(--accent-color);
-  position: relative;
-}
-
-.resume .resume-item h4 {
-  line-height: 18px;
-  font-size: 18px;
-  font-weight: 600;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-bottom: 10px;
+  letter-spacing: 1px;
 }
 
-.resume .resume-item h5 {
-  font-size: 16px;
-  padding: 5px 15px;
-  display: inline-block;
-  font-weight: 600;
-  margin-bottom: 10px;
+.resume .section-title p {
+  text-align: center;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
 }
 
-.resume .resume-item ul {
-  padding-left: 20px;
-}
-
-.resume .resume-item ul li {
-  padding-bottom: 10px;
-}
-
-.resume .resume-item:last-child {
-  padding-bottom: 0;
+/* Linea verticale della timeline */
+.resume .resume-item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 35px;
+  border-left: 3px solid var(--accent-color);
 }
 
 .resume .resume-item::before {
   content: "";
   position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50px;
   left: -9px;
-  top: 0;
-  background: var(--background-color);
-  border: 2px solid var(--accent-color);
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color), transparent 80%);
+}
+
+/* Titoli */
+.resume .resume-item h4 {
+  font-size: 1.15rem;
+  color: var(--heading-color);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.resume .resume-item h5 {
+  font-size: 0.95rem;
+  color: #777;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* Testo e paragrafi */
+.resume .resume-item p {
+  margin-bottom: 8px;
+  line-height: 1.6;
+  color: var(--default-color);
+}
+
+.resume .resume-item ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+  color: var(--default-color);
+  margin-bottom: 5px;
+}
+
+/* Sottotitoli principali */
+.resume-section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 2px solid color-mix(in srgb, var(--accent-color), transparent 80%);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .resume {
+    padding: 40px 20px;
+  }
+  .resume .resume-item {
+    padding-left: 20px;
+  }
+  .resume .resume-item::before {
+    left: -7px;
+  }
 }
 
 /*--------------------------------------------------------------
