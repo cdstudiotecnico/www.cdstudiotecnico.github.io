@@ -1671,9 +1671,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --- Responsive Header --- */
+
+/* Tablet e smartphone medi */
 @media (max-width: 728px) {
   .header .sitename {
-    font-size: 0.8rem;     /* più piccolo su tablet e smartphone medi */
+    font-size: 0.75rem;   /* più compatto ma ancora ben leggibile */
     letter-spacing: 0.25px;
   }
   .header .subtitle {
@@ -1681,18 +1683,25 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Smartphone piccoli */
 @media (max-width: 480px) {
   .header .sitename {
-    font-size: 0.65rem;     /* compatto ma leggibile su smartphone piccoli */
+    font-size: 0.62rem;   /* titolo su una sola riga anche su iPhone */
+    letter-spacing: 0.2px;
   }
   .header .subtitle {
-    font-size: 0.55rem;
+    font-size: 0.52rem;
   }
 }
 
+/* Schermi molto piccoli (es. iPhone SE, Galaxy Mini) */
 @media (max-width: 360px) {
   .header .sitename {
-    font-size: 0.58rem;     /* per schermi extra piccoli tipo iPhone SE */
+    font-size: 0.56rem;   /* ancora più proporzionato */
+    letter-spacing: 0.18px;
+  }
+  .header .subtitle {
+    font-size: 0.48rem;
   }
 }
 
