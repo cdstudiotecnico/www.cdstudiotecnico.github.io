@@ -1675,33 +1675,11 @@ h1, h2, h3, h4, h5, h6 {
 /* Tablet e smartphone medi */
 @media (max-width: 728px) {
   .header .sitename {
-    font-size: 0.30rem;   /* più compatto ma ancora ben leggibile */
-    letter-spacing: 0.15px;
+    font-size: 0.15rem;   /* più compatto ma ancora ben leggibile */
+    letter-spacing: 0.10px;
   }
   .header .subtitle {
-    font-size: 0.9rem;
-  }
-}
-
-/* Smartphone piccoli */
-@media (max-width: 480px) {
-  .header .sitename {
-    font-size: 0.62rem;   /* titolo su una sola riga anche su iPhone */
-    letter-spacing: 0.2px;
-  }
-  .header .subtitle {
-    font-size: 0.52rem;
-  }
-}
-
-/* Schermi molto piccoli (es. iPhone SE, Galaxy Mini) */
-@media (max-width: 360px) {
-  .header .sitename {
-    font-size: 0.56rem;   /* ancora più proporzionato */
-    letter-spacing: 0.18px;
-  }
-  .header .subtitle {
-    font-size: 0.48rem;
+    font-size: 1.0rem;
   }
 }
 
