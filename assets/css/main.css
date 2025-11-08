@@ -1756,8 +1756,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- HEADER (nome e sottotitolo) --- */
 .header .sitename {
-  font-size: 0.35rem;
-  font-weight: 400;
+  font-size: 0.2rem;
+  font-weight: 300;
   color: var(--heading-color);
   letter-spacing: 0.6px;
 }
@@ -1770,7 +1770,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 480px) {
   .no-wrap-title {
-    font-size: 1.5rem;  /* Riduce solo leggermente su schermi piccoli */
+    font-size: 1.1rem;  /* Riduce solo leggermente su schermi piccoli */
   }
 }
 
