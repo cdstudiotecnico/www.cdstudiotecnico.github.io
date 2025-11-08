@@ -1668,10 +1668,17 @@ h1, h2, h3, h4, h5, h6 {
 /* --- Responsive Header (mobile) --- */
 @media (max-width: 728px) {
   .header .sitename {
-    font-size: 0.7rem;   /* scala automatica ma resta su una riga */
+    font-size: 0.85rem;   /* ridotto del 15% rispetto a prima */
+    letter-spacing: 0.3px;
   }
   .header .subtitle {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .header .sitename {
+    font-size: 0.78rem;  /* perfetto per iPhone SE, Galaxy mini, ecc. */
   }
 }
 
