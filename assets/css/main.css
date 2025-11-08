@@ -1,36 +1,34 @@
-/* ===================================================================
-   CD STUDIO TECNICO – MAIN.CSS
-   Versione ottimizzata e uniforme (Header, Nav, Footer, Contatti)
-   =================================================================== */
-
 /*--------------------------------------------------------------
 # Font & Color Variables
 --------------------------------------------------------------*/
 :root {
   /* Fonts */
-  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway", sans-serif;
   --nav-font: "Poppins", sans-serif;
 
-  /* Palette istituzionale */
-  --accent-color: #4E7073;        /* Verde petrolio principale */
-  --secondary-color: #6C8BAA;     /* Blu-grigio secondario */
-  --heading-color: #2E3D3C;       /* Titoli */
-  --default-color: #445555;       /* Testo base */
-  --background-color: #F4F7F7;    /* Sfondo sezioni */
-  --surface-color: #FFFFFF;       /* Card e box */
-  --contrast-color: #FFFFFF;      /* Testo su pulsanti */
-  --nav-color: #2E3D3C;           /* Colore menu desktop */
-  --nav-hover-color: #4E7073;     /* Hover menu */
-}
+  /* Palette uniforme CD Studio Tecnico */
+  --accent-color: #4E7073;
+  --secondary-color: #6C8BAA;
+  --heading-color: #2E3D3C;
+  --default-color: #445555;
+  --background-color: #F4F7F7;
+  --surface-color: #FFFFFF;
+  --contrast-color: #FFFFFF;
 
-/* Smooth scroll */
-:root {
+  /* Nav Colors */
+  --nav-color: #444444;
+  --nav-hover-color: #34b7a7;
+  --nav-mobile-background-color: #ffffff;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #444444;
+  --nav-dropdown-hover-color: #34b7a7;
+
   scroll-behavior: smooth;
 }
 
 /*--------------------------------------------------------------
-# Base Typography & Links
+# General Styling
 --------------------------------------------------------------*/
 body {
   font-family: var(--default-font);
@@ -38,13 +36,6 @@ body {
   background-color: var(--background-color);
   letter-spacing: 0.3px;
   line-height: 1.6;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--heading-font);
-  color: var(--heading-color);
-  font-weight: 600;
-  letter-spacing: 0.4px;
 }
 
 a {
@@ -58,152 +49,91 @@ a:hover {
   text-decoration: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--heading-color);
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 .header {
-  background-color: var(--surface-color);
   color: var(--default-color);
+  background-color: var(--background-color);
   padding: 15px 0;
-  transition: all 0.4s ease;
+  transition: all 0.5s;
   z-index: 997;
-  box-shadow: 0 0 18px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid #e8ecef;
 }
 
-/* Logo e titoli */
 .header .logo {
   line-height: 1;
 }
 
+.header .logo img {
+  max-height: 36px;
+  margin-right: 8px;
+}
+
 .header .sitename {
   font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  color: var(--heading-color);
-  letter-spacing: 0.5px;
+  font-weight: 400;
+  font-size: 0.7rem;
+  line-height: 1.1;
+  color: #1c3f53;
   margin: 0;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .header .subtitle {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  font-size: 0.8rem;
-  color: color-mix(in srgb, var(--heading-color), transparent 45%);
+  font-size: 0.6rem;
+  color: #6c757d;
   margin-top: 2px;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.4px;
 }
 
-/* Social link icone header */
 .header .header-social-links a {
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   padding-left: 6px;
-  font-size: 16px;
   transition: 0.3s;
+  font-size: 16px;
 }
+
 .header .header-social-links a:hover {
   color: var(--accent-color);
+}
+
+/* Responsive header */
+@media (max-width: 768px) {
+  .header .sitename {
+    font-size: 0.5rem;
+    line-height: 0.9;
+  }
+  .header .subtitle {
+    font-size: 0.7rem;
+  }
 }
 
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
-@media (min-width: 1200px) {
-  .navmenu ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .navmenu > ul > li {
-    padding: 15px 14px;
-    position: relative;
-  }
-
-  .navmenu a {
-    color: var(--nav-color);
-    font-family: var(--nav-font);
-    font-size: 15px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s;
-  }
-
-  .navmenu a:hover,
-  .navmenu .active {
-    color: var(--nav-hover-color);
-  }
-
-  .navmenu a:before {
-    content: "";
-    position: absolute;
-    height: 2px;
-    bottom: -6px;
-    left: 0;
-    background-color: var(--nav-hover-color);
-    width: 0;
-    visibility: hidden;
-    transition: all 0.3s;
-  }
-
-  .navmenu a:hover:before,
-  .navmenu .active:before {
-    width: 25px;
-    visibility: visible;
-  }
+.navmenu a {
+  color: var(--heading-color);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
 }
 
-/* Mobile Navigation */
-@media (max-width: 1199px) {
-  .mobile-nav-toggle {
-    color: var(--nav-color);
-    font-size: 28px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-
-  .navmenu ul {
-    display: none;
-    list-style: none;
-    position: absolute;
-    inset: 60px 20px 20px 20px;
-    padding: 10px 0;
-    margin: 0;
-    border-radius: 6px;
-    background-color: var(--surface-color);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    z-index: 9998;
-  }
-
-  .navmenu a {
-    color: var(--nav-color);
-    padding: 10px 20px;
-    font-family: var(--nav-font);
-    font-size: 16px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .mobile-nav-active {
-    overflow: hidden;
-  }
-
-  .mobile-nav-active .navmenu {
-    position: fixed;
-    inset: 0;
-    background: rgba(33, 37, 41, 0.85);
-  }
-
-  .mobile-nav-active .navmenu > ul {
-    display: block;
-    background: var(--surface-color);
-  }
+.navmenu a:hover,
+.navmenu .active {
+  color: var(--accent-color);
 }
 
 /*--------------------------------------------------------------
@@ -212,132 +142,69 @@ a:hover {
 .hero {
   width: 100%;
   min-height: calc(100vh - 82px);
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--background-color);
+  position: relative;
+  padding: 80px 0;
+}
+
+.hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
+  top: -65px;
   text-align: center;
 }
 
-.hero h1 {
-  font-size: 2.6rem;
-  color: #1a1a1a;
-  letter-spacing: 0.5px;
+.hero h2 {
+  font-size: 33px;
+  font-weight: 700;
+  color: #2E3D3C;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .hero p {
-  font-size: 1.1rem;
-  color: #444;
+  font-size: 16px;
+  color: #5A6E6E;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 }
 
-.hero .btn-get-started {
+.btn, .hero .btn-get-started {
   background-color: var(--accent-color);
-  color: #fff;
   border: none;
+  color: #fff;
   border-radius: 40px;
   font-weight: 600;
   letter-spacing: 0.6px;
-  transition: 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   box-shadow: 0 3px 10px rgba(0,0,0,0.15);
 }
 
-.hero .btn-get-started:hover {
+.btn:hover, .hero .btn-get-started:hover {
   background-color: var(--secondary-color);
   transform: translateY(-2px);
-}
-
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
-.contact .info-wrap {
-  background-color: var(--surface-color);
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  padding: 30px;
-  border-radius: 10px;
-}
-
-.contact .info-item {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 25px;
-}
-
-.contact .info-item i {
-  font-size: 20px;
-  color: var(--accent-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
-  width: 44px;
-  height: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  margin-right: 15px;
-  transition: 0.3s;
-}
-
-.contact .info-item i:hover {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.contact .info-item h3 {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 0 0 4px 0;
-}
-
-.contact .info-item p {
-  font-size: 14px;
-  margin: 0;
-}
-
-.contact .php-email-form {
-  background-color: var(--surface-color);
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
-}
-
-.contact .php-email-form input,
-.contact .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
-  background-color: var(--surface-color);
-}
-
-.contact .php-email-form button[type=submit] {
-  background: var(--accent-color);
-  border: 0;
-  color: #fff;
-  border-radius: 50px;
-  padding: 10px 30px;
-  transition: 0.3s;
-}
-.contact .php-email-form button[type=submit]:hover {
-  background: var(--secondary-color);
 }
 
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 .footer {
-  background-color: #E8EFEF;
+  background-color: #E9ECEC;
   color: #4F6664;
   font-size: 15px;
   line-height: 1.6;
   padding: 45px 0 30px;
   text-align: center;
-  border-top: 1px solid #dfe5e5;
-}
-
-.footer p, .footer span {
-  color: #4F6664;
-}
-
-.footer strong {
-  color: var(--heading-color);
 }
 
 .footer a {
@@ -350,7 +217,6 @@ a:hover {
   color: var(--secondary-color);
 }
 
-/* Social links */
 .footer .social-links {
   margin-top: 25px;
 }
@@ -366,7 +232,7 @@ a:hover {
   color: #4F6664;
   border: 1px solid rgba(79, 102, 100, 0.4);
   margin: 0 6px;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
   background-color: transparent;
 }
 
@@ -377,59 +243,82 @@ a:hover {
   transform: translateY(-2px);
 }
 
+.footer p,
+.footer span {
+  color: #4F6664;
+}
+
+.footer .copyright p,
+.footer .credits {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
 .footer .credits {
   margin-top: 15px;
   font-weight: 500;
   color: #3b4b4a;
-  font-size: 14px;
+}
+
+.footer strong {
+  font-weight: 700;
+  color: var(--heading-color);
 }
 
 /*--------------------------------------------------------------
-# Scroll Top
+# Contact Section Alignment
 --------------------------------------------------------------*/
-.scroll-top {
-  position: fixed;
-  right: 15px;
-  bottom: -15px;
-  z-index: 9999;
-  background-color: var(--accent-color);
+.contact .info-wrap {
+  background-color: var(--surface-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: left !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+
+.contact .info-item {
+  justify-content: flex-start !important;
+  text-align: left !important;
+  margin-bottom: 40px;
+}
+
+.contact .info-item i {
+  font-size: 20px;
+  color: #0056b3;
+  background: color-mix(in srgb, var(--accent-color), transparent 92%);
   width: 44px;
   height: 44px;
-  border-radius: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.4s;
+  align-items: center;
+  border-radius: 50px;
+  margin-right: 12px;
+  transition: 0.3s;
 }
 
-.scroll-top.active {
-  visibility: visible;
-  opacity: 1;
-  bottom: 15px;
+.contact .info-item:hover i {
+  background: var(--accent-color);
+  color: var(--contrast-color);
 }
 
-.scroll-top i {
-  font-size: 24px;
-  color: #fff;
-}
-
-.scroll-top:hover {
-  background-color: var(--secondary-color);
+.contact .php-email-form {
+  background-color: var(--surface-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
 }
 
 /*--------------------------------------------------------------
-# Responsive Adjustments
+# Utility Classes
 --------------------------------------------------------------*/
-@media (max-width: 768px) {
-  .header .sitename {
-    font-size: 0.9rem;
-  }
-  .header .subtitle {
-    font-size: 0.7rem;
-  }
-  .footer {
-    font-size: 14px;
+.no-wrap-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 480px) {
+  .no-wrap-title {
+    font-size: 1.8rem;
   }
 }
