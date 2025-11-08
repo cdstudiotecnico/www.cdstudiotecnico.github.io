@@ -1572,173 +1572,60 @@ section,
   /* Add your styles here */
 }
 
-/* --- Sezione ProntoPro --- */
-.prontopro-shot {
-  max-width: 700px;      /* limita la dimensione su desktop */
-  width: 100%;           /* piena larghezza su mobile */
-  height: auto;
+/*--------------------------------------------------------------
+# STILI AGGIUNTIVI OTTIMIZZATI
+--------------------------------------------------------------*/
+
+/* --- Palette Istituzionale CD Studio Tecnico --- */
+:root {
+  --accent-color: #4E7073;       /* Verde petrolio principale */
+  --secondary-color: #6C8BAA;    /* Blu secondario */
+  --heading-color: #2E3D3C;      /* Titoli */
+  --default-color: #445555;      /* Testo */
+  --background-color: #F4F7F7;   /* Sfondo sezione */
+  --surface-color: #FFFFFF;      /* Card e box */
+  --contrast-color: #FFFFFF;     /* Testo su sfondi scuri */
 }
 
+/* --- Sezione ProntoPro --- */
 .prontopro-section {
   margin-top: 15px;
   margin-bottom: 20px;
 }
+.prontopro-shot {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+}
 
-/* --- Correzione realismo immagine About (profilo) --- */
+/* --- Miglioramento foto About --- */
 .about img,
 img[src*="profile-img"] {
-  filter: brightness(1.04) contrast(1.12) saturate(0.88) sepia(0.06) hue-rotate(-5deg) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.12));
-  -webkit-filter: brightness(1.04) contrast(1.12) saturate(0.88) sepia(0.06) hue-rotate(-5deg) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.12));
+  filter: brightness(1.04) contrast(1.12) saturate(0.88)
+          sepia(0.06) hue-rotate(-5deg)
+          drop-shadow(0 2px 6px rgba(0, 0, 0, 0.12));
   transition: all 0.3s ease-in-out;
 }
 
-/* --- Logo Ordine Ingegneri (versione leggermente ingrandita) --- */
+/* --- Logo Ordine Ingegneri --- */
 .logo-ordine {
-  max-width: 180px;   /* dimensione logo */
-  width: 70%;         /* migliore resa su mobile */
-  height: auto;
-  margin-top: 20px;
-  margin-bottom: 25px;
+  max-width: 180px;
+  width: 70%;
+  margin: 20px auto 25px;
   opacity: 0.95;
   transition: opacity 1s ease, transform 1.2s ease;
 }
-
 .logo-ordine.show {
   opacity: 1;
   transform: scale(1);
 }
-
 @media (min-width: 992px) {
   .logo-ordine {
-    max-width: 260px; /* dimensione ottimale su desktop */
+    max-width: 260px;
   }
 }
 
-/* --- Palette istituzionale CD Studio Tecnico --- */
-:root {
-  --accent-color: #4E7073;       /* verde petrolio */
-  --heading-color: #5F7E7B;      /* verde-grigio per titoli */
-  --default-color: #333333;      /* testi principali */
-  --background-color: #F8FAFA;   /* sfondo sezioni */
-  --surface-color: #FFFFFF;      /* box, card, sezioni interne */
-}
-
-/* Pulsanti */
-.btn,
-.hero .btn-get-started {
-  background-color: var(--accent-color);
-  border: none;
-  color: #fff;
-  transition: 0.3s ease;
-}
-
-.btn:hover,
-.hero .btn-get-started:hover {
-  background-color: #6C8BAA; /* blu secondario logo */
-  color: #fff;
-}
-
-/* Link e hover */
-a {
-  color: var(--accent-color);
-}
-a:hover {
-  color: #6C8BAA;
-}
-
-/* Titoli */
-h1, h2, h3, h4, h5, h6 {
-  color: var(--heading-color);
-}
-
-.hero h2,
-.hero p {
-  text-shadow: 0 1px 3px rgba(50, 70, 70, 0.45);
-}
-
-.hero h2 {
-  color: #3b4b4a; /* tono più deciso ma coerente con logo */
-}
-
-.hero p {
-  color: #4f6a6a;
-}
-
-/* --- Uniformità titolo e sottotitolo header in tutte le pagine --- */
-.header .sitename {
-  font-size: 1.2rem;     /* prima era 1.8rem */
-  font-weight: 700;
-  line-height: 1.1;      /* migliora compattezza verticale */
-  margin: 0;
-}
-
-.header .subtitle {
-  font-size: 0.9rem;
-  color: #6c757d;
-  margin-top: -4px; /* riduce spazio tra nome e sottotitolo */
-}
-
-/* Margini uniformi e spaziatura coerente col blocco Servizi */
-.header.light-background {
-  padding: 15px 0;
-  border-bottom: 1px solid #e8ecef;
-}
-
-/* --- Stile uniforme per nome e sottotitolo in header --- */
-.header .sitename {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: 0.35rem; /* ← più piccolo */
-  line-height: 1.1;
-  color: #1c3f53;
-  text-transform: none;
-  margin: 0;
-}
-
-.header .subtitle {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 0.6rem;
-  color: #6c757d;
-  margin-top: 2px;
-  letter-spacing: 0.4px;
-}
-
-/* Allineamento sinistro sezione contatti */
-.contact .info-wrap {
-  text-align: left !important;
-  justify-content: flex-start !important;
-  align-items: flex-start !important;
-}
-
-.contact .info-item {
-  justify-content: flex-start !important;
-  text-align: left !important;
-}
-
-.contact .info-item i {
-  margin-right: 12px;
-  color: #0056b3; /* opzionale: armonizza colore icone */
-}
-
-.contact .info-item h3,
-.contact .info-item p {
-  text-align: left !important;
-  margin: 0;
-}
-
-/* --- PALETTE UNIFORMATA --- */
-:root {
-  --accent-color: #4E7073;
-  --secondary-color: #6C8BAA;
-  --heading-color: #2E3D3C;
-  --default-color: #445555;
-  --background-color: #F4F7F7;
-  --surface-color: #FFFFFF;
-  --contrast-color: #FFFFFF;
-}
-
-/* --- TESTI & FONT --- */
+/* --- Tipografia e corpo --- */
 body {
   font-family: "Roboto", sans-serif;
   color: var(--default-color);
@@ -1746,7 +1633,6 @@ body {
   letter-spacing: 0.3px;
   line-height: 1.6;
 }
-
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
   color: var(--heading-color);
@@ -1754,64 +1640,55 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
-/* --- HEADER (nome e sottotitolo) --- */
+/* --- Header (nome e sottotitolo) --- */
+.header.light-background {
+  padding: 15px 0;
+  border-bottom: 1px solid #e8ecef;
+}
 .header .sitename {
-  font-size: 0.2rem;
-  font-weight: 300;
-  color: var(--heading-color);
-  letter-spacing: 0.6px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #1c3f53;
+  line-height: 1.1;
+  margin: 0;
+  white-space: nowrap;          /* evita l’andata a capo */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.header .subtitle {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-top: 2px;
+  letter-spacing: 0.4px;
 }
 
-.no-wrap-title {
-  white-space: nowrap;         /* Impedisce l’andata a capo */
-  overflow: hidden;            /* Evita rotture strane */
-  text-overflow: ellipsis;     /* Se mai servisse, aggiunge "…" */
-}
-
-@media (max-width: 480px) {
-  .no-wrap-title {
-    font-size: 1.1rem;  /* Riduce solo leggermente su schermi piccoli */
+/* --- Responsive Header (mobile) --- */
+@media (max-width: 728px) {
+  .header .sitename {
+    font-size: 1rem;   /* scala automatica ma resta su una riga */
+  }
+  .header .subtitle {
+    font-size: 0.7rem;
   }
 }
 
-.header .subtitle {
-  font-size: 0.9rem;
-  color: color-mix(in srgb, var(--heading-color), transparent 45%);
-}
-
-/* --- MENU NAV --- */
+/* --- Menu di navigazione --- */
 .navmenu a {
   color: var(--heading-color);
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.4px;
+  transition: color 0.3s ease;
 }
-
 .navmenu a:hover,
 .navmenu .active {
   color: var(--accent-color);
 }
 
-/* --- HERO SECTION --- */
-.hero {
-  background-color: var(--background-color);
-}
-
-.hero h2 {
-  color: #2E3D3C;
-  font-size: 33px;
-  text-shadow: 0 3px 6px rgba(0,0,0,0.2);
-  font-weight: 700;
-}
-
-.hero p {
-  color: #5A6E6E;
-  font-size: 16px;
-  font-weight: 400;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.15);
-}
-
-/* --- BOTTONI --- */
+/* --- Pulsanti --- */
 .btn, .hero .btn-get-started {
   background-color: var(--accent-color);
   color: #fff;
@@ -1819,31 +1696,50 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   letter-spacing: 0.6px;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
-
 .btn:hover, .hero .btn-get-started:hover {
   background-color: var(--secondary-color);
   transform: translateY(-2px);
 }
 
-/* --- FOOTER --- */
+/* --- Hero Section --- */
+.hero {
+  background-color: var(--background-color);
+}
+.hero h2 {
+  color: #2E3D3C;
+  font-size: 33px;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  font-weight: 700;
+}
+.hero p {
+  color: #5A6E6E;
+  font-size: 16px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+
+/* --- Footer --- */
 .footer {
   background-color: #E9ECEC;
   color: #4F6664;
 }
-
 .footer a:hover {
   color: var(--secondary-color);
 }
 
-/* Riduzione nome in header su mobile */
-@media (max-width: 728px) {
-  .header .sitename {
-    font-size: 1.2rem;   /* era ~1.2rem */
-    line-height: 1.1;    /* era ~1.1 */
-  }
-  .header .subtitle {
-    font-size: 0.7rem;   /* sottotitolo proporzionato */
-  }
+/* --- Contatti (allineamento sinistro) --- */
+.contact .info-wrap,
+.contact .info-item {
+  text-align: left !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+.contact .info-item i {
+  margin-right: 12px;
+  color: #0056b3;
+}
+.contact .info-item h3,
+.contact .info-item p {
+  margin: 0;
 }
