@@ -1756,10 +1756,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- HEADER (nome e sottotitolo) --- */
 .header .sitename {
-  font-size: 0.5rem;
-  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
   color: var(--heading-color);
-  letter-spacing: 0.6px;
+  letter-spacing: 0.5px;
+  margin: 0;
+  white-space: nowrap; /* Evita il ritorno a capo su mobile */
 }
 
 .no-wrap-title {
@@ -1775,8 +1778,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header .subtitle {
-  font-size: 0.9rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
   color: color-mix(in srgb, var(--heading-color), transparent 45%);
+  margin-top: 2px;
+  letter-spacing: 0.3px;
 }
 
 /* --- MENU NAV --- */
