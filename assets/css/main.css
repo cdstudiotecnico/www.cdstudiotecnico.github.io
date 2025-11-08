@@ -1756,10 +1756,10 @@ h1, h2, h3, h4, h5, h6 {
 /* --- HEADER (nome e sottotitolo) --- */
 .header .sitename {
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   font-size: 1rem;
   color: var(--heading-color);
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
   margin: 0;
   white-space: nowrap; /* Evita il ritorno a capo su mobile */
 }
@@ -1772,7 +1772,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 480px) {
   .no-wrap-title {
-    font-size: 1.8rem;  /* Riduce solo leggermente su schermi piccoli */
+    font-size: 1.5rem;  /* Riduce solo leggermente su schermi piccoli */
   }
 }
 
