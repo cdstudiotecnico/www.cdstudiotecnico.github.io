@@ -210,8 +210,8 @@
             <!-- Messaggi e Pulsante -->
             <div class="col-md-12 text-center">
               <div class="loading" style="display:none;">Invio in corso...</div>
-              <div class="error-message" style="display:none; color:red;">❌ Errore durante l'invio, riprova più tardi.</div>
-              <div class="sent-message" style="display:none; color:green;">✅ Messaggio inviato con successo! Ti risponderemo al più presto.</div>
+              <div class="error-message" style="display:none; color:red;">Errore durante l'invio, riprova più tardi.</div>
+              <div class="sent-message" style="display:none; color:green;">Messaggio inviato con successo! Ti risponderemo al più presto.</div>
               <button type="submit" class="btn btn-primary px-4 py-2 mt-2">Invia</button>
             </div>
 
@@ -248,7 +248,7 @@
   <!-- Preloader -->
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
+    <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- <script src="assets/vendor/php-email-form/validate.js"></script> disattivato per compatibilità con Formspree -->
   <script src="assets/vendor/aos/aos.js"></script>
@@ -284,14 +284,13 @@
 
         loading.style.display = "none";
 
-if (response.ok) {
-  sentMessage.style.display = "block";
-  form.reset();
-  // Nasconde il messaggio dopo 3 secondi
-  setTimeout(() => {
-    sentMessage.style.display = "none";
-  }, 3000);
-}
+        if (response.ok) {
+          sentMessage.style.display = "block";
+          form.reset();
+          // Nasconde il messaggio dopo 3 secondi
+          setTimeout(() => {
+            sentMessage.style.display = "none";
+          }, 3000);
         } else {
           const data = await response.json();
           if (data.errors) {
@@ -300,11 +299,19 @@ if (response.ok) {
             errorMessage.textContent = "Errore durante l'invio, riprova.";
           }
           errorMessage.style.display = "block";
+          // Nasconde il messaggio di errore dopo 3 secondi
+          setTimeout(() => {
+            errorMessage.style.display = "none";
+          }, 3000);
         }
       } catch (error) {
         loading.style.display = "none";
         errorMessage.textContent = "Errore di connessione, controlla la rete.";
         errorMessage.style.display = "block";
+        // Anche in caso di eccezione, scompare dopo 3 secondi
+        setTimeout(() => {
+          errorMessage.style.display = "none";
+        }, 3000);
       }
     });
   });
@@ -314,6 +321,4 @@ if (response.ok) {
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>
-
