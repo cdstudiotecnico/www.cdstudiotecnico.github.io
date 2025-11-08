@@ -1650,11 +1650,11 @@ h1, h2, h3, h4, h5, h6 {
 .header .sitename {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: clamp(0.7rem, 2vw, 1.2rem); /* fluido: piccolo su mobile, ampio su desktop */
+  font-size: clamp(0.7rem, 2vw, 1.2rem) !important; /* ← aggiunto !important */
   color: #1c3f53;
   line-height: 1.1;
   margin: 0;
-  white-space: nowrap; /* evita l’andata a capo */
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   letter-spacing: 0.25px;
