@@ -1640,54 +1640,59 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
-/* --- Header (nome e sottotitolo) --- */
+/* --- HEADER (nome e sottotitolo uniformati) --- */
 .header.light-background {
   padding: 15px 0;
   border-bottom: 1px solid #e8ecef;
 }
 
+/* Titolo principale */
 .header .sitename {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: clamp(0.9rem, 2.5vw, 1.4rem);
+  font-size: clamp(0.9rem, 2vw, 1.4rem); /* fluido desktop → tablet */
   color: #1c3f53;
   line-height: 1.1;
   margin: 0;
-  white-space: nowrap;
+  white-space: nowrap;         /* evita l’andata a capo */
   overflow: hidden;
   text-overflow: ellipsis;
+  letter-spacing: 0.3px;
 }
 
-@media (max-width: 480px) {
-  .header .sitename {
-    font-size: 0.78rem;  /* dimensione perfetta per telefoni piccoli */
-    letter-spacing: 0.25px;
-  }
-}
-
+/* Sottotitolo */
 .header .subtitle {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #6c757d;
   margin-top: 2px;
   letter-spacing: 0.4px;
 }
 
-/* --- Responsive Header (mobile) --- */
+/* --- Responsive Header --- */
 @media (max-width: 728px) {
   .header .sitename {
-    font-size: 0.85rem;   /* ridotto del 15% rispetto a prima */
-    letter-spacing: 0.3px;
+    font-size: 0.8rem;     /* più piccolo su tablet e smartphone medi */
+    letter-spacing: 0.25px;
   }
   .header .subtitle {
     font-size: 0.65rem;
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   .header .sitename {
-    font-size: 0.78rem;  /* perfetto per iPhone SE, Galaxy mini, ecc. */
+    font-size: 0.65rem;     /* compatto ma leggibile su smartphone piccoli */
+  }
+  .header .subtitle {
+    font-size: 0.55rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .header .sitename {
+    font-size: 0.58rem;     /* per schermi extra piccoli tipo iPhone SE */
   }
 }
 
