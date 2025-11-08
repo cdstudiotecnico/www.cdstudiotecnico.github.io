@@ -1649,7 +1649,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Titolo principale */
 .header .sitename {
   font-family: "Poppins", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: clamp(0.7rem, 2vw, 1.2rem) !important; /* ← aggiunto !important */
   color: #1c3f53;
   line-height: 1.1;
@@ -1675,7 +1675,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Smartphone medi */
 @media (max-width: 480px) {
   .header .sitename {
-    font-size: 0.65rem;   /* più compatto su mobile */
+    font-size: 0.75rem;   /* più compatto su mobile */
     letter-spacing: 0.2px;
   }
   .header .subtitle {
@@ -1686,7 +1686,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Smartphone molto piccoli (iPhone SE, ecc.) */
 @media (max-width: 360px) {
   .header .sitename {
-    font-size: 0.58rem;   /* perfettamente adattato */
+    font-size: 0.55rem;   /* perfettamente adattato */
   }
   .header .subtitle {
     font-size: 0.45rem;
