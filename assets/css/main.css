@@ -1838,10 +1838,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Riduzione nome in header su mobile */
-@media (max-width: 600px) {
+@media (max-width: 728px) {
   .header .sitename {
-    font-size: 0.2rem;   /* era ~1.2rem */
-    line-height: 0.5;    /* era ~1.1 */
+    font-size: 1.2rem;   /* era ~1.2rem */
+    line-height: 1.1;    /* era ~1.1 */
   }
   .header .subtitle {
     font-size: 0.7rem;   /* sottotitolo proporzionato */
