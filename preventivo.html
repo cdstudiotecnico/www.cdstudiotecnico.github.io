@@ -284,9 +284,14 @@
 
         loading.style.display = "none";
 
-        if (response.ok) {
-          sentMessage.style.display = "block";
-          form.reset();
+if (response.ok) {
+  sentMessage.style.display = "block";
+  form.reset();
+  // Nasconde il messaggio dopo 3 secondi
+  setTimeout(() => {
+    sentMessage.style.display = "none";
+  }, 3000);
+}
         } else {
           const data = await response.json();
           if (data.errors) {
