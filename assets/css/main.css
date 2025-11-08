@@ -1650,7 +1650,7 @@ h1, h2, h3, h4, h5, h6 {
 .header .sitename {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: clamp(0.5rem, 2vw, 1.2rem); /* fluido desktop → tablet */
+  font-size: clamp(0.5rem, 1.5vw, 1.2rem); /* fluido desktop → tablet */
   color: #1c3f53;
   line-height: 1.1;
   margin: 0;
