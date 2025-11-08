@@ -1944,3 +1944,78 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.75rem;
   }
 }
+
+/* === Uniformità assoluta titolo, sottotitolo e nav in tutte le pagine === */
+
+/* Stile titolo (uguale su tutte le pagine) */
+.header .sitename {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 1.2rem !important;
+  line-height: 1.1 !important;
+  color: #1c3f53 !important;
+  text-transform: none !important;
+  white-space: nowrap !important; /* mai andare a capo */
+  margin: 0 !important;
+}
+
+/* Sottotitolo */
+.header .subtitle {
+  font-family: "Raleway", sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 0.9rem !important;
+  color: #6c757d !important;
+  margin-top: 2px !important;
+  letter-spacing: 0.4px !important;
+}
+
+/* Menu di navigazione */
+.navmenu a {
+  color: #2E3D3C !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.4px !important;
+}
+
+.navmenu a:hover,
+.navmenu .active {
+  color: #4E7073 !important; /* accent color coerente */
+}
+
+/* Social header */
+.header .header-social-links a {
+  color: #4E7073 !important;
+  font-size: 16px !important;
+  transition: 0.3s;
+}
+.header .header-social-links a:hover {
+  color: #6C8BAA !important;
+}
+
+/* Footer identico */
+.footer {
+  background-color: #E8EFEF !important;
+  color: #4F6664 !important;
+  text-align: center !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+}
+
+.footer a {
+  color: #4E7073 !important;
+  font-weight: 600 !important;
+}
+.footer a:hover {
+  color: #6C8BAA !important;
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  .header .sitename {
+    font-size: 1.05rem !important;
+    white-space: nowrap !important;
+  }
+  .header .subtitle {
+    font-size: 0.8rem !important;
+  }
+}
