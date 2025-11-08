@@ -630,6 +630,29 @@ section, .section {
   background: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
 
+* Allineamento sinistro sezione contatti */
+.contact .info-wrap {
+  text-align: left !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+
+.contact .info-item {
+  justify-content: flex-start !important;
+  text-align: left !important;
+}
+
+.contact .info-item i {
+  margin-right: 12px;
+  color: #0056b3; /* opzionale: armonizza colore icone */
+}
+
+.contact .info-item h3,
+.contact .info-item p {
+  text-align: left !important;
+  margin: 0;
+}
+
 /*--------------------------------------------------------------
 # Footer (identico in tutte le pagine)
 --------------------------------------------------------------*/
