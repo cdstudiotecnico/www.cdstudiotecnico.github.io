@@ -1688,7 +1688,7 @@ h1, h2, h3, h4, h5, h6 {
 .header .sitename {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 0.7rem; /* ← più piccolo */
+  font-size: 0.35rem; /* ← più piccolo */
   line-height: 1.1;
   color: #1c3f53;
   text-transform: none;
@@ -1756,7 +1756,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- HEADER (nome e sottotitolo) --- */
 .header .sitename {
-  font-size: 0.5rem;
+  font-size: 0.35rem;
   font-weight: 400;
   color: var(--heading-color);
   letter-spacing: 0.6px;
@@ -1770,7 +1770,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 480px) {
   .no-wrap-title {
-    font-size: 1.8rem;  /* Riduce solo leggermente su schermi piccoli */
+    font-size: 1.5rem;  /* Riduce solo leggermente su schermi piccoli */
   }
 }
 
