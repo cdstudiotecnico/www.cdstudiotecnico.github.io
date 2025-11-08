@@ -1649,15 +1649,15 @@ h1, h2, h3, h4, h5, h6 {
 /* Titolo principale */
 .header .sitename {
   font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: clamp(0.4rem, 0.7vw, 0.7rem); /* fluido desktop → tablet */
+  font-weight: 550;
+  font-size: clamp(0.3rem, 0.5vw, 0.5rem); /* fluido desktop → tablet */
   color: #1c3f53;
   line-height: 1.1;
   margin: 0;
   white-space: nowrap;         /* evita l’andata a capo */
   overflow: hidden;
   text-overflow: ellipsis;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
 }
 
 /* Sottotitolo */
@@ -1673,9 +1673,9 @@ h1, h2, h3, h4, h5, h6 {
 /* --- Responsive Header --- */
 
 /* Tablet e smartphone medi */
-@media (max-width: 728px) {
+@media (max-width: 650px) {
   .header .sitename {
-    font-size: 0.10rem;   /* più compatto ma ancora ben leggibile */
+    font-size: 0.05rem;   /* più compatto ma ancora ben leggibile */
     letter-spacing: 0.10px;
   }
   .header .subtitle {
