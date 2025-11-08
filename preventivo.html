@@ -250,7 +250,7 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- <script src="assets/vendor/php-email-form/validate.js"></script> disattivato per compatibilità con Formspree -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -259,9 +259,56 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
+  <!-- ✅ Script personalizzato per gestione invio Formspree -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".php-email-form");
+    if (!form) return;
+
+    const loading = form.querySelector(".loading");
+    const errorMessage = form.querySelector(".error-message");
+    const sentMessage = form.querySelector(".sent-message");
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      loading.style.display = "block";
+      errorMessage.style.display = "none";
+      sentMessage.style.display = "none";
+
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: new FormData(form),
+          headers: { Accept: "application/json" },
+        });
+
+        loading.style.display = "none";
+
+        if (response.ok) {
+          sentMessage.style.display = "block";
+          form.reset();
+        } else {
+          const data = await response.json();
+          if (data.errors) {
+            errorMessage.textContent = data.errors.map(e => e.message).join(", ");
+          } else {
+            errorMessage.textContent = "Errore durante l'invio, riprova.";
+          }
+          errorMessage.style.display = "block";
+        }
+      } catch (error) {
+        loading.style.display = "none";
+        errorMessage.textContent = "Errore di connessione, controlla la rete.";
+        errorMessage.style.display = "block";
+      }
+    });
+  });
+  </script>
+
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>
 
 </html>
+
