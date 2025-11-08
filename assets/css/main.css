@@ -1666,9 +1666,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Uniformità titolo e sottotitolo header in tutte le pagine --- */
 .header .sitename {
-  font-size: 1.0rem;     /* prima era 1.8rem */
-  font-weight: 500;
-  line-height: 1.0;      /* migliora compattezza verticale */
+  font-size: 1.2rem;     /* prima era 1.8rem */
+  font-weight: 700;
+  line-height: 1.1;      /* migliora compattezza verticale */
   margin: 0;
 }
 
@@ -1685,13 +1685,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --- Stile uniforme per nome e sottotitolo in header --- */
-.header {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 15px 0;
-  transition: all 0.5s;
-  z-index: 997;
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+.header .sitename {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 0.7rem; /* ← più piccolo */
+  line-height: 1.1;
+  color: #1c3f53;
+  text-transform: none;
+  margin: 0;
 }
 
 .header .subtitle {
@@ -1755,13 +1756,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- HEADER (nome e sottotitolo) --- */
 .header .sitename {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-size: 1rem;
+  font-size: 0.5rem;
+  font-weight: 400;
   color: var(--heading-color);
-  letter-spacing: 0.4px;
-  margin: 0;
-  white-space: nowrap; /* Evita il ritorno a capo su mobile */
+  letter-spacing: 0.6px;
 }
 
 .no-wrap-title {
@@ -1772,17 +1770,13 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 480px) {
   .no-wrap-title {
-    font-size: 1.3rem;  /* Riduce solo leggermente su schermi piccoli */
+    font-size: 1.8rem;  /* Riduce solo leggermente su schermi piccoli */
   }
 }
 
 .header .subtitle {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: color-mix(in srgb, var(--heading-color), transparent 45%);
-  margin-top: 2px;
-  letter-spacing: 0.3px;
 }
 
 /* --- MENU NAV --- */
@@ -1844,10 +1838,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Riduzione nome in header su mobile */
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .header .sitename {
-    font-size: 0.2rem;   /* era ~1.2rem */
-    line-height: 0.6;    /* era ~1.1 */
+    font-size: 0.5rem;   /* era ~1.2rem */
+    line-height: 0.9;    /* era ~1.1 */
   }
   .header .subtitle {
     font-size: 0.7rem;   /* sottotitolo proporzionato */
