@@ -21,10 +21,11 @@
   <!-- Canonical URL -->
   <link rel="canonical" href="https://www.cdstudiotecnico.it/">
 
-  <!-- Favicon e Logo -->
-  <link rel="icon" href="https://www.cdstudiotecnico.it/assets/img/favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="https://www.cdstudiotecnico.it/assets/img/favicon.jpeg">
-  <link rel="logo" href="https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg" type="image/png">
+  <!-- ✅ Favicon e Logo (versione corretta e aggiornata) -->
+<link rel="icon" href="https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg" type="image/jpeg">
+<link rel="apple-touch-icon" href="https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg">
+<meta property="og:image" content="https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg">
+<meta name="twitter:image" content="https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Ing. Dario Cucchiara - CD Studio Tecnico">
@@ -41,39 +42,29 @@
   <meta name="twitter:description" content="Ingegneria civile, edile e ambientale. Servizi tecnici e pratiche online in tutta Italia.">
   <meta name="twitter:image" content="https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg">
 
-  <!-- Schema.org / LocalBusiness -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Ing. Dario Cucchiara - CD Studio Tecnico",
-    "image": "https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg",
-    "url": "https://www.cdstudiotecnico.it",
-    "telephone": "+393289250353",
-    "email": "cdstudiotecnico@hotmail.com",
-    "priceRange": "€€",
-    "address": [
-      {
-        "@type": "PostalAddress",
-        "streetAddress": "Via J.F. Kennedy n. 42",
-        "addressLocality": "Partinico",
-        "addressRegion": "PA",
-        "postalCode": "90047",
-        "addressCountry": "IT"
-      },
-      {
-        "@type": "PostalAddress",
-        "streetAddress": "Via Paolo Marchese n. 3",
-        "addressLocality": "Montelepre",
-        "addressRegion": "PA",
-        "postalCode": "90040",
-        "addressCountry": "IT"
-      }
-    ],
-    "openingHours": "Mo-Fr 09:00-18:00",
-    "areaServed": ["Italia", "Sicilia"]
-  }
-  </script>
+  !-- ✅ JSON-LD aggiornato: il logo ufficiale riconosciuto da Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "CD Studio Tecnico – Ing. Dario Cucchiara",
+  "image": "https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg",
+  "logo": "https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg",
+  "url": "https://www.cdstudiotecnico.it",
+  "telephone": "+393289250353",
+  "email": "cdstudiotecnico@hotmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Paolo Marchese n. 3",
+    "addressLocality": "Montelepre",
+    "addressRegion": "PA",
+    "postalCode": "90040",
+    "addressCountry": "IT"
+  },
+  "areaServed": ["Montelepre", "Partinico", "Palermo", "Italia"],
+  "openingHours": "Mo-Fr 09:00-18:00"
+}
+</script>
 
   <!-- Meta geolocalizzazione -->
   <meta name="geo.region" content="IT-PA">
