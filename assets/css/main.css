@@ -2032,12 +2032,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header .logo .subtitle {
-  font-family: "Raleway", sans-serif !important;
-  font-weight: 400 !important;
-  font-size: 0.95rem !important;
-  color: #72787a !important;
-  letter-spacing: 0.3px !important;
-  margin-top: 0 !important;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #72787a;
+  letter-spacing: 0.3px;
+  margin-top: 2px;
+  line-height: 1.2;
+  white-space: nowrap;
+  display: inline-block;
 }
 
 /* Allineamento coerente tra icone e titolo */
