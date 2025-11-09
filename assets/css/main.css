@@ -1979,6 +1979,129 @@ media (max-width: 576px) {
   box-shadow: 0 8px 28px rgba(0,0,0,0.08);
 }
 
+/* ===== Refinement Portfolio Details – CD Studio Tecnico ===== */
+
+.elegant-box {
+  background: #ffffff;
+  border: 1px solid #e6ebeb;
+  border-radius: 14px;
+  padding: 34px 36px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.05);
+  transition: all 0.35s ease;
+}
+.elegant-box:hover {
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+}
+
+/* Titoli box */
+.box-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2f4f4f;
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgba(53,108,108,0.12);
+  padding-bottom: 8px;
+  letter-spacing: 0.4px;
+}
+
+/* Lista dati progetto */
+.project-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.project-info-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8px 0;
+  border-bottom: 1px dashed #e1e8e8;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.project-info-list li:last-child {
+  border-bottom: none;
+}
+.project-info-list .label {
+  font-weight: 600;
+  color: #356c6c;
+  flex: 0 0 45%;
+}
+.project-info-list .value {
+  flex: 0 0 55%;
+  text-align: right;
+  color: #333;
+}
+
+/* Citazione del Sindaco */
+.refined-quote {
+  background: linear-gradient(180deg, #f9fbfb 0%, #f1f5f5 100%);
+  border-left: 5px solid #356c6c;
+  border-radius: 14px;
+  padding: 42px 48px;
+  font-style: italic;
+  color: #2f2f2f;
+  line-height: 1.9;
+  font-size: 1rem;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.05);
+  position: relative;
+}
+.refined-quote footer {
+  text-align: right;
+  margin-top: 25px;
+  font-style: normal;
+  color: #356c6c;
+  font-weight: 600;
+}
+.refined-quote::before {
+  content: "“";
+  position: absolute;
+  top: -25px;
+  left: 22px;
+  font-size: 4.5rem;
+  color: rgba(53,108,108,0.15);
+}
+.refined-quote::after {
+  content: "”";
+  position: absolute;
+  bottom: -25px;
+  right: 28px;
+  font-size: 4.5rem;
+  color: rgba(53,108,108,0.15);
+}
+
+/* Pulsante finale */
+.refined-back-btn {
+  border: 1.5px solid #356c6c !important;
+  color: #356c6c !important;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 10px 24px;
+  transition: all 0.3s ease;
+  background: #ffffff;
+}
+.refined-back-btn:hover {
+  background-color: #356c6c !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+/* Responsive migliorato */
+@media (max-width: 768px) {
+  .project-info-list li {
+    flex-direction: column;
+    text-align: left;
+  }
+  .project-info-list .value {
+    text-align: left;
+    margin-top: 4px;
+  }
+  .refined-quote {
+    padding: 28px 26px;
+  }
+}
+
 /* Descrizione tecnica */
 .portfolio-description h2 {
   font-size: 1.35rem;
