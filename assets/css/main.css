@@ -1004,31 +1004,7 @@ section,
 # Resume Section – Layout Elegante CD Studio Tecnico
 --------------------------------------------------------------*/
 
-/* Contenitore principale del curriculum */
-.resume {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 60px 30px;
-  background: var(--surface-color);
-  border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-}
 
-/* Titolo principale */
-.resume .section-title h2 {
-  text-align: center;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
-}
-
-.resume .section-title p {
-  text-align: center;
-  color: #666;
-  max-width: 700px;
-  margin: 0 auto 40px auto;
-}
 
 /* Linea verticale della timeline */
 .resume .resume-item {
