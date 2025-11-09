@@ -306,7 +306,10 @@
    
    <!-- Portfolio Section -->
    
-   <section id="portfolio" class="portfolio section">
+ <!-- ==============================
+     PORTFOLIO – Versione definitiva originale
+============================== -->
+<section id="portfolio" class="portfolio section">
 
   <div class="container" data-aos="fade-up">
 
@@ -315,73 +318,82 @@
       <p>Selezione di progetti tecnici realizzati dal nostro studio in ambito pubblico e privato</p>
     </div>
 
-    <!-- Filtri -->
-    <ul class="portfolio-filters" data-aos="fade-up" data-aos-delay="100">
-      <li class="filter-active">Tutti</li>
-      <li>Opere Pubbliche</li>
-      <li>Progetti Privati</li>
+    <!-- FILTRI -->
+    <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+      <li data-filter="*" class="filter-active">Tutti</li>
+      <li data-filter=".filter-app">Opere Pubbliche</li>
+      <li data-filter=".filter-product">Progetti Privati</li>
     </ul>
 
-    <!-- Galleria Portfolio -->
+    <!-- CONTENUTO PORTFOLIO -->
     <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-      <!-- PROGETTO 1 -->
-      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-        <div class="portfolio-card">
-          <div class="portfolio-image">
-            <img src="assets/img/portfolio/parco1.jpg" alt="Riqualificazione Parco Urbano di Montelepre">
-          </div>
-          <div class="portfolio-text">
-            <h4>Riqualificazione Parco Urbano di Montelepre</h4>
-            <p>Pavimentazione e sistemazione aree pubbliche adiacenti all’anfiteatro comunale.</p>
-            <div class="portfolio-links">
-              <a href="assets/img/portfolio/parco1.jpg" title="Anteprima" data-gallery="portfolioGallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              <a href="portfolio-details.html" title="Dettagli progetto" class="details-link"><i class="bi bi-link-45deg"></i></a>
-            </div>
-          </div>
+      <!-- OPERA PUBBLICA -->
+      <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+        <img src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid" alt="Riqualificazione urbana Montelepre">
+        <div class="portfolio-info">
+          <h4>Opere Pubbliche</h4>
+          <p>Riqualificazione urbana e sistemazione spazi pubblici</p>
+          <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg"
+             title="Opere Pubbliche"
+             data-gallery="portfolio-gallery-app"
+             class="glightbox preview-link">
+             <i class="bi bi-zoom-in"></i>
+          </a>
+          <a href="portfolio-details.html"
+             title="Dettagli progetto"
+             class="details-link">
+             <i class="bi bi-link-45deg"></i>
+          </a>
         </div>
-      </div>
+      </div><!-- End Item -->
 
-      <!-- PROGETTO 2 -->
-      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-        <div class="portfolio-card">
-          <div class="portfolio-image">
-            <img src="assets/img/portfolio/abitazione1.jpg" alt="Ristrutturazione edificio residenziale a Palermo">
-          </div>
-          <div class="portfolio-text">
-            <h4>Ristrutturazione edificio residenziale a Palermo</h4>
-            <p>Intervento di efficientamento energetico e consolidamento strutturale.</p>
-            <div class="portfolio-links">
-              <a href="assets/img/portfolio/abitazione1.jpg" title="Anteprima" data-gallery="portfolioGallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              <a href="portfolio-details.html" title="Dettagli progetto" class="details-link"><i class="bi bi-link-45deg"></i></a>
-            </div>
-          </div>
+      <!-- PROGETTO PRIVATO 1 -->
+      <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+        <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="Ristrutturazione civile abitazione Palermo">
+        <div class="portfolio-info">
+          <h4>Progetti Privati</h4>
+          <p>Ristrutturazione edilizia e direzione lavori</p>
+          <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg"
+             title="Progetti Privati"
+             data-gallery="portfolio-gallery-product"
+             class="glightbox preview-link">
+             <i class="bi bi-zoom-in"></i>
+          </a>
+          <a href="portfolio-details.html"
+             title="Dettagli progetto"
+             class="details-link">
+             <i class="bi bi-link-45deg"></i>
+          </a>
         </div>
-      </div>
+      </div><!-- End Item -->
 
-      <!-- PROGETTO 3 -->
-      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-        <div class="portfolio-card">
-          <div class="portfolio-image">
-            <img src="assets/img/portfolio/scuola1.jpg" alt="Adeguamento scuola comunale">
-          </div>
-          <div class="portfolio-text">
-            <h4>Adeguamento scuola comunale</h4>
-            <p>Interventi di manutenzione straordinaria e messa in sicurezza degli impianti.</p>
-            <div class="portfolio-links">
-              <a href="assets/img/portfolio/scuola1.jpg" title="Anteprima" data-gallery="portfolioGallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              <a href="portfolio-details.html" title="Dettagli progetto" class="details-link"><i class="bi bi-link-45deg"></i></a>
-            </div>
-          </div>
+      <!-- PROGETTO PRIVATO 2 -->
+      <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+        <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="Villa privata – Direzione lavori e collaudo">
+        <div class="portfolio-info">
+          <h4>Progetti Privati</h4>
+          <p>Progettazione architettonica e strutturale</p>
+          <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg"
+             title="Progetti Privati"
+             data-gallery="portfolio-gallery-product"
+             class="glightbox preview-link">
+             <i class="bi bi-zoom-in"></i>
+          </a>
+          <a href="portfolio-details.html"
+             title="Dettagli progetto"
+             class="details-link">
+             <i class="bi bi-link-45deg"></i>
+          </a>
         </div>
-      </div>
+      </div><!-- End Item -->
 
-    </div>
+    </div><!-- End Row -->
 
-  </div>
+  </div><!-- End Container -->
 
 </section>
-    
+   
     <!-- /Portfolio Section -->
 
   </main>
