@@ -1938,13 +1938,6 @@ media (max-width: 576px) {
    PORTFOLIO DETAILS – RESTYLING ELEGANTE
 ============================================================== */
 
-.portfolio-details.section {
-  background-color: #fafafa;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  font-family: 'Poppins', sans-serif;
-}
-
 /* Slider immagini */
 .portfolio-details-slider {
   border-radius: 14px;
