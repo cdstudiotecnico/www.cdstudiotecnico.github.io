@@ -1,133 +1,203 @@
-<!-- Portfolio Section -->
-<section id="portfolio" class="portfolio section">
+<!DOCTYPE html>
+<html lang="it">
 
-  <div class="container section-title text-center" data-aos="fade-up" style="margin-bottom: 30px;">
-    <img src="assets/img/logo-cdstudiotecnico.jpeg" alt="Logo CD Studio Tecnico"
-         style="max-width: 180px; margin-bottom: 10px; filter: drop-shadow(0 3px 8px rgba(0,0,0,0.25));">
-    <h2 style="font-weight: 700; color: #356c6c;">Portfolio Tecnico</h2>
-    <p style="color:#555;">Una selezione di progetti, studi e realizzazioni curate da CD Studio Tecnico</p>
-  </div>
+<head>
 
-  <div class="container">
-    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+  <!-- Verifica Google Search Console -->
+  <meta name="google-site-verification" content="5-kam6aK3nMX8pb5dczefcCj29VOOaRr7Fop8z9jWI8" />
 
-      <!-- Filtri -->
-      <ul class="portfolio-filters isotope-filters text-center" data-aos="fade-up" data-aos-delay="100">
-        <li data-filter="*" class="filter-active">Tutti</li>
-        <li data-filter=".filter-impianti">Impianti</li>
-        <li data-filter=".filter-ape">Attestati APE</li>
-        <li data-filter=".filter-perizie">Perizie</li>
-        <li data-filter=".filter-costruzioni">Costruzioni</li>
-        <li data-filter=".filter-idraulici">Studi Idraulici</li>
-        <li data-filter=".filter-reflui">Smaltimento Reflui</li>
-        <li data-filter=".filter-sanatorie">Sanatorie Edilizie</li>
-        <li data-filter=".filter-ristrutturazioni">Ristrutturazioni</li>
-        <li data-filter=".filter-enea">Pratiche ENEA e Asseverazioni</li>
-      </ul>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-      <!-- Progetti -->
-      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+  <title>CD Studio Tecnico – Portfolio Lavori e Progetti</title>
+  <meta name="description" content="Portfolio dei lavori del CD Studio Tecnico – Ing. Dario Cucchiara: impianti, attestati APE, perizie, ristrutturazioni e progetti di ingegneria civile, edile e ambientale.">
+  <meta name="keywords" content="portfolio ingegnere, lavori studio tecnico, perizie, APE, impianti, costruzioni, sanatorie, ristrutturazioni, ingegneria civile Palermo, CD Studio Tecnico">
 
-        <!-- IMPIANTI -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-impianti">
-          <img src="assets/img/portfolio/impianti-termici.jpg" class="img-fluid rounded-3 shadow-sm" alt="Impianto termico e fotovoltaico">
-          <div class="portfolio-info">
-            <h4>Progettazione Impianti</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="assets/img/portfolio/impianti-termici.jpg" data-gallery="portfolio-gallery-impianti" class="glightbox preview-link" title="Progettazione Impianti"><i class="bi bi-zoom-in"></i></a>
-            <a href="portfolio-details.html" class="details-link" title="Dettagli Tecnici"><i class="bi bi-link-45deg"></i></a>
-          </div>
+  <!-- Favicon e Logo -->
+  <link rel="icon" href="https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Portfolio Lavori – CD Studio Tecnico">
+  <meta property="og:description" content="Raccolta di progetti e lavori di ingegneria civile, edile e ambientale a cura dell’Ing. Dario Cucchiara.">
+  <meta property="og:image" content="https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg">
+  <meta property="og:url" content="https://www.cdstudiotecnico.it/portfolio.html">
+
+  <!-- Fonts e CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="portfolio-page">
+
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0 text-decoration-none">
+        <div class="d-flex flex-column">
+          <h1 class="sitename mb-0">Ing. Dario Cucchiara</h1>
+          <span class="subtitle">Ingegneria Civile, Edile & Ambientale</span>
         </div>
+      </a>
 
-        <!-- APE -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ape">
-          <img src="assets/img/portfolio/certificazione-ape.jpg" class="img-fluid rounded-3 shadow-sm" alt="Attestato di Prestazione Energetica APE">
-          <div class="portfolio-info">
-            <h4>Certificazione Energetica APE</h4>
-            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere.</p>
-            <a href="assets/img/portfolio/certificazione-ape.jpg" data-gallery="portfolio-gallery-ape" class="glightbox preview-link" title="Certificazione APE"><i class="bi bi-zoom-in"></i></a>
-            <a href="portfolio-details.html" class="details-link" title="Dettagli Tecnici"><i class="bi bi-link-45deg"></i></a>
-          </div>
-        </div>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Curriculum</a></li>
+          <li><a href="services.html">Servizi</a></li>
+          <li><a href="preventivo.html">Richiedi Preventivo</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="contact.html">Contatti</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
 
-        <!-- PERIZIE -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-perizie">
-          <img src="assets/img/portfolio/perizia-tecnica.jpg" class="img-fluid rounded-3 shadow-sm" alt="Perizia Tecnica e Relazione Giurata">
-          <div class="portfolio-info">
-            <h4>Perizie e Relazioni Giurate</h4>
-            <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
-            <a href="assets/img/portfolio/perizia-tecnica.jpg" data-gallery="portfolio-gallery-perizie" class="glightbox preview-link" title="Perizia Tecnica"><i class="bi bi-zoom-in"></i></a>
-            <a href="portfolio-details.html" class="details-link" title="Dettagli Tecnici"><i class="bi bi-link-45deg"></i></a>
-          </div>
-        </div>
+      <div class="header-social-links">
+        <a href="mailto:cdstudiotecnico@hotmail.com" class="email"><i class="bi bi-envelope"></i></a>
+        <a href="tel:+393289250353" class="phone"><i class="bi bi-telephone"></i></a>
+      </div>
 
-        <!-- COSTRUZIONI -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-costruzioni">
-          <img src="assets/img/portfolio/cantiere-civile.jpg" class="img-fluid rounded-3 shadow-sm" alt="Cantiere Costruzioni Civili">
-          <div class="portfolio-info">
-            <h4>Costruzioni e Direzione Lavori</h4>
-            <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-            <a href="assets/img/portfolio/cantiere-civile.jpg" data-gallery="portfolio-gallery-costruzioni" class="glightbox preview-link" title="Costruzioni Civili"><i class="bi bi-zoom-in"></i></a>
-            <a href="portfolio-details.html" class="details-link" title="Dettagli Tecnici"><i class="bi bi-link-45deg"></i></a>
-          </div>
-        </div>
-
-        <!-- STUDI IDRAULICI -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-idraulici">
-          <img src="assets/img/portfolio/studio-idraulico.jpg" class="img-fluid rounded-3 shadow-sm" alt="Studio Idraulico e Fluviale">
-          <div class="portfolio-info">
-            <h4>Studi Idraulici e Fluviali</h4>
-            <p>Donec sollicitudin molestie malesuada. Cras ultricies ligula sed magna dictum.</p>
-            <a href="assets/img/portfolio/studio-idraulico.jpg" data-gallery="portfolio-gallery-idraulici" class="glightbox preview-link" title="Studio Idraulico"><i class="bi bi-zoom-in"></i></a>
-            <a href="portfolio-details.html" class="details-link" title="Dettagli Tecnici"><i class="bi bi-link-45deg"></i></a>
-          </div>
-        </div>
-
-        <!-- SMALTIMENTO REFLUI -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-reflui">
-          <img src="assets/img/portfolio/smaltimento-reflui.jpg" class="img-fluid rounded-3 shadow-sm" alt="Progetto Smaltimento Reflui">
-          <div class="portfolio-info">
-            <h4>Progetti di Smaltimento Reflui</h4>
-            <p>Vivamus suscipit tortor eget felis porttitor volutpat.</p>
-            <a href="assets/img/portfolio/smaltimento-reflui.jpg" data-gallery="portfolio-gallery-reflui" class="glightbox preview-link" title="Smaltimento Reflui"><i class="bi bi-zoom-in"></i></a>
-            <a href="portfolio-details.html" class="details-link" title="Dettagli Tecnici"><i class="bi bi-link-45deg"></i></a>
-          </div>
-        </div>
-
-        <!-- SANATORIE -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-sanatorie">
-          <img src="assets/img/portfolio/sanatoria-edilizia.jpg" class="img-fluid rounded-3 shadow-sm" alt="Sanatoria Edilizia e Pratica Urbanistica">
-          <div class="portfolio-info">
-            <h4>Sanatorie Edilizie</h4>
-            <p>Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat.</p>
-            <a href="assets/img/portfolio/sanatoria-edilizia.jpg" data-gallery="portfolio-gallery-sanatorie" class="glightbox preview-link" title="Sanatoria Edilizia"><i class="bi bi-zoom-in"></i></a>
-            <a href="portfolio-details.html" class="details-link" title="Dettagli Tecnici"><i class="bi bi-link-45deg"></i></a>
-          </div>
-        </div>
-
-        <!-- RISTRUTTURAZIONI -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ristrutturazioni">
-          <img src="assets/img/portfolio/ristrutturazione-civile.jpg" class="img-fluid rounded-3 shadow-sm" alt="Ristrutturazione Abitazione Civile">
-          <div class="portfolio-info">
-            <h4>Ristrutturazioni Civili</h4>
-            <p>Pellentesque in ipsum id orci porta dapibus.</p>
-            <a href="assets/img/portfolio/ristrutturazione-civile.jpg" data-gallery="portfolio-gallery-ristrutturazioni" class="glightbox preview-link" title="Ristrutturazione Civile"><i class="bi bi-zoom-in"></i></a>
-            <a href="portfolio-details.html" class="details-link" title="Dettagli Tecnici"><i class="bi bi-link-45deg"></i></a>
-          </div>
-        </div>
-
-        <!-- PRATICHE ENEA -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-enea">
-          <img src="assets/img/portfolio/pratiche-enea.jpg" class="img-fluid rounded-3 shadow-sm" alt="Asseverazioni e Pratiche ENEA">
-          <div class="portfolio-info">
-            <h4>Pratiche ENEA e Asseverazioni</h4>
-            <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-            <a href="assets/img/portfolio/pratiche-enea.jpg" data-gallery="portfolio-gallery-enea" class="glightbox preview-link" title="Pratiche ENEA e Asseverazioni"><i class="bi bi-zoom-in"></i></a>
-            <a href="portfolio-details.html" class="details-link" title="Dettagli Tecnici"><i class="bi bi-link-45deg"></i></a>
-          </div>
-        </div>
-
-      </div><!-- End Container -->
     </div>
-  </div>
-</section>
+  </header>
+  <!-- Fine Header -->
+
+  <main class="main">
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <img src="assets/img/logo-cdstudiotecnico.jpeg" alt="Logo CD Studio Tecnico" class="img-fluid" style="max-width: 160px; margin-bottom: 10px;">
+        <h2 style="font-weight: 700; color: #356c6c;">Portfolio</h2>
+        <p>Selezione di lavori e progetti tecnici realizzati dall’Ing. Dario Cucchiara</p>
+      </div>
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <!-- Filtri -->
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">Tutti</li>
+            <li data-filter=".filter-impianti">Impianti</li>
+            <li data-filter=".filter-ape">APE</li>
+            <li data-filter=".filter-perizie">Perizie</li>
+            <li data-filter=".filter-costruzioni">Costruzioni</li>
+            <li data-filter=".filter-idraulici">Studi Idraulici</li>
+            <li data-filter=".filter-reflui">Reflui</li>
+            <li data-filter=".filter-sanatorie">Sanatorie</li>
+            <li data-filter=".filter-ristrutturazioni">Ristrutturazioni</li>
+            <li data-filter=".filter-enea">ENEA</li>
+          </ul>
+
+          <!-- Contenitore progetti -->
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <!-- Esempio Impianti -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-impianti">
+              <img src="assets/img/portfolio/impianti.jpg" class="img-fluid" alt="Progetto Impianti">
+              <div class="portfolio-info">
+                <h4>Progettazione Impianti</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="assets/img/portfolio/impianti.jpg" title="Impianti" data-gallery="portfolio-gallery-impianti" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="Dettagli" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+
+            <!-- APE -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ape">
+              <img src="assets/img/portfolio/ape.jpg" class="img-fluid" alt="Attestati di Prestazione Energetica">
+              <div class="portfolio-info">
+                <h4>Attestati APE</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="assets/img/portfolio/ape.jpg" title="Attestati APE" data-gallery="portfolio-gallery-ape" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="Dettagli" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+
+            <!-- Perizie -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-perizie">
+              <img src="assets/img/portfolio/perizie.jpg" class="img-fluid" alt="Perizie tecniche e giurate">
+              <div class="portfolio-info">
+                <h4>Perizie Tecniche</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="assets/img/portfolio/perizie.jpg" title="Perizie Tecniche" data-gallery="portfolio-gallery-perizie" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="Dettagli" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+
+            <!-- Costruzioni -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-costruzioni">
+              <img src="assets/img/portfolio/costruzioni.jpg" class="img-fluid" alt="Progetti di costruzione">
+              <div class="portfolio-info">
+                <h4>Costruzioni Civili</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="assets/img/portfolio/costruzioni.jpg" title="Costruzioni" data-gallery="portfolio-gallery-costruzioni" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="Dettagli" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+
+            <!-- Idraulici -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-idraulici">
+              <img src="assets/img/portfolio/idraulici.jpg" class="img-fluid" alt="Studi idraulici">
+              <div class="portfolio-info">
+                <h4>Studi Idraulici</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="assets/img/portfolio/idraulici.jpg" title="Studi Idraulici" data-gallery="portfolio-gallery-idraulici" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="Dettagli" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+
+            <!-- Ristrutturazioni -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ristrutturazioni">
+              <img src="assets/img/portfolio/ristrutturazioni.jpg" class="img-fluid" alt="Ristrutturazioni edilizie">
+              <div class="portfolio-info">
+                <h4>Ristrutturazioni Edilizie</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="assets/img/portfolio/ristrutturazioni.jpg" title="Ristrutturazioni" data-gallery="portfolio-gallery-ristrutturazioni" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="Dettagli" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+
+          </div><!-- Fine container portfolio -->
+        </div>
+      </div>
+    </section><!-- /Portfolio Section -->
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer light-background">
+    <div class="container text-center">
+      <p><strong>Via J.F. Kennedy n. 42 – Partinico (PA)</strong> | <strong>Via Paolo Marchese n. 3 – Montelepre (PA)</strong></p>
+      <p>P.IVA 06513140829</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.facebook.com/share/1BKxwNRBsj/?mibextid=wwXIfr" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/cd_studio.tecnico" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="mailto:cdstudiotecnico@hotmail.com" class="email"><i class="bi bi-envelope"></i></a>
+        <a href="tel:+393289250353" class="phone"><i class="bi bi-telephone"></i></a>
+      </div>
+      <p>Designed by <strong>Ing. Dario Cucchiara</strong></p>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
