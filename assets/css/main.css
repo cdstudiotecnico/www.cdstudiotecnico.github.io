@@ -1778,146 +1778,168 @@ h1, h2, h3, h4, h5, h6 {
 .error-message { color: #c0392b; }
 .sent-message { color: #2e8b57;}
 
-/* === SEZIONE PORTFOLIO DETAILS – STILE ELEGANTE === */
+/*/* ================================
+   PORTFOLIO DETAILS – STILE CD STUDIO TECNICO
+   Versione elegante e coerente – Novembre 2025
+================================== */
 
-/* Titoli principali */
-.project-title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #2f5f5f;
-  margin-top: 10px;
+.portfolio-details.section {
+  background-color: #fdfdfd;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  font-family: 'Poppins', sans-serif;
 }
 
+/* Titolo principale */
+.project-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #2f4f4f;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+/* Sottotitolo */
 .project-subtitle {
   max-width: 800px;
-  margin: 10px auto 0;
-  color: #4d4d4d;
+  margin: 10px auto 25px;
+  color: #4a4a4a;
   font-size: 1.05rem;
-}
-
-/* Box laterali con bordo morbido */
-.elegant-box {
-  background: #ffffff;
-  border: 1px solid #e3e3e3;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  padding: 20px 25px;
-  margin-bottom: 25px;
-  transition: all 0.3s ease;
-}
-
-.elegant-box:hover {
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-}
-
-/* Lista dati progetto */
-.project-info-list li {
-  margin-bottom: 6px;
-  color: #333;
-  font-size: 0.95rem;
-}
-
-/* Descrizione tecnica */
-.portfolio-description p {
-  margin-bottom: 10px;
   line-height: 1.6;
-  color: #444;
-}
-
-/* Caption immagini */
-.img-caption {
   text-align: center;
-  font-style: italic;
-  font-size: 0.9rem;
-  color: #5c5c5c;
-  margin-top: 6px;
 }
 
-/* Blocco commento finale del Sindaco */
-.project-quote {
-  position: relative;
-  background: #f8fbfb;
-  border-left: 5px solid #356c6c;
-  border-radius: 10px;
-  padding: 25px 30px;
-  font-style: italic;
-  color: #2e2e2e;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  max-width: 900px;
-  margin: 0 auto 60px;
-}
-
-.project-quote strong {
+/* Logo in alto */
+.project-logo {
+  max-width: 160px;
+  margin: 10px auto 15px;
   display: block;
-  margin-top: 15px;
-  font-style: normal;
-  color: #356c6c;
-  font-weight: 600;
-  text-align: right;
-}
-
-/* Immagini slider */
-.fade-in-img {
-  border-radius: 8px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.15));
   transition: transform 0.4s ease;
 }
-
-.fade-in-img:hover {
-  transform: scale(1.02);
+.project-logo:hover {
+  transform: scale(1.04);
 }
 
-/* Titolo dati progetto */
-.portfolio-info h3 {
-  color: #2f5f5f;
-  margin-bottom: 15px;
-  font-weight: 700;
+/* Slider immagini uniformato */
+.portfolio-details-slider {
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.06);
 }
 
-/* Logo sopra titolo */
-.project-logo {
-  max-width: 180px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.15));
-}
-
-/* Responsive ottimizzato */
-@media (max-width: 768px) {
-  .project-title {
-    font-size: 1.4rem;
-  }
-  .project-subtitle {
-    font-size: 0.95rem;
-  }
-  .elegant-box {
-    padding: 15px 18px;
-  }
-  
-}
-
-/* === Uniforma dimensioni immagini slider portfolio === */
 .portfolio-details-slider .swiper-slide {
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
 }
 
 .portfolio-details-slider .swiper-slide img {
   width: 100%;
-  height: 480px; /* altezza fissa per desktop */
-  object-fit: cover; /* mantiene proporzioni e ritaglia elegantemente */
-  border-radius: 10px;
-  transition: transform 0.4s ease;
+  height: 500px;
+  object-fit: cover;
+  transition: transform 0.4s ease, opacity 0.5s ease;
 }
 
 .portfolio-details-slider .swiper-slide img:hover {
   transform: scale(1.03);
+  opacity: 0.95;
 }
 
-/* Adatta altezza su schermi piccoli */
+/* Didascalia immagine */
+.img-caption {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 8px;
+}
+
+/* Box laterali eleganti */
+.elegant-box {
+  background: #ffffff;
+  border: 1px solid #e6ecec;
+  border-radius: 12px;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  transition: all 0.3s ease;
+}
+.elegant-box:hover {
+  box-shadow: 0 6px 22px rgba(0,0,0,0.07);
+}
+
+/* Titolo box laterale */
+.portfolio-info h3,
+.portfolio-description h2 {
+  color: #356c6c;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* Lista dati progetto */
+.project-info-list li {
+  margin-bottom: 7px;
+  color: #333;
+  font-size: 0.95rem;
+}
+.project-info-list strong {
+  color: #2f4f4f;
+}
+
+/* Descrizione tecnica */
+.portfolio-description p {
+  margin-bottom: 12px;
+  line-height: 1.7;
+  color: #444;
+  font-size: 0.97rem;
+}
+
+/* Blocco commento Sindaco */
+.project-quote {
+  position: relative;
+  background: #f7fbfb;
+  border-left: 5px solid #356c6c;
+  border-radius: 12px;
+  padding: 25px 35px;
+  font-style: italic;
+  color: #2e2e2e;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+  max-width: 950px;
+  margin: 50px auto 60px;
+  line-height: 1.7;
+}
+
+.project-quote::before {
+  content: "“";
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  font-size: 4rem;
+  color: rgba(53,108,108,0.15);
+}
+
+.project-quote strong {
+  display: block;
+  margin-top: 20px;
+  text-align: right;
+  font-style: normal;
+  color: #356c6c;
+  font-weight: 600;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .portfolio-details-slider .swiper-slide img {
     height: 300px;
+  }
+  .elegant-box {
+    padding: 20px;
+  }
+  .project-title {
+    font-size: 1.5rem;
+  }
+  .project-subtitle {
+    font-size: 0.95rem;
   }
 }
