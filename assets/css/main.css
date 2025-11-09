@@ -1778,115 +1778,120 @@ h1, h2, h3, h4, h5, h6 {
 .error-message { color: #c0392b; }
 .sent-message { color: #2e8b57;}
 
-/* ================================
-   PORTFOLIO DETAILS – CD STUDIO TECNICO
-==================================*/
+/* === SEZIONE PORTFOLIO DETAILS – STILE ELEGANTE === */
 
-.project-logo {
-  max-width: 180px;
-  margin-bottom: 10px;
-  filter: drop-shadow(0 3px 8px rgba(0,0,0,0.15));
-}
-
+/* Titoli principali */
 .project-title {
+  font-size: 1.8rem;
   font-weight: 700;
-  color: #356c6c;
-  margin-bottom: 10px;
+  color: #2f5f5f;
+  margin-top: 10px;
 }
 
 .project-subtitle {
+  max-width: 800px;
+  margin: 10px auto 0;
+  color: #4d4d4d;
   font-size: 1.05rem;
-  color: #555;
-  max-width: 720px;
-  margin: 0 auto;
 }
 
+/* Box laterali con bordo morbido */
 .elegant-box {
-  background: #fff;
+  background: #ffffff;
+  border: 1px solid #e3e3e3;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  padding: 25px 25px 20px 25px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  padding: 20px 25px;
+  margin-bottom: 25px;
   transition: all 0.3s ease;
 }
+
 .elegant-box:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
+/* Lista dati progetto */
 .project-info-list li {
-  margin-bottom: 10px;
-  color: #444;
-  transition: all 0.2s ease;
-}
-.project-info-list li:hover {
-  transform: translateX(5px);
-  color: #356c6c;
-}
-
-.fade-in-img {
-  opacity: 0;
-  transform: scale(1.02);
-  transition: opacity 0.8s ease, transform 1s ease;
-}
-.fade-in-img.loaded {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.project-quote {
-  font-style: italic;
-  color: #444;
-  background: #f7f9f9;
-  border-left: 4px solid #356c6c;
-  padding: 15px 25px;
-  border-radius: 6px;
-  line-height: 1.6;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-}
-
-.credits-text {
-  font-style: italic;
-  color: #356c6c;
-  margin-top: 12px;
-}
-
-/* Fade-in automatico immagini */
-document.addEventListener("DOMContentLoaded", () => {
-  const imgs = document.querySelectorAll(".fade-in-img");
-  imgs.forEach(img => {
-    img.onload = () => img.classList.add("loaded");
-  });
-});
-
-/* Portfolio thumbnail elegante */
-.portfolio-thumb {
-  border-radius: 10px;
-  transition: all 0.35s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-.portfolio-thumb:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-}
-
-.portfolio-info {
-  background: #fff;
-  border-radius: 0 0 10px 10px;
-  padding: 15px 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
-}
-.portfolio-info:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.portfolio-title {
-  font-weight: 600;
-  color: #356c6c;
   margin-bottom: 6px;
+  color: #333;
+  font-size: 0.95rem;
 }
 
-.portfolio-desc {
-  color: #555;
-  font-size: 0.95rem;
+/* Descrizione tecnica */
+.portfolio-description p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Caption immagini */
+.img-caption {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #5c5c5c;
+  margin-top: 6px;
+}
+
+/* Blocco commento finale del Sindaco */
+.project-quote {
+  position: relative;
+  background: #f8fbfb;
+  border-left: 5px solid #356c6c;
+  border-radius: 10px;
+  padding: 25px 30px;
+  font-style: italic;
+  color: #2e2e2e;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+
+.project-quote strong {
+  display: block;
+  margin-top: 15px;
+  font-style: normal;
+  color: #356c6c;
+  font-weight: 600;
+  text-align: right;
+}
+
+/* Immagini slider */
+.fade-in-img {
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
+}
+
+.fade-in-img:hover {
+  transform: scale(1.02);
+}
+
+/* Titolo dati progetto */
+.portfolio-info h3 {
+  color: #2f5f5f;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+/* Logo sopra titolo */
+.project-logo {
+  max-width: 180px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.15));
+}
+
+/* Responsive ottimizzato */
+@media (max-width: 768px) {
+  .project-title {
+    font-size: 1.4rem;
+  }
+  .project-subtitle {
+    font-size: 0.95rem;
+  }
+  .elegant-box {
+    padding: 15px 18px;
+  }
+  
 }
