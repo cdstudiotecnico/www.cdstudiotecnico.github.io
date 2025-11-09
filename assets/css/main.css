@@ -1785,134 +1785,75 @@ media (max-width: 576px) {
 }
 
 /* ============================
-   SEZIONE PORTFOLIO – LAYOUT RAFFINATO
-   CD Studio Tecnico · Novembre 2025
+   OTTIMIZZAZIONE BLOCCO PORTFOLIO
+   Coerenza grafica con il tema principale
 ============================ */
 
-/* Contenitore generale */
-.portfolio {
-  background-color: #f9fafb;
-  padding-top: 70px;
-  padding-bottom: 70px;
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Titolo principale */
-.portfolio .section-title h2 {
-  font-size: 2.2rem;
-  color: #356c6c;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  margin-bottom: 12px;
-}
-
-.portfolio .section-title p {
-  font-size: 1rem;
-  color: #444;
-  max-width: 780px;
-  margin: 0 auto 35px;
-  line-height: 1.7;
-}
-
-/* ----- FILTRI ----- */
-.portfolio .portfolio-filters {
+/* Contenitore filtri */
+.portfolio #portfolio-flters {
   text-align: center;
   margin-bottom: 30px;
-  list-style: none;
   padding: 0;
+  list-style: none;
 }
 
-.portfolio .portfolio-filters li {
+/* "Tutti" centrato sopra */
+.portfolio #portfolio-flters li:first-child {
+  display: block;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #2f4f4f;
+}
+
+/* "Opere Pubbliche" e "Progetti Privati" su una riga */
+.portfolio #portfolio-flters li:not(:first-child) {
   display: inline-block;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #666;
-  margin: 6px 12px;
-  padding: 6px 14px;
+  margin: 0 10px;
+  font-size: 15px;
+}
+
+/* Bottone attivo */
+.portfolio #portfolio-flters .filter-active {
+  background-color: #356c6c;
+  color: #fff;
   border-radius: 20px;
-  transition: all 0.3s ease;
+  padding: 6px 16px;
+}
+
+/* Hover leggero */
+.portfolio #portfolio-flters li:hover {
+  color: #356c6c;
   cursor: pointer;
 }
 
-/* “Tutti” centrato sopra */
-.portfolio .portfolio-filters li:first-child {
-  display: block;
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #2f4f4f;
-  margin-bottom: 8px;
+/* Allineamento sinistro per i testi sotto le immagini */
+.portfolio .portfolio-info {
+  text-align: left !important;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-/* Linea sotto “Tutti” */
-.portfolio .portfolio-filters li:not(:first-child) {
-  display: inline-block;
-}
-
-/* Stile attivo */
-.portfolio .portfolio-filters .filter-active {
-  background: #356c6c;
-  color: #fff;
-  font-weight: 600;
-  box-shadow: 0 3px 10px rgba(53,108,108,0.25);
-}
-
-/* Hover */
-.portfolio .portfolio-filters li:hover {
-  color: #356c6c;
-  transform: translateY(-2px);
-}
-
-/* ----- CARD PROGETTO ----- */
-.portfolio-item {
-  background: #fff;
-  border: 1px solid #e8e8e8;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 5px 18px rgba(0,0,0,0.05);
-  transition: all 0.35s ease;
-}
-.portfolio-item:hover {
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  transform: translateY(-4px);
-}
-
-.portfolio-item .portfolio-info {
-  padding: 18px 20px;
-  text-align: left; /* <-- allineamento testo sinistro */
-}
-
-.portfolio-item .portfolio-info h4 {
-  font-size: 1.05rem;
+/* Titolo e descrizione del progetto */
+.portfolio .portfolio-info h4 {
+  text-align: left;
   font-weight: 600;
   color: #2f4f4f;
   margin-bottom: 6px;
 }
 
-.portfolio-item .portfolio-info p {
-  font-size: 0.93rem;
+.portfolio .portfolio-info p {
+  text-align: left;
   color: #555;
   margin-bottom: 0;
-  line-height: 1.55;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
-/* Icone */
-.portfolio-item .portfolio-info .preview-link,
-.portfolio-item .portfolio-info .details-link {
-  color: #356c6c;
-  font-size: 1.2rem;
-  margin-right: 10px;
-  transition: color 0.3s ease;
-}
-
-.portfolio-item .portfolio-info .preview-link:hover,
-.portfolio-item .portfolio-info .details-link:hover {
-  color: #224d4d;
-}
-
-/* Mobile */
+/* Pulizia visiva su mobile */
 @media (max-width: 768px) {
-  .portfolio .section-title h2 { font-size: 1.8rem; }
-  .portfolio .portfolio-filters li { font-size: 0.9rem; margin: 4px 8px; }
-  .portfolio-item .portfolio-info h4 { font-size: 1rem; }
-  .portfolio-item .portfolio-info p { font-size: 0.88rem; }
+  .portfolio #portfolio-flters li {
+    font-size: 14px;
+    margin: 4px 8px;
+  }
 }
