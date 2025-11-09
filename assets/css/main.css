@@ -1778,122 +1778,191 @@ h1, h2, h3, h4, h5, h6 {
 .error-message { color: #c0392b; }
 .sent-message { color: #2e8b57;}
 
-/* ================================
-   PORTFOLIO DETAILS – VERSIONE RAFFINATA
-   Novembre 2025 – CD Studio Tecnico
-================================== */
+/* =======================================================
+   PORTFOLIO DETAILS – VERSIONE PREMIUM
+   CD Studio Tecnico · Ing. Dario Cucchiara · Novembre 2025
+   Design: sobrio, tecnico, fluido e tipograficamente equilibrato
+========================================================= */
 
 .portfolio-details.section {
-  background-color: #fafafa;
-  padding-top: 70px;
-  padding-bottom: 70px;
+  background-color: #f9fafb;
+  padding: 80px 0 80px;
   font-family: 'Poppins', sans-serif;
+  color: #2b2b2b;
+  overflow-x: hidden;
 }
 
-/* Titolo e sottotitolo */
+/* ---------- TITOLI E STRUTTURA ---------- */
 .project-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: #2f4f4f;
-  letter-spacing: 0.3px;
-  margin-bottom: 10px;
+  letter-spacing: 0.2px;
+  margin-bottom: 8px;
+  line-height: 1.3;
+  text-transform: none;
 }
 
 .project-subtitle {
   max-width: 850px;
-  margin: 10px auto 35px;
+  margin: 12px auto 40px;
   color: #444;
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: 1.06rem;
+  line-height: 1.75;
   text-align: center;
   font-weight: 400;
 }
 
-/* Logo */
+/* Logo Studio */
 .project-logo {
   max-width: 160px;
-  margin: 0 auto 15px;
+  margin: 0 auto 20px;
   display: block;
-  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1));
-  transition: transform 0.4s ease;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.12));
+  transition: transform 0.35s ease;
 }
-.project-logo:hover { transform: scale(1.04); }
+.project-logo:hover {
+  transform: scale(1.05);
+}
 
-/* Slider */
+/* ---------- SLIDER IMMAGINI ---------- */
 .portfolio-details-slider {
-  border-radius: 12px;
+  position: relative;
+  border-radius: 14px;
   overflow: hidden;
   background: #fff;
-  box-shadow: 0 6px 30px rgba(0,0,0,0.05);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
 }
+
+.portfolio-details-slider .swiper-slide {
+  text-align: center;
+  background: #fff;
+}
+
 .portfolio-details-slider .swiper-slide img {
   width: 100%;
-  height: 500px;
+  height: 520px;
   object-fit: cover;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  border-bottom: 1px solid #f1f1f1;
 }
 .portfolio-details-slider .swiper-slide img:hover {
   transform: scale(1.02);
   opacity: 0.95;
 }
+
 .img-caption {
   text-align: center;
   font-style: italic;
-  font-size: 0.9rem;
+  font-size: 0.93rem;
   color: #555;
-  margin-top: 8px;
+  margin: 10px 0 15px;
+  line-height: 1.6;
+  padding: 0 15px;
 }
 
-/* Box */
-.elegant-box {
-  background: #ffffff;
-  border: 1px solid #e8e8e8;
-  border-radius: 14px;
-  padding: 28px 32px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+/* Paginazione Swiper */
+.swiper-pagination-bullet {
+  background: #d4d4d4;
+  opacity: 1;
   transition: all 0.3s ease;
 }
-.elegant-box:hover {
-  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+.swiper-pagination-bullet-active {
+  background: #356c6c;
+  width: 12px;
+  height: 12px;
 }
 
-/* Liste e testi */
-.project-info-list li {
-  margin-bottom: 8px;
-  color: #333;
-  font-size: 0.95rem;
+/* ---------- BOX INFORMATIVI ---------- */
+.elegant-box {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 35px;
+  box-shadow: 0 4px 22px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
-.project-info-list strong { color: #356c6c; }
+.elegant-box:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
+}
+
+.elegant-box h3,
+.portfolio-description h2 {
+  color: #356c6c;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.project-info-list {
+  padding-left: 0;
+  list-style: none;
+}
+.project-info-list li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 14px;
+  font-size: 0.96rem;
+  color: #333;
+}
+.project-info-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #356c6c;
+  font-weight: bold;
+}
+.project-info-list strong {
+  color: #356c6c;
+}
+
+/* ---------- TESTO DESCRITTIVO ---------- */
 .portfolio-description p {
   margin-bottom: 14px;
-  line-height: 1.75;
+  line-height: 1.8;
   color: #3a3a3a;
   font-size: 0.97rem;
+  text-align: justify;
+}
+.portfolio-description p:last-child {
+  margin-bottom: 0;
+}
+.credits-text {
+  margin-top: 10px;
+  font-style: italic;
+  color: #666;
+  font-size: 0.9rem;
 }
 
-/* Citazione del Sindaco */
+/* ---------- CITAZIONE DEL SINDACO ---------- */
 .project-quote {
   position: relative;
   background: #f7fbfb;
   border-left: 5px solid #356c6c;
-  border-radius: 12px;
-  padding: 30px 40px;
+  border-radius: 14px;
+  padding: 35px 50px;
   font-style: italic;
   color: #2e2e2e;
-  box-shadow: 0 4px 25px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 26px rgba(0,0,0,0.04);
   max-width: 950px;
-  margin: 60px auto 20px;
-  line-height: 1.8;
+  margin: 60px auto 30px;
+  line-height: 1.85;
   font-size: 1rem;
 }
 .project-quote::before {
   content: "“";
   position: absolute;
-  top: -20px;
+  top: -15px;
   left: 20px;
   font-size: 4rem;
-  color: rgba(53,108,108,0.15);
+  color: rgba(53,108,108,0.18);
+  font-family: Georgia, serif;
 }
 .project-quote strong {
   display: block;
@@ -1904,10 +1973,68 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
-/* Responsive */
+/* ---------- PULSANTE FINALE ---------- */
+.btn-outline-primary {
+  border: 1.8px solid #356c6c !important;
+  color: #356c6c !important;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  border-radius: 8px;
+  padding: 10px 22px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+.btn-outline-primary:hover {
+  background: #356c6c !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 992px) {
+  .portfolio-details.section {
+    padding: 60px 0;
+  }
+  .portfolio-details-slider .swiper-slide img {
+    height: 400px;
+  }
+  .project-title {
+    font-size: 1.8rem;
+  }
+  .project-subtitle {
+    font-size: 1rem;
+  }
+  .elegant-box {
+    padding: 25px;
+  }
+}
+
 @media (max-width: 768px) {
-  .portfolio-details-slider .swiper-slide img { height: 320px; }
-  .project-title { font-size: 1.6rem; }
-  .project-subtitle { font-size: 0.95rem; }
-  .elegant-box { padding: 22px; }
+  .portfolio-details-slider .swiper-slide img {
+    height: 320px;
+  }
+  .project-title {
+    font-size: 1.5rem;
+  }
+  .project-subtitle {
+    font-size: 0.94rem;
+  }
+  .project-quote {
+    padding: 25px 30px;
+    font-size: 0.92rem;
+  }
+  .project-quote::before {
+    top: -10px;
+    left: 15px;
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio-details-slider .swiper-slide img {
+    height: 260px;
+  }
+  .project-subtitle {
+    font-size: 0.9rem;
+  }
 }
