@@ -1785,144 +1785,153 @@ media (max-width: 576px) {
 }
 
 /* ================================================
-   STILE PORTFOLIO DETAILS – VERSIONE RAFFINATA CD STUDIO TECNICO
+   PORTFOLIO DETAILS – VERSIONE ELEGANTE E PROPORZIONATA
+   CD Studio Tecnico – Ing. Dario Cucchiara
    Novembre 2025
-   (Solo contenuti e resa visiva, senza alterare struttura globale)
 ================================================= */
 
 .portfolio-details.section {
-  background-color: #fafafa;
-  padding: 70px 0;
+  background-color: #fdfdfd;
+  padding-top: 80px;
+  padding-bottom: 80px;
   font-family: 'Poppins', sans-serif;
 }
 
-/* Titolo e sottotitolo */
+/* --- Titolo e sottotitolo --- */
 .project-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
-  color: #2f4f4f;
-  margin-bottom: 10px;
+  color: #2e4c4c;
+  letter-spacing: 0.4px;
+  margin-bottom: 12px;
   text-align: center;
-  letter-spacing: 0.3px;
 }
 
 .project-subtitle {
   max-width: 850px;
-  margin: 12px auto 35px;
-  color: #444;
+  margin: 15px auto 40px;
+  color: #4b4b4b;
   font-size: 1.05rem;
   line-height: 1.8;
   text-align: center;
   font-weight: 400;
 }
 
-/* Logo */
+/* --- Logo --- */
 .project-logo {
   max-width: 160px;
   margin: 0 auto 18px;
   display: block;
-  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.15));
-  transition: transform 0.3s ease;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.15));
+  transition: transform 0.4s ease;
 }
-.project-logo:hover {
-  transform: scale(1.04);
-}
+.project-logo:hover { transform: scale(1.05); }
 
-/* Slider immagini */
+/* --- Slider immagini --- */
 .portfolio-details-slider {
   border-radius: 14px;
   overflow: hidden;
   background: #fff;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+  box-shadow: 0 8px 35px rgba(0,0,0,0.06);
 }
 
 .portfolio-details-slider .swiper-slide {
   position: relative;
   text-align: center;
+  background-color: #fff;
 }
 
 .portfolio-details-slider .swiper-slide img {
   width: 100%;
-  height: 460px;
+  height: 480px;             /* Uniforma perfettamente le proporzioni */
   object-fit: cover;
+  object-position: center;
   transition: transform 0.6s ease, opacity 0.4s ease;
+  border-radius: 8px;
 }
 .portfolio-details-slider .swiper-slide img:hover {
-  transform: scale(1.03);
-  opacity: 0.97;
+  transform: scale(1.02);
+  opacity: 0.96;
 }
 
-/* Didascalie immagini */
+/* --- Didascalie immagini --- */
 .img-caption {
   text-align: left;
   font-style: italic;
-  font-size: 0.92rem;
+  font-size: 0.93rem;
   color: #555;
-  margin: 10px 0 15px;
-  line-height: 1.5;
-  padding-left: 4px;
+  margin: 10px 0 18px;
+  line-height: 1.55;
+  padding-left: 5px;
+  font-weight: 400;
 }
 
-/* Box descrittivi */
+/* --- Box informativi --- */
 .elegant-box {
   background: #ffffff;
-  border: 1px solid #e7e7e7;
+  border: 1px solid #e9e9e9;
   border-radius: 14px;
-  padding: 28px 32px;
-  margin-bottom: 30px;
-  box-shadow: 0 3px 16px rgba(0,0,0,0.05);
-  transition: box-shadow 0.3s ease;
+  padding: 32px 36px;
+  margin-bottom: 35px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.05);
+  transition: all 0.35s ease;
 }
 .elegant-box:hover {
-  box-shadow: 0 6px 22px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
 }
 
-/* Liste dati progetto */
+/* --- Lista dati progetto --- */
 .project-info-list {
   padding-left: 18px;
   list-style-type: disc;
 }
 .project-info-list li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   color: #333;
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 0.97rem;
+  line-height: 1.7;
 }
 .project-info-list strong {
   color: #356c6c;
   font-weight: 600;
 }
 
-/* Descrizione tecnica */
-.portfolio-description p {
+/* --- Testi descrittivi --- */
+.portfolio-description h2 {
+  font-size: 1.3rem;
+  color: #356c6c;
+  font-weight: 600;
   margin-bottom: 14px;
-  line-height: 1.8;
+}
+.portfolio-description p {
+  margin-bottom: 16px;
+  line-height: 1.85;
   color: #3a3a3a;
-  font-size: 0.97rem;
+  font-size: 0.98rem;
   text-align: justify;
 }
 
-/* Citazione del Sindaco */
+/* --- Citazione del Sindaco --- */
 .project-quote {
   position: relative;
-  background: #f9fdfd;
+  background: #f7fbfb;
   border-left: 5px solid #356c6c;
-  border-radius: 12px;
-  padding: 32px 40px;
+  border-radius: 14px;
+  padding: 36px 42px;
   font-style: italic;
   color: #2f2f2f;
-  box-shadow: 0 4px 25px rgba(0,0,0,0.05);
-  max-width: 950px;
-  margin: 60px auto 20px;
-  line-height: 1.8;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+  max-width: 960px;
+  margin: 65px auto 30px;
+  line-height: 1.85;
   font-size: 1rem;
 }
 .project-quote::before {
   content: "“";
   position: absolute;
-  top: -18px;
-  left: 20px;
-  font-size: 4rem;
+  top: -25px;
+  left: 25px;
+  font-size: 4.5rem;
   color: rgba(53,108,108,0.15);
 }
 .project-quote strong {
@@ -1934,7 +1943,7 @@ media (max-width: 576px) {
   font-weight: 600;
 }
 
-/* Pulsante “Torna al Portfolio” */
+/* --- Pulsante “Torna al Portfolio” --- */
 .project-quote + .text-center .btn {
   font-size: 0.95rem;
   border-radius: 8px;
@@ -1948,13 +1957,13 @@ media (max-width: 576px) {
   transform: translateY(-2px);
 }
 
-/* Responsività */
+/* --- Responsività --- */
 @media (max-width: 992px) {
   .portfolio-details-slider .swiper-slide img {
     height: 340px;
   }
   .project-title {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
   }
   .project-subtitle {
     font-size: 0.96rem;
