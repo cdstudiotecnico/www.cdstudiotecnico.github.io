@@ -1777,3 +1777,116 @@ h1, h2, h3, h4, h5, h6 {
 .loading { color: #6c757d; }
 .error-message { color: #c0392b; }
 .sent-message { color: #2e8b57;}
+
+/* ================================
+   PORTFOLIO DETAILS – CD STUDIO TECNICO
+==================================*/
+
+.project-logo {
+  max-width: 180px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 3px 8px rgba(0,0,0,0.15));
+}
+
+.project-title {
+  font-weight: 700;
+  color: #356c6c;
+  margin-bottom: 10px;
+}
+
+.project-subtitle {
+  font-size: 1.05rem;
+  color: #555;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.elegant-box {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 25px 25px 20px 25px;
+  transition: all 0.3s ease;
+}
+.elegant-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.project-info-list li {
+  margin-bottom: 10px;
+  color: #444;
+  transition: all 0.2s ease;
+}
+.project-info-list li:hover {
+  transform: translateX(5px);
+  color: #356c6c;
+}
+
+.fade-in-img {
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 0.8s ease, transform 1s ease;
+}
+.fade-in-img.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.project-quote {
+  font-style: italic;
+  color: #444;
+  background: #f7f9f9;
+  border-left: 4px solid #356c6c;
+  padding: 15px 25px;
+  border-radius: 6px;
+  line-height: 1.6;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.credits-text {
+  font-style: italic;
+  color: #356c6c;
+  margin-top: 12px;
+}
+
+/* Fade-in automatico immagini */
+document.addEventListener("DOMContentLoaded", () => {
+  const imgs = document.querySelectorAll(".fade-in-img");
+  imgs.forEach(img => {
+    img.onload = () => img.classList.add("loaded");
+  });
+});
+
+/* Portfolio thumbnail elegante */
+.portfolio-thumb {
+  border-radius: 10px;
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.portfolio-thumb:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.portfolio-info {
+  background: #fff;
+  border-radius: 0 0 10px 10px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+.portfolio-info:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.portfolio-title {
+  font-weight: 600;
+  color: #356c6c;
+  margin-bottom: 6px;
+}
+
+.portfolio-desc {
+  color: #555;
+  font-size: 0.95rem;
+}
