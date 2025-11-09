@@ -1784,76 +1784,182 @@ media (max-width: 576px) {
   .img-caption { font-size: 0.85rem; padding: 0 5px 10px; }
 }
 
-/* ============================
-   OTTIMIZZAZIONE BLOCCO PORTFOLIO
-   Coerenza grafica con il tema principale
-============================ */
+/* ================================================
+   STILE PORTFOLIO DETAILS – VERSIONE RAFFINATA CD STUDIO TECNICO
+   Novembre 2025
+   (Solo contenuti e resa visiva, senza alterare struttura globale)
+================================================= */
 
-/* Contenitore filtri */
-.portfolio #portfolio-flters {
+.portfolio-details.section {
+  background-color: #fafafa;
+  padding: 70px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Titolo e sottotitolo */
+.project-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2f4f4f;
+  margin-bottom: 10px;
   text-align: center;
-  margin-bottom: 30px;
-  padding: 0;
-  list-style: none;
+  letter-spacing: 0.3px;
 }
 
-/* "Tutti" centrato sopra */
-.portfolio #portfolio-flters li:first-child {
+.project-subtitle {
+  max-width: 850px;
+  margin: 12px auto 35px;
+  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: center;
+  font-weight: 400;
+}
+
+/* Logo */
+.project-logo {
+  max-width: 160px;
+  margin: 0 auto 18px;
   display: block;
-  font-weight: 600;
-  font-size: 16px;
-  margin-bottom: 8px;
-  color: #2f4f4f;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.15));
+  transition: transform 0.3s ease;
+}
+.project-logo:hover {
+  transform: scale(1.04);
 }
 
-/* "Opere Pubbliche" e "Progetti Privati" su una riga */
-.portfolio #portfolio-flters li:not(:first-child) {
-  display: inline-block;
-  margin: 0 10px;
-  font-size: 15px;
+/* Slider immagini */
+.portfolio-details-slider {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.06);
 }
 
-/* Bottone attivo */
-.portfolio #portfolio-flters .filter-active {
-  background-color: #356c6c;
-  color: #fff;
-  border-radius: 20px;
-  padding: 6px 16px;
+.portfolio-details-slider .swiper-slide {
+  position: relative;
+  text-align: center;
 }
 
-/* Hover leggero */
-.portfolio #portfolio-flters li:hover {
-  color: #356c6c;
-  cursor: pointer;
+.portfolio-details-slider .swiper-slide img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  transition: transform 0.6s ease, opacity 0.4s ease;
+}
+.portfolio-details-slider .swiper-slide img:hover {
+  transform: scale(1.03);
+  opacity: 0.97;
 }
 
-/* Allineamento sinistro per i testi sotto le immagini */
-.portfolio .portfolio-info {
-  text-align: left !important;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Titolo e descrizione del progetto */
-.portfolio .portfolio-info h4 {
+/* Didascalie immagini */
+.img-caption {
   text-align: left;
-  font-weight: 600;
-  color: #2f4f4f;
-  margin-bottom: 6px;
-}
-
-.portfolio .portfolio-info p {
-  text-align: left;
+  font-style: italic;
+  font-size: 0.92rem;
   color: #555;
-  margin-bottom: 0;
-  font-size: 15px;
+  margin: 10px 0 15px;
   line-height: 1.5;
+  padding-left: 4px;
 }
 
-/* Pulizia visiva su mobile */
-@media (max-width: 768px) {
-  .portfolio #portfolio-flters li {
-    font-size: 14px;
-    margin: 4px 8px;
+/* Box descrittivi */
+.elegant-box {
+  background: #ffffff;
+  border: 1px solid #e7e7e7;
+  border-radius: 14px;
+  padding: 28px 32px;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 16px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+.elegant-box:hover {
+  box-shadow: 0 6px 22px rgba(0,0,0,0.08);
+}
+
+/* Liste dati progetto */
+.project-info-list {
+  padding-left: 18px;
+  list-style-type: disc;
+}
+.project-info-list li {
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.project-info-list strong {
+  color: #356c6c;
+  font-weight: 600;
+}
+
+/* Descrizione tecnica */
+.portfolio-description p {
+  margin-bottom: 14px;
+  line-height: 1.8;
+  color: #3a3a3a;
+  font-size: 0.97rem;
+  text-align: justify;
+}
+
+/* Citazione del Sindaco */
+.project-quote {
+  position: relative;
+  background: #f9fdfd;
+  border-left: 5px solid #356c6c;
+  border-radius: 12px;
+  padding: 32px 40px;
+  font-style: italic;
+  color: #2f2f2f;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.05);
+  max-width: 950px;
+  margin: 60px auto 20px;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+.project-quote::before {
+  content: "“";
+  position: absolute;
+  top: -18px;
+  left: 20px;
+  font-size: 4rem;
+  color: rgba(53,108,108,0.15);
+}
+.project-quote strong {
+  display: block;
+  margin-top: 20px;
+  text-align: right;
+  font-style: normal;
+  color: #356c6c;
+  font-weight: 600;
+}
+
+/* Pulsante “Torna al Portfolio” */
+.project-quote + .text-center .btn {
+  font-size: 0.95rem;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.project-quote + .text-center .btn:hover {
+  background-color: #356c6c;
+  color: #fff !important;
+  transform: translateY(-2px);
+}
+
+/* Responsività */
+@media (max-width: 992px) {
+  .portfolio-details-slider .swiper-slide img {
+    height: 340px;
+  }
+  .project-title {
+    font-size: 1.7rem;
+  }
+  .project-subtitle {
+    font-size: 0.96rem;
+  }
+  .img-caption {
+    font-size: 0.88rem;
   }
 }
