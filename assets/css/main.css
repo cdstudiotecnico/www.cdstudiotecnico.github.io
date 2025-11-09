@@ -1790,11 +1790,11 @@ media (max-width: 576px) {
    Versione raffinata – Novembre 2025
 ===================================================== */
 
-/* ===============================================
-   PORTFOLIO – VERSIONE ELEGANTE E PROPORZIONATA
+/* ==============================================================
+   PORTFOLIO – VERSIONE RAFFINATA E COERENTE CON IL RESTO DEL SITO
    CD Studio Tecnico – Ing. Dario Cucchiara
    Novembre 2025
-=============================================== */
+============================================================== */
 
 .portfolio {
   background-color: #ffffff;
@@ -1802,122 +1802,80 @@ media (max-width: 576px) {
   font-family: 'Poppins', sans-serif;
 }
 
-/* --- Titolo sezione --- */
-.portfolio .section-title h2 {
-  font-weight: 700;
-  color: #2e4c4c;
-  font-size: 2.1rem;
-  margin-bottom: 12px;
-}
-.portfolio .section-title p {
-  font-size: 1rem;
-  color: #444;
-  margin-bottom: 40px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.7;
-}
-
-/* --- Filtri --- */
+/* --- Filtri Portfolio --- */
 .portfolio .portfolio-filters {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 18px;
   list-style: none;
   padding: 0;
-  margin: 0 0 45px 0;
+  margin: 0 0 50px 0;
 }
 
 .portfolio .portfolio-filters li {
   cursor: pointer;
-  padding: 10px 26px;
-  border-radius: 50px;
+  padding: 10px 30px;
+  border-radius: 25px;
   font-size: 0.95rem;
   font-weight: 500;
   color: #356c6c;
-  border: 1.6px solid #356c6c;
-  background-color: transparent;
+  border: 1.5px solid #356c6c;
+  background: #fff;
   transition: all 0.3s ease;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
 }
 
-.portfolio .portfolio-filters li:hover,
+.portfolio .portfolio-filters li:hover {
+  background-color: #e7f0f0;
+  color: #2a5252;
+}
+
 .portfolio .portfolio-filters li.filter-active {
   background-color: #356c6c;
   color: #fff;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* --- Griglia portfolio --- */
+/* --- Griglia Portfolio --- */
 .portfolio .isotope-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 28px;
+  gap: 32px;
 }
 
+/* Box progetto */
 .portfolio-item {
   position: relative;
   overflow: hidden;
   border-radius: 14px;
-  transition: all 0.4s ease;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-  max-width: 400px;
-  flex: 1 1 350px;
   background: #fff;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.05);
+  transition: all 0.35s ease;
+  max-width: 400px;
+  flex: 1 1 360px;
 }
 
+.portfolio-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+}
+
+/* Immagine */
 .portfolio-item img {
   width: 100%;
   height: 240px;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.5s ease;
 }
 
 .portfolio-item:hover img {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
-/* --- Box descrizione --- */
-.portfolio-info {
-  padding: 20px 22px;
-  background-color: #ffffff;
-  text-align: left;
-  color: #2f2f2f;
-  border-top: 1px solid #e9e9e9;
-}
-
-.portfolio-info h4 {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #2f4f4f;
-  margin-bottom: 6px;
-}
-
-.portfolio-info p {
-  font-size: 0.9rem;
-  color: #555;
-  margin-bottom: 10px;
-  line-height: 1.5;
-}
-
-/* --- Icone azioni (zoom e link) --- */
-.portfolio-info .preview-link,
-.portfolio-info .details-link {
-  font-size: 1.25rem;
-  color: #356c6c;
-  margin-right: 12px;
-  transition: 0.3s;
-}
-.portfolio-info .preview-link:hover,
-.portfolio-info .details-link:hover {
-  color: #2a5252;
-}
-
-/* --- Hover overlay elegante --- */
+/* Overlay su hover */
 .portfolio-item::before {
   content: "";
   position: absolute;
@@ -1928,20 +1886,71 @@ media (max-width: 576px) {
   border-radius: 14px;
 }
 .portfolio-item:hover::before {
-  opacity: 0.25;
+  opacity: 0.18;
 }
 
-/* --- Responsive --- */
+/* --- Informazioni Progetto --- */
+.portfolio-info {
+  padding: 20px 24px;
+  text-align: left;
+  color: #2e2e2e;
+  background: #ffffff;
+  border-top: 1px solid #e9e9e9;
+}
+
+.portfolio-info h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #2f4f4f;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.portfolio-info p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* --- Icone --- */
+.portfolio-info .preview-link,
+.portfolio-info .details-link {
+  font-size: 1.25rem;
+  color: #356c6c;
+  margin-right: 12px;
+  transition: color 0.3s ease;
+}
+
+.portfolio-info .preview-link:hover,
+.portfolio-info .details-link:hover {
+  color: #2a5252;
+}
+
+/* --- Responsive Design --- */
 @media (max-width: 992px) {
+  .portfolio .portfolio-filters li {
+    padding: 8px 22px;
+    font-size: 0.9rem;
+  }
+  .portfolio-item img {
+    height: 210px;
+  }
   .portfolio-info h4 {
     font-size: 1rem;
   }
   .portfolio-info p {
     font-size: 0.88rem;
   }
-  .portfolio .portfolio-filters li {
-    padding: 8px 20px;
-    font-size: 0.9rem;
+}
+
+@media (max-width: 576px) {
+  .portfolio .isotope-container {
+    gap: 24px;
+  }
+  .portfolio-item {
+    flex: 1 1 100%;
   }
 }
 
