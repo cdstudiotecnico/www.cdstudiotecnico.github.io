@@ -308,88 +308,122 @@
   </div>
 
    <!-- CONTENUTO PRINCIPALE -->
+<!-- ==============================
+     PORTFOLIO DETAILS – Originale
+============================== -->
 <section id="portfolio-details" class="portfolio-details section">
 
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <!-- Galleria immagini -->
-    <div class="portfolio-details-slider swiper" data-aos="fade-up" data-aos-delay="200">
-      <div class="swiper-wrapper align-items-center">
-
-        <div class="swiper-slide">
-          <img src="assets/img/portfolio/parco1.jpg" alt="Vista area anfiteatro - pavimentazione in pietra">
-        </div>
-
-        <div class="swiper-slide">
-          <img src="assets/img/portfolio/parco2.jpg" alt="Area pedonale pavimentata - dettaglio finiture">
-        </div>
-
-        <div class="swiper-slide">
-          <img src="assets/img/portfolio/parco3.jpg" alt="Anfiteatro urbano - spazi adiacenti riqualificati">
-        </div>
-
-      </div>
-      <div class="swiper-pagination"></div>
+  <div class="section-title text-center" data-aos="fade-up" style="margin-top:10px; margin-bottom:10px;">
+    <img src="assets/img/logo.png" alt="Logo CD Studio Tecnico" class="img-fluid project-logo">
+    <div class="container section-title" data-aos="fade-up">
+      <h2 class="project-title">Riqualificazione Spazi Anfiteatro del Parco Urbano di Montelepre</h2>
+      <p class="project-subtitle">
+        Intervento di sistemazione e pavimentazione degli spazi pubblici adiacenti all’anfiteatro del Parco Urbano di Montelepre (PA),
+        volto al miglioramento della fruibilità, della sicurezza e alla valorizzazione del patrimonio urbano comunale.
+      </p>
     </div>
+  </div>
 
-    <div class="row gy-4" data-aos="fade-up" data-aos-delay="250">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4">
+
+      <!-- SLIDER IMMAGINI -->
+      <div class="col-lg-8">
+        <div class="portfolio-details-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 650,
+              "autoplay": { "delay": 4500 },
+              "slidesPerView": 1,
+              "spaceBetween": 10,
+              "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }
+            }
+          </script>
+
+          <div class="swiper-wrapper align-items-center">
+
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/montelepre-parco-urbano-1.jpeg" alt="Pavimentazione area anfiteatro" class="fade-in-img">
+              <p class="img-caption">Rifacimento della pavimentazione in pietra locale presso l’area dell’anfiteatro, con geometrie naturali e materiali durevoli.</p>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/montelepre-parco-urbano-2.jpeg" alt="Veduta complessiva area lavori" class="fade-in-img">
+              <p class="img-caption">Vista complessiva della nuova pavimentazione e delle opere di sistemazione paesaggistica integrate nel contesto urbano.</p>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/montelepre-parco-urbano-3.jpeg" alt="Recinzioni metalliche" class="fade-in-img">
+              <p class="img-caption">Particolare delle nuove recinzioni metalliche installate lungo i percorsi pedonali e le aree a dislivello.</p>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/montelepre-parco-urbano-4.jpeg" alt="Vista laterale ringhiere e opere di consolidamento" class="fade-in-img">
+              <p class="img-caption">Vista laterale delle ringhiere zincate e dei muretti di contenimento, per una maggiore sicurezza e continuità visiva.</p>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/montelepre-parco-urbano-5.jpeg" alt="Canaletta smaltimento acque meteoriche" class="fade-in-img">
+              <p class="img-caption">Canaletta di raccolta delle acque meteoriche integrata nella pavimentazione, per una gestione sostenibile del deflusso.</p>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
       <!-- DATI PROGETTO -->
       <div class="col-lg-4">
-        <div class="portfolio-info elegant-box">
+        <div class="portfolio-info elegant-box" data-aos="fade-right" data-aos-delay="200">
           <h3><i class="bi bi-info-circle"></i> Dati Progetto</h3>
           <ul class="project-info-list">
-            <li><strong>Committente:</strong> Comune di Montelepre (PA)</li>
-            <li><strong>Programma di finanziamento:</strong> FSE – Regione Siciliana, Asse 8 “Promozione dell’occupazione e dell’inclusione sociale”</li>
-            <li><strong>Tipologia intervento:</strong> Sistemazione pavimentazioni e spazi pubblici adiacenti all’anfiteatro</li>
-            <li><strong>Ruolo tecnico:</strong> Progettazione esecutiva, Direzione Lavori, Coordinamento Sicurezza</li>
-            <li><strong>Importo lavori:</strong> € 43.798,76</li>
-            <li><strong>Data inizio lavori:</strong> 12/10/2020</li>
-            <li><strong>Anno di completamento:</strong> 2021</li>
-            <li><strong>Località:</strong> Montelepre (PA)</li>
+            <li><strong>Committente</strong>: Comune di Montelepre (PA)</li>
+            <li><strong>Programma di finanziamento</strong>: FSE – Regione Siciliana, Asse 8 “Promozione dell’occupazione e dell’inclusione sociale”</li>
+            <li><strong>Tipologia intervento</strong>: Sistemazione pavimentazioni e spazi pubblici adiacenti all’anfiteatro</li>
+            <li><strong>Ruolo tecnico</strong>: Progettazione esecutiva, Direzione Lavori, Coordinamento Sicurezza</li>
+            <li><strong>Importo lavori</strong>: € 43.798,76</li>
+            <li><strong>Data inizio lavori</strong>: 12/10/2020</li>
+            <li><strong>Anno di completamento</strong>: 2021</li>
+            <li><strong>Località</strong>: Montelepre (PA)</li>
           </ul>
         </div>
-      </div>
 
-      <!-- DESCRIZIONE TECNICA -->
-      <div class="col-lg-8">
-        <div class="portfolio-description elegant-box">
+        <div class="portfolio-description elegant-box" data-aos="fade-left" data-aos-delay="300">
           <h2><i class="bi bi-gear"></i> Descrizione tecnica e obiettivi</h2>
           <p>
             L’intervento ha riguardato la riqualificazione paesaggistica e funzionale dell’area dell’anfiteatro del Parco Urbano,
-            mediante la sostituzione delle pavimentazioni ammalorate, la sistemazione dei muretti in pietra e
-            l’installazione di nuove ringhiere metalliche di protezione.
+            attraverso la sostituzione delle pavimentazioni ammalorate, la sistemazione dei muretti in pietra e l’installazione di nuove ringhiere metalliche.
           </p>
           <p>
-            Le opere hanno previsto anche il miglioramento del deflusso delle acque meteoriche tramite canalette integrate e
-            superfici permeabili, nel rispetto della morfologia del terreno e dei principi di drenaggio urbano sostenibile.
+            Le opere hanno inoltre previsto il miglioramento del deflusso delle acque meteoriche mediante canalette integrate e superfici permeabili.
           </p>
           <p>
-            L’obiettivo principale è stato quello di restituire alla cittadinanza un’area pubblica sicura, accessibile e coerente con il contesto ambientale,
-            valorizzando il patrimonio urbano e promuovendo una fruizione più consapevole degli spazi collettivi.
+            L’obiettivo principale è stato quello di restituire alla cittadinanza un’area pubblica più sicura, accessibile e coerente con il contesto ambientale,
+            promuovendo principi di sostenibilità e valorizzazione del patrimonio urbano locale.
           </p>
           <p class="credits-text">
-            Progetto redatto dall’Ing. Dario Cucchiara
+            Progetto redatto e diretto dall’Ing. Dario Cucchiara – CD Studio Tecnico, Montelepre (PA).
           </p>
         </div>
       </div>
+
     </div>
   </div>
 
   <!-- COMMENTO DEL SINDACO -->
-  <div class="container" data-aos="fade-up" data-aos-delay="400" style="margin-top:50px;">
+  <div class="container" data-aos="fade-up" data-aos-delay="400" style="margin-top:40px;">
     <blockquote class="project-quote">
-      È con grande soddisfazione che oggi consegniamo i lavori di sistemazione e pavimentazione degli spazi
-      adiacenti all’anfiteatro del Parco Urbano di Montelepre. Questo intervento rappresenta un importante passo
-      avanti per la riqualificazione del nostro patrimonio urbano, offrendo un ambiente più accogliente, sicuro e fruibile da tutti.
+      <i class="bi bi-quote" style="font-size:22px; color:#356c6c; margin-right:8px;"></i>
+      È con grande soddisfazione che oggi consegniamo i lavori di sistemazione e pavimentazione degli spazi adiacenti
+      all’anfiteatro del Parco Urbano di Montelepre. Questo progetto rappresenta un importante passo avanti per la
+      riqualificazione del nostro patrimonio urbano, offrendo un ambiente più accogliente e sicuro per la comunità e i visitatori.
       <br><br>
       Desidero ringraziare tutti i professionisti e gli operatori che hanno contribuito alla realizzazione dell’opera,
       e l’Ing. Dario Cucchiara per la professionalità e la competenza dimostrate nella direzione tecnica del progetto.
-      <strong>– Sindaco Comune Montelepre (2021)</strong>
+      <br><br>
+      <strong>– Il Sindaco del Comune di Montelepre (2021)</strong>
     </blockquote>
-
-    <div class="text-center" style="margin-top:30px;">
-      <a href="portfolio.html" class="btn">← Torna al Portfolio</a>
-    </div>
   </div>
 
 </section>
