@@ -288,88 +288,89 @@
   <main class="main">
 
     <!-- Portfolio Details Section -->
-    <section id="portfolio-details" class="portfolio-details section">
+  <section id="portfolio-details" class="portfolio-details section">
 
-       <!-- Logo Studio Tecnico -->
- <div class="section-title" data-aos="fade-up" style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
-  <img src="assets/img/logo.png" alt="Logo CD Studio Tecnico" 
-     class="img-fluid" 
-     style="max-width: 200px; margin-top: 5px; margin-bottom: 5px; filter: drop-shadow(0 3px 8px rgba(0,0,0,0.2));">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-          <h2 style="font-weight: 700; color: #356c6c;">Portfolio Details</h2>
-        <p>Pagina in Lavorazione . . .</p>
-      </div><!-- End Section Title -->
+  <!-- Logo Studio Tecnico -->
+  <div class="section-title" data-aos="fade-up" style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
+    <img src="assets/img/logo.png" alt="Logo CD Studio Tecnico" 
+      class="img-fluid" 
+      style="max-width: 200px; margin-top: 5px; margin-bottom: 5px; filter: drop-shadow(0 3px 8px rgba(0,0,0,0.2));">
+    <div class="container section-title" data-aos="fade-up">
+      <h2 style="font-weight: 700; color: #356c6c;">Riqualificazione Parco Urbano di Montelepre</h2>
+      <p>Progetto di riqualificazione paesaggistica e funzionale delle aree pubbliche del centro urbano di Montelepre (PA).</p>
+    </div>
+  </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4">
 
-        <div class="row gy-4">
+      <!-- Galleria immagini -->
+      <div class="col-lg-8">
+        <div class="portfolio-details-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": { "delay": 5000 },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
 
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper init-swiper">
-
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
-                }
-              </script>
-
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/app-1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/product-1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/branding-1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/books-1.jpg" alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/montelepre-parco-urbano-1.jpeg" alt="Vista generale lavori Parco Urbano di Montelepre">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/montelepre-parco-urbano-2.jpeg" alt="Sistemazione pavimentazioni e spazi pubblici Montelepre">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/montelepre-parco-urbano-3.jpeg" alt="Fase di riqualificazione area giochi e camminamenti Montelepre">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/montelepre-parco-urbano-4.jpeg" alt="Progetto esecutivo e direzione lavori Ing. Dario Cucchiara Montelepre">
             </div>
           </div>
-
-          <div class="col-lg-4">
-            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
-              </ul>
-            </div>
-            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Exercitationem repudiandae officiis neque suscipit</h2>
-              <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-              </p>
-            </div>
-          </div>
-
+          <div class="swiper-pagination"></div>
         </div>
-
       </div>
 
-    </section><!-- /Portfolio Details Section -->
+      <!-- Dati progetto -->
+      <div class="col-lg-4">
+        <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+          <h3>Dati Progetto</h3>
+          <ul>
+            <li><strong>Committente</strong>: Comune di Montelepre (PA)</li>
+            <li><strong>Tipologia</strong>: Riqualificazione urbana e opere pubbliche</li>
+            <li><strong>Ruolo</strong>: Progettazione esecutiva, Direzione Lavori e Sicurezza</li>
+            <li><strong>Anno di realizzazione</strong>: 2024</li>
+            <li><strong>Località</strong>: Montelepre (PA)</li>
+          </ul>
+        </div>
+        <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+          <h2>Descrizione tecnica dell’intervento</h2>
+          <p>
+            L’intervento ha previsto la riqualificazione paesaggistica e funzionale del Parco Urbano di Montelepre,
+            mediante la sostituzione delle pavimentazioni ammalorate, il rifacimento della rete di smaltimento delle acque meteoriche
+            e l’installazione di nuovi elementi di arredo urbano e illuminazione a basso consumo.
+          </p>
+          <p>
+            L’obiettivo principale è stato il miglioramento della fruibilità e della sicurezza degli spazi pubblici, nel rispetto
+            dei principi di accessibilità e sostenibilità ambientale, con l’utilizzo di materiali permeabili e tecniche costruttive
+            a basso impatto ambientale.
+          </p>
+          <p style="margin-top:10px; font-style: italic; color: #356c6c;">
+            Progetto redatto e diretto dall’Ing. Dario Cucchiara – CD Studio Tecnico, Montelepre (PA).
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+ </section><!-- /Portfolio Details Section -->
 
   </main>
 
