@@ -708,6 +708,30 @@ section,
   margin-bottom: 0;
 }
 
+/* --------------------------------------------------------------
+# Uniforma sottotitoli (p) di tutte le sezioni, incluso Resume
+-------------------------------------------------------------- */
+.section-title p {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #5a6e6e;
+  letter-spacing: 0.3px;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+/* Forza lo stesso stile anche dentro Resume */
+.resume .section-title p {
+  color: #5a6e6e !important;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
