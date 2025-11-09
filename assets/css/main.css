@@ -1784,285 +1784,315 @@ media (max-width: 576px) {
   .img-caption { font-size: 0.85rem; padding: 0 5px 10px; }
 }
 
-//* ===========================================================
-   PORTFOLIO & DETAILS – RESTYLING PREMIUM ELEGANTE
-   CD Studio Tecnico – Ing. Dario Cucchiara – Novembre 2025
-=========================================================== */
+/* ==============================================================
+   RESTYLING ISTITUZIONALE – PORTFOLIO & DETAILS
+   CD Studio Tecnico – Ing. Dario Cucchiara
+============================================================== */
 
-/* ---- Sezione Portfolio ---- */
-.portfolio.section {
-  background-color: #fafbfb;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  font-family: "Roboto", sans-serif;
+/* ---- Palette tonale coerente ---- */
+:root {
+  --card-border: rgba(0, 0, 0, 0.08);
+  --card-bg: #ffffff;
+  --card-text: #374646;
+  --card-muted: #5c6c6c;
+  --card-title: #2c3e3e;
+}
+
+/* ==============================================================
+   PORTFOLIO – Griglia e Card
+============================================================== */
+.portfolio .portfolio-item {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+  max-width: 400px;
+}
+
+.portfolio .portfolio-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.portfolio .portfolio-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.portfolio .portfolio-info {
+  padding: 18px 22px 20px;
+  text-align: left;
+}
+
+.portfolio .portfolio-info h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--card-title);
+  margin-bottom: 6px;
+  letter-spacing: 0.2px;
+}
+
+.portfolio .portfolio-info p {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--card-muted);
+  margin-bottom: 0;
+}
+
+/* Link icone */
+.portfolio .portfolio-info .preview-link,
+.portfolio .portfolio-info .details-link {
+  color: var(--card-muted);
+  font-size: 1.2rem;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+.portfolio .portfolio-info .preview-link:hover,
+.portfolio .portfolio-info .details-link:hover {
+  color: var(--accent-color);
 }
 
 /* Filtri */
-.portfolio .portfolio-filters {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 14px;
-  list-style: none;
-  margin-bottom: 55px;
-  padding: 0;
-  animation: fadeInUp 0.6s ease both;
+.portfolio .portfolio-filters li {
+  border: 1px solid rgba(0,0,0,0.1);
+  background: #fff;
+  color: #374646;
+  font-weight: 500;
+  padding: 8px 22px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
 }
 
-.portfolio .portfolio-filters li {
-  cursor: pointer;
-  padding: 10px 28px;
-  border-radius: 40px;
+.portfolio .portfolio-filters li:hover {
+  background: #f6f8f8;
+  transform: translateY(-1px);
+}
+
+.portfolio .portfolio-filters li.filter-active {
+  background: var(--accent-color);
+  color: #fff;
+  border-color: var(--accent-color);
+}
+
+/* ==============================================================
+   PORTFOLIO DETAILS – Layout tecnico minimalista
+============================================================== */
+.portfolio-details .elegant-box {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 28px 30px;
+  margin-bottom: 28px;
+  color: var(--card-text);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+  transition: all 0.25s ease;
+}
+
+.portfolio-details .elegant-box:hover {
+  box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+}
+
+.portfolio-details .elegant-box h3,
+.portfolio-details .elegant-box h2 {
+  font-size: 1.15rem;
+  color: var(--card-title);
+  font-weight: 600;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.portfolio-details .elegant-box h3 i,
+.portfolio-details .elegant-box h2 i {
+  font-size: 1.1rem;
+  color: var(--accent-color);
+}
+
+.portfolio-details .elegant-box ul.project-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.portfolio-details .elegant-box ul.project-info-list li {
+  font-size: 0.93rem;
+  padding: 6px 0;
+  border-bottom: 1px dashed rgba(0,0,0,0.05);
+  color: var(--card-text);
+}
+.portfolio-details .elegant-box ul.project-info-list li:last-child {
+  border-bottom: none;
+}
+
+.portfolio-details .elegant-box ul.project-info-list strong {
+  color: var(--card-title);
+  font-weight: 600;
+}
+
+/* Descrizione tecnica */
+.portfolio-details .portfolio-description p {
+  text-align: justify;
+  font-size: 0.96rem;
+  color: var(--card-text);
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+/* Firma finale */
+.portfolio-details .portfolio-description .credits-text {
+  font-style: italic;
+  text-align: right;
+  font-size: 0.9rem;
+  color: var(--card-muted);
+  border-top: 1px dashed rgba(0,0,0,0.05);
+  padding-top: 10px;
+}
+
+/* ==============================================================
+   CITAZIONE DEL SINDACO – Versione istituzionale
+============================================================== */
+.project-quote {
+  background: #fafbfb;
+  border-left: 3px solid var(--accent-color);
+  border-radius: 8px;
+  padding: 30px 36px;
+  margin: 60px auto 30px;
+  font-style: italic;
+  font-size: 0.97rem;
+  color: var(--card-text);
+  line-height: 1.75;
+  max-width: 960px;
+  text-align: justify;
+}
+
+.project-quote strong {
+  display: block;
+  text-align: right;
+  color: var(--accent-color);
+  font-style: normal;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+/* Pulsante di ritorno */
+.project-quote + .text-center .btn {
   font-size: 0.95rem;
   font-weight: 500;
-  letter-spacing: 0.3px;
-  color: #3e5e5e;
-  border: 1px solid rgba(62, 94, 94, 0.4);
-  background: #ffffff;
-  transition: all 0.3s ease;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  background: transparent;
+  border: 1.3px solid var(--accent-color);
+  color: var(--accent-color);
+  border-radius: 8px;
+  padding: 10px 22px;
+  transition: all 0.25s ease;
 }
-
-.portfolio .portfolio-filters li:hover,
-.portfolio .portfolio-filters li.filter-active {
-  background: linear-gradient(135deg, #3b6c6c, #2d5656);
+.project-quote + .text-center .btn:hover {
+  background: var(--accent-color);
   color: #fff;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Griglia progetti */
-.portfolio .isotope-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 36px;
+/* ==============================================================
+   Responsive ottimizzato
+============================================================== */
+@media (max-width: 768px) {
+  .portfolio-details .elegant-box {
+    padding: 22px 20px;
+  }
+  .portfolio-details .portfolio-description p {
+    font-size: 0.94rem;
+  }
+  .project-quote {
+    padding: 26px 24px;
+    font-size: 0.94rem;
+  }
 }
 
-/* Card progetto */
-.portfolio-item {
-  position: relative;
-  overflow: hidden;
+/* ==============================================================
+   PORTFOLIO – STILE MINIMALISTICO ISTITUZIONALE
+============================================================== */
+
+.portfolio-card {
   background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.05);
-  transition: all 0.4s ease;
-  flex: 1 1 360px;
-  max-width: 400px;
-  animation: fadeInUp 0.8s ease both;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
 }
 
-.portfolio-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+.portfolio-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
 /* Immagine */
-.portfolio-item img {
+.portfolio-image img {
   width: 100%;
-  height: 260px;
+  height: 220px;
   object-fit: cover;
-  border-radius: 18px 18px 0 0;
-  transition: transform 0.5s ease, filter 0.4s ease;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
-.portfolio-item:hover img {
-  transform: scale(1.04);
-  filter: brightness(0.95);
-}
-
-/* Info progetto */
-.portfolio-info {
-  padding: 22px 28px 28px;
+/* Testo */
+.portfolio-text {
+  padding: 18px 22px;
   text-align: left;
-  color: #2e2e2e;
-  background: #fff;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
-
-.portfolio-info h4 {
-  font-size: 1.05rem;
+.portfolio-text h4 {
+  font-size: 1rem;
   font-weight: 600;
   color: #2f4f4f;
   margin-bottom: 8px;
   line-height: 1.45;
 }
-
-.portfolio-info p {
-  font-size: 0.92rem;
-  color: #555;
-  line-height: 1.58;
-  margin-bottom: 0;
-  text-align: justify;
-}
-
-/* Effetto fade */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(25px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ===========================================================
-   PORTFOLIO DETAILS – RESTYLING PREMIUM
-=========================================================== */
-
-.portfolio-details.section {
-  background-color: #f9fafa;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  font-family: "Roboto", sans-serif;
-}
-
-/* Slider immagini */
-.portfolio-details-slider {
-  border-radius: 18px;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.06);
-}
-.portfolio-details-slider .swiper-slide img {
-  width: 100%;
-  height: 480px;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-}
-.portfolio-details-slider .swiper-slide img:hover {
-  transform: scale(1.02);
-}
-.img-caption {
-  text-align: left;
-  font-style: italic;
+.portfolio-text p {
   font-size: 0.9rem;
-  color: #555;
-  margin: 10px 0 16px;
+  color: #5a6a6a;
   line-height: 1.55;
+  margin-bottom: 12px;
 }
 
-/* Box eleganti */
-.elegant-box {
-  background: #ffffff;
-  border: 1px solid #e3e7e7;
-  border-radius: 14px;
-  padding: 38px 42px;
-  margin-bottom: 40px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.04);
-  transition: all 0.35s ease;
+/* Icone */
+.portfolio-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
-.elegant-box:hover {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+.portfolio-links a {
+  color: #5a6a6a;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
 }
-
-.elegant-box h3, 
-.elegant-box h2 {
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-  color: #2f4f4f;
-  font-size: 1.30rem;
-  border-bottom: 2px solid rgba(47,79,79,0.15);
-  padding-bottom: 10px;
-  margin-bottom: 20px;
+.portfolio-links a:hover {
+  color: var(--accent-color);
 }
 
-/* Dati progetto */
-.project-info-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.project-info-list li {
-  margin-bottom: 10px;
-  font-size: 0.96rem;
-  line-height: 1.6;
-  color: #333;
-  text-align: justify;
-}
-.project-info-list strong {
-  color: #3b6c6c;
-  font-weight: 600;
-}
-
-/* Descrizione tecnica */
-.portfolio-description p {
-  margin-bottom: 20px;
-  line-height: 1.85;
-  color: #3a3a3a;
-  font-size: 1.00rem;
-  text-align: justify;
-}
-.portfolio-description .credits-text {
-  font-style: italic;
-  color: #555;
-  font-size: 0.93rem;
-  margin-top: 14px;
-  border-top: 1px dashed #dcdcdc;
-  padding-top: 10px;
-  text-align: right;
-}
-
-/* Citazione Sindaco */
-.project-quote {
-  background: linear-gradient(180deg, #fdfefe 0%, #f4f7f7 100%);
-  border-left: 5px solid #3b6c6c;
-  border-radius: 14px;
-  padding: 42px 48px;
-  font-style: italic;
-  color: #2e2e2e;
-  line-height: 1.9;
-  font-size: 1.02rem;
-  box-shadow: 0 6px 28px rgba(0,0,0,0.05);
-  position: relative;
-  max-width: 960px;
-  margin: 70px auto 35px;
-  text-align: justify;
-}
-.project-quote::before,
-.project-quote::after {
-  position: absolute;
-  font-size: 4.5rem;
-  color: rgba(59,108,108,0.12);
-  font-family: serif;
-}
-.project-quote::before {
-  content: "“";
-  top: -20px;
-  left: 25px;
-}
-.project-quote::after {
-  content: "”";
-  bottom: -20px;
-  right: 30px;
-}
-.project-quote strong {
-  display: block;
-  margin-top: 25px;
-  text-align: right;
-  font-style: normal;
-  color: #3b6c6c;
-  font-weight: 600;
-}
-
-/* Pulsante finale */
-.project-quote + .text-center .btn {
-  font-size: 1rem;
-  border: 1.5px solid #3b6c6c;
-  border-radius: 8px;
-  padding: 12px 28px;
-  font-weight: 500;
-  background-color: transparent;
-  color: #3b6c6c;
+/* Filtri */
+.portfolio-filters li {
+  border: 1px solid rgba(0,0,0,0.1);
+  color: #374646;
+  background: #fff;
+  padding: 8px 22px;
+  border-radius: 30px;
   transition: all 0.3s ease;
+  font-weight: 500;
 }
-.project-quote + .text-center .btn:hover {
-  background-color: #3b6c6c;
-  color: #fff !important;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+.portfolio-filters li:hover {
+  background: #f8f9f9;
+}
+.portfolio-filters li.filter-active {
+  background: var(--accent-color);
+  color: #fff;
+  border-color: var(--accent-color);
 }
 
 /* Responsive */
-@media (max-width: 992px) {
-  .portfolio-details-slider .swiper-slide img { height: 340px; }
-  .elegant-box { padding: 30px; }
-  .portfolio-description p { font-size: 0.95rem; }
-  .project-info-list li { font-size: 0.90rem; }
-  .project-quote { padding: 32px 30px; font-size: 0.95rem; }
+@media (max-width: 768px) {
+  .portfolio-image img { height: 200px; }
+  .portfolio-text h4 { font-size: 0.95rem; }
+  .portfolio-text p { font-size: 0.85rem; }
 }
