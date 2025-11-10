@@ -81,7 +81,7 @@
     }
     .swiper-slide img {
       width: 100%;
-      height: 440px;
+      height: 520px;
       object-fit: cover;
       transition: transform 0.6s ease;
     }
@@ -242,7 +242,7 @@
     <!-- === PARCO URBANO === -->
     <section id="parco-urbano" class="main-container project">
       <div class="project-title">
-  <img src="assets/img/logo.png" alt="Logo CD Studio Tecnico">
+        <img src="assets/img/logo.png" alt="Logo Studio Tecnico">
         <h1>Parco Urbano – Montelepre</h1>
         <p>Intervento di sistemazione e pavimentazione delle aree pubbliche adiacenti all’anfiteatro comunale.</p>
       </div>
@@ -314,4 +314,23 @@
 
     const params = new URLSearchParams(window.location.search);
     const project = params.get("project");
-    document.querySelec
+    document.querySelectorAll(".project").forEach(s => s.style.display = "none");
+    if (project) document.getElementById(project).style.display = "block";
+
+    // Slider con frecce + autoplay
+    document.querySelectorAll('.swiper').forEach(swiperEl => {
+      new Swiper(swiperEl, {
+        loop: true,
+        effect: 'fade',
+        autoplay: { delay: 3600, disableOnInteraction: false, pauseOnMouseEnter: true },
+        pagination: { el: swiperEl.querySelector('.swiper-pagination'), clickable: true },
+        navigation: {
+          nextEl: swiperEl.querySelector('.swiper-button-next'),
+          prevEl: swiperEl.querySelector('.swiper-button-prev'),
+        },
+        speed: 900,
+      });
+    });
+  </script>
+</body>
+</html>
