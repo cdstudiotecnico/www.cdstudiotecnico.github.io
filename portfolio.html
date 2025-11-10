@@ -65,22 +65,22 @@
       color: #fff;
     }
 
-    /* ===== Container ===== */
+    /* ===== Container principale ===== */
     .portfolio-wrapper {
       width: 100%;
       overflow: hidden;
-      position: relative;
       display: flex;
       justify-content: center;
     }
 
     .portfolio-container {
       display: flex;
-      flex-wrap: nowrap;
       align-items: flex-start;
-      gap: 40px;
-      transition: transform 0.4s ease-in-out;
       justify-content: center;
+      gap: 40px;
+      flex-wrap: nowrap;
+      transition: transform 0.4s ease-in-out;
+      scroll-behavior: smooth;
     }
 
     .portfolio-item {
@@ -143,14 +143,28 @@
       color: #fff;
     }
 
+    /* ===== Responsive ===== */
     @media (max-width: 992px) {
       .portfolio-item { width: 280px; }
     }
 
     @media (max-width: 768px) {
-      .portfolio-container { gap: 20px; }
-      .portfolio-item { width: 260px; }
-      .filter-buttons button { padding: 8px 18px; font-size: 0.95rem; }
+      .portfolio-wrapper {
+        justify-content: center;
+      }
+      .portfolio-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+      }
+      .portfolio-item {
+        width: 90%;
+        max-width: 420px;
+      }
+      .filter-buttons button {
+        padding: 8px 18px;
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
@@ -202,6 +216,7 @@
 
       <div class="portfolio-wrapper">
         <div class="portfolio-container" id="portfolioContainer">
+
           <!-- OPERE PUBBLICHE -->
           <div class="portfolio-item public show">
             <img src="assets/img/portfolio/montelepre-parco-urbano-2.jpeg" alt="Parco Urbano - Montelepre">
@@ -257,6 +272,7 @@
               <div class="text-center"><a href="portfolio-details.html?project=ampliamento-montelepre" class="btn-discover">Scopri di più</a></div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -298,17 +314,12 @@
       container.scrollLeft = 0;
     }
 
-    function centerItems() {
-      const visible = Array.from(items).filter(i => i.classList.contains('show'));
-      const totalWidth = visible.reduce((acc, el) => acc + el.offsetWidth + 40, 0);
-      const emptySpace = (container.offsetWidth - totalWidth) / 2;
-      container.style.justifyContent = emptySpace > 0 ? 'center' : 'flex-start';
-    }
-
     function autoScroll() {
-      if (!isHovered) container.scrollLeft += scrollSpeed;
-      if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 1) {
-        container.scrollLeft = 0;
+      if (window.innerWidth > 900 && !isHovered) {
+        container.scrollLeft += scrollSpeed;
+        if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 1) {
+          container.scrollLeft = 0;
+        }
       }
       requestAnimationFrame(autoScroll);
     }
@@ -319,7 +330,6 @@
         btn.classList.add('active');
         const filter = btn.getAttribute('data-filter');
         showItems(filter);
-        setTimeout(centerItems, 300);
       });
     });
 
@@ -328,9 +338,7 @@
 
     window.addEventListener('load', () => {
       showItems('public');
-      centerItems();
       requestAnimationFrame(autoScroll);
-      window.addEventListener('resize', centerItems);
     });
   </script>
 </body>
