@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Portfolio Dettagli | CD Studio Tecnico – Ing. Dario Cucchiara</title>
-  <meta name="description" content="Dettagli dei progetti realizzati dal CD Studio Tecnico.">
+  <title>Portfolio – Dettagli Progetto | CD Studio Tecnico</title>
+  <meta name="description" content="Dettagli dei progetti tecnici realizzati dallo studio CD Studio Tecnico – Ing. Dario Cucchiara.">
 
   <!-- Fonts e CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
@@ -46,10 +46,7 @@
       max-width: 980px;
       margin: 90px auto 60px auto;
       padding: 0 20px;
-      display: none;
     }
-
-    .main-container.active { display: block; }
 
     .project-title {
       text-align: center;
@@ -74,6 +71,7 @@
       margin: 0 auto;
     }
 
+    /* SLIDER */
     .swiper {
       margin-top: 40px;
       border-radius: 14px;
@@ -89,39 +87,40 @@
     .swiper-slide img:hover { transform: scale(1.02); }
 
     .caption {
-      background: rgba(250, 250, 250, 0.96);
+      background: rgba(250,250,250,0.96);
       text-align: center;
       padding: 12px 15px;
       font-size: 0.95rem;
       color: #444;
       font-style: italic;
       border-top: 1px solid #eee;
-      animation: fadeInUp 0.8s ease;
     }
 
-    @keyframes fadeInUp {
-      from {opacity: 0; transform: translateY(10px);}
-      to {opacity: 1; transform: translateY(0);}
+    .swiper-pagination-bullet {
+      background: #356c6c !important;
+      opacity: 0.4;
+    }
+    .swiper-pagination-bullet-active {
+      opacity: 1;
     }
 
-    .swiper-pagination { position: relative; bottom: 5px; margin-top: 10px; }
-    .swiper-pagination-bullet { background: #356c6c !important; opacity: 0.35; }
-    .swiper-pagination-bullet-active { opacity: 1; }
-    .swiper-button-prev, .swiper-button-next { color: #356c6c; transition: 0.3s; }
-    .swiper-button-prev:hover, .swiper-button-next:hover { color: #2e5555; }
+    .swiper-button-prev, .swiper-button-next {
+      color: #356c6c;
+      transition: 0.3s;
+    }
+    .swiper-button-prev:hover, .swiper-button-next:hover {
+      color: #2e5555;
+    }
 
+    /* INFO BOX */
     .info-box, .description {
       background: #fff;
       border-radius: 12px;
       padding: 35px 45px;
       margin-top: 50px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .info-box:hover, .description:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-    }
+
     .info-box h3, .description h3 {
       color: #356c6c;
       font-family: 'Poppins', sans-serif;
@@ -131,14 +130,28 @@
       align-items: center;
       gap: 8px;
     }
-    .info-box h3 i, .description h3 i {
-      color: #2f5858;
-      font-size: 1.2rem;
+
+    .info-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
-    .info-box ul { list-style: none; padding: 0; margin: 0; }
-    .info-box li { padding: 8px 0; border-bottom: 1px solid #eee; font-size: 0.97rem; }
-    .info-box strong { color: #356c6c; }
-    .description p { font-size: 1rem; color: #555; margin-bottom: 12px; }
+
+    .info-box li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 0.97rem;
+    }
+
+    .info-box strong {
+      color: #356c6c;
+    }
+
+    .description p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 12px;
+    }
 
     .quote {
       background: #fff;
@@ -169,7 +182,10 @@
       font-weight: 500;
       transition: all 0.3s ease;
     }
-    .back-btn:hover { background: #356c6c; color: #fff; }
+    .back-btn:hover {
+      background: #356c6c;
+      color: #fff;
+    }
 
     @media (max-width: 768px) {
       .swiper-slide img { height: 340px; }
@@ -181,104 +197,153 @@
 
 <body>
 
-  <!-- Bottone chiusura -->
+  <!-- Pulsante chiusura -->
   <a href="portfolio.html" class="close-btn" title="Torna al Portfolio"><i class="bi bi-x-lg"></i></a>
 
-  <!-- ====== PROGETTO 1: PARCO URBANO ====== -->
-  <div class="main-container" id="parco-urbano">
-    <div class="project-title">
-      <img src="assets/img/logo.png" alt="Logo CD Studio Tecnico">
-      <h1>Parco Urbano – Montelepre</h1>
-      <p>Intervento di sistemazione e pavimentazione degli spazi pubblici adiacenti all’anfiteatro del Parco Urbano di Montelepre.</p>
-    </div>
+  <!-- Sezioni progetti -->
+  <div id="projects">
 
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="assets/img/portfolio/montelepre-parco-urbano-1.jpeg"><div class="caption">Pavimentazione in pietra locale presso l’area dell’anfiteatro.</div></div>
-        <div class="swiper-slide"><img src="assets/img/portfolio/montelepre-parco-urbano-2.jpeg"><div class="caption">Vista d’insieme degli spazi pubblici riqualificati e delle ringhiere zincate.</div></div>
-        <div class="swiper-slide"><img src="assets/img/portfolio/montelepre-parco-urbano-3.jpeg"><div class="caption">Dettaglio della nuova recinzione metallica e delle canalette per il deflusso acque.</div></div>
-        <div class="swiper-slide"><img src="assets/img/portfolio/montelepre-parco-urbano-4.jpeg"><div class="caption">Vista laterale delle pavimentazioni e dei muretti di contenimento restaurati.</div></div>
-        <div class="swiper-slide"><img src="assets/img/portfolio/montelepre-parco-urbano-5.jpeg"><div class="caption">Particolare delle canalette integrate nella pavimentazione permeabile.</div></div>
+    <!-- === PARCO URBANO === -->
+    <section id="parco-urbano" class="main-container project">
+      <div class="project-title">
+        <img src="assets/img/logo.png" alt="Logo Studio Tecnico">
+        <h1>Parco Urbano – Montelepre</h1>
+        <p>Intervento di sistemazione e pavimentazione delle aree pubbliche adiacenti all’anfiteatro comunale.</p>
       </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
 
-    <div class="info-box">
-      <h3><i class="bi bi-building"></i> Dati Progetto</h3>
-      <ul>
-        <li><strong>Committente:</strong> Comune di Montelepre</li>
-        <li><strong>Tipologia:</strong> Sistemazione pavimentazioni e spazi pubblici adiacenti all’anfiteatro</li>
-        <li><strong>Ruolo tecnico:</strong> Progettazione, Direzione Lavori e Coordinamento Sicurezza</li>
-        <li><strong>Importo lavori:</strong> € 43.798,76</li>
-        <li><strong>Anno:</strong> 2021</li>
-      </ul>
-    </div>
+      <div class="swiper parcoSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="assets/img/portfolio/montelepre-parco-urbano-1.jpeg" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/portfolio/montelepre-parco-urbano-2.jpeg" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/portfolio/montelepre-parco-urbano-3.jpeg" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/portfolio/montelepre-parco-urbano-4.jpeg" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/portfolio/montelepre-parco-urbano-5.jpeg" alt=""></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
 
-    <div class="description">
-      <h3><i class="bi bi-diagram-3"></i> Descrizione tecnica</h3>
-      <p>L’intervento ha riguardato la riqualificazione paesaggistica e funzionale dell’area dell’anfiteatro del Parco Urbano, con pavimentazioni in pietra locale e nuove ringhiere metalliche zincate.</p>
-      <p>Le opere hanno previsto canalette integrate per il deflusso delle acque meteoriche e l’utilizzo di materiali a basso impatto ambientale.</p>
-      <p>L’obiettivo principale è restituire alla cittadinanza un’area pubblica più sicura, accessibile e coerente con il contesto urbano di Montelepre.</p>
-    </div>
+      <div class="info-box">
+        <h3><i class="bi bi-building"></i> Dati Progetto</h3>
+        <ul>
+          <li><strong>Committente:</strong> Comune di Montelepre</li>
+          <li><strong>Programma:</strong> FSE – Regione Siciliana</li>
+          <li><strong>Tipologia:</strong> Riqualificazione spazi pubblici</li>
+          <li><strong>Ruolo tecnico:</strong> Progettazione, Direzione Lavori e Sicurezza</li>
+          <li><strong>Importo lavori:</strong> € 43.798,76</li>
+          <li><strong>Anno:</strong> 2021</li>
+        </ul>
+      </div>
 
-    <div class="quote">
-      È con grande soddisfazione che oggi consegniamo i lavori di sistemazione e pavimentazione degli spazi adiacenti all’anfiteatro del Parco Urbano di Montelepre...
-      <strong>Il Sindaco del Comune di Montelepre (2021)</strong>
-    </div>
+      <div class="description">
+        <h3><i class="bi bi-diagram-3"></i> Descrizione tecnica e obiettivi</h3>
+        <p>Riqualificazione paesaggistica e funzionale dell’area dell’anfiteatro con pavimentazioni in pietra locale e nuove ringhiere zincate.</p>
+        <p>Opere integrate di drenaggio e finiture sostenibili con l’ambiente urbano circostante.</p>
+      </div>
 
-    <div class="text-center"><a href="portfolio.html" class="back-btn">← Torna al Portfolio</a></div>
+      <div class="quote">
+        “Questo progetto rappresenta un passo importante per la valorizzazione del nostro patrimonio urbano.”
+        <strong>Il Sindaco del Comune di Montelepre (2021)</strong>
+      </div>
+
+      <div class="text-center">
+        <a href="portfolio.html" class="back-btn">← Torna al Portfolio</a>
+      </div>
+    </section>
+
+    <!-- === ALTRI PROGETTI === -->
+    <section id="piazza-vittorio-emanuele" class="main-container project">
+      <div class="project-title"><img src="assets/img/logo.png" alt=""><h1>Piazza Vittorio Emanuele – Terrasini</h1></div>
+      <div class="swiper piazzaSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="assets/img/portfolio/piazza-vittorio-emanuele.jpeg" alt=""></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="info-box">
+        <h3><i class="bi bi-building"></i> Dati Progetto</h3>
+        <ul><li><strong>Comune:</strong> Terrasini</li><li><strong>Intervento:</strong> Restauro pavimentazione e nuova illuminazione artistica</li><li><strong>Ruolo tecnico:</strong> Direzione lavori e sicurezza</li><li><strong>Anno:</strong> 2020</li></ul>
+      </div>
+      <div class="description"><p>Restauro e valorizzazione della pavimentazione storica della piazza principale di Terrasini con nuovi corpi illuminanti a LED a basso consumo.</p></div>
+      <div class="text-center"><a href="portfolio.html" class="back-btn">← Torna al Portfolio</a></div>
+    </section>
+
+    <section id="scuola-montelepre" class="main-container project">
+      <div class="project-title"><img src="assets/img/logo.png" alt=""><h1>Scuola Elementare – Montelepre</h1></div>
+      <div class="swiper scuolaSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="assets/img/portfolio/edificio-scolastico-montelepre.jpeg" alt=""></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="info-box">
+        <h3><i class="bi bi-building"></i> Dati Progetto</h3>
+        <ul><li><strong>Comune:</strong> Montelepre</li><li><strong>Intervento:</strong> Adeguamento sismico ed efficientamento energetico</li><li><strong>Anno:</strong> 2019</li></ul>
+      </div>
+      <div class="description"><p>Progetto di riqualificazione energetica e strutturale dell’edificio scolastico con impianti fotovoltaici e nuovi infissi termici.</p></div>
+      <div class="text-center"><a href="portfolio.html" class="back-btn">← Torna al Portfolio</a></div>
+    </section>
+
+    <section id="studio-idraulico" class="main-container project">
+      <div class="project-title"><img src="assets/img/logo.png" alt=""><h1>Studio Idraulico – Trappeto</h1></div>
+      <div class="swiper idraulicoSwiper">
+        <div class="swiper-wrapper"><div class="swiper-slide"><img src="assets/img/portfolio/studio-idraulico-trappeto.jpeg" alt=""></div></div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="info-box">
+        <h3><i class="bi bi-water"></i> Dati Progetto</h3>
+        <ul><li><strong>Luogo:</strong> Trappeto</li><li><strong>Tipologia:</strong> Studio di compatibilità idraulica</li><li><strong>Anno:</strong> 2022</li></ul>
+      </div>
+      <div class="description"><p>Analisi e modellazione del deflusso fluviale per la verifica della compatibilità idraulica in aree soggette a rischio esondazione.</p></div>
+      <div class="text-center"><a href="portfolio.html" class="back-btn">← Torna al Portfolio</a></div>
+    </section>
+
+    <section id="villa-partinico" class="main-container project">
+      <div class="project-title"><img src="assets/img/logo.png" alt=""><h1>Villa Privata – Partinico</h1></div>
+      <div class="swiper villaSwiper">
+        <div class="swiper-wrapper"><div class="swiper-slide"><img src="assets/img/portfolio/villa-privata-partinico.jpeg" alt=""></div></div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="info-box"><ul><li><strong>Intervento:</strong> Direzione lavori e collaudo</li><li><strong>Anno:</strong> 2023</li></ul></div>
+      <div class="description"><p>Residenza unifamiliare ad alta efficienza energetica con impianti fotovoltaici e pompe di calore integrate.</p></div>
+      <div class="text-center"><a href="portfolio.html" class="back-btn">← Torna al Portfolio</a></div>
+    </section>
+
+    <section id="ampliamento-montelepre" class="main-container project">
+      <div class="project-title"><img src="assets/img/logo.png" alt=""><h1>Ampliamento civile abitazione – Montelepre</h1></div>
+      <div class="swiper ampliamentoSwiper">
+        <div class="swiper-wrapper"><div class="swiper-slide"><img src="assets/img/portfolio/ampliamento-casa-montelepre.jpeg" alt=""></div></div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="info-box"><ul><li><strong>Luogo:</strong> Montelepre</li><li><strong>Tipologia:</strong> Ampliamento civile abitazione</li><li><strong>Anno:</strong> 2023</li></ul></div>
+      <div class="description"><p>Progetto architettonico e strutturale con verifica antisismica e ottimizzazione volumetrica della struttura esistente.</p></div>
+      <div class="text-center"><a href="portfolio.html" class="back-btn">← Torna al Portfolio</a></div>
+    </section>
+
   </div>
 
-  <!-- ====== PROGETTO 2: PIAZZA VITTORIO EMANUELE ====== -->
-  <div class="main-container" id="piazza-vittorio-emanuele">
-    <div class="project-title">
-      <img src="assets/img/logo.png" alt="Logo CD Studio Tecnico">
-      <h1>Piazza Vittorio Emanuele – Terrasini</h1>
-      <p>Restauro pavimentazione storica e nuova illuminazione artistica nel centro urbano.</p>
-    </div>
-    <!-- Slider immagini -->
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="assets/img/portfolio/piazza-vittorio-emanuele.jpeg"><div class="caption">Intervento sulla pavimentazione storica del centro di Terrasini.</div></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-
-    <div class="info-box">
-      <h3><i class="bi bi-building"></i> Dati Progetto</h3>
-      <ul>
-        <li><strong>Committente:</strong> Comune di Terrasini</li>
-        <li><strong>Tipologia:</strong> Restauro pavimentazioni storiche e impianto illuminazione</li>
-        <li><strong>Ruolo tecnico:</strong> Direzione Lavori e Coordinamento Sicurezza</li>
-        <li><strong>Anno:</strong> 2020</li>
-      </ul>
-    </div>
-
-    <div class="description">
-      <h3><i class="bi bi-diagram-3"></i> Descrizione tecnica</h3>
-      <p>Il progetto ha previsto la sostituzione della pavimentazione in pietra naturale e la realizzazione di un nuovo impianto di illuminazione artistica nel cuore del centro urbano di Terrasini.</p>
-    </div>
-    <div class="text-center"><a href="portfolio.html" class="back-btn">← Torna al Portfolio</a></div>
-  </div>
-
-  <!-- (continua con gli altri 4 progetti nello stesso formato...) -->
   <!-- JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script>
     AOS.init();
-    var swiper = new Swiper(".mySwiper", { loop: true, autoplay: { delay: 3500, disableOnInteraction: false }, pagination: { el: ".swiper-pagination", clickable: true }, navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }, effect: "fade", speed: 900 });
 
+    // Mostra solo il progetto selezionato
     const params = new URLSearchParams(window.location.search);
     const project = params.get("project");
-    if (project) {
-      document.getElementById(project)?.classList.add("active");
-    } else {
-      document.getElementById("parco-urbano").classList.add("active");
-    }
+    document.querySelectorAll(".project").forEach(s => s.style.display = "none");
+    if (project) document.getElementById(project).style.display = "block";
+
+    // Attiva tutti gli slider
+    document.querySelectorAll('.swiper').forEach(swiperEl => {
+      new Swiper(swiperEl, {
+        loop: true,
+        effect: 'fade',
+        autoplay: { delay: 3500, disableOnInteraction: false, pauseOnMouseEnter: true },
+        pagination: { el: swiperEl.querySelector('.swiper-pagination'), clickable: true },
+        speed: 800,
+      });
+    });
   </script>
 </body>
 </html>
