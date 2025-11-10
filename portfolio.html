@@ -14,6 +14,7 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
@@ -24,10 +25,11 @@
       line-height: 1.7;
     }
 
+    /* Sezione titolo */
     .section-title {
       text-align: center;
-      margin-top: 30px;
-      margin-bottom: 15px;
+      margin-top: 40px;
+      margin-bottom: 10px;
     }
 
     .section-title img {
@@ -48,23 +50,24 @@
       margin-bottom: 25px;
     }
 
-    /* Bottoni filtro */
+    /* Pulsanti */
     .portfolio-filters {
       display: flex;
       justify-content: center;
-      gap: 12px;
+      gap: 15px;
       margin-bottom: 40px;
     }
 
     .portfolio-filters button {
       background-color: #fff;
-      border: 1.5px solid #356c6c;
+      border: 1.6px solid #356c6c;
       color: #356c6c;
       padding: 10px 24px;
       border-radius: 30px;
       font-weight: 500;
       cursor: pointer;
       transition: all 0.3s ease;
+      font-size: 0.95rem;
     }
 
     .portfolio-filters button:hover {
@@ -72,24 +75,24 @@
       color: #fff;
     }
 
-    .portfolio-filters .active {
+    .portfolio-filters button.active {
       background-color: #356c6c;
       color: #fff;
     }
 
-    /* Contenitore immagini */
+    /* Contenuto */
     .portfolio-container {
       max-width: 900px;
       margin: 0 auto;
       text-align: center;
       position: relative;
-      min-height: 350px;
+      min-height: 400px;
     }
 
     .portfolio-item {
       display: none;
       opacity: 0;
-      transition: opacity 0.7s ease;
+      transition: opacity 0.8s ease;
     }
 
     .portfolio-item.active {
@@ -99,25 +102,26 @@
 
     .portfolio-item img {
       width: 100%;
-      border-radius: 10px;
+      border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .portfolio-info {
-      background: rgba(255, 255, 255, 0.92);
-      border-radius: 10px;
-      margin-top: -70px;
-      padding: 15px 25px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px 25px;
       display: inline-block;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      margin-top: -40px;
       position: relative;
       z-index: 2;
+      width: 85%;
     }
 
     .portfolio-info h4 {
       font-weight: 600;
       color: #356c6c;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
     }
 
     .portfolio-info p {
@@ -164,27 +168,28 @@
     </div>
   </header>
 
-  <!-- Main -->
   <main class="main">
-
     <section id="portfolio" class="portfolio section">
 
+      <!-- Titolo -->
       <div class="section-title" data-aos="fade-up">
         <img src="assets/img/logo.png" alt="Logo CD Studio Tecnico">
         <h2>Portfolio</h2>
         <p>Selezione di progetti tecnici realizzati dal nostro studio in ambito pubblico e privato</p>
       </div>
 
+      <!-- Pulsanti -->
       <div class="portfolio-filters" data-aos="fade-up" data-aos-delay="100">
-        <button id="publicBtn" class="active">Opere Pubbliche</button>
-        <button id="privateBtn">Progetti Privati</button>
+        <button id="btnPublic" class="active">Opere Pubbliche</button>
+        <button id="btnPrivate">Progetti Privati</button>
       </div>
 
+      <!-- Contenuto -->
       <div class="portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-        <!-- Opera Pubblica -->
-        <div class="portfolio-item active" id="publicProject">
-          <a href="portfolio-details.html">
+        <!-- Opere Pubbliche -->
+        <div id="public" class="portfolio-item active">
+          <a href="portfolio-details.html" class="glightbox">
             <img src="assets/img/portfolio/montelepre-parco-urbano-2.jpeg" alt="Parco Urbano Montelepre">
           </a>
           <div class="portfolio-info">
@@ -193,9 +198,9 @@
           </div>
         </div>
 
-        <!-- Progetto Privato -->
-        <div class="portfolio-item" id="privateProject">
-          <a href="portfolio-details.html">
+        <!-- Progetti Privati -->
+        <div id="private" class="portfolio-item">
+          <a href="portfolio-details.html" class="glightbox">
             <img src="assets/img/portfolio/studio-idraulico-trappeto.jpeg" alt="Studio Idraulico Trappeto">
           </a>
           <div class="portfolio-info">
@@ -203,10 +208,8 @@
             <p>Studio di compatibilità idraulica di un tratto fluviale.</p>
           </div>
         </div>
-
       </div>
     </section>
-
   </main>
 
   <!-- Footer -->
@@ -225,25 +228,34 @@
     </div>
   </footer>
 
+  <!-- JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
   <script>
-    const publicBtn = document.getElementById("publicBtn");
-    const privateBtn = document.getElementById("privateBtn");
-    const publicProject = document.getElementById("publicProject");
-    const privateProject = document.getElementById("privateProject");
+    AOS.init();
+    const btnPublic = document.getElementById("btnPublic");
+    const btnPrivate = document.getElementById("btnPrivate");
+    const sectionPublic = document.getElementById("public");
+    const sectionPrivate = document.getElementById("private");
 
-    publicBtn.addEventListener("click", () => {
-      publicBtn.classList.add("active");
-      privateBtn.classList.remove("active");
-      publicProject.classList.add("active");
-      privateProject.classList.remove("active");
+    btnPublic.addEventListener("click", () => {
+      btnPublic.classList.add("active");
+      btnPrivate.classList.remove("active");
+      sectionPublic.classList.add("active");
+      sectionPrivate.classList.remove("active");
     });
 
-    privateBtn.addEventListener("click", () => {
-      privateBtn.classList.add("active");
-      publicBtn.classList.remove("active");
-      privateProject.classList.add("active");
-      publicProject.classList.remove("active");
+    btnPrivate.addEventListener("click", () => {
+      btnPrivate.classList.add("active");
+      btnPublic.classList.remove("active");
+      sectionPrivate.classList.add("active");
+      sectionPublic.classList.remove("active");
     });
+
+    const lightbox = GLightbox({ selector: '.glightbox' });
   </script>
 
 </body>
