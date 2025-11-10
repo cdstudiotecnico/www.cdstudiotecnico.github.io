@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+
+  <!-- Verifica Google Search Console -->
+  <meta name="google-site-verification" content="5-kam6aK3nMX8pb5dczefcCj29VOOaRr7Fop8z9jWI8" />
+
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <!-- Titolo e Descrizione -->
   <title>Portfolio | CD Studio Tecnico – Ing. Dario Cucchiara</title>
   <meta name="description" content="Selezione di opere pubbliche e progetti privati realizzati da CD Studio Tecnico – Ing. Dario Cucchiara.">
   <meta name="author" content="Ing. Dario Cucchiara">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="ingegnere civile, portfolio, progetti tecnici, opere pubbliche, progettazione, CD Studio Tecnico, Dario Cucchiara, Palermo, Montelepre, Partinico">
 
+  <!-- Favicon e Logo -->
   <link rel="icon" href="assets/img/logo-cdstudiotecnico.jpeg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="assets/img/logo-cdstudiotecnico.jpeg">
+  <meta property="og:image" content="https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg">
+
+  <!-- Fonts e CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
+
 </head>
 
 <body class="portfolio-page">
@@ -21,7 +36,6 @@
   <!-- HEADER -->
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0 text-decoration-none">
         <div class="d-flex flex-column">
           <h1 class="sitename mb-0">Ing. Dario Cucchiara</h1>
@@ -46,7 +60,6 @@
         <a href="mailto:cdstudiotecnico@hotmail.com" class="email"><i class="bi bi-envelope"></i></a>
         <a href="tel:+393289250353" class="phone"><i class="bi bi-telephone"></i></a>
       </div>
-
     </div>
   </header>
 
@@ -62,17 +75,17 @@
       </div>
 
       <!-- FILTRI -->
-      <ul class="portfolio-filters" data-aos="fade-up" data-aos-delay="100">
+      <ul class="portfolio-filters" data-aos="fade-up" data-aos-delay="150">
         <li data-filter=".filter-app" class="filter-active">Opere Pubbliche</li>
         <li data-filter=".filter-product">Progetti Privati</li>
       </ul>
 
       <!-- CONTENUTO -->
-      <div class="container">
-        <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+      <div class="container isotope-layout" data-aos="fade-up" data-aos-delay="250">
+        <div class="row gy-4 isotope-container">
 
           <!-- OPERA PUBBLICA -->
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app" data-aos="fade-up" data-aos-delay="300">
             <div class="portfolio-wrap">
               <div class="portfolio-img">
                 <img src="assets/img/portfolio/montelepre-parco-urbano-2.jpeg" class="img-fluid" alt="Parco Urbano Montelepre">
@@ -94,8 +107,8 @@
             </div>
           </div>
 
-          <!-- PROGETTO PRIVATO (placeholder) -->
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product" style="display:none;">
+          <!-- PROGETTO PRIVATO -->
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product" data-aos="fade-up" data-aos-delay="400">
             <div class="portfolio-wrap">
               <div class="portfolio-img">
                 <img src="assets/img/portfolio/esempio-progetto-privato.jpg" class="img-fluid" alt="Progetto Privato Palermo">
@@ -122,20 +135,27 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- FOOTER IDENTICO AL RESTO DEL SITO -->
   <footer id="footer" class="footer light-background">
-    <div class="container text-center">
-      <p><strong>Via J.F. Kennedy n. 42, Partinico (PA)</strong> – <strong>Via P. Marchese n. 3, Montelepre (PA)</strong></p>
-      <p>P.IVA 06513140829 – Email: cdstudiotecnico@hotmail.com – Cell. 3289250353</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://www.facebook.com/share/1BKxwNRBsj/?mibextid=wwXIfr" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/cd_studio.tecnico?igsh=M2d2d2NvdnAwdDgz" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+    <div class="container">
+      <div class="copyright text-center">
+        <p><span>Sede Operativa:</span> <strong>Via J.F. Kennedy n. 42, Partinico (PA)</strong></p>
+        <p><span>Sede Legale:</span> <strong class="px-1 sitename">Via P. Marchese n. 3, Montelepre (PA)</strong></p>
+        <p><span>P.IVA:</span> <strong>06513<span style="display:none;">-</span>140829</strong></p>
       </div>
-      <p class="mt-2">Designed by <strong>Ing. Dario Cucchiara</strong></p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.facebook.com/share/1BKxwNRBsj/?mibextid=wwXIfr" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/cd_studio.tecnico?igsh=M2d2d2NvdnAwdDgz&utm_source=qr" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="mailto:cdstudiotecnico@hotmail.com" class="email"><i class="bi bi-envelope"></i></a>
+        <a href="tel:+393289250353" class="phone"><i class="bi bi-telephone"></i></a>
+      </div>
+      <div class="credits">
+        <p>Designed by <strong>Ing. Dario Cucchiara</strong></p>
+      </div>
     </div>
   </footer>
 
-  <!-- Script -->
+  <!-- JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -145,41 +165,50 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      const grid = document.querySelector('.isotope-container');
+      const iso = new Isotope(grid, { itemSelector: '.isotope-item', layoutMode: 'fitRows' });
       const filters = document.querySelectorAll('.portfolio-filters li');
-      const items = document.querySelectorAll('.portfolio-item');
-
       filters.forEach(f => {
         f.addEventListener('click', () => {
           filters.forEach(ff => ff.classList.remove('filter-active'));
           f.classList.add('filter-active');
-          const filter = f.getAttribute('data-filter');
-          items.forEach(item => {
-            item.style.display = item.classList.contains(filter.replace('.', '')) ? 'block' : 'none';
-          });
+          iso.arrange({ filter: f.getAttribute('data-filter') });
         });
       });
+      iso.arrange({ filter: '.filter-app' });
 
-      // Mostra “Opere Pubbliche” di default
-      document.querySelector('[data-filter=".filter-app"]').click();
-    });
+      GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+        loop: false,
+        zoomable: true,
+        moreText: 'Chiudi',
+        descriptionPosition: 'bottom'
+      });
 
-    const lightbox = GLightbox({
-      selector: '.glightbox',
-      touchNavigation: true,
-      loop: false,
-      descriptionPosition: 'bottom'
+      AOS.init({ duration: 900, once: true, easing: 'ease-out' });
     });
   </script>
 
   <!-- STILE PERSONALIZZATO -->
   <style>
-    /* FILTRI */
     .portfolio-filters {
       list-style: none;
       padding: 0;
       margin: 30px auto 50px;
       text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s forwards ease-out;
     }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     .portfolio-filters li {
       display: inline-block;
       margin: 6px 14px;
@@ -193,18 +222,18 @@
       transition: all 0.3s ease;
       box-shadow: 0 3px 10px rgba(0,0,0,0.08);
     }
+
     .portfolio-filters li:hover {
       background: #e7f2f2;
-      transform: translateY(-1px);
+      transform: translateY(-2px);
     }
+
     .portfolio-filters .filter-active {
       background: #356c6c;
       color: #fff;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      transform: translateY(-1px);
     }
 
-    /* BOX */
     .portfolio-wrap {
       border-radius: 12px;
       overflow: hidden;
@@ -212,40 +241,39 @@
       transition: all 0.35s ease;
       border: 1px solid #ebebeb;
     }
+
     .portfolio-wrap:hover {
       transform: translateY(-5px);
       box-shadow: 0 12px 25px rgba(0,0,0,0.08);
     }
 
-    /* IMMAGINI */
-    .portfolio-img {
-      position: relative;
-      overflow: hidden;
-    }
     .portfolio-img img {
       width: 100%;
       height: 260px;
       object-fit: cover;
       opacity: 0.93;
       transition: all 0.6s ease;
+      border: 3px solid transparent;
     }
+
     .portfolio-wrap:hover img {
       opacity: 1;
       transform: scale(1.04);
-      border: 3px solid #356c6c;
+      border-color: #356c6c;
     }
 
-    /* TESTO */
     .portfolio-info {
       padding: 18px 22px;
       background: #fafcfc;
     }
+
     .portfolio-info h4 {
       color: #2e4e4e;
       font-size: 1.08rem;
       font-weight: 600;
       margin-bottom: 6px;
     }
+
     .portfolio-info p {
       color: #555;
       font-size: 0.94rem;
@@ -253,34 +281,36 @@
       margin-bottom: 8px;
     }
 
-    /* LINK */
     .portfolio-links {
       text-align: right;
       opacity: 0;
       transition: all 0.3s ease;
     }
+
     .portfolio-wrap:hover .portfolio-links {
       opacity: 1;
     }
+
     .portfolio-links a {
       color: #356c6c;
       font-size: 1.25rem;
       margin-left: 8px;
       transition: 0.3s;
     }
+
     .portfolio-links a:hover {
       color: #1f3d3d;
     }
 
-    @media (max-width: 768px) {
-      .portfolio-filters li {
-        padding: 8px 22px;
-        font-size: 0.9rem;
-      }
-      .portfolio-item img {
-        height: 220px;
-      }
+    /* Descrizione Lightbox */
+    .gdesc-inner {
+      text-align: left;
+      font-size: 0.95rem;
+      color: #ccc;
+      line-height: 1.6;
+      padding-top: 8px;
     }
   </style>
+
 </body>
 </html>
