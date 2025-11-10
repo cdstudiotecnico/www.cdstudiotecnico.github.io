@@ -5,110 +5,66 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Parco Urbano – Montelepre | CD Studio Tecnico</title>
   <meta name="description" content="Dettagli del progetto di riqualificazione urbana – Parco Urbano di Montelepre.">
-  
+
   <!-- Fonts e CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
     body {
       background-color: #fafafa;
       color: #333;
       font-family: 'Raleway', sans-serif;
-      line-height: 1.75;
       overflow-x: hidden;
     }
 
-    /* Pulsante X */
-    .close-btn {
-      position: fixed;
-      top: 18px;
-      right: 25px;
-      z-index: 1000;
-      background: #356c6c;
-      color: #fff;
-      border-radius: 50%;
-      width: 42px;
-      height: 42px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      text-decoration: none;
-      transition: 0.3s;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-    }
-    .close-btn:hover { background: #2f5555; }
-
-    .main-container {
-      max-width: 980px;
-      margin: 90px auto 60px auto;
-      padding: 0 20px;
-    }
-
-    /* Titolo progetto */
-    .project-title {
+    /* ===== Titolo ===== */
+    .project-header {
       text-align: center;
-      margin-bottom: 25px;
+      margin-bottom: 35px;
     }
-    .project-title img {
+    .project-header img {
       max-width: 150px;
-      margin-bottom: 10px;
-      filter: drop-shadow(0 3px 5px rgba(0,0,0,0.15));
+      margin-bottom: 12px;
+      filter: drop-shadow(0 3px 5px rgba(0,0,0,0.1));
     }
-    .project-title h1 {
+    .project-header h1 {
       font-family: 'Poppins', sans-serif;
-      color: #356c6c;
       font-weight: 600;
+      color: #356c6c;
       font-size: 1.9rem;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
-    .project-title p {
+    .project-header p {
       color: #555;
-      font-size: 1.05rem;
       max-width: 760px;
       margin: 0 auto;
+      font-size: 1.05rem;
     }
 
-    /* Slider */
+    /* ===== Slider ===== */
     .swiper {
-      margin-top: 40px;
       border-radius: 14px;
       overflow: hidden;
       box-shadow: 0 6px 18px rgba(0,0,0,0.12);
     }
     .swiper-slide img {
       width: 100%;
-      height: 520px;
+      height: auto;
       object-fit: cover;
-      transition: transform 0.6s ease;
     }
-    .swiper-slide img:hover { transform: scale(1.02); }
-
-    /* Didascalie immagini */
     .caption {
-      background: rgba(250, 250, 250, 0.96);
+      background: rgba(255, 255, 255, 0.96);
       text-align: center;
-      padding: 12px 15px;
+      padding: 10px 14px;
       font-size: 0.95rem;
       color: #444;
-      font-style: italic;
       border-top: 1px solid #eee;
-      animation: fadeInUp 0.8s ease;
-    }
-
-    @keyframes fadeInUp {
-      from {opacity: 0; transform: translateY(10px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-
-    .swiper-pagination {
-      position: relative;
-      bottom: 5px;
-      margin-top: 10px;
+      font-style: italic;
     }
     .swiper-pagination-bullet {
       background: #356c6c !important;
@@ -117,28 +73,35 @@
     .swiper-pagination-bullet-active {
       opacity: 1;
     }
-    .swiper-button-prev, .swiper-button-next {
+    .swiper-button-prev,
+    .swiper-button-next {
       color: #356c6c;
       transition: 0.3s;
     }
-    .swiper-button-prev:hover, .swiper-button-next:hover {
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
       color: #2e5555;
     }
 
-    /* Box dati e descrizione */
-    .info-box, .description {
+    /* ===== Box dati e descrizione ===== */
+    .info-box,
+    .description,
+    .quote {
       background: #fff;
       border-radius: 12px;
       padding: 35px 45px;
-      margin-top: 50px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: all 0.3s ease;
+      margin-top: 50px;
     }
-    .info-box:hover, .description:hover {
+    .info-box:hover,
+    .description:hover,
+    .quote:hover {
       transform: translateY(-4px);
       box-shadow: 0 6px 20px rgba(0,0,0,0.12);
     }
-    .info-box h3, .description h3 {
+    .info-box h3,
+    .description h3 {
       color: #356c6c;
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
@@ -146,10 +109,6 @@
       display: flex;
       align-items: center;
       gap: 8px;
-    }
-    .info-box h3 i, .description h3 i {
-      color: #2f5858;
-      font-size: 1.2rem;
     }
     .info-box ul {
       list-style: none;
@@ -164,22 +123,16 @@
     .info-box strong {
       color: #356c6c;
     }
-
     .description p {
       font-size: 1rem;
       color: #555;
       margin-bottom: 12px;
     }
 
-    /* Citazione finale */
+    /* ===== Citazione ===== */
     .quote {
-      background: #fff;
       border-left: 4px solid #356c6c;
-      border-radius: 8px;
-      padding: 30px 35px;
-      margin-top: 50px;
       font-style: italic;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
       color: #444;
       line-height: 1.8;
     }
@@ -190,11 +143,11 @@
       font-style: normal;
     }
 
-    /* Bottone finale */
+    /* ===== Bottone ===== */
     .back-btn {
       display: inline-block;
       margin: 50px auto 0;
-      border: 1.8px solid #356c6c;
+      border: 2px solid #356c6c;
       color: #356c6c;
       text-decoration: none;
       border-radius: 30px;
@@ -208,91 +161,146 @@
     }
 
     @media (max-width: 768px) {
-      .swiper-slide img { height: 340px; }
-      .info-box, .description { padding: 25px; }
-      .caption { font-size: 0.9rem; }
+      .info-box,
+      .description,
+      .quote {
+        padding: 25px;
+      }
+      .caption {
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
 
 <body>
-  <!-- X per tornare -->
-  <a href="portfolio.html" class="close-btn" title="Torna al Portfolio"><i class="bi bi-x-lg"></i></a>
 
-  <div class="main-container" data-aos="fade-up">
-    <div class="project-title">
-      <img src="assets/img/logo.png" alt="Logo CD Studio Tecnico">
-      <h1>Parco Urbano – Montelepre</h1>
-      <p>Intervento di sistemazione e pavimentazione degli spazi pubblici adiacenti all’anfiteatro del Parco Urbano di Montelepre.</p>
-    </div>
-
-    <!-- Slider con didascalie -->
-    <div class="swiper mySwiper" data-aos="fade-up" data-aos-delay="100">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="assets/img/portfolio/montelepre-parco-urbano-1.jpeg" alt="">
-          <div class="caption">Pavimentazione in pietra locale presso l’area dell’anfiteatro.</div>
+  <!-- HEADER (identico al resto del sito) -->
+  <header id="header" class="header d-flex align-items-center sticky-top light-background">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto text-decoration-none">
+        <div class="d-flex flex-column">
+          <h1 class="sitename mb-0">Ing. Dario Cucchiara</h1>
+          <span class="subtitle">Ingegneria Civile, Edile & Ambientale</span>
         </div>
-        <div class="swiper-slide">
-          <img src="assets/img/portfolio/montelepre-parco-urbano-2.jpeg" alt="">
-          <div class="caption">Vista d’insieme degli spazi pubblici riqualificati e delle ringhiere zincate.</div>
-        </div>
-        <div class="swiper-slide">
-          <img src="assets/img/portfolio/montelepre-parco-urbano-3.jpeg" alt="">
-          <div class="caption">Dettaglio della nuova recinzione metallica e delle canalette per il deflusso acque.</div>
-        </div>
-        <div class="swiper-slide">
-          <img src="assets/img/portfolio/montelepre-parco-urbano-4.jpeg" alt="">
-          <div class="caption">Vista laterale delle pavimentazioni e dei muretti di contenimento restaurati.</div>
-        </div>
-        <div class="swiper-slide">
-          <img src="assets/img/portfolio/montelepre-parco-urbano-5.jpeg" alt="">
-          <div class="caption">Particolare delle canalette integrate nella pavimentazione permeabile.</div>
-        </div>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Curriculum</a></li>
+          <li><a href="services.html">Servizi</a></li>
+          <li><a href="preventivo.html">Richiedi Preventivo</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="contact.html">Contatti</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <div class="header-social-links">
+        <a href="mailto:cdstudiotecnico@hotmail.com"><i class="bi bi-envelope"></i></a>
+        <a href="tel:+393289250353"><i class="bi bi-telephone"></i></a>
       </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
     </div>
+  </header>
 
-    <!-- Dati progetto -->
-    <div class="info-box" data-aos="fade-up" data-aos-delay="150">
-      <h3><i class="bi bi-building"></i> Dati Progetto</h3>
-      <ul>
-        <li><strong>Committente:</strong> Comune di Montelepre</li>
-        <li><strong>Programma:</strong> FSE – Regione Siciliana, Asse 8 “Promozione dell’occupazione e dell’inclusione sociale”</li>
-        <li><strong>Tipologia:</strong> Sistemazione pavimentazioni e spazi pubblici adiacenti all’anfiteatro</li>
-        <li><strong>Ruolo tecnico:</strong> Progettazione, Direzione Lavori e Coordinamento Sicurezza</li>
-        <li><strong>Importo lavori:</strong> € 43.798,76</li>
-        <li><strong>Anno:</strong> 2021</li>
-      </ul>
-    </div>
+  <!-- MAIN -->
+  <main class="main">
+    <section id="project" class="section">
+      <div class="container" data-aos="fade-up">
 
-    <!-- Descrizione tecnica -->
-    <div class="description" data-aos="fade-up" data-aos-delay="200">
-      <h3><i class="bi bi-diagram-3"></i> Descrizione tecnica e obiettivi</h3>
-      <p>L’intervento ha riguardato la riqualificazione paesaggistica e funzionale dell’area dell’anfiteatro del Parco Urbano, con pavimentazioni in pietra locale e nuove ringhiere metalliche zincate.</p>
-      <p>Le opere hanno previsto canalette integrate per il deflusso delle acque meteoriche e l’utilizzo di materiali a basso impatto ambientale.</p>
-      <p>L’obiettivo principale è restituire alla cittadinanza un’area pubblica più sicura, accessibile e coerente con il contesto urbano di Montelepre.</p>
-      <p><em>Progetto redatto e diretto dall’Ing. Dario Cucchiara – CD Studio Tecnico, Montelepre.</em></p>
-    </div>
+        <div class="project-header">
+          <img src="assets/img/logo.png" alt="Logo CD Studio Tecnico">
+          <h1>Parco Urbano – Montelepre</h1>
+          <p>Intervento di sistemazione e pavimentazione degli spazi pubblici adiacenti all’anfiteatro del Parco Urbano di Montelepre.</p>
+        </div>
 
-    <!-- Citazione -->
-    <div class="quote" data-aos="fade-up" data-aos-delay="250">
-      È con grande soddisfazione che oggi consegniamo i lavori di sistemazione e pavimentazione degli spazi adiacenti
-      all’anfiteatro del Parco Urbano di Montelepre. Questo progetto rappresenta un importante passo avanti per la
-      riqualificazione del nostro patrimonio urbano, offrendo un ambiente più accogliente e sicuro per la comunità e i visitatori.
-      <br><br>
-      Desidero ringraziare tutti i professionisti e gli operatori che hanno contribuito alla realizzazione dell’opera,
-      e l’Ing. Dario Cucchiara per la professionalità e la competenza dimostrate nella direzione tecnica del progetto.
-      <br><br>
-      <strong>Il Sindaco del Comune di Montelepre (2021)</strong>
-    </div>
+        <!-- Slider immagini -->
+        <div class="swiper mySwiper mb-5" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/montelepre-parco-urbano-1.jpeg" alt="">
+              <div class="caption">Pavimentazione in pietra locale presso l’area dell’anfiteatro.</div>
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/montelepre-parco-urbano-2.jpeg" alt="">
+              <div class="caption">Vista d’insieme degli spazi pubblici riqualificati e delle ringhiere zincate.</div>
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/montelepre-parco-urbano-3.jpeg" alt="">
+              <div class="caption">Dettaglio della nuova recinzione metallica e delle canalette per il deflusso acque.</div>
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/montelepre-parco-urbano-4.jpeg" alt="">
+              <div class="caption">Vista laterale delle pavimentazioni e dei muretti di contenimento restaurati.</div>
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/montelepre-parco-urbano-5.jpeg" alt="">
+              <div class="caption">Particolare delle canalette integrate nella pavimentazione permeabile.</div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
 
-    <div class="text-center">
-      <a href="portfolio.html" class="back-btn">← Torna al Portfolio</a>
+        <!-- Dati progetto -->
+        <div class="info-box" data-aos="fade-up" data-aos-delay="150">
+          <h3><i class="bi bi-building"></i> Dati Progetto</h3>
+          <ul>
+            <li><strong>Committente:</strong> Comune di Montelepre</li>
+            <li><strong>Programma:</strong> FSE – Regione Siciliana, Asse 8 “Promozione dell’occupazione e dell’inclusione sociale”</li>
+            <li><strong>Tipologia:</strong> Sistemazione pavimentazioni e spazi pubblici adiacenti all’anfiteatro</li>
+            <li><strong>Ruolo tecnico:</strong> Progettazione, Direzione Lavori e Coordinamento Sicurezza</li>
+            <li><strong>Importo lavori:</strong> € 43.798,76</li>
+            <li><strong>Anno:</strong> 2021</li>
+          </ul>
+        </div>
+
+        <!-- Descrizione -->
+        <div class="description" data-aos="fade-up" data-aos-delay="200">
+          <h3><i class="bi bi-diagram-3"></i> Descrizione tecnica e obiettivi</h3>
+          <p>L’intervento ha riguardato la riqualificazione paesaggistica e funzionale dell’area dell’anfiteatro del Parco Urbano, con pavimentazioni in pietra locale e nuove ringhiere metalliche zincate.</p>
+          <p>Le opere hanno previsto canalette integrate per il deflusso delle acque meteoriche e l’utilizzo di materiali a basso impatto ambientale.</p>
+          <p>L’obiettivo principale è restituire alla cittadinanza un’area pubblica più sicura, accessibile e coerente con il contesto urbano di Montelepre.</p>
+          <p><em>Progetto redatto e diretto dall’Ing. Dario Cucchiara – CD Studio Tecnico, Montelepre.</em></p>
+        </div>
+
+        <!-- Citazione -->
+        <div class="quote" data-aos="fade-up" data-aos-delay="250">
+          È con grande soddisfazione che oggi consegniamo i lavori di sistemazione e pavimentazione degli spazi adiacenti
+          all’anfiteatro del Parco Urbano di Montelepre. Questo progetto rappresenta un importante passo avanti per la
+          riqualificazione del nostro patrimonio urbano, offrendo un ambiente più accogliente e sicuro per la comunità e i visitatori.
+          <br><br>
+          Desidero ringraziare tutti i professionisti e gli operatori che hanno contribuito alla realizzazione dell’opera,
+          e l’Ing. Dario Cucchiara per la professionalità e la competenza dimostrate nella direzione tecnica del progetto.
+          <br><br>
+          <strong>Il Sindaco del Comune di Montelepre (2021)</strong>
+        </div>
+
+        <!-- Bottone finale -->
+        <div class="text-center">
+          <a href="portfolio.html" class="back-btn">← Torna al Portfolio</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (identico al resto del sito) -->
+  <footer id="footer" class="footer light-background">
+    <div class="container text-center">
+      <p><strong>Sede Operativa:</strong> Via J.F. Kennedy n. 42, Partinico (PA)</p>
+      <p><strong>Sede Legale:</strong> Via P. Marchese n. 3, Montelepre (PA)</p>
+      <p><strong>P.IVA:</strong> 06513140829</p>
+      <div class="social-links d-flex justify-content-center mt-3">
+        <a href="https://www.facebook.com/share/1BKxwNRBsj/?mibextid=wwXIfr" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/cd_studio.tecnico?igsh=M2d2d2NvdnAwdDgz" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="mailto:cdstudiotecnico@hotmail.com"><i class="bi bi-envelope"></i></a>
+        <a href="tel:+393289250353"><i class="bi bi-telephone"></i></a>
+      </div>
+      <p class="mt-3">Designed by <strong>Ing. Dario Cucchiara</strong></p>
     </div>
-  </div>
+  </footer>
 
   <!-- JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -303,7 +311,7 @@
     var swiper = new Swiper(".mySwiper", {
       loop: true,
       autoplay: {
-        delay: 3600,
+        delay: 3800,
         disableOnInteraction: false,
       },
       pagination: {
