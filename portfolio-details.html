@@ -9,6 +9,8 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
   <style>
     body {
       background-color: #fafafa;
@@ -16,6 +18,8 @@
       font-family: 'Raleway', sans-serif;
       line-height: 1.7;
     }
+
+    /* Pulsante X */
     .close-btn {
       position: fixed;
       top: 18px;
@@ -41,6 +45,7 @@
       margin: 80px auto;
       padding: 0 20px;
     }
+
     .project-title {
       text-align: center;
       margin-bottom: 10px;
@@ -63,37 +68,51 @@
       margin: 0 auto;
     }
 
-    .gallery {
+    /* Slider */
+    .swiper {
       margin-top: 40px;
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
     }
-    .gallery img {
+    .swiper-slide img {
       width: 100%;
       height: 520px;
       object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      transition: transform 0.5s ease;
     }
-    .gallery img:hover {
-      transform: scale(1.01);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    .swiper-slide img:hover { transform: scale(1.01); }
+    .swiper-pagination-bullet {
+      background: #356c6c !important;
+      opacity: 0.5;
+    }
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+    .swiper-button-prev, .swiper-button-next {
+      color: #356c6c;
+      transition: 0.3s;
+    }
+    .swiper-button-prev:hover, .swiper-button-next:hover {
+      color: #2b5252;
     }
 
-    .info-box {
+    .info-box, .description {
       background: #fff;
       border-radius: 12px;
       padding: 30px 40px;
       margin-top: 50px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     }
-    .info-box h3 {
+    .info-box h3, .description h3 {
       color: #356c6c;
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
       margin-bottom: 20px;
+    }
+    .info-box h3 i, .description h3 i {
+      margin-right: 8px;
+      color: #2f5858;
     }
     .info-box ul {
       list-style: none;
@@ -108,19 +127,6 @@
       color: #356c6c;
     }
 
-    .description {
-      background: #fff;
-      border-radius: 12px;
-      padding: 30px 40px;
-      margin-top: 35px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    }
-    .description h3 {
-      color: #356c6c;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      margin-bottom: 15px;
-    }
     .description p {
       font-size: 1rem;
       color: #555;
@@ -159,7 +165,7 @@
     }
 
     @media (max-width: 768px) {
-      .gallery img { height: 340px; }
+      .swiper-slide img { height: 340px; }
       .info-box, .description { padding: 25px; }
     }
   </style>
@@ -175,14 +181,23 @@
       <p>Intervento di sistemazione e pavimentazione degli spazi pubblici adiacenti all’anfiteatro del Parco Urbano di Montelepre.</p>
     </div>
 
-    <div class="gallery" data-aos="fade-up" data-aos-delay="100">
-      <img src="assets/img/portfolio/montelepre-parco-urbano-1.jpeg" alt="Vista pavimentazione in pietra locale">
-      <img src="assets/img/portfolio/montelepre-parco-urbano-2.jpeg" alt="Area anfiteatro e spazi pubblici">
-      <img src="assets/img/portfolio/montelepre-parco-urbano-3.jpeg" alt="Dettaglio ringhiere metalliche">
+    <!-- Slider immagini -->
+    <div class="swiper mySwiper" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="assets/img/portfolio/montelepre-parco-urbano-1.jpeg" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/portfolio/montelepre-parco-urbano-2.jpeg" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/portfolio/montelepre-parco-urbano-3.jpeg" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/portfolio/montelepre-parco-urbano-4.jpeg" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/portfolio/montelepre-parco-urbano-5.jpeg" alt=""></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
 
+    <!-- Box informazioni -->
     <div class="info-box" data-aos="fade-up" data-aos-delay="150">
-      <h3><i class="bi bi-info-circle"></i> Dati Progetto</h3>
+      <h3><i class="bi bi-building"></i> Dati Progetto</h3>
       <ul>
         <li><strong>Committente:</strong> Comune di Montelepre (PA)</li>
         <li><strong>Programma:</strong> FSE – Regione Siciliana, Asse 8 “Promozione dell’occupazione e dell’inclusione sociale”</li>
@@ -193,14 +208,16 @@
       </ul>
     </div>
 
+    <!-- Box descrizione -->
     <div class="description" data-aos="fade-up" data-aos-delay="200">
-      <h3><i class="bi bi-gear"></i> Descrizione tecnica e obiettivi</h3>
+      <h3><i class="bi bi-diagram-3"></i> Descrizione tecnica e obiettivi</h3>
       <p>L’intervento ha riguardato la riqualificazione paesaggistica e funzionale dell’area dell’anfiteatro del Parco Urbano, con pavimentazioni in pietra locale e nuove ringhiere metalliche zincate.</p>
       <p>Le opere hanno previsto canalette integrate per il deflusso delle acque meteoriche e l’utilizzo di materiali a basso impatto ambientale.</p>
       <p>L’obiettivo principale è restituire alla cittadinanza un’area pubblica più sicura, accessibile e coerente con il contesto urbano di Montelepre.</p>
       <p><em>Progetto redatto e diretto dall’Ing. Dario Cucchiara – CD Studio Tecnico, Montelepre (PA).</em></p>
     </div>
 
+    <!-- Citazione -->
     <div class="quote" data-aos="fade-up" data-aos-delay="250">
       “È con grande soddisfazione che oggi consegniamo i lavori di sistemazione del Parco Urbano di Montelepre, 
       un importante passo avanti per la riqualificazione del nostro patrimonio urbano.”
@@ -212,8 +229,29 @@
     </div>
   </div>
 
+  <!-- JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script>AOS.init();</script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script>
+    AOS.init();
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      effect: "fade",
+      speed: 800,
+    });
+  </script>
 </body>
 </html>
