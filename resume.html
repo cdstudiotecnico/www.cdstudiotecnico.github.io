@@ -449,30 +449,33 @@
     color: #356c6c;
     border-left: 4px solid #9fc5c9;
     padding-left: 12px;
-    margin-bottom: 25px;
+    margin: 50px 0 25px;
   }
 
   .timeline {
     position: relative;
-    margin-left: 10px;
-    padding-left: 20px;
+    margin-left: 15px;
+    padding-left: 25px;
     border-left: 2px solid #d9e6e6;
   }
 
   .timeline-item {
     position: relative;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
+    padding-left: 5px;
   }
 
   .timeline-item::before {
     content: "";
     position: absolute;
-    left: -10px;
-    top: 6px;
+    left: -18px;
+    top: 7px;
     width: 12px;
     height: 12px;
     background-color: #356c6c;
     border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px #9fc5c9;
   }
 
   .timeline-date {
@@ -480,20 +483,20 @@
     font-size: 0.85rem;
     color: #6a8f8f;
     font-weight: 600;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
   }
 
   .timeline-item h4 {
     font-size: 1.05rem;
     font-weight: 600;
     color: #222;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
   }
 
   .timeline-item p {
     color: #555;
     font-size: 0.95rem;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
   }
 
   .skills-list p {
@@ -509,66 +512,19 @@
   }
 
   @media (max-width: 768px) {
-    .resume-section { padding: 30px 20px; margin: 40px 10px; }
-    .two-cols { grid-template-columns: 1fr; }
-  }
-</style>
-
-<style>
-  .resume-section {
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 6px 24px rgba(0,0,0,0.07);
-    padding: 60px 45px;
-    max-width: 1150px;
-    margin: 60px auto;
-  }
-
-  .resume-title {
-    font-weight: 700;
-    font-size: 1.25rem;
-    color: #356c6c;
-    border-left: 4px solid #9fc5c9;
-    padding-left: 12px;
-    margin-bottom: 25px;
-  }
-
-  .resume-item {
-    padding-left: 16px;
-    border-left: 2px solid #d6e4e5;
-    margin-bottom: 25px;
-  }
-
-  .resume-item h4 {
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: #222;
-  }
-
-  .resume-item h5 {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 5px;
-  }
-
-  .resume-item p {
-    color: #555;
-    margin-bottom: 8px;
-  }
-
-  .resume-item ul {
-    margin: 8px 0 0 18px;
-    color: #444;
-  }
-
-  .resume-item ul li {
-    margin-bottom: 4px;
-  }
-
-  @media (max-width: 768px) {
     .resume-section {
       padding: 30px 20px;
       margin: 40px 10px;
+    }
+    .two-cols {
+      grid-template-columns: 1fr;
+    }
+    .timeline {
+      margin-left: 10px;
+      padding-left: 20px;
+    }
+    .timeline-item::before {
+      left: -14px;
     }
   }
 </style>
