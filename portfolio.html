@@ -20,7 +20,7 @@
       overflow-x: hidden;
     }
 
-    /* ===== Titolo ===== */
+    /* ===== Titolo sezione ===== */
     .section-title {
       text-align: center;
       margin-bottom: 25px;
@@ -65,11 +65,13 @@
       color: #fff;
     }
 
-    /* ===== Slider wrapper ===== */
+    /* ===== Container ===== */
     .portfolio-wrapper {
       width: 100%;
       overflow: hidden;
       position: relative;
+      display: flex;
+      justify-content: center;
     }
 
     .portfolio-container {
@@ -77,9 +79,8 @@
       flex-wrap: nowrap;
       align-items: flex-start;
       gap: 40px;
-      transition: transform 0.5s ease-in-out;
+      transition: transform 0.4s ease-in-out;
       justify-content: center;
-      padding-bottom: 10px;
     }
 
     .portfolio-item {
@@ -87,8 +88,7 @@
       border-radius: 12px;
       box-shadow: 0 4px 14px rgba(0,0,0,0.1);
       overflow: hidden;
-      min-width: 330px;
-      max-width: 380px;
+      width: 320px;
       flex: 0 0 auto;
       opacity: 0;
       transform: translateY(30px);
@@ -126,7 +126,6 @@
       margin-bottom: 15px;
     }
 
-    /* ===== Bottone "Scopri di più" ===== */
     .btn-discover {
       display: inline-block;
       border: 2px solid #356c6c;
@@ -144,12 +143,14 @@
       color: #fff;
     }
 
+    @media (max-width: 992px) {
+      .portfolio-item { width: 280px; }
+    }
+
     @media (max-width: 768px) {
-      .portfolio-item { min-width: 260px; max-width: 300px; }
-      .filter-buttons button {
-        padding: 8px 18px;
-        font-size: 0.95rem;
-      }
+      .portfolio-container { gap: 20px; }
+      .portfolio-item { width: 260px; }
+      .filter-buttons button { padding: 8px 18px; font-size: 0.95rem; }
     }
   </style>
 </head>
@@ -199,10 +200,9 @@
         <button class="filter-btn" data-filter="private">Progetti Privati</button>
       </div>
 
-      <!-- Slider orizzontale -->
       <div class="portfolio-wrapper">
         <div class="portfolio-container" id="portfolioContainer">
-          <!-- === OPERE PUBBLICHE === -->
+          <!-- OPERE PUBBLICHE -->
           <div class="portfolio-item public show">
             <img src="assets/img/portfolio/montelepre-parco-urbano-2.jpeg" alt="Parco Urbano - Montelepre">
             <div class="portfolio-info">
@@ -230,7 +230,7 @@
             </div>
           </div>
 
-          <!-- === PROGETTI PRIVATI === -->
+          <!-- PROGETTI PRIVATI -->
           <div class="portfolio-item private">
             <img src="assets/img/portfolio/studio-idraulico-trappeto.jpeg" alt="Studio Idraulico Trappeto">
             <div class="portfolio-info">
@@ -287,12 +287,10 @@
     const buttons = document.querySelectorAll('.filter-btn');
     const items = document.querySelectorAll('.portfolio-item');
     const container = document.getElementById('portfolioContainer');
-    let currentFilter = 'public';
     let scrollSpeed = 0.4;
     let isHovered = false;
 
     function showItems(filter) {
-      currentFilter = filter;
       items.forEach(i => {
         i.classList.remove('show');
         if (i.classList.contains(filter)) i.classList.add('show');
@@ -300,9 +298,16 @@
       container.scrollLeft = 0;
     }
 
+    function centerItems() {
+      const visible = Array.from(items).filter(i => i.classList.contains('show'));
+      const totalWidth = visible.reduce((acc, el) => acc + el.offsetWidth + 40, 0);
+      const emptySpace = (container.offsetWidth - totalWidth) / 2;
+      container.style.justifyContent = emptySpace > 0 ? 'center' : 'flex-start';
+    }
+
     function autoScroll() {
       if (!isHovered) container.scrollLeft += scrollSpeed;
-      if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+      if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 1) {
         container.scrollLeft = 0;
       }
       requestAnimationFrame(autoScroll);
@@ -312,7 +317,9 @@
       btn.addEventListener('click', () => {
         buttons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        showItems(btn.getAttribute('data-filter'));
+        const filter = btn.getAttribute('data-filter');
+        showItems(filter);
+        setTimeout(centerItems, 300);
       });
     });
 
@@ -321,7 +328,9 @@
 
     window.addEventListener('load', () => {
       showItems('public');
+      centerItems();
       requestAnimationFrame(autoScroll);
+      window.addEventListener('resize', centerItems);
     });
   </script>
 </body>
