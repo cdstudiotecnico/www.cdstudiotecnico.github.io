@@ -8,20 +8,11 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <!-- Titolo e Descrizione -->
   <title>Portfolio | CD Studio Tecnico – Ing. Dario Cucchiara</title>
   <meta name="description" content="Selezione di opere pubbliche e progetti privati realizzati da CD Studio Tecnico – Ing. Dario Cucchiara.">
   <meta name="author" content="Ing. Dario Cucchiara">
-  <meta name="robots" content="index, follow">
-  <meta name="keywords" content="ingegnere civile, portfolio, progetti tecnici, opere pubbliche, progettazione, CD Studio Tecnico, Dario Cucchiara, Palermo, Montelepre, Partinico">
 
-  <!-- Favicon e Logo -->
   <link rel="icon" href="assets/img/logo-cdstudiotecnico.jpeg" type="image/jpeg">
-  <link rel="apple-touch-icon" href="assets/img/logo-cdstudiotecnico.jpeg">
-  <meta property="og:image" content="https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg">
-
-  <!-- Fonts e CSS -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -67,7 +58,6 @@
   <main class="main">
     <section id="portfolio" class="portfolio section">
 
-      <!-- TITOLO -->
       <div class="section-title text-center" data-aos="fade-up">
         <img src="assets/img/logo.png" alt="Logo CD Studio Tecnico" class="img-fluid" style="max-width:180px; margin-bottom:10px;">
         <h2>Portfolio</h2>
@@ -81,11 +71,11 @@
       </ul>
 
       <!-- CONTENUTO -->
-      <div class="container isotope-layout" data-aos="fade-up" data-aos-delay="250">
+      <div class="container isotope-layout" data-aos-delay="100">
         <div class="row gy-4 isotope-container">
 
           <!-- OPERA PUBBLICA -->
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app fade-on-load">
             <div class="portfolio-wrap">
               <div class="portfolio-img">
                 <img src="assets/img/portfolio/montelepre-parco-urbano-2.jpeg" class="img-fluid" alt="Parco Urbano Montelepre">
@@ -177,12 +167,17 @@
       });
       iso.arrange({ filter: '.filter-app' });
 
+      // Effetto fade-in immediato su immagine principale
+      setTimeout(() => {
+        document.querySelectorAll('.fade-on-load').forEach(el => {
+          el.classList.add('fade-visible');
+        });
+      }, 700);
+
       GLightbox({
         selector: '.glightbox',
         touchNavigation: true,
-        loop: false,
         zoomable: true,
-        moreText: 'Chiudi',
         descriptionPosition: 'bottom'
       });
 
@@ -190,8 +185,8 @@
     });
   </script>
 
-  <!-- STILE PERSONALIZZATO -->
   <style>
+    /* Pulsanti centrati con effetto luce */
     .portfolio-filters {
       list-style: none;
       padding: 0;
@@ -203,10 +198,7 @@
     }
 
     @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .portfolio-filters li {
@@ -219,8 +211,26 @@
       font-weight: 600;
       background: #fff;
       cursor: pointer;
-      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
       box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+
+    .portfolio-filters li::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -75%;
+      width: 50%;
+      height: 200%;
+      background: rgba(255,255,255,0.3);
+      transform: rotate(25deg);
+      transition: all 0.7s ease;
+    }
+
+    .portfolio-filters li:hover::before {
+      left: 130%;
     }
 
     .portfolio-filters li:hover {
@@ -234,6 +244,10 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
+    /* Effetto fade-on-load */
+    .fade-on-load { opacity: 0; transform: translateY(40px); transition: all 1s ease-out; }
+    .fade-visible { opacity: 1; transform: translateY(0); }
+
     .portfolio-wrap {
       border-radius: 12px;
       overflow: hidden;
@@ -241,7 +255,6 @@
       transition: all 0.35s ease;
       border: 1px solid #ebebeb;
     }
-
     .portfolio-wrap:hover {
       transform: translateY(-5px);
       box-shadow: 0 12px 25px rgba(0,0,0,0.08);
@@ -255,7 +268,6 @@
       transition: all 0.6s ease;
       border: 3px solid transparent;
     }
-
     .portfolio-wrap:hover img {
       opacity: 1;
       transform: scale(1.04);
@@ -266,14 +278,12 @@
       padding: 18px 22px;
       background: #fafcfc;
     }
-
     .portfolio-info h4 {
       color: #2e4e4e;
       font-size: 1.08rem;
       font-weight: 600;
       margin-bottom: 6px;
     }
-
     .portfolio-info p {
       color: #555;
       font-size: 0.94rem;
@@ -286,18 +296,15 @@
       opacity: 0;
       transition: all 0.3s ease;
     }
-
     .portfolio-wrap:hover .portfolio-links {
       opacity: 1;
     }
-
     .portfolio-links a {
       color: #356c6c;
       font-size: 1.25rem;
       margin-left: 8px;
       transition: 0.3s;
     }
-
     .portfolio-links a:hover {
       color: #1f3d3d;
     }
@@ -311,6 +318,5 @@
       padding-top: 8px;
     }
   </style>
-
 </body>
 </html>
