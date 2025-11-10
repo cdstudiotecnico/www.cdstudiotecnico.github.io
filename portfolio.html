@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio – CD Studio Tecnico | Ing. Dario Cucchiara</title>
-  <meta name="description" content="Progetti tecnici realizzati dal CD Studio Tecnico – Ing. Dario Cucchiara, in ambito pubblico e privato.">
-  <meta name="author" content="Ing. Dario Cucchiara">
 
-  <!-- Fonts & CSS -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>Portfolio | CD Studio Tecnico – Ing. Dario Cucchiara</title>
+  <meta name="description" content="Selezione di progetti tecnici realizzati dallo studio in ambito pubblico e privato.">
+
+  <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -19,148 +17,131 @@
   <style>
     body {
       background-color: #fafafa;
-      color: #2f2f2f;
+      color: #333;
       font-family: 'Raleway', sans-serif;
     }
 
+    /* --- Titolo sezione --- */
     .section-title {
       text-align: center;
-      margin-top: 40px;
       margin-bottom: 25px;
     }
 
     .section-title img {
       max-width: 160px;
-      margin-bottom: 10px;
-      filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.15));
+      margin-bottom: 15px;
+      filter: drop-shadow(0 3px 5px rgba(0,0,0,0.1));
     }
 
     .section-title h2 {
-      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
       color: #356c6c;
-      margin-bottom: 10px;
+      font-size: 1.8rem;
+      margin-bottom: 8px;
     }
 
     .section-title p {
       color: #555;
-      font-size: 1rem;
+      font-size: 1.05rem;
     }
 
-    /* Pulsanti filtro */
-    .portfolio-filters {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin: 35px auto 50px auto;
-    }
-
-    .filter-btn {
-      background-color: transparent;
-      border: 1.6px solid #356c6c;
-      color: #356c6c;
-      padding: 10px 28px;
-      border-radius: 25px;
-      font-weight: 500;
-      font-size: 0.95rem;
-      letter-spacing: 0.2px;
-      cursor: pointer;
-      transition: all 0.35s ease;
-    }
-
-    .filter-btn.active,
-    .filter-btn:hover {
-      background-color: #356c6c;
-      color: #fff;
-      box-shadow: 0 3px 10px rgba(53, 108, 108, 0.25);
-    }
-
-    /* Contenitore progetto */
-    .portfolio-wrapper {
-      max-width: 850px;
-      margin: 0 auto;
+    /* --- Pulsanti filtro --- */
+    .filter-buttons {
       text-align: center;
-      position: relative;
+      margin-top: 25px;
+      margin-bottom: 45px;
     }
 
-    .portfolio-item {
-      display: none;
-      opacity: 0;
-      transition: opacity 0.7s ease;
-    }
-
-    .portfolio-item.active {
-      display: block;
-      opacity: 1;
-    }
-
-    .portfolio-image {
-      border-radius: 12px;
-      width: 100%;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-      transition: transform 0.5s ease;
-    }
-
-    .portfolio-image:hover {
-      transform: scale(1.01);
-    }
-
-    .project-box {
-      background-color: #fff;
-      border-radius: 12px;
-      margin-top: -40px;
-      padding: 20px 30px;
-      display: inline-block;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-      width: 85%;
-      position: relative;
-      z-index: 2;
-    }
-
-    .project-box h4 {
+    .filter-buttons button {
+      border: 2px solid #356c6c;
+      background: transparent;
       color: #356c6c;
-      font-weight: 600;
-      margin-bottom: 5px;
-    }
-
-    .project-box p {
-      font-size: 0.95rem;
-      color: #555;
-      margin-bottom: 12px;
-    }
-
-    .project-box a {
-      display: inline-block;
-      text-decoration: none;
-      border: 1.4px solid #356c6c;
-      color: #356c6c;
-      border-radius: 25px;
-      padding: 8px 18px;
-      font-size: 0.9rem;
+      padding: 8px 22px;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 500;
+      margin: 0 8px;
       transition: all 0.3s ease;
     }
 
-    .project-box a:hover {
-      background-color: #356c6c;
+    .filter-buttons button.active,
+    .filter-buttons button:hover {
+      background: #356c6c;
       color: #fff;
     }
 
-    footer {
-      background: #f2f2f2;
-      padding: 40px 0;
-      text-align: center;
-      color: #444;
-      font-size: 0.9rem;
-      margin-top: 70px;
+    /* --- Contenitore progetti --- */
+    .portfolio-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      transition: all 0.5s ease;
+    }
+
+    .portfolio-item {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+      overflow: hidden;
+      max-width: 720px;
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.6s ease;
+    }
+
+    .portfolio-item.hide {
+      opacity: 0;
+      transform: translateY(40px);
+      pointer-events: none;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.02);
+    }
+
+    .portfolio-info {
+      padding: 20px 25px 25px;
+      text-align: left;
+    }
+
+    .portfolio-info h4 {
+      color: #356c6c;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .portfolio-info p {
+      color: #555;
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .portfolio-item { max-width: 90%; }
+      .filter-buttons button {
+        padding: 8px 18px;
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Header -->
-  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+  <header id="header" class="header d-flex align-items-center sticky-top light-background">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0 text-decoration-none">
+      <a href="index.html" class="logo d-flex align-items-center me-auto text-decoration-none">
         <div class="d-flex flex-column">
           <h1 class="sitename mb-0">Ing. Dario Cucchiara</h1>
           <span class="subtitle">Ingegneria Civile, Edile & Ambientale</span>
@@ -179,63 +160,65 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
+
+      <div class="header-social-links">
+        <a href="mailto:cdstudiotecnico@hotmail.com"><i class="bi bi-envelope"></i></a>
+        <a href="tel:+393289250353"><i class="bi bi-telephone"></i></a>
+      </div>
     </div>
   </header>
 
-  <!-- Contenuto principale -->
   <main class="main">
+
     <section id="portfolio" class="portfolio section">
-
-      <div class="section-title" data-aos="fade-up">
-        <img src="assets/img/logo.png" alt="Logo CD Studio Tecnico">
+      <div class="container section-title" data-aos="fade-up">
+        <img src="assets/img/logo.png" alt="Logo Studio Tecnico">
         <h2>Portfolio</h2>
-        <p>Selezione di progetti in ambito pubblico e privato</p>
+        <p>Selezione di progetti tecnici realizzati dal nostro studio in ambito pubblico e privato</p>
       </div>
 
-      <div class="portfolio-filters" data-aos="fade-up" data-aos-delay="100">
-        <button class="filter-btn active" id="btnPublic">Opere Pubbliche</button>
-        <button class="filter-btn" id="btnPrivate">Progetti Privati</button>
+      <div class="filter-buttons" data-aos="fade-up" data-aos-delay="100">
+        <button class="filter-btn active" data-filter="public">Opere Pubbliche</button>
+        <button class="filter-btn" data-filter="private">Progetti Privati</button>
       </div>
 
-      <div class="portfolio-wrapper" data-aos="fade-up" data-aos-delay="200">
+      <div class="portfolio-container" data-aos="fade-up" data-aos-delay="150">
 
-        <!-- Opere Pubbliche -->
-        <div class="portfolio-item active" id="public">
-          <a href="assets/img/portfolio/montelepre-parco-urbano-2.jpeg" class="glightbox" data-gallery="public" data-title="Parco Urbano – Montelepre (PA)" data-description="Riqualificazione e pavimentazione degli spazi pubblici adiacenti all’anfiteatro comunale.">
-            <img src="assets/img/portfolio/montelepre-parco-urbano-2.jpeg" class="portfolio-image" alt="Parco Urbano Montelepre">
+        <!-- OPERE PUBBLICHE -->
+        <div class="portfolio-item public">
+          <a href="portfolio-details.html">
+            <img src="assets/img/portfolio/montelepre-parco-urbano-2.jpeg" alt="Parco Urbano - Montelepre">
           </a>
-          <div class="project-box">
-            <h4>Parco Urbano – Montelepre (PA)</h4>
+          <div class="portfolio-info">
+            <h4>Parco Urbano – Montelepre</h4>
             <p>Riqualificazione e pavimentazione delle aree pubbliche adiacenti all’anfiteatro comunale.</p>
-            <a href="portfolio-details.html">Scopri di più</a>
           </div>
         </div>
 
-        <!-- Progetti Privati -->
-        <div class="portfolio-item" id="private">
-          <a href="assets/img/portfolio/studio-idraulico-trappeto.jpeg" class="glightbox" data-gallery="private" data-title="Studio Idraulico – Trappeto (PA)" data-description="Studio di compatibilità idraulica di un tratto fluviale.">
-            <img src="assets/img/portfolio/studio-idraulico-trappeto.jpeg" class="portfolio-image" alt="Studio Idraulico Trappeto">
+        <!-- PROGETTI PRIVATI -->
+        <div class="portfolio-item private hide">
+          <a href="#">
+            <img src="assets/img/portfolio/studio-idraulico-trappeto.jpeg" alt="Studio Idraulico Trappeto">
           </a>
-          <div class="project-box">
-            <h4>Studio Idraulico – Trappeto (PA)</h4>
+          <div class="portfolio-info">
+            <h4>Studio Idraulico – Trappeto</h4>
             <p>Studio di compatibilità idraulica di un tratto fluviale.</p>
-            <a href="portfolio-details.html">Scopri di più</a>
           </div>
         </div>
 
       </div>
     </section>
+
   </main>
 
-  <!-- Footer -->
   <footer id="footer" class="footer light-background">
-    <div class="container">
+    <div class="container text-center">
       <p><strong>Sede Operativa:</strong> Via J.F. Kennedy n. 42, Partinico (PA)</p>
       <p><strong>Sede Legale:</strong> Via P. Marchese n. 3, Montelepre (PA)</p>
       <p><strong>P.IVA:</strong> 06513140829</p>
-      <div class="social-links d-flex justify-content-center">
+      <div class="social-links d-flex justify-content-center mt-3">
         <a href="https://www.facebook.com/share/1BKxwNRBsj/?mibextid=wwXIfr" target="_blank"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/cd_studio.tecnico" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.instagram.com/cd_studio.tecnico?igsh=M2d2d2NvdnAwdDgz" target="_blank"><i class="bi bi-instagram"></i></a>
         <a href="mailto:cdstudiotecnico@hotmail.com"><i class="bi bi-envelope"></i></a>
         <a href="tel:+393289250353"><i class="bi bi-telephone"></i></a>
       </div>
@@ -246,32 +229,27 @@
   <!-- JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/js/main.js"></script>
-
   <script>
     AOS.init();
 
-    const btnPublic = document.getElementById("btnPublic");
-    const btnPrivate = document.getElementById("btnPrivate");
-    const sectionPublic = document.getElementById("public");
-    const sectionPrivate = document.getElementById("private");
+    const buttons = document.querySelectorAll('.filter-btn');
+    const items = document.querySelectorAll('.portfolio-item');
 
-    btnPublic.addEventListener("click", () => {
-      btnPublic.classList.add("active");
-      btnPrivate.classList.remove("active");
-      sectionPublic.classList.add("active");
-      sectionPrivate.classList.remove("active");
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+        items.forEach(item => {
+          if (item.classList.contains(filter)) {
+            item.classList.remove('hide');
+          } else {
+            item.classList.add('hide');
+          }
+        });
+      });
     });
-
-    btnPrivate.addEventListener("click", () => {
-      btnPrivate.classList.add("active");
-      btnPublic.classList.remove("active");
-      sectionPrivate.classList.add("active");
-      sectionPublic.classList.remove("active");
-    });
-
-    const lightbox = GLightbox({ selector: '.glightbox', touchNavigation: true, loop: false });
   </script>
 
 </body>
