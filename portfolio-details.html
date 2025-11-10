@@ -6,12 +6,12 @@
   <title>Portfolio – Dettagli Progetto | CD Studio Tecnico</title>
   <meta name="description" content="Dettagli dei progetti tecnici realizzati dallo studio CD Studio Tecnico – Ing. Dario Cucchiara.">
 
-  <!-- Favicon e Logo (versione corretta e aggiornata) -->
-  <link rel="icon" href="assets/img/logo-cdstudiotecnico.jpeg" type="image/jpeg">
-  <link rel="icon" href="https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg" type="image/jpeg">
-  <link rel="apple-touch-icon" href="https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg">
-  <meta property="og:image" content="https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg">
-  <meta name="twitter:image" content="https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg">
+  <!-- Fonts e CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <style>
     body {
@@ -259,7 +259,7 @@
           </div>
           <div class="swiper-slide">
             <img src="assets/img/portfolio/montelepre-parco-urbano-3.jpeg" alt="">
-            <div class="caption">Vista laterale dei muretti di contenimento restaurati</div>
+            <div class="caption">Vista laterale dei muretti di contenimento restaurati.</div>
           </div>
           <div class="swiper-slide">
             <img src="assets/img/portfolio/montelepre-parco-urbano-4.jpeg" alt="">
@@ -286,18 +286,18 @@
           <li><strong>Anno:</strong> 2021</li>
         </ul>
       </div>
-      
-<div class="description">
-  <h3><i class="bi bi-diagram-3"></i>Descrizione tecnica e obiettivi</h3>
-  <p>Riqualificazione paesaggistica e funzionale dell’area dell’anfiteatro con pavimentazioni in pietra locale e nuove ringhiere zincate.</p>
-  <p>Opere integrate di drenaggio e finiture sostenibili con l’ambiente urbano circostante.</p>
-</div>
+
+      <div class="description">
+        <h3><i class="bi bi-diagram-3"></i> Descrizione tecnica e obiettivi</h3>
+        <p>Riqualificazione paesaggistica e funzionale dell’area dell’anfiteatro con pavimentazioni in pietra locale e nuove ringhiere zincate.</p>
+        <p>Opere integrate di drenaggio e finiture sostenibili con l’ambiente urbano circostante.</p>
+      </div>
 
       <div class="quote">
-  “Questo progetto rappresenta un passo importante per la valorizzazione del nostro patrimonio urbano e per restituire alla cittadinanza un luogo di aggregazione sicuro, decoroso e pienamente fruibile. Un ringraziamento particolare all’Ing. Dario Cucchiara per la professionalità e la dedizione dimostrate in ogni fase della progettazione e della direzione dei lavori.”
-  <br><br>
-  <strong>Il Sindaco del Comune di Montelepre</strong>
-</div>
+        “Questo progetto rappresenta un passo importante per la valorizzazione del nostro patrimonio urbano e per restituire alla cittadinanza un luogo di aggregazione sicuro, decoroso e pienamente fruibile. Un ringraziamento particolare all’Ing. Dario Cucchiara per la professionalità e la dedizione dimostrate in ogni fase della progettazione e della direzione dei lavori.”
+        <br><br>
+        <strong>Il Sindaco del Comune di Montelepre</strong>
+      </div>
 
       <div class="text-center">
         <a href="portfolio.html" class="back-btn">← Torna al Portfolio</a>
@@ -314,23 +314,4 @@
 
     const params = new URLSearchParams(window.location.search);
     const project = params.get("project");
-    document.querySelectorAll(".project").forEach(s => s.style.display = "none");
-    if (project) document.getElementById(project).style.display = "block";
-
-    // Slider con frecce + autoplay
-    document.querySelectorAll('.swiper').forEach(swiperEl => {
-      new Swiper(swiperEl, {
-        loop: true,
-        effect: 'fade',
-        autoplay: { delay: 3600, disableOnInteraction: false, pauseOnMouseEnter: true },
-        pagination: { el: swiperEl.querySelector('.swiper-pagination'), clickable: true },
-        navigation: {
-          nextEl: swiperEl.querySelector('.swiper-button-next'),
-          prevEl: swiperEl.querySelector('.swiper-button-prev'),
-        },
-        speed: 900,
-      });
-    });
-  </script>
-</body>
-</html>
+    document.querySelec
