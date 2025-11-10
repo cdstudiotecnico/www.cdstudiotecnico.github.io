@@ -1,193 +1,220 @@
 <!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-<style>
-  body {
-    background-color: #fafafa;
-    color: #333;
-    font-family: 'Raleway', sans-serif;
-    overflow-x: hidden;
-  }
+  <title>CD Studio Tecnico – Ing. Dario Cucchiara | Ingegnere Civile, Edile e Ambientale a Partinico, Palermo & Servizi Online in tutta Italia</title>
+  <meta name="description" content="Servizi di ingegneria civile, edile e ambientale in tutta la Sicilia Occidentale e online in tutta Italia. CD Studio Tecnico – Ing. Dario Cucchiara opera da Partinico e Montelepre (PA) e grazie allo smart working offre consulenze, progettazioni, perizie e pratiche completamente digitali in ogni regione italiana.">
+  <meta name="author" content="Ing. Dario Cucchiara">
+  <meta name="robots" content="index, follow">
 
-  /* ===== Titolo sezione ===== */
-  .section-title {
-    text-align: center;
-    margin-bottom: 25px;
-  }
-  .section-title img {
-    max-width: 160px;
-    margin-bottom: 15px;
-    filter: drop-shadow(0 3px 5px rgba(0,0,0,0.1));
-  }
-  .section-title h2 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    color: #356c6c;
-    font-size: 1.8rem;
-    margin-bottom: 8px;
-  }
-  .section-title p {
-    color: #555;
-    font-size: 1.05rem;
-  }
+  <!-- Google Verification -->
+  <meta name="google-site-verification" content="5-kam6aK3nMX8pb5dczefcCj29VOOaRr7Fop8z9jWI8" />
 
-  /* ===== Pulsanti filtro ===== */
-  .filter-buttons {
-    text-align: center;
-    margin-top: 25px;
-    margin-bottom: 40px;
-  }
-  .filter-buttons button {
-    border: 2px solid #356c6c;
-    background: transparent;
-    color: #356c6c;
-    padding: 8px 22px;
-    border-radius: 30px;
-    font-size: 1rem;
-    font-weight: 500;
-    margin: 0 8px;
-    transition: all 0.3s ease;
-  }
-  .filter-buttons button.active,
-  .filter-buttons button:hover {
-    background: #356c6c;
-    color: #fff;
-  }
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.cdstudiotecnico.it/">
 
-  /* ===== Box principale ===== */
-  .portfolio-center-box {
-    max-width: 1000px;
-    margin: 0 auto;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    overflow: hidden;
-    transition: all 0.4s ease;
-  }
+  <!-- Favicon -->
+  <link rel="icon" href="https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg">
 
-  /* === SWIPER === */
-  .swiper {
-    width: 100%;
-    height: auto;
-  }
+  <!-- Fonts e CSS principali -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
 
-  .swiper-slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
+  <!-- CSS personalizzato -->
+  <style>
+    body {
+      background-color: #fafafa;
+      color: #333;
+      font-family: 'Raleway', sans-serif;
+      overflow-x: hidden;
+    }
 
-  .swiper-slide img {
-    width: 100%;
-    height: 500px;              /* ✅ altezza fissa come prima */
-    object-fit: cover;          /* ✅ riempie tutto il box */
-    object-position: center;    /* ✅ centra l’immagine */
-    transition: transform 0.5s ease;
-  }
+    /* ===== Titolo sezione ===== */
+    .section-title {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .section-title img {
+      max-width: 160px;
+      margin-bottom: 15px;
+      filter: drop-shadow(0 3px 5px rgba(0,0,0,0.1));
+    }
+    .section-title h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      color: #356c6c;
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+    .section-title p {
+      color: #555;
+      font-size: 1.05rem;
+    }
 
-  .swiper-slide img:hover {
-    transform: scale(1.03);
-  }
+    /* ===== Pulsanti filtro ===== */
+    .filter-buttons {
+      text-align: center;
+      margin-top: 25px;
+      margin-bottom: 40px;
+    }
+    .filter-buttons button {
+      border: 2px solid #356c6c;
+      background: transparent;
+      color: #356c6c;
+      padding: 8px 22px;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 500;
+      margin: 0 8px;
+      transition: all 0.3s ease;
+    }
+    .filter-buttons button.active,
+    .filter-buttons button:hover {
+      background: #356c6c;
+      color: #fff;
+    }
 
-  .project-info {
-    padding: 25px 35px 35px;
-  }
-
-  .project-info h4 {
-    color: #356c6c;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    margin-bottom: 10px;
-    font-size: 1.35rem;
-  }
-
-  .project-info p {
-    color: #555;
-    font-size: 1rem;
-    margin-bottom: 18px;
-  }
-
-  .btn-discover {
-    display: inline-block;
-    border: 2px solid #356c6c;
-    background: transparent;
-    color: #356c6c;
-    padding: 6px 18px;
-    border-radius: 30px;
-    font-size: 0.95rem;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-
-  .btn-discover:hover {
-    background: #356c6c;
-    color: #fff;
-  }
-
-  /* === Frecce tipo Details === */
-  .swiper-button-prev,
-  .swiper-button-next {
-    color: #356c6c;
-    background: transparent;
-    font-size: 28px;
-    transition: all 0.3s ease;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .swiper-button-prev::after,
-  .swiper-button-next::after {
-    font-weight: 600;
-    font-size: 28px;
-  }
-
-  .swiper-button-prev:hover,
-  .swiper-button-next:hover {
-    color: #2e5555;
-    transform: scale(1.1);
-  }
-
-  .swiper-button-prev {
-    left: 10px;
-  }
-
-  .swiper-button-next {
-    right: 10px;
-  }
-
-  /* === Paginazione === */
-  .swiper-pagination-bullet {
-    background: #356c6c;
-    opacity: 0.3;
-  }
-
-  .swiper-pagination-bullet-active {
-    opacity: 1;
-  }
-
-  @media (max-width: 992px) {
+    /* ===== Box principale ===== */
     .portfolio-center-box {
-      max-width: 95%;
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: all 0.4s ease;
     }
-    .swiper-slide img {
-      height: 360px;
-    }
-  }
 
-  @media (max-width: 600px) {
+    /* === SWIPER === */
+    .swiper {
+      width: 100%;
+      height: auto;
+    }
+
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 500px;              
+      object-fit: cover;          
+      object-position: center;    
+      transition: transform 0.5s ease;
+    }
+
+    .swiper-slide img:hover {
+      transform: scale(1.03);
+    }
+
     .project-info {
-      padding: 20px;
+      padding: 25px 35px 35px;
     }
-    .project-info h4 {
-      font-size: 1.2rem;
-    }
-    .swiper-slide img {
-      height: 280px;
-    }
-  }
-</style>
 
+    .project-info h4 {
+      color: #356c6c;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      margin-bottom: 10px;
+      font-size: 1.35rem;
+    }
+
+    .project-info p {
+      color: #555;
+      font-size: 1rem;
+      margin-bottom: 18px;
+    }
+
+    .btn-discover {
+      display: inline-block;
+      border: 2px solid #356c6c;
+      background: transparent;
+      color: #356c6c;
+      padding: 6px 18px;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-discover:hover {
+      background: #356c6c;
+      color: #fff;
+    }
+
+    /* === Frecce tipo Details === */
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: #356c6c;
+      background: transparent;
+      font-size: 28px;
+      transition: all 0.3s ease;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      font-weight: 600;
+      font-size: 28px;
+    }
+
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+      color: #2e5555;
+      transform: scale(1.1);
+    }
+
+    .swiper-button-prev {
+      left: 10px;
+    }
+
+    .swiper-button-next {
+      right: 10px;
+    }
+
+    /* === Paginazione === */
+    .swiper-pagination-bullet {
+      background: #356c6c;
+      opacity: 0.3;
+    }
+
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+
+    @media (max-width: 992px) {
+      .portfolio-center-box {
+        max-width: 95%;
+      }
+      .swiper-slide img {
+        height: 360px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .project-info {
+        padding: 20px;
+      }
+      .project-info h4 {
+        font-size: 1.2rem;
+      }
+      .swiper-slide img {
+        height: 280px;
+      }
+    }
+  </style>
 </head>
 
 <body>
