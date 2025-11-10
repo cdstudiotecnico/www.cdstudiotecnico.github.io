@@ -13,7 +13,59 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
-    /* ===== Sezione portfolio personalizzata ===== */
+    body {
+      background-color: #fafafa;
+      color: #333;
+      font-family: 'Raleway', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ===== Titolo ===== */
+    .section-title {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .section-title img {
+      max-width: 160px;
+      margin-bottom: 15px;
+      filter: drop-shadow(0 3px 5px rgba(0,0,0,0.1));
+    }
+    .section-title h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      color: #356c6c;
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+    .section-title p {
+      color: #555;
+      font-size: 1.05rem;
+    }
+
+    /* ===== Pulsanti filtro ===== */
+    .filter-buttons {
+      text-align: center;
+      margin-top: 25px;
+      margin-bottom: 45px;
+    }
+    .filter-buttons button {
+      border: 2px solid #356c6c;
+      background: transparent;
+      color: #356c6c;
+      padding: 8px 22px;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 500;
+      margin: 0 8px;
+      transition: all 0.3s ease;
+    }
+    .filter-buttons button.active,
+    .filter-buttons button:hover {
+      background: #356c6c;
+      color: #fff;
+    }
+
+    /* ===== Slider wrapper ===== */
     .portfolio-wrapper {
       width: 100%;
       overflow: hidden;
@@ -23,11 +75,11 @@
     .portfolio-container {
       display: flex;
       flex-wrap: nowrap;
+      align-items: flex-start;
       gap: 40px;
-      justify-content: flex-start;
-      align-items: stretch;
       transition: transform 0.5s ease-in-out;
-      scroll-behavior: smooth;
+      justify-content: center;
+      padding-bottom: 10px;
     }
 
     .portfolio-item {
@@ -35,8 +87,8 @@
       border-radius: 12px;
       box-shadow: 0 4px 14px rgba(0,0,0,0.1);
       overflow: hidden;
-      min-width: 350px;
-      max-width: 400px;
+      min-width: 330px;
+      max-width: 380px;
       flex: 0 0 auto;
       opacity: 0;
       transform: translateY(30px);
@@ -54,10 +106,7 @@
       display: block;
       transition: transform 0.6s ease;
     }
-
-    .portfolio-item:hover img {
-      transform: scale(1.02);
-    }
+    .portfolio-item:hover img { transform: scale(1.03); }
 
     .portfolio-info {
       padding: 20px 25px 30px;
@@ -77,6 +126,7 @@
       margin-bottom: 15px;
     }
 
+    /* ===== Bottone "Scopri di più" ===== */
     .btn-discover {
       display: inline-block;
       border: 2px solid #356c6c;
@@ -89,7 +139,6 @@
       text-decoration: none;
       transition: all 0.3s ease;
     }
-
     .btn-discover:hover {
       background: #356c6c;
       color: #fff;
@@ -97,13 +146,17 @@
 
     @media (max-width: 768px) {
       .portfolio-item { min-width: 260px; max-width: 300px; }
+      .filter-buttons button {
+        padding: 8px 18px;
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER (non toccato) -->
+  <!-- HEADER -->
   <header id="header" class="header d-flex align-items-center sticky-top light-background">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center me-auto text-decoration-none">
@@ -112,7 +165,6 @@
           <span class="subtitle">Ingegneria Civile, Edile & Ambientale</span>
         </div>
       </a>
-
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -125,7 +177,6 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
       <div class="header-social-links">
         <a href="mailto:cdstudiotecnico@hotmail.com"><i class="bi bi-envelope"></i></a>
         <a href="tel:+393289250353"><i class="bi bi-telephone"></i></a>
@@ -142,25 +193,22 @@
         <p>Selezione di progetti tecnici realizzati dal nostro studio in ambito pubblico e privato</p>
       </div>
 
-      <!-- Filtri -->
-      <div class="filter-buttons text-center mb-4" data-aos="fade-up" data-aos-delay="100">
+      <!-- Pulsanti filtro -->
+      <div class="filter-buttons" data-aos="fade-up" data-aos-delay="100">
         <button class="filter-btn active" data-filter="public">Opere Pubbliche</button>
         <button class="filter-btn" data-filter="private">Progetti Privati</button>
       </div>
 
-      <!-- SLIDER ORIZZONTALE -->
+      <!-- Slider orizzontale -->
       <div class="portfolio-wrapper">
         <div class="portfolio-container" id="portfolioContainer">
-
           <!-- === OPERE PUBBLICHE === -->
           <div class="portfolio-item public show">
             <img src="assets/img/portfolio/montelepre-parco-urbano-2.jpeg" alt="Parco Urbano - Montelepre">
             <div class="portfolio-info">
               <h4>Parco Urbano – Montelepre</h4>
               <p>Riqualificazione e pavimentazione delle aree pubbliche adiacenti all’anfiteatro comunale.</p>
-              <div class="text-center">
-                <a href="portfolio-details-parco-urbano.html" class="btn-discover">Scopri di più</a>
-              </div>
+              <div class="text-center"><a href="portfolio-details.html?project=parco-urbano" class="btn-discover">Scopri di più</a></div>
             </div>
           </div>
 
@@ -169,20 +217,16 @@
             <div class="portfolio-info">
               <h4>Piazza Vittorio Emanuele – Terrasini</h4>
               <p>Restauro pavimentazione storica e nuova illuminazione artistica nel centro urbano.</p>
-              <div class="text-center">
-                <a href="portfolio-details-piazza-vittorio-emanuele.html" class="btn-discover">Scopri di più</a>
-              </div>
+              <div class="text-center"><a href="portfolio-details.html?project=piazza-vittorio-emanuele" class="btn-discover">Scopri di più</a></div>
             </div>
           </div>
 
           <div class="portfolio-item public show">
-            <img src="assets/img/portfolio/edificio-scolastico-montelepre.jpeg" alt="Scuola Elementare Montelepre">
+            <img src="assets/img/portfolio/edificio-scolastico-montelepre.jpeg" alt="Scuola Elementare - Montelepre">
             <div class="portfolio-info">
               <h4>Scuola Elementare – Montelepre</h4>
               <p>Interventi di adeguamento sismico e riqualificazione energetica dell’edificio scolastico.</p>
-              <div class="text-center">
-                <a href="portfolio-details-scuola-montelepre.html" class="btn-discover">Scopri di più</a>
-              </div>
+              <div class="text-center"><a href="portfolio-details.html?project=scuola-montelepre" class="btn-discover">Scopri di più</a></div>
             </div>
           </div>
 
@@ -192,9 +236,7 @@
             <div class="portfolio-info">
               <h4>Studio Idraulico – Trappeto</h4>
               <p>Studio di compatibilità idraulica di un tratto fluviale con analisi e modellazione del deflusso.</p>
-              <div class="text-center">
-                <a href="portfolio-details-studio-idraulico.html" class="btn-discover">Scopri di più</a>
-              </div>
+              <div class="text-center"><a href="portfolio-details.html?project=studio-idraulico" class="btn-discover">Scopri di più</a></div>
             </div>
           </div>
 
@@ -203,9 +245,7 @@
             <div class="portfolio-info">
               <h4>Villa Privata – Partinico</h4>
               <p>Direzione lavori e collaudo di residenza unifamiliare ad alta efficienza energetica.</p>
-              <div class="text-center">
-                <a href="portfolio-details-villa-partinico.html" class="btn-discover">Scopri di più</a>
-              </div>
+              <div class="text-center"><a href="portfolio-details.html?project=villa-partinico" class="btn-discover">Scopri di più</a></div>
             </div>
           </div>
 
@@ -214,18 +254,15 @@
             <div class="portfolio-info">
               <h4>Ampliamento civile abitazione – Montelepre</h4>
               <p>Progetto architettonico e strutturale con verifica antisismica e ottimizzazione volumetrica.</p>
-              <div class="text-center">
-                <a href="portfolio-details-ampliamento-montelepre.html" class="btn-discover">Scopri di più</a>
-              </div>
+              <div class="text-center"><a href="portfolio-details.html?project=ampliamento-montelepre" class="btn-discover">Scopri di più</a></div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER (non toccato) -->
+  <!-- FOOTER -->
   <footer id="footer" class="footer light-background">
     <div class="container text-center">
       <p><strong>Sede Operativa:</strong> Via J.F. Kennedy n. 42, Partinico (PA)</p>
@@ -250,18 +287,15 @@
     const buttons = document.querySelectorAll('.filter-btn');
     const items = document.querySelectorAll('.portfolio-item');
     const container = document.getElementById('portfolioContainer');
-
     let currentFilter = 'public';
     let scrollSpeed = 0.4;
     let isHovered = false;
 
     function showItems(filter) {
       currentFilter = filter;
-      items.forEach(item => {
-        item.classList.remove('show');
-        if (item.classList.contains(filter)) {
-          item.classList.add('show');
-        }
+      items.forEach(i => {
+        i.classList.remove('show');
+        if (i.classList.contains(filter)) i.classList.add('show');
       });
       container.scrollLeft = 0;
     }
@@ -290,6 +324,5 @@
       requestAnimationFrame(autoScroll);
     });
   </script>
-
 </body>
 </html>
