@@ -77,6 +77,7 @@
       border-radius: 14px;
       overflow: hidden;
       box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      position: relative;
     }
     .swiper-slide img {
       width: 100%;
@@ -102,13 +103,12 @@
       to {opacity: 1; transform: translateY(0);}
     }
 
-    /* PAGINATION */
+    /* PAGINATION + FRECCE */
     .swiper-pagination {
       position: relative;
       bottom: 5px;
       margin-top: 12px;
     }
-
     .swiper-pagination-bullet {
       width: 12px;
       height: 12px;
@@ -125,12 +125,24 @@
     }
 
     .swiper-button-prev, .swiper-button-next {
-      color: #356c6c;
-      transition: 0.3s;
-      filter: drop-shadow(0 0 2px rgba(0,0,0,0.3));
+      color: #fff;
+      background: rgba(53,108,108,0.75);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
     }
     .swiper-button-prev:hover, .swiper-button-next:hover {
-      color: #2e5555;
+      background: rgba(53,108,108,1);
+      transform: scale(1.08);
+    }
+
+    .swiper-button-prev::after, .swiper-button-next::after {
+      font-size: 18px;
+      font-weight: bold;
     }
 
     /* BOX INFORMATIVI */
@@ -215,6 +227,7 @@
       .info-box, .description { padding: 25px; }
       .caption { font-size: 0.9rem; }
       .swiper-pagination-bullet { width: 10px; height: 10px; }
+      .swiper-button-prev, .swiper-button-next { width: 38px; height: 38px; }
     }
   </style>
 </head>
@@ -246,11 +259,11 @@
           </div>
           <div class="swiper-slide">
             <img src="assets/img/portfolio/montelepre-parco-urbano-3.jpeg" alt="">
-            <div class="caption">Dettaglio della nuova recinzione metallica e delle canalette per il deflusso acque.</div>
+            <div class="caption">Dettaglio della nuova recinzione metallica lato fiume.</div>
           </div>
           <div class="swiper-slide">
             <img src="assets/img/portfolio/montelepre-parco-urbano-4.jpeg" alt="">
-            <div class="caption">Vista laterale delle pavimentazioni e dei muretti di contenimento restaurati.</div>
+            <div class="caption">Vista laterale dei muretti di contenimento restaurati.</div>
           </div>
           <div class="swiper-slide">
             <img src="assets/img/portfolio/montelepre-parco-urbano-5.jpeg" alt="">
@@ -258,6 +271,8 @@
           </div>
         </div>
         <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
 
       <div class="info-box">
@@ -278,18 +293,17 @@
         <p>Opere integrate di drenaggio e finiture sostenibili con l’ambiente urbano circostante.</p>
       </div>
 
-      <div class="quote">
-        “Questo progetto rappresenta un passo importante per la valorizzazione del nostro patrimonio urbano.”
-        <strong>Il Sindaco del Comune di Montelepre (2021)</strong>
-      </div>
+      <<div class="quote">
+  “Questo progetto rappresenta un passo importante per la valorizzazione del nostro patrimonio urbano e per restituire alla cittadinanza un luogo di aggregazione sicuro, decoroso e pienamente fruibile.  
+  Un ringraziamento particolare all’Ing. <strong>Dario Cucchiara</strong> per la professionalità e la dedizione dimostrate in ogni fase della progettazione e della direzione dei lavori.”
+  <br><br>
+  <strong>Il Sindaco del Comune di Montelepre</strong>
+</div>
 
       <div class="text-center">
         <a href="portfolio.html" class="back-btn">← Torna al Portfolio</a>
       </div>
     </section>
-
-    <!-- === ALTRI PROGETTI === -->
-    <!-- restano invariati -->
   </div>
 
   <!-- JS -->
@@ -304,13 +318,17 @@
     document.querySelectorAll(".project").forEach(s => s.style.display = "none");
     if (project) document.getElementById(project).style.display = "block";
 
-    // Slider
+    // Slider con frecce + autoplay
     document.querySelectorAll('.swiper').forEach(swiperEl => {
       new Swiper(swiperEl, {
         loop: true,
         effect: 'fade',
         autoplay: { delay: 3600, disableOnInteraction: false, pauseOnMouseEnter: true },
         pagination: { el: swiperEl.querySelector('.swiper-pagination'), clickable: true },
+        navigation: {
+          nextEl: swiperEl.querySelector('.swiper-button-next'),
+          prevEl: swiperEl.querySelector('.swiper-button-prev'),
+        },
         speed: 900,
       });
     });
