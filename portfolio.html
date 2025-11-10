@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
   <title>Portfolio | CD Studio Tecnico – Ing. Dario Cucchiara</title>
   <meta name="description" content="Selezione di progetti tecnici realizzati dallo studio in ambito pubblico e privato.">
 
@@ -11,7 +10,6 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
@@ -19,9 +17,10 @@
       background-color: #fafafa;
       color: #333;
       font-family: 'Raleway', sans-serif;
+      overflow-x: hidden;
     }
 
-    /* --- Titolo sezione --- */
+    /* ===== Titolo sezione ===== */
     .section-title {
       text-align: center;
       margin-bottom: 25px;
@@ -46,7 +45,7 @@
       font-size: 1.05rem;
     }
 
-    /* --- Pulsanti filtro --- */
+    /* ===== Pulsanti filtro ===== */
     .filter-buttons {
       text-align: center;
       margin-top: 25px;
@@ -71,14 +70,13 @@
       color: #fff;
     }
 
-    /* --- Contenitore progetti --- */
+    /* ===== Contenitore progetti ===== */
     .portfolio-container {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 40px;
-      transition: all 0.5s ease;
     }
 
     .portfolio-item {
@@ -87,15 +85,14 @@
       box-shadow: 0 4px 14px rgba(0,0,0,0.1);
       overflow: hidden;
       max-width: 720px;
-      opacity: 1;
-      transform: translateY(0);
-      transition: all 0.6s ease;
-    }
-
-    .portfolio-item.hide {
       opacity: 0;
       transform: translateY(40px);
-      pointer-events: none;
+      transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    .portfolio-item.show {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .portfolio-item img {
@@ -127,6 +124,7 @@
       margin-bottom: 0;
     }
 
+    /* ===== Responsive ===== */
     @media (max-width: 768px) {
       .portfolio-item { max-width: 90%; }
       .filter-buttons button {
@@ -139,6 +137,7 @@
 
 <body>
 
+  <!-- HEADER -->
   <header id="header" class="header d-flex align-items-center sticky-top light-background">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center me-auto text-decoration-none">
@@ -168,8 +167,8 @@
     </div>
   </header>
 
+  <!-- MAIN -->
   <main class="main">
-
     <section id="portfolio" class="portfolio section">
       <div class="container section-title" data-aos="fade-up">
         <img src="assets/img/logo.png" alt="Logo Studio Tecnico">
@@ -177,15 +176,17 @@
         <p>Selezione di progetti tecnici realizzati dal nostro studio in ambito pubblico e privato</p>
       </div>
 
+      <!-- Filtri -->
       <div class="filter-buttons" data-aos="fade-up" data-aos-delay="100">
         <button class="filter-btn active" data-filter="public">Opere Pubbliche</button>
         <button class="filter-btn" data-filter="private">Progetti Privati</button>
       </div>
 
-      <div class="portfolio-container" data-aos="fade-up" data-aos-delay="150">
+      <!-- Container -->
+      <div class="portfolio-container" id="portfolioContainer">
 
-        <!-- OPERE PUBBLICHE -->
-        <div class="portfolio-item public">
+        <!-- === OPERE PUBBLICHE === -->
+        <div class="portfolio-item public show">
           <a href="portfolio-details.html">
             <img src="assets/img/portfolio/montelepre-parco-urbano-2.jpeg" alt="Parco Urbano - Montelepre">
           </a>
@@ -195,22 +196,62 @@
           </div>
         </div>
 
-        <!-- PROGETTI PRIVATI -->
-        <div class="portfolio-item private hide">
+        <div class="portfolio-item public show">
+          <a href="#">
+            <img src="assets/img/portfolio/piazza-vittorio-emanuele.jpeg" alt="Piazza Vittorio Emanuele - Terrasini">
+          </a>
+          <div class="portfolio-info">
+            <h4>Piazza Vittorio Emanuele – Terrasini</h4>
+            <p>Restauro pavimentazione storica e nuova illuminazione artistica nel centro urbano.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item public show">
+          <a href="#">
+            <img src="assets/img/portfolio/edificio-scolastico-montelepre.jpeg" alt="Scuola Elementare Montelepre">
+          </a>
+          <div class="portfolio-info">
+            <h4>Scuola Elementare – Montelepre</h4>
+            <p>Interventi di adeguamento sismico e riqualificazione energetica dell’edificio scolastico.</p>
+          </div>
+        </div>
+
+        <!-- === PROGETTI PRIVATI === -->
+        <div class="portfolio-item private">
           <a href="#">
             <img src="assets/img/portfolio/studio-idraulico-trappeto.jpeg" alt="Studio Idraulico Trappeto">
           </a>
           <div class="portfolio-info">
             <h4>Studio Idraulico – Trappeto</h4>
-            <p>Studio di compatibilità idraulica di un tratto fluviale.</p>
+            <p>Studio di compatibilità idraulica di un tratto fluviale con analisi e modellazione del deflusso.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item private">
+          <a href="#">
+            <img src="assets/img/portfolio/villa-privata-partinico.jpeg" alt="Villa privata Partinico">
+          </a>
+          <div class="portfolio-info">
+            <h4>Villa Privata – Partinico</h4>
+            <p>Direzione lavori e collaudo di residenza unifamiliare ad alta efficienza energetica.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item private">
+          <a href="#">
+            <img src="assets/img/portfolio/ampliamento-casa-montelepre.jpeg" alt="Ampliamento Casa Montelepre">
+          </a>
+          <div class="portfolio-info">
+            <h4>Ampliamento civile abitazione – Montelepre</h4>
+            <p>Progetto architettonico e strutturale con verifica antisismica e ottimizzazione volumetrica.</p>
           </div>
         </div>
 
       </div>
     </section>
-
   </main>
 
+  <!-- FOOTER -->
   <footer id="footer" class="footer light-background">
     <div class="container text-center">
       <p><strong>Sede Operativa:</strong> Via J.F. Kennedy n. 42, Partinico (PA)</p>
@@ -235,20 +276,31 @@
     const buttons = document.querySelectorAll('.filter-btn');
     const items = document.querySelectorAll('.portfolio-item');
 
+    function showItems(filter) {
+      let visibleItems = 0;
+      items.forEach((item) => {
+        item.classList.remove('show');
+        if (item.classList.contains(filter)) {
+          setTimeout(() => {
+            item.classList.add('show');
+          }, visibleItems * 200); // ritardo sequenziale elegante
+          visibleItems++;
+        }
+      });
+    }
+
     buttons.forEach(btn => {
       btn.addEventListener('click', () => {
         buttons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-
         const filter = btn.getAttribute('data-filter');
-        items.forEach(item => {
-          if (item.classList.contains(filter)) {
-            item.classList.remove('hide');
-          } else {
-            item.classList.add('hide');
-          }
-        });
+        showItems(filter);
       });
+    });
+
+    // Mostra inizialmente le opere pubbliche
+    window.addEventListener('load', () => {
+      showItems('public');
     });
   </script>
 
