@@ -10,6 +10,7 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
@@ -46,7 +47,7 @@
     .filter-buttons {
       text-align: center;
       margin-top: 25px;
-      margin-bottom: 45px;
+      margin-bottom: 40px;
     }
     .filter-buttons button {
       border: 2px solid #356c6c;
@@ -65,61 +66,57 @@
       color: #fff;
     }
 
-    /* ===== Container ===== */
-    .portfolio-wrapper {
-      width: 100%;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-    }
-
-    .portfolio-container {
-      display: grid;
-      grid-auto-flow: column;
-      grid-auto-columns: minmax(300px, 1fr);
-      gap: 40px;
-      justify-content: center;
-      align-items: start;
-      transition: transform 0.4s ease-in-out;
-    }
-
-    .portfolio-item {
+    /* ===== Box principale ===== */
+    .portfolio-center-box {
+      max-width: 900px;
+      margin: 0 auto;
       background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
       overflow: hidden;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s ease;
-    }
-    .portfolio-item.show {
-      opacity: 1;
-      transform: translateY(0);
+      transition: all 0.4s ease;
     }
 
-    .portfolio-item img {
+    .swiper {
       width: 100%;
-      height: auto;
-      display: block;
-      transition: transform 0.6s ease;
-    }
-    .portfolio-item:hover img { transform: scale(1.03); }
-
-    .portfolio-info {
-      padding: 20px 25px 30px;
-      text-align: left;
+      height: 100%;
     }
 
-    .portfolio-info h4 {
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .swiper-slide img:hover {
+      transform: scale(1.03);
+    }
+
+    .project-info {
+      padding: 25px 35px 35px;
+    }
+
+    .project-info h4 {
       color: #356c6c;
-      font-size: 1.25rem;
+      font-family: 'Poppins', sans-serif;
       font-weight: 600;
       margin-bottom: 10px;
+      font-size: 1.35rem;
     }
-    .portfolio-info p {
+
+    .project-info p {
       color: #555;
       font-size: 1rem;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
 
     .btn-discover {
@@ -134,31 +131,42 @@
       text-decoration: none;
       transition: all 0.3s ease;
     }
+
     .btn-discover:hover {
       background: #356c6c;
       color: #fff;
     }
 
-    /* ===== Responsive layout ===== */
-    @media (max-width: 1200px) {
-      .portfolio-container {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        grid-auto-flow: row;
-        justify-content: center;
+    /* Swiper controls */
+    .swiper-button-prev, .swiper-button-next {
+      color: #356c6c;
+      transition: 0.3s;
+    }
+
+    .swiper-pagination-bullet {
+      background: #356c6c;
+      opacity: 0.3;
+    }
+
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+
+    @media (max-width: 992px) {
+      .portfolio-center-box {
+        max-width: 95%;
+      }
+      .swiper-slide img {
+        height: 340px;
       }
     }
-    @media (max-width: 768px) {
-      .portfolio-container {
-        grid-template-columns: 1fr;
-        gap: 25px;
+
+    @media (max-width: 600px) {
+      .project-info {
+        padding: 20px;
       }
-      .portfolio-item {
-        width: 90%;
-        margin: 0 auto;
-      }
-      .filter-buttons button {
-        padding: 8px 18px;
-        font-size: 0.95rem;
+      .project-info h4 {
+        font-size: 1.2rem;
       }
     }
   </style>
@@ -209,65 +217,72 @@
         <button class="filter-btn" data-filter="private">Progetti Privati</button>
       </div>
 
-      <div class="portfolio-wrapper">
-        <div class="portfolio-container" id="portfolioContainer">
+      <!-- Box centrale -->
+      <div class="portfolio-center-box" data-aos="fade-up" data-aos-delay="200">
+        <div class="swiper portfolioSwiper">
+          <div class="swiper-wrapper" id="publicProjects">
+            <!-- Opere Pubbliche -->
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/montelepre-parco-urbano-2.jpeg" alt="">
+              <div class="project-info">
+                <h4>Parco Urbano – Montelepre</h4>
+                <p>Riqualificazione e pavimentazione delle aree pubbliche adiacenti all’anfiteatro comunale.</p>
+                <a href="portfolio-details.html?project=parco-urbano" class="btn-discover">Scopri di più</a>
+              </div>
+            </div>
 
-          <!-- OPERE PUBBLICHE -->
-          <div class="portfolio-item public show">
-            <img src="assets/img/portfolio/montelepre-parco-urbano-2.jpeg" alt="Parco Urbano - Montelepre">
-            <div class="portfolio-info">
-              <h4>Parco Urbano – Montelepre</h4>
-              <p>Riqualificazione delle aree pubbliche adiacenti all’anfiteatro comunale.</p>
-              <div class="text-center"><a href="portfolio-details.html?project=parco-urbano" class="btn-discover">Scopri di più</a></div>
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/piazza-vittorio-emanuele.jpeg" alt="">
+              <div class="project-info">
+                <h4>Piazza Vittorio Emanuele – Terrasini</h4>
+                <p>Restauro pavimentazione storica e nuova illuminazione artistica nel centro urbano.</p>
+                <a href="portfolio-details.html?project=piazza-vittorio-emanuele" class="btn-discover">Scopri di più</a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/edificio-scolastico-montelepre.jpeg" alt="">
+              <div class="project-info">
+                <h4>Scuola Elementare – Montelepre</h4>
+                <p>Interventi di adeguamento sismico e riqualificazione energetica dell’edificio scolastico.</p>
+                <a href="portfolio-details.html?project=scuola-montelepre" class="btn-discover">Scopri di più</a>
+              </div>
             </div>
           </div>
 
-          <div class="portfolio-item public show">
-            <img src="assets/img/portfolio/piazza-vittorio-emanuele.jpeg" alt="Piazza Vittorio Emanuele - Terrasini">
-            <div class="portfolio-info">
-              <h4>Piazza Vittorio Emanuele – Terrasini</h4>
-              <p>Restauro pavimentazione storica e nuova illuminazione artistica nel centro urbano.</p>
-              <div class="text-center"><a href="portfolio-details.html?project=piazza-vittorio-emanuele" class="btn-discover">Scopri di più</a></div>
+          <!-- Progetti Privati -->
+          <div class="swiper-wrapper d-none" id="privateProjects">
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/studio-idraulico-trappeto.jpeg" alt="">
+              <div class="project-info">
+                <h4>Studio Idraulico – Trappeto</h4>
+                <p>Studio di compatibilità idraulica di un tratto fluviale con modellazione del deflusso.</p>
+                <a href="portfolio-details.html?project=studio-idraulico" class="btn-discover">Scopri di più</a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/villa-privata-partinico.jpeg" alt="">
+              <div class="project-info">
+                <h4>Villa Privata – Partinico</h4>
+                <p>Direzione lavori e collaudo di residenza unifamiliare ad alta efficienza energetica.</p>
+                <a href="portfolio-details.html?project=villa-partinico" class="btn-discover">Scopri di più</a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/ampliamento-casa-montelepre.jpeg" alt="">
+              <div class="project-info">
+                <h4>Ampliamento civile abitazione – Montelepre</h4>
+                <p>Progetto architettonico e strutturale con verifica antisismica e ottimizzazione volumetrica.</p>
+                <a href="portfolio-details.html?project=ampliamento-montelepre" class="btn-discover">Scopri di più</a>
+              </div>
             </div>
           </div>
 
-          <div class="portfolio-item public show">
-            <img src="assets/img/portfolio/edificio-scolastico-montelepre.jpeg" alt="Scuola Elementare - Montelepre">
-            <div class="portfolio-info">
-              <h4>Scuola Elementare – Montelepre</h4>
-              <p>Interventi di adeguamento sismico e riqualificazione energetica dell’edificio scolastico.</p>
-              <div class="text-center"><a href="portfolio-details.html?project=scuola-montelepre" class="btn-discover">Scopri di più</a></div>
-            </div>
-          </div>
-
-          <!-- PROGETTI PRIVATI -->
-          <div class="portfolio-item private">
-            <img src="assets/img/portfolio/studio-idraulico-trappeto.jpeg" alt="Studio Idraulico Trappeto">
-            <div class="portfolio-info">
-              <h4>Studio Idraulico – Trappeto</h4>
-              <p>Studio di compatibilità idraulica di un tratto fluviale con modellazione del deflusso.</p>
-              <div class="text-center"><a href="portfolio-details.html?project=studio-idraulico" class="btn-discover">Scopri di più</a></div>
-            </div>
-          </div>
-
-          <div class="portfolio-item private">
-            <img src="assets/img/portfolio/villa-privata-partinico.jpeg" alt="Villa privata Partinico">
-            <div class="portfolio-info">
-              <h4>Villa Privata – Partinico</h4>
-              <p>Direzione lavori e collaudo di residenza unifamiliare ad alta efficienza energetica.</p>
-              <div class="text-center"><a href="portfolio-details.html?project=villa-partinico" class="btn-discover">Scopri di più</a></div>
-            </div>
-          </div>
-
-          <div class="portfolio-item private">
-            <img src="assets/img/portfolio/ampliamento-casa-montelepre.jpeg" alt="Ampliamento Casa Montelepre">
-            <div class="portfolio-info">
-              <h4>Ampliamento civile abitazione – Montelepre</h4>
-              <p>Progetto architettonico e strutturale con verifica antisismica e ottimizzazione volumetrica.</p>
-              <div class="text-center"><a href="portfolio-details.html?project=ampliamento-montelepre" class="btn-discover">Scopri di più</a></div>
-            </div>
-          </div>
-
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
       </div>
     </section>
@@ -292,43 +307,39 @@
   <!-- JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script>
     AOS.init();
-    const buttons = document.querySelectorAll('.filter-btn');
-    const items = document.querySelectorAll('.portfolio-item');
-    const container = document.getElementById('portfolioContainer');
-    let scrollSpeed = 0.4;
-    let isHovered = false;
-
-    function showItems(filter) {
-      items.forEach(i => i.classList.remove('show'));
-      document.querySelectorAll(`.${filter}`).forEach(i => i.classList.add('show'));
-    }
-
-    function autoScroll() {
-      if (window.innerWidth > 1200 && !isHovered) {
-        container.scrollLeft += scrollSpeed;
-        if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 1) {
-          container.scrollLeft = 0;
-        }
-      }
-      requestAnimationFrame(autoScroll);
-    }
-
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        buttons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        showItems(btn.getAttribute('data-filter'));
-      });
+    let swiper = new Swiper(".portfolioSwiper", {
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: { el: ".swiper-pagination", clickable: true },
+      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+      effect: "slide",
+      speed: 800,
     });
 
-    container.addEventListener('mouseenter', () => isHovered = true);
-    container.addEventListener('mouseleave', () => isHovered = false);
+    // Cambio categoria
+    const publicSlides = document.getElementById("publicProjects");
+    const privateSlides = document.getElementById("privateProjects");
+    const buttons = document.querySelectorAll(".filter-btn");
 
-    window.addEventListener('load', () => {
-      showItems('public');
-      requestAnimationFrame(autoScroll);
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        buttons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        if (btn.dataset.filter === "public") {
+          privateSlides.classList.add("d-none");
+          publicSlides.classList.remove("d-none");
+        } else {
+          publicSlides.classList.add("d-none");
+          privateSlides.classList.remove("d-none");
+        }
+        swiper.update();
+      });
     });
   </script>
 </body>
