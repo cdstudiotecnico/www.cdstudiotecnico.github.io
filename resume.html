@@ -451,6 +451,22 @@
     box-shadow: 0 10px 34px rgba(0,0,0,0.1);
   }
 
+  <style>
+  /* ======= SEZIONE CURRICULUM ======= */
+  .resume-section {
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+    padding: 70px 55px;
+    max-width: 1150px;
+    margin: 70px auto;
+    transition: all 0.3s ease;
+  }
+
+  .resume-section:hover {
+    box-shadow: 0 10px 34px rgba(0,0,0,0.1);
+  }
+
   /* ======= TITOLI PRINCIPALI ======= */
   .resume-title {
     font-family: 'Poppins', sans-serif;
@@ -473,8 +489,8 @@
 
   .timeline-item {
     position: relative;
-    margin-bottom: 30px;
-    padding-left: 8px;
+    margin-bottom: 32px;
+    padding-left: 10px;
   }
 
   .timeline-item::before {
@@ -492,11 +508,10 @@
 
   .timeline-date {
     display: inline-block;
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     color: #6a8f8f;
     font-weight: 600;
-    margin-bottom: 6px;
-    letter-spacing: 0.2px;
+    margin-bottom: 4px;
   }
 
   .timeline-item h4 {
@@ -514,21 +529,19 @@
     margin-bottom: 8px;
   }
 
-  /* ======= COMPETENZE ======= */
+  /* ======= COMPETENZE (senza palline) ======= */
+  .skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
   .skills-list p {
     font-size: 1rem;
     color: #444;
-    margin-bottom: 6px;
-    position: relative;
-    padding-left: 18px;
-  }
-
-  .skills-list p::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #356c6c;
-    font-weight: bold;
+    margin: 0;
+    border-bottom: 1px solid #f0f3f3;
+    padding-bottom: 6px;
   }
 
   /* ======= STRUTTURA A DUE COLONNE ======= */
