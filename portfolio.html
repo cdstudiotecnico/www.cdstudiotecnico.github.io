@@ -318,28 +318,38 @@
     let swiper;
     const container = document.getElementById("slides-container");
 
-    function loadSlides(type) {
-      container.innerHTML = "";
-      projects[type].forEach(p => {
-        container.innerHTML += `
-          <div class="swiper-slide">
-            <img src="${p.img}" alt="">
-            <div class="project-info">
-              <h4>${p.title}</h4>
-              <p>${p.desc}</p>
-              <a href="${p.link}" class="btn-discover">Scopri di più</a>
-            </div>
-          </div>`;
-      });
-      if (swiper) swiper.destroy(true, true);
-      swiper = new Swiper(".portfolioSwiper", {
-        loop: true,
-        autoplay: { delay: 4000, disableOnInteraction: false },
-        pagination: { el: ".swiper-pagination", clickable: true },
-        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-        speed: 800
-      });
-    }
+function loadSlides(type) {
+  // Avvia dissolvenza in uscita
+  container.classList.add("fade-out");
+
+  setTimeout(() => {
+    container.innerHTML = "";
+    projects[type].forEach(p => {
+      container.innerHTML += `
+        <div class="swiper-slide">
+          <img src="${p.img}" alt="">
+          <div class="project-info">
+            <h4>${p.title}</h4>
+            <p>${p.desc}</p>
+            <a href="${p.link}" class="btn-discover">Scopri di più</a>
+          </div>
+        </div>`;
+    });
+
+    // Ricrea swiper da zero
+    if (swiper) swiper.destroy(true, true);
+    swiper = new Swiper(".portfolioSwiper", {
+      loop: true,
+      autoplay: { delay: 4000, disableOnInteraction: false },
+      pagination: { el: ".swiper-pagination", clickable: true },
+      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+      speed: 800
+    });
+
+    // Fade in
+    container.classList.remove("fade-out");
+  }, 400); // tempo in ms della dissolvenza
+}
 
     // Inizializzazione
     loadSlides("public");
