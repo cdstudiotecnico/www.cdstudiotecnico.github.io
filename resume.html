@@ -428,7 +428,7 @@
         <h3 class="resume-title">Competenze Linguistiche e Digitali</h3>
         <div class="skills-list">
           <p><strong>Inglese:</strong> Certificazione Bulats Cambridge C2 (2017)</p>
-          <p><strong>Competenze informatiche:</strong> EIPASS 7 Modules User, LIM, Tablet, PEKIT (2020)</p>
+          <p><strong>Competenze informatiche:</strong>EIPASS 7 Modules User, LIM, Tablet, PEKIT (2020)</p>
         </div>
       </div>
     </div>
@@ -436,94 +436,123 @@
 </section>
 
 <style>
+  /* ======= SEZIONE CURRICULUM ======= */
   .resume-section {
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 6px 24px rgba(0,0,0,0.08);
-    padding: 60px 45px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+    padding: 70px 55px;
     max-width: 1150px;
-    margin: 60px auto;
+    margin: 70px auto;
+    transition: all 0.3s ease;
   }
 
+  .resume-section:hover {
+    box-shadow: 0 10px 34px rgba(0,0,0,0.1);
+  }
+
+  /* ======= TITOLI PRINCIPALI ======= */
   .resume-title {
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     color: #356c6c;
     border-left: 4px solid #9fc5c9;
-    padding-left: 12px;
-    margin: 50px 0 25px;
+    padding-left: 14px;
+    margin: 50px 0 30px;
+    letter-spacing: 0.3px;
   }
 
+  /* ======= TIMELINE ======= */
   .timeline {
     position: relative;
-    margin-left: 15px;
-    padding-left: 25px;
+    margin-left: 18px;
+    padding-left: 28px;
     border-left: 2px solid #d9e6e6;
   }
 
   .timeline-item {
     position: relative;
-    margin-bottom: 28px;
-    padding-left: 5px;
+    margin-bottom: 30px;
+    padding-left: 8px;
   }
 
   .timeline-item::before {
     content: "";
     position: absolute;
-    left: -18px;
-    top: 7px;
-    width: 12px;
-    height: 12px;
+    left: -20px;
+    top: 8px;
+    width: 13px;
+    height: 13px;
     background-color: #356c6c;
     border-radius: 50%;
-    border: 2px solid #fff;
-    box-shadow: 0 0 0 2px #9fc5c9;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 3px #9fc5c9;
   }
 
   .timeline-date {
     display: inline-block;
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     color: #6a8f8f;
     font-weight: 600;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
+    letter-spacing: 0.2px;
   }
 
   .timeline-item h4 {
-    font-size: 1.05rem;
+    font-size: 1.08rem;
     font-weight: 600;
     color: #222;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
+    font-family: 'Raleway', sans-serif;
   }
 
   .timeline-item p {
     color: #555;
     font-size: 0.95rem;
-    margin-bottom: 6px;
+    line-height: 1.6;
+    margin-bottom: 8px;
   }
 
+  /* ======= COMPETENZE ======= */
   .skills-list p {
     font-size: 1rem;
     color: #444;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
+    position: relative;
+    padding-left: 18px;
   }
 
+  .skills-list p::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #356c6c;
+    font-weight: bold;
+  }
+
+  /* ======= STRUTTURA A DUE COLONNE ======= */
   .two-cols {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25px 40px;
+    gap: 30px 50px;
+  }
+
+  /* ======= RESPONSIVE ======= */
+  @media (max-width: 992px) {
+    .resume-section {
+      padding: 45px 30px;
+      margin: 50px 15px;
+    }
   }
 
   @media (max-width: 768px) {
-    .resume-section {
-      padding: 30px 20px;
-      margin: 40px 10px;
-    }
     .two-cols {
       grid-template-columns: 1fr;
     }
     .timeline {
       margin-left: 10px;
-      padding-left: 20px;
+      padding-left: 22px;
     }
     .timeline-item::before {
       left: -14px;
