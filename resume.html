@@ -446,7 +446,7 @@
     margin: 60px auto;
   }
 
-  /* Titoli interni della sezione (es. Formazione, Esperienze) */
+  /* Titoli sezioni interni (Formazione, Esperienze, ecc.) */
   .resume-title {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -457,39 +457,39 @@
     margin: 50px 0 25px;
   }
 
-  /* Timeline semplice ed elegante */
+  /* Timeline elegante senza “palline” */
   .timeline {
     position: relative;
-    margin-left: 15px;
     padding-left: 25px;
-    border-left: 2px solid #e0ebeb;
+    border-left: 2px solid #e4eded;
   }
 
   .timeline-item {
     position: relative;
-    margin-bottom: 28px;
-    padding-left: 5px;
+    margin-bottom: 30px;
+    padding-left: 10px;
   }
 
   .timeline-item::before {
+    content: none; /* 🔹 niente cerchi, tutto lineare */
+  }
+
+  .timeline-item::after {
     content: "";
     position: absolute;
-    left: -18px;
-    top: 7px;
-    width: 12px;
-    height: 12px;
-    background-color: #356c6c;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    box-shadow: 0 0 0 2px #9fc5c9;
+    left: -2px;
+    bottom: -15px;
+    width: 2px;
+    height: 15px;
+    background: #e4eded;
   }
 
   .timeline-date {
-    display: inline-block;
+    display: block;
     font-size: 0.9rem;
     color: #6a8f8f;
     font-weight: 600;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
 
   .timeline-item h4 {
@@ -529,11 +529,8 @@
       margin: 40px 10px;
     }
     .timeline {
-      margin-left: 10px;
-      padding-left: 20px;
-    }
-    .timeline-item::before {
-      left: -14px;
+      padding-left: 18px;
+      border-left-width: 1px;
     }
     .skills-list {
       grid-template-columns: 1fr;
