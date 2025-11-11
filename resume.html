@@ -446,7 +446,7 @@
     margin: 60px auto;
   }
 
-  /* Titoli sezioni interni (Formazione, Esperienze, ecc.) */
+  /* Titoli interni (Formazione, Esperienze, ecc.) */
   .resume-title {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -454,34 +454,28 @@
     color: #356c6c;
     border-left: 4px solid #9fc5c9;
     padding-left: 12px;
-    margin: 50px 0 25px;
+    margin: 50px 0 30px;
   }
 
-  /* Timeline elegante senza “palline” */
+  /* Timeline ultra minimal */
   .timeline {
-    position: relative;
+    border-left: 1.5px solid rgba(53,108,108,0.15);
     padding-left: 25px;
-    border-left: 2px solid #e4eded;
+    margin-left: 5px;
   }
 
   .timeline-item {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
     padding-left: 10px;
+    transition: all 0.3s ease;
   }
 
-  .timeline-item::before {
-    content: none; /* 🔹 niente cerchi, tutto lineare */
-  }
-
-  .timeline-item::after {
-    content: "";
-    position: absolute;
-    left: -2px;
-    bottom: -15px;
-    width: 2px;
-    height: 15px;
-    background: #e4eded;
+  /* effetto hover delicato */
+  .timeline-item:hover {
+    background: rgba(245,249,249,0.5);
+    border-radius: 8px;
+    padding-left: 14px;
   }
 
   .timeline-date {
@@ -490,47 +484,53 @@
     color: #6a8f8f;
     font-weight: 600;
     margin-bottom: 6px;
+    letter-spacing: 0.2px;
   }
 
   .timeline-item h4 {
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 600;
-    color: #222;
-    margin-bottom: 4px;
+    color: #1f1f1f;
+    margin-bottom: 6px;
   }
 
   .timeline-item p {
     color: #555;
     font-size: 0.95rem;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     line-height: 1.6;
   }
 
-  /* Competenze */
+  /* Competenze (senza elenchi puntati) */
   .skills-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 6px 40px;
-    margin-top: 15px;
+    gap: 8px 40px;
+    margin-top: 18px;
   }
 
   .skills-list p {
-    font-size: 0.95rem;
-    color: #444;
+    font-size: 0.96rem;
+    color: #333;
     margin: 0;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #f0f3f3;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(53,108,108,0.08);
+    transition: color 0.3s ease;
   }
 
-  /* Responsivo */
+  .skills-list p:hover {
+    color: #356c6c;
+  }
+
+  /* Responsive */
   @media (max-width: 768px) {
     .resume-section {
       padding: 35px 22px;
       margin: 40px 10px;
     }
     .timeline {
+      border-left: 1px solid rgba(53,108,108,0.15);
       padding-left: 18px;
-      border-left-width: 1px;
     }
     .skills-list {
       grid-template-columns: 1fr;
