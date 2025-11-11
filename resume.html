@@ -439,71 +439,49 @@
   /* ======= SEZIONE CURRICULUM ======= */
   .resume-section {
     background: #ffffff;
-    border-radius: 18px;
-    box-shadow: 0 8px 28px rgba(0,0,0,0.08);
-    padding: 70px 55px;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+    padding: 60px 45px;
     max-width: 1150px;
-    margin: 70px auto;
-    transition: all 0.3s ease;
+    margin: 60px auto;
   }
 
-  .resume-section:hover {
-    box-shadow: 0 10px 34px rgba(0,0,0,0.1);
-  }
-
-  <style>
-  /* ======= SEZIONE CURRICULUM ======= */
-  .resume-section {
-    background: #ffffff;
-    border-radius: 18px;
-    box-shadow: 0 8px 28px rgba(0,0,0,0.08);
-    padding: 70px 55px;
-    max-width: 1150px;
-    margin: 70px auto;
-    transition: all 0.3s ease;
-  }
-
-  .resume-section:hover {
-    box-shadow: 0 10px 34px rgba(0,0,0,0.1);
-  }
-
-  /* ======= TITOLI PRINCIPALI ======= */
+  /* Titoli interni della sezione (es. Formazione, Esperienze) */
   .resume-title {
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 1.35rem;
+    font-weight: 600;
+    font-size: 1.2rem;
     color: #356c6c;
     border-left: 4px solid #9fc5c9;
-    padding-left: 14px;
-    margin: 50px 0 30px;
-    letter-spacing: 0.3px;
+    padding-left: 12px;
+    margin: 50px 0 25px;
   }
 
-  /* ======= TIMELINE ======= */
+  /* Timeline semplice ed elegante */
   .timeline {
     position: relative;
-    margin-left: 18px;
-    padding-left: 28px;
-    border-left: 2px solid #d9e6e6;
+    margin-left: 15px;
+    padding-left: 25px;
+    border-left: 2px solid #e0ebeb;
   }
 
   .timeline-item {
     position: relative;
-    margin-bottom: 32px;
-    padding-left: 10px;
+    margin-bottom: 28px;
+    padding-left: 5px;
   }
 
   .timeline-item::before {
     content: "";
     position: absolute;
-    left: -20px;
-    top: 8px;
-    width: 13px;
-    height: 13px;
+    left: -18px;
+    top: 7px;
+    width: 12px;
+    height: 12px;
     background-color: #356c6c;
     border-radius: 50%;
-    border: 3px solid #fff;
-    box-shadow: 0 0 0 3px #9fc5c9;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px #9fc5c9;
   }
 
   .timeline-date {
@@ -515,64 +493,54 @@
   }
 
   .timeline-item h4 {
-    font-size: 1.08rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #222;
-    margin-bottom: 6px;
-    font-family: 'Raleway', sans-serif;
+    margin-bottom: 4px;
   }
 
   .timeline-item p {
     color: #555;
     font-size: 0.95rem;
+    margin-bottom: 4px;
     line-height: 1.6;
-    margin-bottom: 8px;
   }
 
-  /* ======= COMPETENZE (senza palline) ======= */
+  /* Competenze */
   .skills-list {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 40px;
+    margin-top: 15px;
   }
 
   .skills-list p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: #444;
     margin: 0;
+    padding-bottom: 5px;
     border-bottom: 1px solid #f0f3f3;
-    padding-bottom: 6px;
   }
 
-  /* ======= STRUTTURA A DUE COLONNE ======= */
-  .two-cols {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px 50px;
-  }
-
-  /* ======= RESPONSIVE ======= */
-  @media (max-width: 992px) {
-    .resume-section {
-      padding: 45px 30px;
-      margin: 50px 15px;
-    }
-  }
-
+  /* Responsivo */
   @media (max-width: 768px) {
-    .two-cols {
-      grid-template-columns: 1fr;
+    .resume-section {
+      padding: 35px 22px;
+      margin: 40px 10px;
     }
     .timeline {
       margin-left: 10px;
-      padding-left: 22px;
+      padding-left: 20px;
     }
     .timeline-item::before {
       left: -14px;
     }
+    .skills-list {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
-
+    
 <!-- ======= Sezione Footer ======= -->
     
   <footer id="footer" class="footer light-background">
