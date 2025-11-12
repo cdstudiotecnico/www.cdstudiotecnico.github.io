@@ -325,42 +325,76 @@
   }
 }
 
-/* ====== VERSIONE TABLET ====== */
-@media (min-width: 768px) and (max-width: 991px) {
-  .contact .row {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .contact .col-lg-6 {
-    max-width: 100%;
-  }
-
-  .contact .info-box,
-  .contact .form-box {
-    padding: 35px 45px;
-  }
+  /* Allinea a sinistra i campi Nome e Email nel form contatti */
+.contact .php-email-form .col-md-6 {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* forza allineamento sinistro */
 }
 
-/* ====== VERSIONE MOBILE ====== */
-@media (max-width: 767px) {
+/* Assicura che gli input si adattino alla larghezza del contenitore */
+.contact .php-email-form .col-md-6 input {
+  width: 100%;
+}
+
+/* ======== VERSIONE MOBILE E TABLET ======== */
+@media (max-width: 991px) {
+  /* Impilamento verticale */
   .contact .row {
     flex-direction: column;
-    gap: 25px;
+    align-items: center;
   }
 
+  /* Ogni box occupa tutta la larghezza ma con margine laterale */
   .contact .col-lg-6 {
+    flex: 0 0 100%;
     max-width: 100%;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
-  .contact .info-box,
+  /* Box sinistro (info + mappa) */
+  .contact .info-box {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+    padding: 30px 25px;
+  }
+
+  /* Box destro (form) */
   .contact .form-box {
-    padding: 25px 25px;
-    border-radius: 12px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+    padding: 30px 25px;
+  }
+
+  /* Contenuto interno del form ben proporzionato */
+  .contact .php-email-form {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .contact .php-email-form .btn-send {
+    align-self: flex-start;
+  }
+
+  /* Mappa adattata */
+  .contact iframe {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
   }
 }
 </style>
-
+  
 </head>
 
 <body class="contact-page">
