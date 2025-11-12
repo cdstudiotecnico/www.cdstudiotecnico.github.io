@@ -1625,76 +1625,6 @@ img[src*="profile-img"] {
   }
 }
 
-/* --- Tipografia e corpo --- */
-body {
-  font-family: "Roboto", sans-serif;
-  color: var(--default-color);
-  background-color: var(--background-color);
-  letter-spacing: 0.3px;
-  line-height: 1.6;
-}
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
-  color: var(--heading-color);
-  letter-spacing: 0.5px;
-  font-weight: 600;
-}
-
-/* --- HEADER (nome e sottotitolo uniformati) --- */
-.header.light-background {
-  padding: 15px 0;
-  border-bottom: 1px solid #e8ecef;
-}
-
-/* Titolo principale */
-.header .sitename {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: clamp(1.23rem, 2vw, 1.2rem) !important; /* ← aggiunto !important */
-  color: #1c3f53;
-  line-height: 1.1;
-  margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  letter-spacing: 0.25px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* Sottotitolo */
-.header .subtitle {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: clamp(0.55rem, 1.5vw, 0.9rem);
-  color: #6c757d;
-  margin-top: 2px;
-  letter-spacing: 0.4px;
-}
-
-/* --- Responsive Header --- */
-
-/* Smartphone medi */
-@media (max-width: 480px) {
-  .header .sitename {
-    font-size: 0.87rem;   /* più compatto su mobile */
-    letter-spacing: 0.2px;
-  }
-  .header .subtitle {
-    font-size: 0.7rem;
-  }
-}
-
-/* Smartphone molto piccoli (iPhone SE, ecc.) */
-@media (max-width: 360px) {
-  .header .sitename {
-    font-size: 0.55rem;   /* perfettamente adattato */
-  }
-  .header .subtitle {
-    font-size: 0.45rem;
-  }
-}
-
 /* --- Menu di navigazione --- */
 .navmenu a {
   color: var(--heading-color);
@@ -2169,31 +2099,76 @@ media (max-width: 576px) {
   }
 </style>
 
-/* --- Ripristino proporzioni generali del MAIN --- */
-.main {
+/* --- Tipografia e corpo --- */
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--default-color);
+  background-color: var(--background-color);
+  letter-spacing: 0.3px;
+  line-height: 1.6;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+  color: var(--heading-color);
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* --- HEADER (nome e sottotitolo uniformati) --- */
+.header.light-background {
+  padding: 15px 0;
+  border-bottom: 1px solid #e8ecef;
+}
+
+/* Titolo principale */
+.header .sitename {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.23rem, 2vw, 1.2rem) !important; /* ← aggiunto !important */
+  color: #1c3f53;
+  line-height: 1.1;
+  margin: 0;
+  white-space: nowrap;
   overflow: hidden;
-  padding: 60px 0;
+  text-overflow: ellipsis;
+  letter-spacing: 0.25px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
-@media (max-width: 768px) {
-  .main {
-    padding: 40px 0;
-  }
+/* Sottotitolo */
+.header .subtitle {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: clamp(0.55rem, 1.5vw, 0.9rem);
+  color: #6c757d;
+  margin-top: 2px;
+  letter-spacing: 0.4px;
+}
 
-  .section-title h2,
-  .section-title h3 {
-    font-size: 1.5rem;
-  }
+/* --- Responsive Header --- */
 
-  .section-title p {
-    font-size: 1rem;
-    line-height: 1.6;
+/* Smartphone medi */
+@media (max-width: 480px) {
+  .header .sitename {
+    font-size: 0.87rem;   /* più compatto su mobile */
+    letter-spacing: 0.2px;
   }
-
-  .highlight-box {
-    padding: 25px 18px;
+  .header .subtitle {
+    font-size: 0.7rem;
   }
 }
+
+/* Smartphone molto piccoli (iPhone SE, ecc.) */
+@media (max-width: 360px) {
+  .header .sitename {
+    font-size: 0.55rem;   /* perfettamente adattato */
+  }
+  .header .subtitle {
+    font-size: 0.45rem;
+  }
+}
+
 
 /* --- Ripristino layout contatto con form a destra --- */
 .contact .container .row {
@@ -2222,5 +2197,3 @@ media (max-width: 576px) {
     padding: 0;
   }
 }
-
-
