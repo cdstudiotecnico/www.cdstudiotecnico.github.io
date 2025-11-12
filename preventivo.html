@@ -313,66 +313,95 @@
     </p>
 
     <form action="https://formspree.io/f/xjkpnylz" method="POST" class="form-preventivo" novalidate>
+  <div class="row gy-4">
 
-      <div class="row gy-4">
-        <!-- Nome e Cognome -->
-        <div class="col-md-6">
-          <label for="name-field" class="form-label">Nome e Cognome</label>
-          <input type="text" name="name" id="name-field" class="form-control" required>
-        </div>
+    <!-- Nome e Cognome -->
+    <div class="col-md-6">
+      <label for="name-field" class="form-label">Nome e Cognome</label>
+      <input
+        type="text"
+        name="name"
+        id="name-field"
+        class="form-control"
+        placeholder="Inserisci il tuo nome completo"
+        required>
+    </div>
 
-        <!-- Email -->
-        <div class="col-md-6">
-          <label for="email-field" class="form-label">E-mail</label>
-          <input type="email" name="email" id="email-field" class="form-control" required>
-        </div>
+    <!-- Email -->
+    <div class="col-md-6">
+      <label for="email-field" class="form-label">E-mail</label>
+      <input
+        type="email"
+        name="email"
+        id="email-field"
+        class="form-control"
+        placeholder="esempio@email.com"
+        required>
+    </div>
 
-        <!-- Servizio -->
-        <div class="col-12">
-          <label for="service-field" class="form-label">Servizio Richiesto</label>
-          <select name="service" id="service-field" class="form-select" required>
-            <option value="">Seleziona</option>
-            <option>Perizie Tecniche</option>
-            <option>Perizie di Stima</option>
-            <option>Perizie Giurate</option>
-            <option>Certificazioni Energetiche (APE)</option>
-            <option>Certificazioni Impianti (DICO)</option>
-            <option>Fornitura ed Installazione Impianti</option>
-            <option>Progettazione</option>
-            <option>Pratiche Urbanistiche e Catastali</option>
-            <option>Sanatorie Urbanistiche</option>
-            <option>Pratiche Autorizzazione Scarico</option>
-            <option>Ristrutturazioni</option>
-            <option>Pratiche ENEA e Asseverazioni</option>
-            <option>Pratiche Impianti Fotovoltaici</option>
-            <option>Consulenza Tecnica di Parte (CTP)</option>
-            <option>Modellazione Autocad</option>
-            <option>Consulenza Bonus Ristrutturazione/Rispamio Energetico</option>
-            <option>Consulenza Tecnica</option>
-            <option>Altri Servizi Tecnici</option>
-          </select>
-        </div>
+    <!-- Servizio Richiesto -->
+    <div class="col-12">
+      <label for="service-field" class="form-label">Servizio Richiesto</label>
+      <select name="service" id="service-field" class="form-select" required>
+        <option value="">Seleziona</option>
+        <option>Perizie Tecniche</option>
+        <option>Perizie di Stima</option>
+        <option>Perizie Giurate</option>
+        <option>Certificazioni Energetiche (APE)</option>
+        <option>Certificazioni Impianti (DICO)</option>
+        <option>Fornitura ed Installazione Impianti</option>
+        <option>Progettazione</option>
+        <option>Pratiche Urbanistiche e Catastali</option>
+        <option>Sanatorie Urbanistiche</option>
+        <option>Pratiche Autorizzazione Scarico</option>
+        <option>Ristrutturazioni</option>
+        <option>Pratiche ENEA e Asseverazioni</option>
+        <option>Pratiche Impianti Fotovoltaici</option>
+        <option>Consulenza Tecnica di Parte (CTP)</option>
+        <option>Modellazione Autocad</option>
+        <option>Consulenza Bonus Ristrutturazione/Risparmio Energetico</option>
+        <option>Consulenza Tecnica</option>
+        <option>Altri Servizi Tecnici</option>
+      </select>
+    </div>
 
-        <!-- Oggetto -->
-        <div class="col-12">
-          <label for="subject-field" class="form-label">Oggetto</label>
-          <input type="text" name="subject" id="subject-field" class="form-control" required>
-        </div>
+    <!-- Oggetto -->
+    <div class="col-12">
+      <label for="subject-field" class="form-label">Oggetto</label>
+      <input
+        type="text"
+        name="subject"
+        id="subject-field"
+        class="form-control"
+        placeholder="Inserisci l’oggetto della richiesta"
+        required>
+    </div>
 
-        <!-- Messaggio -->
-        <div class="col-12">
-          <label for="message-field" class="form-label">Messaggio</label>
-          <textarea name="message" id="message-field" class="form-control" rows="7" required></textarea>
-        </div>
+    <!-- Messaggio -->
+    <div class="col-12">
+      <label for="message-field" class="form-label">Messaggio</label>
+      <textarea
+        name="message"
+        id="message-field"
+        class="form-control"
+        rows="6"
+        placeholder="Descrivi brevemente la tua richiesta..."
+        required></textarea>
+    </div>
 
-        <!-- Pulsante -->
-        <div class="col-12 text-center">
-          <button type="submit" class="btn-submit">Invia Richiesta</button>
-          <p class="form-note mt-3 text-muted">Tutti i dati saranno trattati nel rispetto del GDPR 2016/679.</p>
-        </div>
-      </div>
+    <!-- Pulsante -->
+    <div class="col-12 text-center">
+      <button type="submit" class="btn-submit">
+        <span>Invia Richiesta</span>
+      </button>
+      <p class="form-note mt-3 text-muted">
+        I dati saranno trattati nel rispetto del GDPR (UE) 2016/679.
+      </p>
+    </div>
 
-    </form>
+  </div>
+</form>
+
   </div>
 </section>
       
