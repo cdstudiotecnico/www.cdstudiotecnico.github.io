@@ -193,10 +193,19 @@
       .page-wrapper { padding: 25px; margin: 50px 15px; }
     }
 
+/* Sfondo come in index.html */
 body.contact-page {
-  background: url("assets/img/hero-bg.png") center center / cover no-repeat;
+  background: url("assets/img/hero-bg.png") center center / cover no-repeat fixed;
   background-attachment: fixed;
-  background-color: #f8f9fa; /* colore di fallback */
+  background-color: #f5f7f7;
+}
+
+/* Rendi il box leggermente trasparente per far intravedere lo sfondo */
+.contact-form-box {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 35px 30px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
 }
     
   </style>
