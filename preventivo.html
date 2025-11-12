@@ -249,133 +249,136 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
 <style>
-/* ====== SEZIONE PREVENTIVO – BOX UNICO CENTRATO E RESPONSIVO ====== */
+/* ====== SEZIONE PREVENTIVO – BOX CENTRATO E ARMONIOSO ====== */
 
-.preventivo .container {
+#preventivo.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 0 80px 0;
+  background-color: #f9f9f9;
+}
+
+/* Contenitore principale */
+#preventivo .container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: 40px auto;
-  max-width: 1200px;
-  padding: 0 20px;
-}
-
-/* BOX PRINCIPALE */
-.preventivo .form-box {
-  background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
-  padding: 50px 70px;
+  align-items: flex-start;
   width: 100%;
-  max-width: 850px;
+  max-width: 1200px;
   margin: 0 auto;
-  transition: all 0.3s ease;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 
-.preventivo .form-box:hover {
+/* Box del form */
+.php-email-form {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 50px 60px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.php-email-form:hover {
   box-shadow: 0 10px 36px rgba(0, 0, 0, 0.12);
   transform: translateY(-3px);
 }
 
-/* FORM INTERNO */
-.preventivo .php-email-form {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-  width: 100%;
-}
-
-.preventivo .php-email-form label {
+/* Etichette */
+.php-email-form label {
+  display: block;
   font-weight: 600;
   color: #356c6c;
   margin-bottom: 6px;
-  font-size: 1rem;
 }
 
-.preventivo .php-email-form input,
-.preventivo .php-email-form textarea,
-.preventivo .php-email-form select {
+/* Campi input, select, textarea */
+.php-email-form input,
+.php-email-form textarea,
+.php-email-form select {
   width: 100%;
-  border: 1.4px solid #dcdcdc;
-  border-radius: 12px;
-  padding: 13px 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 12px 14px;
   font-size: 1rem;
   color: #333;
-  background: #fdfdfd;
-  transition: all 0.25s ease-in-out;
+  background: #fafafa;
+  transition: all 0.25s ease;
 }
 
-.preventivo .php-email-form input:focus,
-.preventivo .php-email-form textarea:focus,
-.preventivo .php-email-form select:focus {
+.php-email-form input:focus,
+.php-email-form textarea:focus,
+.php-email-form select:focus {
   border-color: #356c6c;
-  box-shadow: 0 0 0 3px rgba(53, 108, 108, 0.12);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(53, 108, 108, 0.15);
   outline: none;
 }
 
-/* PULSANTE INVIA */
-.preventivo .php-email-form .btn-send,
-.preventivo .php-email-form button[type="submit"] {
-  align-self: flex-start;
+/* Pulsante */
+.php-email-form button[type="submit"] {
   background: #356c6c;
   color: #fff;
   font-weight: 600;
-  padding: 13px 42px;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
+  padding: 12px 40px;
+  margin-top: 10px;
   transition: all 0.3s ease;
-  letter-spacing: 0.5px;
-  box-shadow: 0 3px 8px rgba(53, 108, 108, 0.3);
+  box-shadow: 0 3px 10px rgba(53, 108, 108, 0.3);
 }
 
-.preventivo .php-email-form .btn-send:hover,
-.preventivo .php-email-form button[type="submit"]:hover {
-  background: #2c5858;
+.php-email-form button[type="submit"]:hover {
+  background: #2b5757;
   transform: translateY(-2px);
 }
 
-/* STILE MESSAGGI */
-.preventivo .php-email-form .loading,
-.preventivo .php-email-form .error-message,
-.preventivo .php-email-form .sent-message {
-  font-size: 0.95rem;
+/* Messaggi */
+.loading,
+.error-message,
+.sent-message {
   margin-top: 8px;
+  font-size: 0.95rem;
 }
 
-/* VERSIONE TABLET */
-@media (max-width: 991px) {
-  .preventivo .form-box {
-    padding: 40px 45px;
+/* RESPONSIVE: Tablet */
+@media (max-width: 992px) {
+  #preventivo .container {
+    padding: 0 16px;
+  }
+
+  .php-email-form {
+    padding: 40px 35px;
     max-width: 90%;
   }
 }
 
-/* VERSIONE MOBILE */
+/* RESPONSIVE: Mobile */
 @media (max-width: 575px) {
-  .preventivo .form-box {
-    padding: 30px 25px;
-    border-radius: 15px;
+  #preventivo.section {
+    padding: 30px 0 60px 0;
+  }
+
+  .php-email-form {
+    padding: 30px 20px;
+    border-radius: 16px;
     max-width: 95%;
   }
 
-  .preventivo .php-email-form {
-    gap: 16px;
-  }
-
-  .preventivo .php-email-form label {
+  .php-email-form input,
+  .php-email-form textarea,
+  .php-email-form select {
     font-size: 0.95rem;
+    padding: 10px 12px;
   }
 
-  .preventivo .php-email-form input,
-  .preventivo .php-email-form textarea,
-  .preventivo .php-email-form select {
-    font-size: 0.95rem;
-    padding: 11px 13px;
-  }
-
-  .preventivo .php-email-form button[type="submit"] {
+  .php-email-form button[type="submit"] {
     width: 100%;
-    text-align: center;
   }
 }
 </style>
