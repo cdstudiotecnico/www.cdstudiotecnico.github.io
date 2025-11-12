@@ -427,6 +427,27 @@
   }
 }
 
+  /* Correzione allineamento su schermi molto larghi (desktop full HD e oltre) */
+@media (min-width: 1400px) {
+  .contact .container {
+    max-width: 1200px;      /* fissa larghezza centrale armoniosa */
+    margin: 0 auto;         /* centra il contenitore */
+    padding-left: 0;        /* elimina margine extra sinistro */
+    padding-right: 0;       /* elimina margine extra destro */
+  }
+
+  .contact .php-email-form .col-md-6,
+  .contact .php-email-form .col-md-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .contact .php-email-form input,
+  .contact .php-email-form textarea {
+    width: 100%;
+  }
+}
+
 </style>
   
 </head>
