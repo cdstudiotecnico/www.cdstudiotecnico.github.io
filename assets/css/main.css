@@ -2168,3 +2168,30 @@ media (max-width: 576px) {
     margin-bottom: 12px;
   }
 </style>
+
+/* --- Ripristino proporzioni generali del MAIN --- */
+.main {
+  overflow: hidden;
+  padding: 60px 0;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 40px 0;
+  }
+
+  .section-title h2,
+  .section-title h3 {
+    font-size: 1.5rem;
+  }
+
+  .section-title p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .highlight-box {
+    padding: 25px 18px;
+  }
+}
+
