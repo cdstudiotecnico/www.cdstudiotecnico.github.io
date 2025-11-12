@@ -299,10 +299,15 @@
   }
 
   .contact .php-email-form {
-  width: 100%;
-  max-width: 100%;
+  width: 90%;
+  max-width: 90%;
   padding-left: 10px;  /* ← margine interno sinistro */
   padding-right: 10px; /* ← margine interno destro */
+}
+
+  /* Allineamento sinistro del contenuto del form */
+.contact .php-email-form {
+  text-align: left;        /* tutto il testo e gli elementi allineati a sinistra */
 }
 
   /* Il form occupa tutta l’altezza disponibile nel box */
@@ -479,19 +484,19 @@
           <form action="https://formspree.io/f/xjkpnylz" method="POST" class="php-email-form" novalidate>
             <div class="row gy-3">
               <div class="col-md-6">
-                <label for="name-field" class="pb-2">Nome e Cognome</label>
+                <label for="name-field" class="pb-2"> Nome e Cognome</label>
                 <input type="text" name="name" id="name-field" class="form-control" required>
               </div>
               <div class="col-md-6">
-                <label for="email-field" class="pb-2">E-mail</label>
+                <label for="email-field" class="pb-2"> e-mail</label>
                 <input type="email" name="email" id="email-field" class="form-control" required>
               </div>
               <div class="col-md-12">
-                <label for="subject-field" class="pb-2">Oggetto</label>
+                <label for="subject-field" class="pb-2"> Oggetto</label>
                 <input type="text" name="subject" id="subject-field" class="form-control" required>
               </div>
               <div class="col-md-12">
-                <label for="message-field" class="pb-2">Messaggio</label>
+                <label for="message-field" class="pb-2"> Messaggio</label>
                 <textarea name="message" id="message-field" class="form-control" rows="8" required></textarea>
               </div>
               <div class="col-md-12 text-center">
