@@ -2168,3 +2168,14 @@ media (max-width: 576px) {
     margin-bottom: 12px;
   }
 </style>
+
+/* Linea decorativa sotto i titoli di sezione - stile globale */
+.section-title h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #356c6c;
+  margin: 10px auto 12px;
+  border-radius: 2px;
+}
