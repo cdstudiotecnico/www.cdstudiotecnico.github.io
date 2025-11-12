@@ -401,6 +401,32 @@
   align-self: flex-start;
 }
 
+  /* Allineamento perfetto dei campi nel form contatti */
+@media (min-width: 992px) {
+  .contact .php-email-form .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .contact .php-email-form .col-md-6,
+  .contact .php-email-form .col-md-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Etichette e input allineati a sinistra */
+  .contact .php-email-form label {
+    text-align: left;
+    width: 100%;
+  }
+
+  /* Input e textarea uguale larghezza */
+  .contact .php-email-form input,
+  .contact .php-email-form textarea {
+    width: 100%;
+  }
+}
+
 </style>
   
 </head>
@@ -508,7 +534,7 @@
             <i class="bi bi-globe2"
               style="font-size:1.7rem; color:#356c6c; display:block; text-align:center; margin-bottom:10px;"></i>
             <h3 style="font-weight:700; color:#356c6c; font-size:1.4rem; margin-bottom:10px; text-align:center;">Operatività</h3>
-            <p style="font-size:1rem; color:#444; line-height:1.65; text-align:justify;">
+            <p style="font-size:0.8rem; color:#444; line-height:1.5; style="text-align: left;"">
               Lo <strong>Studio Tecnico</strong>, con sede in <strong>Sicilia</strong>, offre
               <strong>Servizi di Ingegneria</strong> e <strong>Consulenza Tecnica</strong> in tutta <strong>Italia</strong>.
               Grazie a un’organizzazione digitale basata sul <strong>Smart Working</strong>, gestiamo
