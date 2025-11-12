@@ -14,23 +14,30 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <style>
-   
-      .section-title {
-  position: relative;
-  text-align: center;
-  margin-bottom: 25px;
-}
+    body {
+      background-color: #fafafa;
+      color: #333;
+      font-family: 'Raleway', sans-serif;
+      overflow-x: hidden;
+    }
 
-.section-title img {
-  position: relative;
-  z-index: 3;
-  max-width: 200px; /* dimensione di base, puoi aumentare a 220px o 250px */
-  transform: scale(1.0); /* ingrandisce visivamente senza influire sul layout */
-  margin-top: -30px; /* spinge leggermente il logo verso l’alto, sovrapponendolo */
-  margin-bottom: 0;
-  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.25));
-  pointer-events: none; /* evita che il mouse interferisca con click o hover */
-}
+    /* SEZIONE TITOLO */
+    .section-title {
+      position: relative;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .section-title img {
+      position: relative;
+      z-index: 3;
+      max-width: 200px;
+      transform: scale(1.0);
+      margin-top: 5px; /* ✅ logo abbassato e allineato con le altre pagine */
+      margin-bottom: 10px;
+      filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.25));
+      pointer-events: none;
+    }
 
     .section-title h2 {
       font-family: 'Poppins', sans-serif;
@@ -39,7 +46,8 @@
       font-size: 1.8rem;
       margin-bottom: 15px;
     }
-    
+
+    /* BOTTONE CHIUSURA */
     .close-btn {
       position: fixed;
       top: 18px;
@@ -60,21 +68,19 @@
     }
     .close-btn:hover { background: #2f5555; }
 
+    /* CONTENITORE */
     .main-container {
       max-width: 980px;
       margin: 90px auto 60px auto;
       padding: 0 20px;
     }
 
+    /* TITOLO PROGETTO */
     .project-title {
       text-align: center;
       margin-bottom: 25px;
     }
-    .project-title img {
-      max-width: 150px;
-      margin-bottom: 10px;
-      filter: drop-shadow(0 3px 5px rgba(0,0,0,0.15));
-    }
+
     .project-title h1 {
       font-family: 'Poppins', sans-serif;
       color: #356c6c;
@@ -82,6 +88,7 @@
       font-size: 1.9rem;
       margin-bottom: 8px;
     }
+
     .project-title p {
       color: #555;
       font-size: 1.05rem;
@@ -97,12 +104,14 @@
       box-shadow: 0 6px 18px rgba(0,0,0,0.12);
       position: relative;
     }
+
     .swiper-slide img {
       width: 100%;
       height: 520px;
       object-fit: cover;
       transition: transform 0.6s ease;
     }
+
     .swiper-slide img:hover { transform: scale(1.02); }
 
     .caption {
@@ -121,12 +130,13 @@
       to {opacity: 1; transform: translateY(0);}
     }
 
-    /* PAGINATION + FRECCE */
+    /* PAGINAZIONE + FRECCE */
     .swiper-pagination {
       position: relative;
       bottom: 5px;
       margin-top: 12px;
     }
+
     .swiper-pagination-bullet {
       width: 12px;
       height: 12px;
@@ -136,6 +146,7 @@
       margin: 0 5px;
       transition: all 0.3s ease;
     }
+
     .swiper-pagination-bullet-active {
       background: #356c6c;
       opacity: 1;
@@ -153,6 +164,7 @@
       justify-content: center;
       transition: all 0.3s ease;
     }
+
     .swiper-button-prev:hover, .swiper-button-next:hover {
       background: rgba(53,108,108,1);
       transform: scale(1.08);
@@ -163,7 +175,7 @@
       font-weight: bold;
     }
 
-    /* BOX INFORMATIVI */
+    /* BOX INFO E DESCRIZIONE */
     .info-box, .description {
       background: #fff;
       border-radius: 12px;
@@ -216,6 +228,7 @@
       color: #444;
       line-height: 1.8;
     }
+
     .quote strong {
       display: block;
       margin-top: 10px;
@@ -235,6 +248,7 @@
       font-weight: 500;
       transition: all 0.3s ease;
     }
+
     .back-btn:hover {
       background: #356c6c;
       color: #fff;
@@ -255,14 +269,11 @@
   <!-- Pulsante chiusura -->
   <a href="portfolio.html" class="close-btn" title="Torna al Portfolio"><i class="bi bi-x-lg"></i></a>
 
-  <div id="projects">
-
-    <!-- === PARCO URBANO === -->
-      <main class="main">
+  <main class="main">
     <section id="portfolio-details" class="portfolio-details section">
       <div class="section-title" data-aos="fade-up">
         <img src="assets/img/logo.png" alt="Logo CD Studio Tecnico">
-         <h2 style="font-weight: 700; color: #356c6c;">Parco Urbano</h2>
+        <h2>Parco Urbano</h2>
         <p>Intervento di sistemazione e pavimentazione delle aree pubbliche adiacenti all’anfiteatro</p>
       </div>
 
@@ -288,7 +299,7 @@
             <img src="assets/img/portfolio/montelepre-parco-urbano-5.jpeg" alt="">
             <div class="caption">Particolare delle canalette integrate nella pavimentazione permeabile.</div>
           </div>
-        </div>
+        </div> <!-- ✅ chiusura corretta della swiper-wrapper -->
         <div class="swiper-pagination"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
@@ -322,25 +333,22 @@
         <a href="portfolio.html" class="back-btn">← Torna al Portfolio</a>
       </div>
     </section>
-  </div>
+  </main>
 
   <!-- JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
   <script>
     AOS.init();
 
-    const params = new URLSearchParams(window.location.search);
-    const project = params.get("project");
-    document.querySelectorAll(".project").forEach(s => s.style.display = "none");
-    if (project) document.getElementById(project).style.display = "block";
-
-    // Slider con frecce + autoplay
+    // Slider con frecce + autoplay + paginazione
     document.querySelectorAll('.swiper').forEach(swiperEl => {
       new Swiper(swiperEl, {
         loop: true,
         effect: 'fade',
+        fadeEffect: { crossFade: true },
         autoplay: { delay: 3600, disableOnInteraction: false, pauseOnMouseEnter: true },
         pagination: { el: swiperEl.querySelector('.swiper-pagination'), clickable: true },
         navigation: {
