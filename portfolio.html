@@ -398,21 +398,61 @@
   <script>
     AOS.init();
 
-    // Database dei progetti
-    const projects = {
-      public: [
-        { img: "assets/img/portfolio/montelepre-parco-urbano-2.jpeg", title: "Anfiteatro – Montelepre", desc: "Riqualificazione e pavimentazione delle aree pubbliche adiacenti all’anfiteatro.", link: "portfolio-details.html?project=parco-urbano" },
-        { img: "assets/img/portfolio/piazza-vittorio-emanuele.jpeg", title: "Opera Pubblica 2", desc: "Opera pubblica in esecuzione.", link: "portfolio-details.html?project=piazza-vittorio-emanuele" },
-        { img: "assets/img/portfolio/piazza-vittorio-emanuele.jpeg", title: "Opera Pubblica 3", desc: "Opera pubblica in esecuzione.", link: "portfolio-details.html?project=piazza-vittorio-emanuele" },
-        { img: "assets/img/portfolio/piazza-vittorio-emanuele.jpeg", title: "Opera Pubblica 4", desc: "Opera pubblica in esecuzione.", link: "portfolio-details.html?project=piazza-vittorio-emanuele" }
-      ],
-      private: [
-        { img: "assets/img/portfolio/trappeto-idraulico-1.jpeg", title: "Studio Idraulico – Trappeto", desc: "Studio di compatibilità idraulica di un tratto fluviale con modellazione deflusso.", link: "portfolio-details.html?project=studio-idraulico" },
-        { img: "assets/img/portfolio/villa-privata-partinico.jpeg", title: "Progetto Privato 2", desc: "Progetto privato in esecuzione.", link: "portfolio-details.html?project=villa-partinico" },
-        { img: "assets/img/portfolio/villa-privata-partinico.jpeg", title: "Progetto Privato 3", desc: "Progetto privato in esecuzione.", link: "portfolio-details.html?project=villa-partinico" },
-        { img: "assets/img/portfolio/villa-privata-partinico.jpeg", title: "Progetto Privato 4", desc: "Progetto privato in esecuzione.", link: "portfolio-details.html?project=villa-partinico" }
-      ]
-    };
+// Database dei progetti
+const projects = {
+  public: [
+    {
+      img: "assets/img/portfolio/montelepre-parco-urbano-2.jpeg",
+      title: "Anfiteatro – Montelepre",
+      desc: "Riqualificazione e pavimentazione delle aree pubbliche adiacenti all’anfiteatro.",
+      link: "portfolio-parco-urbano.html"
+    },
+    {
+      img: "assets/img/portfolio/piazza-vittorio-emanuele.jpeg",
+      title: "Opera Pubblica 2",
+      desc: "Opera pubblica in esecuzione.",
+      link: "portfolio-opera-pubblica-2.html"
+    },
+    {
+      img: "assets/img/portfolio/piazza-vittorio-emanuele.jpeg",
+      title: "Opera Pubblica 3",
+      desc: "Opera pubblica in esecuzione.",
+      link: "portfolio-opera-pubblica-3.html"
+    },
+    {
+      img: "assets/img/portfolio/piazza-vittorio-emanuele.jpeg",
+      title: "Opera Pubblica 4",
+      desc: "Opera pubblica in esecuzione.",
+      link: "portfolio-opera-pubblica-4.html"
+    }
+  ],
+  private: [
+    {
+      img: "assets/img/portfolio/trappeto-idraulico-1.jpeg",
+      title: "Studio Idraulico – Trappeto",
+      desc: "Studio di compatibilità idraulica di un tratto fluviale con modellazione deflusso.",
+      link: "portfolio-studio-idraulico.html"
+    },
+    {
+      img: "assets/img/portfolio/villa-privata-partinico.jpeg",
+      title: "Progetto Privato 2",
+      desc: "Progetto privato in esecuzione.",
+      link: "portfolio-progetto-privato-2.html"
+    },
+    {
+      img: "assets/img/portfolio/villa-privata-partinico.jpeg",
+      title: "Progetto Privato 3",
+      desc: "Progetto privato in esecuzione.",
+      link: "portfolio-progetto-privato-3.html"
+    },
+    {
+      img: "assets/img/portfolio/villa-privata-partinico.jpeg",
+      title: "Progetto Privato 4",
+      desc: "Progetto privato in esecuzione.",
+      link: "portfolio-progetto-privato-4.html"
+    }
+  ]
+};
 
     let swiper;
     const container = document.getElementById("slides-container");
