@@ -249,128 +249,137 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
 <style>
-  
- /* ====== SEZIONE PREVENTIVO – BOX UNICO CENTRATO E RESPONSIVO ====== */
+/* ====== SEZIONE PREVENTIVO – BOX UNICO CENTRATO E RESPONSIVO ====== */
 
 .preventivo .container {
   display: flex;
-  justify-content: center;   /* centra orizzontalmente */
-  align-items: flex-start;   /* allineamento verticale naturale */
-  margin: 20px;
-  max-width: 95%;         /* limita la larghezza massima */
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 0 20px;
 }
 
-/* BOX PRINCIPALE DEL FORM */
+/* BOX PRINCIPALE */
 .preventivo .form-box {
   background: #ffffff;
   border-radius: 18px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-  padding: 50px 60px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  padding: 50px 70px;
   width: 100%;
-  max-width: 850px;          /* imposta larghezza armoniosa */
-  margin: 40px auto 60px auto; /* centrato e con margine sopra/sotto */
-  transition: all 0.4s ease;
+  max-width: 850px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
 }
 
 .preventivo .form-box:hover {
-  box-shadow: 0 10px 38px rgba(0, 0, 0, 0.12);
-  transform: translateY(-2px);
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
 }
 
 /* FORM INTERNO */
 .preventivo .php-email-form {
   display: flex;
   flex-direction: column;
-  margin: 20px;
-  gap: 20px;
+  gap: 22px;
   width: 100%;
-  text-align: left;
 }
 
 .preventivo .php-email-form label {
   font-weight: 600;
   color: #356c6c;
   margin-bottom: 6px;
-  text-align: left;
+  font-size: 1rem;
 }
 
 .preventivo .php-email-form input,
 .preventivo .php-email-form textarea,
 .preventivo .php-email-form select {
   width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 12px 15px;
+  border: 1.4px solid #dcdcdc;
+  border-radius: 12px;
+  padding: 13px 16px;
   font-size: 1rem;
   color: #333;
-  background-color: #fdfdfd;
-  transition: all 0.3s ease;
-  box-sizing: border-box;
+  background: #fdfdfd;
+  transition: all 0.25s ease-in-out;
 }
 
 .preventivo .php-email-form input:focus,
-.preventivo .php-email-form textarea:focus {
+.preventivo .php-email-form textarea:focus,
+.preventivo .php-email-form select:focus {
   border-color: #356c6c;
-  box-shadow: 0 0 0 3px rgba(53, 108, 108, 0.1);
+  box-shadow: 0 0 0 3px rgba(53, 108, 108, 0.12);
   outline: none;
 }
 
 /* PULSANTE INVIA */
-.preventivo .php-email-form .btn-send {
+.preventivo .php-email-form .btn-send,
+.preventivo .php-email-form button[type="submit"] {
   align-self: flex-start;
   background: #356c6c;
   color: #fff;
   font-weight: 600;
-  padding: 12px 40px;
+  padding: 13px 42px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   transition: all 0.3s ease;
-  margin-top: 10px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 3px 8px rgba(53, 108, 108, 0.3);
 }
 
-.preventivo .php-email-form .btn-send:hover {
-  background: #2b5757;
+.preventivo .php-email-form .btn-send:hover,
+.preventivo .php-email-form button[type="submit"]:hover {
+  background: #2c5858;
   transform: translateY(-2px);
 }
 
-/* ✅ VERSIONE TABLET */
+/* STILE MESSAGGI */
+.preventivo .php-email-form .loading,
+.preventivo .php-email-form .error-message,
+.preventivo .php-email-form .sent-message {
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
+/* VERSIONE TABLET */
 @media (max-width: 991px) {
   .preventivo .form-box {
-    padding: 40px 35px;
-    margin: 30px auto;
+    padding: 40px 45px;
     max-width: 90%;
   }
 }
 
-/* ✅ VERSIONE MOBILE */
+/* VERSIONE MOBILE */
 @media (max-width: 575px) {
   .preventivo .form-box {
-    padding: 30px 20px;
+    padding: 30px 25px;
     border-radius: 15px;
-    margin: 20px auto;
     max-width: 95%;
   }
 
   .preventivo .php-email-form {
-    gap: 15px;
+    gap: 16px;
+  }
+
+  .preventivo .php-email-form label {
+    font-size: 0.95rem;
   }
 
   .preventivo .php-email-form input,
-  .preventivo .php-email-form textarea {
+  .preventivo .php-email-form textarea,
+  .preventivo .php-email-form select {
     font-size: 0.95rem;
-    padding: 10px 12px;
+    padding: 11px 13px;
   }
 
-  .preventivo .php-email-form .btn-send {
+  .preventivo .php-email-form button[type="submit"] {
     width: 100%;
     text-align: center;
   }
 }
-
 </style>
-
  
-
 </head>
 
 <body class="contact-page">
