@@ -304,78 +304,78 @@
       </div>
 
       <!-- Form di Contatto per Preventivo -->
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <form action="https://formspree.io/f/xjkpnylz" method="POST" class="php-email-form" novalidate>
+      <!-- FORM PREVENTIVO MIGLIORATO -->
+<section id="preventivo" class="preventivo-section py-5">
+  <div class="form-preventivo-container" data-aos="fade-up" data-aos-delay="100">
+    <h2 class="text-center mb-4">Richiedi un Preventivo</h2>
+    <p class="text-center text-muted mb-5">
+      Compila il modulo sottostante per ricevere una consulenza o un preventivo personalizzato. Ti risponderemo entro 24 ore.
+    </p>
 
-          <div class="row gy-4">
+    <form action="https://formspree.io/f/xjkpnylz" method="POST" class="form-preventivo" novalidate>
 
-            <!-- Nome e Cognome -->
-            <div class="col-md-6">
-              <label for="name-field" class="pb-2">Nome e Cognome</label>
-              <input type="text" name="name" id="name-field" class="form-control" required>
-            </div>
+      <div class="row gy-4">
+        <!-- Nome e Cognome -->
+        <div class="col-md-6">
+          <label for="name-field" class="form-label">Nome e Cognome</label>
+          <input type="text" name="name" id="name-field" class="form-control" required>
+        </div>
 
-            <!-- Email -->
-            <div class="col-md-6">
-              <label for="email-field" class="pb-2">e-mail</label>
-              <input type="email" name="email" id="email-field" class="form-control" required>
-            </div>
+        <!-- Email -->
+        <div class="col-md-6">
+          <label for="email-field" class="form-label">E-mail</label>
+          <input type="email" name="email" id="email-field" class="form-control" required>
+        </div>
 
-            <!-- Servizio Richiesto -->
-            <div class="col-md-12">
-              <label for="service-field" class="pb-2">Seleziona il Servizio Richiesto</label>
-              <select name="service" id="service-field" class="form-control" required>
-                <option value="Seleziona">Seleziona</option>
-                <option value="Perizie Tecniche">Perizie Tecniche</option>
-                <option value="Accertamenti di Prevenzione Incendi">Accertamenti di Prevenzione Incendi</option>
-                <option value="Certificazione Energetica">Certificazione Energetica</option>
-                <option value="Progettazione Civile e Impiantistica">Progettazione Civile e Impiantistica</option>
-                <option value="Consulenza Tecnica Ambientale">Consulenza Tecnica Ambientale</option>
-                <option value="Gestione Rifiuti e Impianti di Depurazione">Gestione Rifiuti e Impianti di Depurazione</option>
-                <option value="Sicurezza nei Luoghi di Lavoro">Sicurezza nei Luoghi di Lavoro</option>
-                <option value="Studi di Impatto Ambientale">Studi di Impatto Ambientale</option>
-                <option value="Progettazione Strutturale">Progettazione Strutturale</option>
-                <option value="Diagnosi Energetiche e Certificazioni APE">Diagnosi Energetiche e Certificazioni APE</option>
-                <option value="Ristrutturazioni Edilizie">Ristrutturazioni Edilizie</option>
-                <option value="Consultazione Notarile">Consultazione Notarile</option>
-                <option value="Pratiche Urbanistiche e Catastali">Pratiche Urbanistiche e Catastali</option>
-                <option value="Installazione Impianti Termici e Fotovoltaici">Installazione Impianti Termici e Fotovoltaici</option>
-                <option value="Controllo della Qualità dell'Acqua">Controllo della Qualità dell'Acqua</option>
-                <option value="Rilevamenti e Studi Geologici">Rilevamenti e Studi Geologici</option>
-                <option value="Consulenza e Gestione Servizi Edilizi">Consulenza e Gestione Servizi Edilizi</option>
-                <option value="Valutazioni di Sostenibilità Ambientale">Valutazioni di Sostenibilità Ambientale</option>
-                <option value="Progettazione di Infrastrutture Viabili">Progettazione di Infrastrutture Viabili</option>
-                <option value="Servizi di Ristrutturazione e Restauro">Servizi di Ristrutturazione e Restauro</option>
-                <option value="Bonifica di Siti Contaminati">Bonifica di Siti Contaminati</option>
-                <option value="Progettazione di Impianti Elettrici">Progettazione di Impianti Elettrici</option>
-                <option value="Piani di Sicurezza Edilizia">Piani di Sicurezza Edilizia</option>
-                <option value="Redazione di Relazioni Acustiche">Redazione di Relazioni Acustiche</option>
-                <option value="Interventi di Recupero e Sostenibilità">Interventi di Recupero e Sostenibilità</option>
-              </select>
-            </div>
+        <!-- Servizio -->
+        <div class="col-12">
+          <label for="service-field" class="form-label">Servizio Richiesto</label>
+          <select name="service" id="service-field" class="form-select" required>
+            <option value="">Seleziona</option>
+            <option>Perizie Tecniche</option>
+            <option>Perizie di Stima</option>
+            <option>Perizie Giurate</option>
+            <option>Certificazioni Energetiche (APE)</option>
+            <option>Certificazioni Impianti (DICO)</option>
+            <option>Fornitura ed Installazione Impianti</option>
+            <option>Progettazione</option>
+            <option>Pratiche Urbanistiche e Catastali</option>
+            <option>Sanatorie Urbanistiche</option>
+            <option>Pratiche Autorizzazione Scarico</option>
+            <option>Ristrutturazioni</option>
+            <option>Pratiche ENEA e Asseverazioni</option>
+            <option>Pratiche Impianti Fotovoltaici</option>
+            <option>Consulenza Tecnica di Parte (CTP)</option>
+            <option>Modellazione Autocad</option>
+            <option>Consulenza Bonus Ristrutturazione/Rispamio Energetico</option>
+            <option>Consulenza Tecnica</option>
+            <option>Altri Servizi Tecnici</option>
+          </select>
+        </div>
 
-            <!-- Oggetto -->
-            <div class="col-md-12">
-              <label for="subject-field" class="pb-2">Oggetto</label>
-              <input type="text" name="subject" id="subject-field" class="form-control" required>
-            </div>
+        <!-- Oggetto -->
+        <div class="col-12">
+          <label for="subject-field" class="form-label">Oggetto</label>
+          <input type="text" name="subject" id="subject-field" class="form-control" required>
+        </div>
 
-            <!-- Messaggio -->
-            <div class="col-md-12">
-              <label for="message-field" class="pb-2">Messaggio</label>
-              <textarea name="message" id="message-field" class="form-control" rows="10" required></textarea>
-            </div>
+        <!-- Messaggio -->
+        <div class="col-12">
+          <label for="message-field" class="form-label">Messaggio</label>
+          <textarea name="message" id="message-field" class="form-control" rows="7" required></textarea>
+        </div>
 
-            <!-- Messaggi e Pulsante -->
-            <div class="col-md-12 text-center">
-              <div class="loading" style="display:none;">Invio in corso...</div>
-              <div class="error-message" style="display:none; color:red;">Errore durante l'invio! Riprova più tardi.</div>
-              <div class="sent-message" style="display:none; color:green;">Messaggio inviato con successo! Ti risponderemo al più presto.</div>
-              <button type="submit" class="btn btn-primary px-4 py-2 mt-2">Invia</button>
-            </div>
+        <!-- Pulsante -->
+        <div class="col-12 text-center">
+          <button type="submit" class="btn-submit">Invia Richiesta</button>
+          <p class="form-note mt-3 text-muted">Tutti i dati saranno trattati nel rispetto del GDPR 2016/679.</p>
+        </div>
+      </div>
 
-          </div>
-        </form>
+    </form>
+  </div>
+</section>
+      
       </div>
 
     </section><!-- /Preventivo Section -->
