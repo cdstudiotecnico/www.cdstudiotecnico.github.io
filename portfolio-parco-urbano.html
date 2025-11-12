@@ -207,8 +207,48 @@ body.contact-page {
   padding: 35px 30px;
   box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
 }
+
+    /* Ridimensionamento elegante dello slider Swiper */
+.swiper {
+  margin-top: 25px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  position: relative;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0; /* elimina spazi extra sopra e sotto */
+}
+
+/* Altezza immagini armonizzata al box */
+.swiper-slide img {
+  width: 100%;
+  height: 320px; /* 🔧 altezza più bassa e proporzionata */
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Caption più vicina all’immagine */
+.caption {
+  background: rgba(255,255,255,0.96);
+  text-align: center;
+  padding: 8px 12px; /* meno spazio interno */
+  font-size: 0.9rem;
+  color: #444;
+  font-style: italic;
+  border-top: 1px solid #eee;
+}
+
+/* Adattamento su mobile */
+@media (max-width: 768px) {
+  .swiper-slide img {
+    height: 220px; /* riduce ulteriormente sui dispositivi piccoli */
+  }
+}
     
   </style>
+  
 </head>
 
 <body>
