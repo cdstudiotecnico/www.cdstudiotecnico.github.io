@@ -248,6 +248,33 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 
+<style>
+/* Imposta disposizione affiancata su desktop: info a sinistra, form a destra */
+@media (min-width: 992px) {
+  .contact .row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* Box info (mappa, contatti) a sinistra */
+  .contact .info-item,
+  .contact iframe,
+  .contact .highlight-box {
+    order: 1;
+  }
+
+  /* Colonna form a destra */
+  .contact form {
+    order: 2;
+  }
+
+  /* Distanza laterale tra le due colonne */
+  .contact .col-lg-6 {
+    padding: 15px;
+  }
+}
+</style>
+
 </head>
 
 <body class="contact-page">
