@@ -248,6 +248,60 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 
+
+
+  <!-- ✅ Stile personalizzato per sezione Preventivo -->
+  
+  <style>
+    
+    /* ====== SEZIONE PREVENTIVO – BOX CENTRATO E RESPONSIVO ====== */
+
+    @media (min-width: 1200px) {
+      #preventivo .container {
+        max-width: 1000px;                /* larghezza massima del box */
+        margin-left: auto;                /* centra orizzontalmente */
+        margin-right: auto;
+        background: #ffffff;              /* sfondo bianco */
+        padding: 60px 70px;               /* spazio interno più ampio */
+        border-radius: 20px;              /* angoli arrotondati */
+        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08); /* ombra morbida */
+      }
+
+      /* Migliora la leggibilità dei campi */
+      #preventivo .php-email-form .form-control,
+      #preventivo .php-email-form select {
+        border-radius: 10px;
+        padding: 14px 18px;
+        font-size: 1rem;
+      }
+
+      /* Pulsante più visibile */
+      #preventivo .php-email-form button {
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 10px;
+        padding: 14px 35px;
+        box-shadow: 0 4px 15px rgba(0, 119, 230, 0.25);
+      }
+
+      /* Etichette più leggibili e distanziate */
+      #preventivo label {
+        font-weight: 500;
+        color: #333;
+        margin-bottom: 5px;
+      }
+    }
+
+    /* ====== VERSIONE MOBILE ====== */
+    @media (max-width: 1199px) {
+      #preventivo .container {
+        padding: 30px 25px;
+        border-radius: 15px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+      }
+    }
+  </style>
+
 </head>
 
 <body class="contact-page">
