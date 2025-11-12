@@ -259,12 +259,25 @@
   }
 
   /* Entrambe le colonne hanno la stessa larghezza */
-  .contact .col-lg-6 {
-    flex: 0 0 48%;
-    max-width: 48%;
-    display: flex;
-    flex-direction: column;
-  }
+ /* Colonna sinistra (mappa e info) */
+.contact .col-lg-6:first-child {
+  flex: 0 0 45%;
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Colonna destra (form) più larga e spinta a destra */
+.contact .col-lg-6:last-child {
+  flex: 0 0 55%;
+  max-width: 55%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  padding-right: 30px; /* margine simmetrico con sinistra */
+}
 
   /* Box informativo */
   .contact .info-box {
