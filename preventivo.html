@@ -360,6 +360,124 @@
     margin-top: 15px;
   }
 }
+
+  /* ====== SEZIONE PREVENTIVO – BOX UNICO CENTRATO E RESPONSIVO ====== */
+
+.preventivo .container {
+  display: flex;
+  justify-content: center;   /* centra orizzontalmente */
+  align-items: flex-start;   /* allineamento verticale naturale */
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1100px;         /* limita la larghezza massima */
+}
+
+/* BOX PRINCIPALE DEL FORM */
+.preventivo .form-box {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  padding: 50px 60px;
+  width: 100%;
+  max-width: 850px;          /* imposta larghezza armoniosa */
+  margin: 40px auto 60px auto; /* centrato e con margine sopra/sotto */
+  transition: all 0.4s ease;
+}
+
+.preventivo .form-box:hover {
+  box-shadow: 0 10px 38px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+/* FORM INTERNO */
+.preventivo .php-email-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  text-align: left;
+}
+
+.preventivo .php-email-form label {
+  font-weight: 600;
+  color: #356c6c;
+  margin-bottom: 6px;
+  text-align: left;
+}
+
+.preventivo .php-email-form input,
+.preventivo .php-email-form textarea,
+.preventivo .php-email-form select {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 12px 15px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fdfdfd;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.preventivo .php-email-form input:focus,
+.preventivo .php-email-form textarea:focus {
+  border-color: #356c6c;
+  box-shadow: 0 0 0 3px rgba(53, 108, 108, 0.1);
+  outline: none;
+}
+
+/* PULSANTE INVIA */
+.preventivo .php-email-form .btn-send {
+  align-self: flex-start;
+  background: #356c6c;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.preventivo .php-email-form .btn-send:hover {
+  background: #2b5757;
+  transform: translateY(-2px);
+}
+
+/* ✅ VERSIONE TABLET */
+@media (max-width: 991px) {
+  .preventivo .form-box {
+    padding: 40px 35px;
+    margin: 30px auto;
+    max-width: 90%;
+  }
+}
+
+/* ✅ VERSIONE MOBILE */
+@media (max-width: 575px) {
+  .preventivo .form-box {
+    padding: 30px 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 95%;
+  }
+
+  .preventivo .php-email-form {
+    gap: 15px;
+  }
+
+  .preventivo .php-email-form input,
+  .preventivo .php-email-form textarea {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+
+  .preventivo .php-email-form .btn-send {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 </style>
 
 </head>
