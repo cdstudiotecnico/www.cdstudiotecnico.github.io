@@ -322,6 +322,58 @@
     margin-top: 10px;
   }
 }
+
+  /* Allineamento perfetto dei campi nel form contatti */
+@media (min-width: 992px) {
+  .contact .php-email-form .row {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 20px;   /* riduce spazio sopra */
+    margin-bottom: 20px; /* aggiunge aria sotto */
+  }
+
+  .contact .php-email-form .col-md-6,
+  .contact .php-email-form .col-md-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Etichette e input allineati a sinistra */
+  .contact .php-email-form label {
+    text-align: left;
+    width: 100%;
+  }
+
+  /* Input e textarea uguale larghezza */
+  .contact .php-email-form input,
+  .contact .php-email-form textarea {
+    width: 100%;
+  }
+}
+
+  /* Correzione allineamento su schermi molto larghi (desktop full HD e oltre) */
+@media (min-width: 1400px) {
+  .contact .container {
+    max-width: 1200px;      /* fissa larghezza centrale armoniosa */
+    margin: 0 auto;         /* centra il contenitore */
+    margin-top: 30px;
+    padding-left: 0;        /* elimina margine extra sinistro */
+    padding-right: 0;       /* elimina margine extra destro */
+  }
+
+  .contact .php-email-form .col-md-6,
+  .contact .php-email-form .col-md-12 {
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 15px; /* o 20px per curve più dolci */
+  }
+
+  .contact .php-email-form input,
+  .contact .php-email-form textarea {
+    width: 100%;
+  }
+}
+
 </style>
 
 </head>
