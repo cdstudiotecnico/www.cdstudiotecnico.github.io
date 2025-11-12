@@ -2169,13 +2169,22 @@ media (max-width: 576px) {
   }
 </style>
 
-/* Linea decorativa sotto i titoli di sezione - stile globale */
+/* Linea decorativa sotto ai titoli delle sezioni (stile uniforme per tutto il sito) */
+.section-title h2 {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #356c6c;
+  font-size: 1.8rem;
+  margin-bottom: 25px; /* 👈 aumenta leggermente lo spazio tra titolo e linea */
+}
+
 .section-title h2::after {
   content: "";
   display: block;
   width: 60px;
   height: 3px;
   background-color: #356c6c;
-  margin: 10px auto 12px;
+  margin: 12px auto 18px; /* 👈 regola perfetta: 12px sopra, 18px sotto */
   border-radius: 2px;
 }
