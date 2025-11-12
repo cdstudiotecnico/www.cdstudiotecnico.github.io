@@ -15,8 +15,23 @@
 
   <style>
    
-  body {
-   
+     .section-title {
+  position: relative;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.section-title img {
+  position: relative;
+  z-index: 3;
+  max-width: 200px; /* dimensione di base, puoi aumentare a 220px o 250px */
+  transform: scale(1.0); /* ingrandisce visivamente senza influire sul layout */
+  margin-top: -25px; /* spinge leggermente il logo verso l’alto, sovrapponendolo */
+  margin-bottom: 0;
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.25));
+  pointer-events: none; /* evita che il mouse interferisca con click o hover */
+}
+  
     .close-btn {
       position: fixed;
       top: 18px;
