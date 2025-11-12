@@ -393,6 +393,14 @@
     border-radius: 10px;
   }
 }
+
+  /* Pulsante INVIA - ottimizzazione margini */
+.contact .php-email-form .btn-send {
+  margin-top: 10px;   /* riduce spazio sopra */
+  margin-bottom: 20px; /* aggiunge aria sotto */
+  align-self: flex-start;
+}
+
 </style>
   
 </head>
@@ -518,19 +526,19 @@
           <form action="https://formspree.io/f/xjkpnylz" method="POST" class="php-email-form" novalidate>
             <div class="row gy-3">
               <div class="col-md-6">
-                <label for="name-field" class="pb-2"> Nome e Cognome</label>
+                <label for="name-field" class="pb-2" style="text-align: left;"> Nome e Cognome</label>
                 <input type="text" name="name" id="name-field" class="form-control" required>
               </div>
               <div class="col-md-6">
-                <label for="email-field" class="pb-2"> e-mail</label>
+                <label for="email-field" class="pb-2" style="text-align: left;"> e-mail</label>
                 <input type="email" name="email" id="email-field" class="form-control" required>
               </div>
               <div class="col-md-12">
-                <label for="subject-field" class="pb-2"> Oggetto</label>
+                <label for="subject-field" class="pb-2" style="text-align: left;"> Oggetto</label>
                 <input type="text" name="subject" id="subject-field" class="form-control" required>
               </div>
               <div class="col-md-12">
-                <label for="message-field" class="pb-2"> Messaggio</label>
+                <label for="message-field" class="pb-2" style="text-align: left;"> Messaggio</label>
                 <textarea name="message" id="message-field" class="form-control" rows="8" required></textarea>
               </div>
               <div class="col-md-12 text-center">
