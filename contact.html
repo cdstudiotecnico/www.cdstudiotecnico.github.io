@@ -15,6 +15,8 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
@@ -26,67 +28,18 @@
       min-height: 100vh;
     }
 
-    /* Contenitore simmetrico */
-    .contact .container {
-      max-width: 1100px;
-    }
-
-    /* Box sinistro e destro simmetrici */
-    .info-box,
+    /* Box del form effetto vetro */
     .contact-form-box {
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       border-radius: 15px;
-      padding: 30px 25px;
-      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+      padding: 35px 30px;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+      width: 100%;
       height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
     }
 
-    /* Mappa e contenuti interni */
-    .info-box iframe {
-      border-radius: 10px;
-      margin-top: 15px;
-      flex-grow: 1;
-      min-height: 250px;
-    }
-
-    /* Testi e icone */
-    .info-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 18px;
-    }
-
-    .info-item i {
-      font-size: 1.5rem;
-      color: #356c6c;
-      margin-right: 10px;
-      transition: 0.3s ease;
-    }
-
-    .info-item i:hover {
-      color: #1f3e3e;
-      transform: scale(1.1);
-    }
-
-    .info-item h3 {
-      margin: 0;
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: #356c6c;
-    }
-
-    .info-item p {
-      margin: 2px 0 0;
-      color: #444;
-      font-size: 0.95rem;
-    }
-
-    /* Form */
     .contact-form-box label {
       font-weight: 500;
       color: #356c6c;
@@ -124,10 +77,19 @@
       transform: translateY(-2px);
     }
 
-    @media (max-width: 991px) {
-      .info-box,
-      .contact-form-box {
-        height: auto;
+    section.contact {
+      padding: 60px 0;
+    }
+
+    @media (min-width: 992px) {
+      .col-lg-6.form-column {
+        flex: 0 0 55%;
+        max-width: 55%;
+      }
+
+      .col-lg-6.info-column {
+        flex: 0 0 45%;
+        max-width: 45%;
       }
     }
   </style>
@@ -165,11 +127,11 @@
     </div>
   </header>
 
+  <!-- Contenuto -->
   <main class="main">
     <section id="contact" class="contact section">
 
-      <!-- Titolo -->
-      <div class="section-title text-center" data-aos="fade-up" style="margin-top: 15px; margin-bottom: 25px;">
+      <div class="section-title text-center" data-aos="fade-up" style="margin-top: 10px; margin-bottom: 20px;">
         <img src="assets/img/logo.png" alt="Logo CD Studio Tecnico" class="img-fluid"
           style="max-width: 200px; filter: drop-shadow(0 3px 8px rgba(0,0,0,0.2)); margin-bottom: 10px;">
         <h2 style="font-weight: 700; color: #356c6c;">Contatti</h2>
@@ -177,57 +139,68 @@
         <p><a href="privacy.html" target="_blank">Privacy Policy</a></p>
       </div>
 
-      <!-- Box -->
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
+        <div class="row gy-4 align-items-stretch">
 
-          <!-- Sinistra -->
-          <div class="col-lg-6">
-            <div class="info-box h-100">
-              <div>
-                <div class="info-item">
-                  <a href="https://www.google.com/maps/dir/?api=1&destination=Via+Paolo+Marchese+3,+Montelepre,+PA"
-                    target="_blank" title="Apri Google Maps e avvia il percorso">
-                    <i class="bi bi-geo-alt"></i>
-                  </a>
-                  <div>
-                    <h3>Sede Legale</h3>
-                    <p>Via P. Marchese n. 3, Montelepre (PA)</p>
-                  </div>
+          <!-- Info -->
+          <div class="col-lg-6 info-column d-flex flex-column">
+            <div class="info-wrap flex-fill">
+
+              <div class="info-item d-flex mb-3 align-items-center">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Via+Paolo+Marchese+3,+Montelepre,+PA"
+                  target="_blank"><i class="bi bi-geo-alt" style="font-size:1.4rem; color:#356c6c; margin-right:8px;"></i></a>
+                <div>
+                  <h3>Sede Legale</h3>
+                  <p>Via P. Marchese n. 3, Montelepre (PA)</p>
                 </div>
+              </div>
 
-                <div class="info-item">
-                  <a href="tel:+393289250353" title="Chiama lo studio">
-                    <i class="bi bi-telephone"></i>
-                  </a>
-                  <div>
-                    <h3>Telefono</h3>
-                    <p><a href="tel:+393289250353" class="text-decoration-none">+39 328 9250353</a></p>
-                  </div>
+              <div class="info-item d-flex mb-3 align-items-center">
+                <a href="tel:+393289250353"><i class="bi bi-telephone"
+                    style="font-size:1.4rem; color:#356c6c; margin-right:8px;"></i></a>
+                <div>
+                  <h3>Telefono</h3>
+                  <p><a href="tel:+393289250353" class="text-decoration-none">+39 328 9250353</a></p>
                 </div>
+              </div>
 
-                <div class="info-item">
-                  <a href="mailto:cdstudiotecnico@hotmail.com" title="Scrivi un'e-mail">
-                    <i class="bi bi-envelope"></i>
-                  </a>
-                  <div>
-                    <h3>E-mail</h3>
-                    <p><a href="mailto:cdstudiotecnico@hotmail.com" class="text-decoration-none">cdstudiotecnico@hotmail.com</a></p>
-                  </div>
+              <div class="info-item d-flex mb-3 align-items-center">
+                <a href="mailto:cdstudiotecnico@hotmail.com"><i class="bi bi-envelope"
+                    style="font-size:1.4rem; color:#356c6c; margin-right:8px;"></i></a>
+                <div>
+                  <h3>E-mail</h3>
+                  <p><a href="mailto:cdstudiotecnico@hotmail.com"
+                      class="text-decoration-none">cdstudiotecnico@hotmail.com</a></p>
                 </div>
               </div>
 
               <iframe
                 src="https://www.google.com/maps?q=Via%20Paolo%20Marchese%203%2C%2090040%20Montelepre%20PA&output=embed"
-                allowfullscreen loading="lazy"></iframe>
+                style="width:100%; height:300px; border:0;" allowfullscreen loading="lazy"></iframe>
+
+              <div class="highlight-box mt-4"
+                style="background:rgba(255,255,255,0.9); border-radius:12px; padding:30px 25px; box-shadow:0 3px 8px rgba(0,0,0,0.08);">
+                <i class="bi bi-globe2"
+                  style="font-size:1.7rem; color:#356c6c; display:block; text-align:center; margin-bottom:12px;"></i>
+                <div class="section-title text-center" data-aos="fade-up">
+                  <h3 style="font-weight:700; color:#356c6c; font-size:1.4rem; margin:0;">Operatività</h3>
+                  <p style="font-size:1rem; color:#444; line-height:1.65; text-align:justify; margin-top:15px;">
+                    Lo <strong>Studio Tecnico</strong>, con sede in <strong>Sicilia</strong>, offre <strong>Servizi di
+                      Ingegneria</strong> e <strong>Consulenza Tecnica</strong> in tutta <strong>Italia</strong>.
+                    Grazie a un’organizzazione digitale basata sul <strong>Smart Working</strong>, gestiamo
+                    <strong>Consulenze, Progettazioni, Perizie, Certificazioni e Pratiche Online</strong>
+                    con la stessa qualità di un servizio in presenza.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Destra -->
-          <div class="col-lg-6">
+          <!-- Form -->
+          <div class="col-lg-6 form-column d-flex flex-column">
             <form action="https://formspree.io/f/xjkpnylz" method="POST"
-              class="php-email-form contact-form-box h-100 d-flex flex-column justify-content-between" novalidate>
-              <div class="row gy-3 flex-grow-1">
+              class="php-email-form contact-form-box flex-fill" novalidate>
+              <div class="row gy-3">
                 <div class="col-md-6">
                   <label for="name-field" class="pb-2">Nome e Cognome</label>
                   <input type="text" name="name" id="name-field" class="form-control" required>
@@ -242,18 +215,17 @@
                 </div>
                 <div class="col-md-12">
                   <label for="message-field" class="pb-2">Messaggio</label>
-                  <textarea name="message" id="message-field" class="form-control flex-grow-1" rows="7" required></textarea>
+                  <textarea name="message" id="message-field" class="form-control" rows="8" required></textarea>
                 </div>
-              </div>
-              <div class="text-center mt-3">
-                <button type="submit" class="btn-send">Invia</button>
-                <div class="loading" style="display:none;">Invio in corso...</div>
-                <div class="error-message" style="display:none; color:red;">Errore durante l'invio!</div>
-                <div class="sent-message" style="display:none; color:green;">Messaggio inviato con successo!</div>
+                <div class="col-md-12 text-center">
+                  <button type="submit" class="btn-send mt-3">Invia</button>
+                  <div class="loading" style="display:none;">Invio in corso...</div>
+                  <div class="error-message" style="display:none; color:red;">Errore durante l'invio!</div>
+                  <div class="sent-message" style="display:none; color:green;">Messaggio inviato con successo!</div>
+                </div>
               </div>
             </form>
           </div>
-
         </div>
       </div>
     </section>
@@ -280,6 +252,8 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/js/main.js"></script>
+</body>
+</html>
 
   <!-- ✅ Script universale per moduli con Formspree + validazione -->
 <script>
