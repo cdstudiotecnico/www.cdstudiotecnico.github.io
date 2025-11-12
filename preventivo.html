@@ -250,148 +250,82 @@
 
 
 
-  <!-- ✅ Stile personalizzato per sezione Preventivo -->
+  /* ====== SEZIONE PREVENTIVO – VERSIONE DEFINITIVA ====== */
   
-  <style>
-    
-    /* ====== SEZIONE PREVENTIVO – BOX CENTRATO E RESPONSIVO ====== */
+<style>
 
-    @media (min-width: 1200px) {
-      #preventivo .container {
-        max-width: 1000px;                /* larghezza massima del box */
-        margin-left: auto;                /* centra orizzontalmente */
-        margin-right: auto;
-        background: #ffffff;              /* sfondo bianco */
-        padding: 60px 70px;               /* spazio interno più ampio */
-        border-radius: 20px;              /* angoli arrotondati */
-        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08); /* ombra morbida */
-      }
-
-      /* Migliora la leggibilità dei campi */
-      #preventivo .php-email-form .form-control,
-      #preventivo .php-email-form select {
-        border-radius: 10px;
-        padding: 14px 18px;
-        font-size: 1rem;
-      }
-
-      /* Pulsante più visibile */
-      #preventivo .php-email-form button {
-        font-size: 1.1rem;
-        font-weight: 600;
-        border-radius: 10px;
-        padding: 14px 35px;
-        box-shadow: 0 4px 15px rgba(0, 119, 230, 0.25);
-      }
-
-      /* Etichette più leggibili e distanziate */
-      #preventivo label {
-        font-weight: 500;
-        color: #333;
-        margin-bottom: 5px;
-      }
-    }
-
-    /* ====== VERSIONE MOBILE ====== */
-    @media (max-width: 1199px) {
-      #preventivo .container {
-        padding: 30px 25px;
-        border-radius: 15px;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-      }
-    }
-
-/* 🔧 Ottimizzazione box form preventivo senza cambiare layout */
-.php-email-form {
-  background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  padding: 45px 55px; /* più spazio interno */
-  margin-top: 25px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.php-email-form label {
-  font-weight: 600;
-  color: #356c6c;
-  margin-bottom: 6px;
-  display: block;
-  text-align: left;
-}
-
-.php-email-form input,
-.php-email-form textarea {
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 12px 14px;
-  font-size: 1rem;
-  color: #333;
-  background-color: #fafafa;
-  transition: all 0.3s ease;
-  box-sizing: border-box;
-}
-
-.php-email-form input:focus,
-.php-email-form textarea:focus {
-  border-color: #356c6c;
-  box-shadow: 0 0 0 3px rgba(53, 108, 108, 0.1);
-  outline: none;
-}
-
-/* Pulsante invia migliorato */
-.php-email-form .btn-send {
-  background: #356c6c;
-  color: #fff;
-  font-weight: 600;
-  padding: 12px 35px;
-  border: none;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  margin-top: 15px;
-}
-
-.php-email-form .btn-send:hover {
-  background: #2e5d5d;
-  transform: translateY(-2px);
-}
-
-/* ✅ Adattabilità schermi grandi */
+/* 💻 DESKTOP LARGE */
 @media (min-width: 1200px) {
-  .php-email-form {
-    padding: 50px 70px;
+  #preventivo .container {
+    max-width: 1000px;                /* dimensione armoniosa a schermo intero */
+    margin-left: auto;
+    margin-right: auto;
+    background: #ffffff;
+    padding: 60px 70px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;        /* effetto morbido di adattamento */
+  }
+
+  #preventivo .php-email-form .form-control,
+  #preventivo .php-email-form select {
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 1rem;
+  }
+
+  #preventivo .php-email-form button {
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 14px 35px;
+    box-shadow: 0 4px 15px rgba(0, 119, 230, 0.25);
+    background-color: #356c6c;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  #preventivo .php-email-form button:hover {
+    background-color: #2c5c5c;
+    transform: translateY(-2px);
+  }
+
+  #preventivo label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 6px;
   }
 }
 
-/* ✅ Adattabilità tablet */
-@media (max-width: 991px) {
-  .php-email-form {
-    padding: 35px 30px;
-  }
-}
-
-/* ✅ Adattabilità mobile */
-@media (max-width: 575px) {
-  .php-email-form {
-    padding: 25px 20px;
+/* 📱 MOBILE & TABLET */
+@media (max-width: 1199px) {
+  #preventivo .container {
+    width: 95%;
+    margin: 0 auto;
+    background: #ffffff;
     border-radius: 15px;
-    margin: 15px 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    padding: 25px 20px;
   }
 
-  .php-email-form input,
-  .php-email-form textarea {
+  #preventivo .php-email-form .form-control,
+  #preventivo .php-email-form select {
+    border-radius: 8px;
+    padding: 12px 14px;
     font-size: 0.95rem;
-    padding: 10px 12px;
   }
 
-  .php-email-form .btn-send {
+  #preventivo .php-email-form button {
     width: 100%;
+    font-size: 1rem;
+    padding: 12px 0;
+    background-color: #356c6c;
+    border-radius: 8px;
+    border: none;
+    margin-top: 10px;
   }
 }
-    
-  </style>
+</style>
 
 </head>
 
@@ -482,13 +416,13 @@
         <option>Sanatorie Urbanistiche</option>
         <option>Pratiche Autorizzazione Scarico</option>
         <option>Sicurezza Luoghi Lavoro (DVR,POS,PSC)</option>
-        <option>Rilievi Topografici/option>       
+        <option>Rilievi Topografici</option>       
         <option>Ristrutturazioni</option>
         <option>Pratiche ENEA e Asseverazioni</option>
         <option>Pratiche Impianti Fotovoltaici</option>
         <option>Consulenza Tecnica di Parte (CTP)</option>
         <option>Modellazione Autocad</option>
-        <option>Consulenza Bonus Ristrutturazione/Risparmio Energetico</option>
+        <option>Bonus Ristrutturazione/Risparmio Energetico</option>
         <option>Consulenza Tecnica</option>
         <option>Altri Servizi Tecnici</option>
               </select>
