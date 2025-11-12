@@ -66,12 +66,13 @@ v<!DOCTYPE html>
       margin-right: auto;
     }
 
-    .swiper-slide img {
-      width: 100%;
-      height: 380px; /* ridotto da 520px */
-      object-fit: cover;
-      transition: transform 0.6s ease;
-    }
+.swiper-slide img {
+  width: 100%;
+  height: 340px; /* 🔧 più proporzionato */
+  object-fit: cover;
+  margin-bottom: 0;  /* 🔧 elimina spazio extra */
+  transition: transform 0.6s ease;
+}
 
     .swiper-slide img:hover { transform: scale(1.02); }
 
@@ -86,11 +87,14 @@ v<!DOCTYPE html>
     }
 
     /* PAGINATION + FRECCE */
-    .swiper-pagination {
-      position: relative;
-      bottom: 5px;
-      margin-top: 10px;
-    }
+    
+.swiper-pagination {
+  position: relative;
+  bottom: 0;         /* 🔧 elimina spazio inutile */
+  margin-top: 4px;   /* 🔧 ridotto da 10px */
+  margin-bottom: 0;  /* 🔧 evita spazio sotto */
+}
+
     .swiper-pagination-bullet {
       width: 10px;
       height: 10px;
