@@ -2169,14 +2169,80 @@ media (max-width: 576px) {
   }
 </style>
 
-/* Linea decorativa sotto ai titoli delle sezioni (stile uniforme per tutto il sito) */
-.section-title h2 {
-  position: relative;
+
+
+
+/* --- Box "Operatività" --- */
+.highlight-box {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 30px 25px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* intestazione con icona + titolo */
+.highlight-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.highlight-header i {
+  font-size: 1.9rem;
+  color: #356c6c;
+  margin-bottom: 8px;
+}
+
+.highlight-header .titolo-sezione {
   font-family: 'Poppins', sans-serif;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #356c6c;
+  position: relative;
+  margin: 0;
+}
+
+.highlight-header .titolo-sezione::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #356c6c;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* testo */
+.highlight-box .testo-sezione {
+  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-align: justify;
+  margin-top: 15px;
+}
+
+
+
+/* --- Uniforma distanza logo / titolo / testo in tutte le sezioni --- */
+.section-title img {
+  display: block;
+  margin: 35px auto 20px; /* spazio sopra e sotto il logo */
+  max-width: 200px;
+  filter: drop-shadow(0 3px 8px rgba(0,0,0,0.2));
+}
+
+.section-title h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
   color: #356c6c;
   font-size: 1.8rem;
-  margin-bottom: 25px; /* 👈 aumenta leggermente lo spazio tra titolo e linea */
+  position: relative;
 }
 
 .section-title h2::after {
@@ -2185,6 +2251,15 @@ media (max-width: 576px) {
   width: 60px;
   height: 3px;
   background-color: #356c6c;
-  margin: 12px auto 18px; /* 👈 regola perfetta: 12px sopra, 18px sotto */
+  margin: 10px auto 15px;
   border-radius: 2px;
+}
+
+.section-title p {
+  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto 15px;
+  text-align: center;
 }
