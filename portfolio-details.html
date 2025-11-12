@@ -15,108 +15,60 @@
 
   <style>
     body {
-      background-color: #fafafa;
-      color: #333;
+      background: url("assets/img/background-pattern.jpg") no-repeat center center fixed;
+      background-size: cover;
       font-family: 'Raleway', sans-serif;
-      overflow-x: hidden;
+      color: #333;
     }
 
-    /* SEZIONE TITOLO */
+    .page-wrapper {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 18px;
+      max-width: 880px;
+      margin: 70px auto;
+      padding: 40px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
     .section-title {
-      position: relative;
       text-align: center;
       margin-bottom: 25px;
     }
 
-.section-title img {
-  position: relative;
-  z-index: 3;
-  max-width: 200px;
-  transform: translateY(25px) scale(1.0); /* ✅ sposta solo il logo verso il basso */
-  margin: 0; /* nessun margine, così non altera il layout */
-  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.25));
-  pointer-events: none;
-}
+    .section-title img {
+      max-width: 190px;
+      margin-bottom: 15px;
+      filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.15));
+    }
 
     .section-title h2 {
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
       color: #356c6c;
       font-size: 1.8rem;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
-    .section-title h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background-color: #356c6c;
-  margin: 10px auto 0;
-  border-radius: 2px;
-}
-
-    /* BOTTONE CHIUSURA */
-    .close-btn {
-      position: fixed;
-      top: 18px;
-      right: 25px;
-      z-index: 1000;
-      background: #356c6c;
-      color: #fff;
-      border-radius: 50%;
-      width: 42px;
-      height: 42px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      text-decoration: none;
-      transition: 0.3s;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-    }
-    .close-btn:hover { background: #2f5555; }
-
-    /* CONTENITORE */
-    .main-container {
-      max-width: 980px;
-      margin: 90px auto 60px auto;
-      padding: 0 20px;
-    }
-
-    /* TITOLO PROGETTO */
-    .project-title {
-      text-align: center;
-      margin-bottom: 25px;
-    }
-
-    .project-title h1 {
-      font-family: 'Poppins', sans-serif;
-      color: #356c6c;
-      font-weight: 600;
-      font-size: 1.9rem;
-      margin-bottom: 8px;
-    }
-
-    .project-title p {
+    .section-title p {
       color: #555;
       font-size: 1.05rem;
-      max-width: 760px;
-      margin: 0 auto;
     }
 
-    /* SLIDER */
+    /* SLIDER ridotto */
     .swiper {
-      margin-top: 40px;
+      margin-top: 25px;
       border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
       position: relative;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .swiper-slide img {
       width: 100%;
-      height: 520px;
+      height: 380px; /* ridotto da 520px */
       object-fit: cover;
       transition: transform 0.6s ease;
     }
@@ -126,36 +78,28 @@
     .caption {
       background: rgba(255,255,255,0.96);
       text-align: center;
-      padding: 12px 15px;
-      font-size: 0.95rem;
+      padding: 10px 15px;
+      font-size: 0.93rem;
       color: #444;
       font-style: italic;
       border-top: 1px solid #eee;
-      animation: fadeInUp 0.8s ease;
     }
 
-    @keyframes fadeInUp {
-      from {opacity: 0; transform: translateY(10px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-
-    /* PAGINAZIONE + FRECCE */
+    /* PAGINATION + FRECCE */
     .swiper-pagination {
       position: relative;
       bottom: 5px;
-      margin-top: 12px;
+      margin-top: 10px;
     }
-
     .swiper-pagination-bullet {
-      width: 12px;
-      height: 12px;
+      width: 10px;
+      height: 10px;
       background: rgba(53,108,108,0.9);
       border: 2px solid rgba(255,255,255,0.8);
       opacity: 0.45;
       margin: 0 5px;
       transition: all 0.3s ease;
     }
-
     .swiper-pagination-bullet-active {
       background: #356c6c;
       opacity: 1;
@@ -165,32 +109,25 @@
     .swiper-button-prev, .swiper-button-next {
       color: #fff;
       background: rgba(53,108,108,0.75);
-      width: 44px;
-      height: 44px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       transition: all 0.3s ease;
     }
-
     .swiper-button-prev:hover, .swiper-button-next:hover {
       background: rgba(53,108,108,1);
       transform: scale(1.08);
     }
 
-    .swiper-button-prev::after, .swiper-button-next::after {
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    /* BOX INFO E DESCRIZIONE */
-    .info-box, .description {
+    .info-box, .description, .quote {
       background: #fff;
       border-radius: 12px;
-      padding: 35px 45px;
-      margin-top: 50px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      padding: 30px 40px;
+      margin-top: 40px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
     .info-box h3, .description h3 {
@@ -212,30 +149,18 @@
     .info-box li {
       padding: 8px 0;
       border-bottom: 1px solid #eee;
-      font-size: 0.97rem;
+      font-size: 0.95rem;
     }
 
     .info-box strong {
       color: #356c6c;
     }
 
-    .description p {
-      font-size: 1rem;
-      color: #555;
-      margin-bottom: 12px;
-    }
-
-    /* CITAZIONE */
     .quote {
-      background: #fff;
       border-left: 4px solid #356c6c;
-      border-radius: 8px;
-      padding: 30px 35px;
-      margin-top: 50px;
       font-style: italic;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      color: #444;
       line-height: 1.8;
+      color: #444;
     }
 
     .quote strong {
@@ -245,7 +170,6 @@
       font-style: normal;
     }
 
-    /* BOTTONE FINALE */
     .back-btn {
       display: inline-block;
       margin: 50px auto 0;
@@ -264,100 +188,95 @@
     }
 
     @media (max-width: 768px) {
-      .swiper-slide img { height: 340px; }
-      .info-box, .description { padding: 25px; }
-      .caption { font-size: 0.9rem; }
-      .swiper-pagination-bullet { width: 10px; height: 10px; }
-      .swiper-button-prev, .swiper-button-next { width: 38px; height: 38px; }
+      .swiper-slide img { height: 280px; }
+      .info-box, .description, .quote { padding: 22px; }
+      .page-wrapper { padding: 25px; margin: 50px 15px; }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Pulsante chiusura -->
-  <a href="portfolio.html" class="close-btn" title="Torna al Portfolio"><i class="bi bi-x-lg"></i></a>
+  <a href="portfolio.html" class="close-btn" title="Torna al Portfolio" style="position: fixed; top: 18px; right: 25px; z-index: 1000; background: #356c6c; color: #fff; border-radius: 50%; width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; font-size: 20px; text-decoration: none; transition: 0.3s; box-shadow: 0 3px 8px rgba(0,0,0,0.2);">
+    <i class="bi bi-x-lg"></i>
+  </a>
 
-  <main class="main">
-    <section id="portfolio-details" class="portfolio-details section">
-      <div class="section-title" data-aos="fade-up">
-        <img src="assets/img/logo.png" alt="Logo CD Studio Tecnico">
-        <h2>Parco Urbano</h2>
-        <p>Intervento di sistemazione e pavimentazione delle aree pubbliche adiacenti all’anfiteatro</p>
-      </div>
+  <div class="page-wrapper" data-aos="fade-up">
 
-      <div class="swiper parcoSwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="assets/img/portfolio/montelepre-parco-urbano-1.jpeg" alt="">
-            <div class="caption">Pavimentazione in pietra locale presso area anfiteatro.</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/img/portfolio/montelepre-parco-urbano-2.jpeg" alt="">
-            <div class="caption">Vista d’insieme degli spazi pubblici riqualificati e delle ringhiere zincate.</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/img/portfolio/montelepre-parco-urbano-3.jpeg" alt="">
-            <div class="caption">Vista laterale dei muretti di contenimento restaurati.</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/img/portfolio/montelepre-parco-urbano-4.jpeg" alt="">
-            <div class="caption">Dettaglio della nuova recinzione metallica lato fiume.</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/img/portfolio/montelepre-parco-urbano-5.jpeg" alt="">
-            <div class="caption">Particolare delle canalette integrate nella pavimentazione permeabile.</div>
-          </div>
-        </div> <!-- ✅ chiusura corretta della swiper-wrapper -->
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
+    <div class="section-title">
+      <img src="assets/img/logo.png" alt="Logo CD Studio Tecnico">
+      <h2>Parco Urbano</h2>
+      <p>Intervento di sistemazione e pavimentazione delle aree pubbliche adiacenti all’anfiteatro</p>
+    </div>
 
-      <div class="info-box">
-        <h3><i class="bi bi-building"></i> Dati Progetto</h3>
-        <ul>
-          <li><strong>Committente:</strong> Comune di Montelepre</li>
-          <li><strong>Programma:</strong> FSE – Regione Siciliana</li>
-          <li><strong>Tipologia:</strong> Riqualificazione spazi pubblici</li>
-          <li><strong>Ruolo tecnico:</strong> Progettazione, Direzione Lavori e Sicurezza</li>
-          <li><strong>Importo lavori:</strong> € 43.798,76</li>
-          <li><strong>Anno:</strong> 2021</li>
-        </ul>
+    <div class="swiper parcoSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="assets/img/portfolio/montelepre-parco-urbano-1.jpeg" alt="">
+          <div class="caption">Pavimentazione in pietra locale presso l’area dell’anfiteatro.</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/portfolio/montelepre-parco-urbano-2.jpeg" alt="">
+          <div class="caption">Vista d’insieme degli spazi pubblici riqualificati e delle ringhiere zincate.</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/portfolio/montelepre-parco-urbano-3.jpeg" alt="">
+          <div class="caption">Vista laterale dei muretti di contenimento restaurati.</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/portfolio/montelepre-parco-urbano-4.jpeg" alt="">
+          <div class="caption">Dettaglio della nuova recinzione metallica lato fiume.</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/portfolio/montelepre-parco-urbano-5.jpeg" alt="">
+          <div class="caption">Particolare delle canalette integrate nella pavimentazione permeabile.</div>
+        </div>
       </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
 
-      <div class="description">
-        <h3><i class="bi bi-pencil-square"></i> Descrizione Tecnica</h3>
-        <p>Riqualificazione paesaggistica e funzionale dell’area dell’anfiteatro con pavimentazioni in pietra locale e nuove ringhiere zincate.</p>
-        <p>Opere integrate di drenaggio e finiture sostenibili con l’ambiente urbano circostante.</p>
-      </div>
+    <div class="info-box">
+      <h3><i class="bi bi-building"></i> Dati Progetto</h3>
+      <ul>
+        <li><strong>Committente:</strong> Comune di Montelepre</li>
+        <li><strong>Programma:</strong> FSE – Regione Siciliana</li>
+        <li><strong>Tipologia:</strong> Riqualificazione spazi pubblici</li>
+        <li><strong>Ruolo tecnico:</strong> Progettazione, Direzione Lavori e Sicurezza</li>
+        <li><strong>Importo lavori:</strong> € 43.798,76</li>
+        <li><strong>Anno:</strong> 2021</li>
+      </ul>
+    </div>
 
-      <div class="quote">
-        “Questo progetto rappresenta un passo importante per la valorizzazione del nostro patrimonio urbano e per restituire alla cittadinanza un luogo di aggregazione sicuro, decoroso e pienamente fruibile. Un ringraziamento particolare all’Ing. Dario Cucchiara per la professionalità e la dedizione dimostrate in ogni fase della progettazione e della direzione dei lavori.”
-        <br><br>
-        <strong>Il Sindaco del Comune di Montelepre</strong>
-      </div>
+    <div class="description">
+      <h3><i class="bi bi-diagram-3"></i> Descrizione tecnica e obiettivi</h3>
+      <p>Riqualificazione paesaggistica e funzionale dell’area dell’anfiteatro con pavimentazioni in pietra locale e nuove ringhiere zincate.</p>
+      <p>Opere integrate di drenaggio e finiture sostenibili con l’ambiente urbano circostante.</p>
+    </div>
 
-      <div class="text-center">
-        <a href="portfolio.html" class="back-btn">← Torna al Portfolio</a>
-      </div>
-    </section>
-  </main>
+    <div class="quote">
+      “Questo progetto rappresenta un passo importante per la valorizzazione del nostro patrimonio urbano e per restituire alla cittadinanza un luogo di aggregazione sicuro, decoroso e pienamente fruibile. Un ringraziamento particolare all’Ing. Dario Cucchiara per la professionalità e la dedizione dimostrate in ogni fase della progettazione e della direzione dei lavori.”
+      <br><br>
+      <strong>Il Sindaco del Comune di Montelepre</strong>
+    </div>
+
+    <div class="text-center">
+      <a href="portfolio.html" class="back-btn">← Torna al Portfolio</a>
+    </div>
+
+  </div>
 
   <!-- JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
   <script>
     AOS.init();
-
-    // Slider con frecce + autoplay + paginazione
     document.querySelectorAll('.swiper').forEach(swiperEl => {
       new Swiper(swiperEl, {
         loop: true,
         effect: 'fade',
-        fadeEffect: { crossFade: true },
         autoplay: { delay: 3600, disableOnInteraction: false, pauseOnMouseEnter: true },
         pagination: { el: swiperEl.querySelector('.swiper-pagination'), clickable: true },
         navigation: {
