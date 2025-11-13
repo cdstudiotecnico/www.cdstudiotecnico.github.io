@@ -1,5 +1,4 @@
 /* CD Studio Tecnico – Sito ufficiale */
 Autore: Ing. Dario Cucchiara
-Email: cdstudiotecnico@hotmail.com
-Versione: 1.0 – Ottobre 2025
-Tecnologie: HTML5, CSS3, Bootstrap 5, GitHub Pages, Noamweb DNS
+e-mail: cdstudiotecnico@hotmail.com
+Versione: 1.0 – Novembre 2025
