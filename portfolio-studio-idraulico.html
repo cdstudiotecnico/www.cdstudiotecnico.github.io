@@ -68,11 +68,12 @@
 
 .swiper-slide img {
   width: 100%;
-  height: auto;          /* ✅ lascia l'immagine con proporzione naturale */
-  aspect-ratio: 16 / 9;  /* ✅ forza il formato 1280x720 */
-  object-fit: contain;   /* ✅ evita qualsiasi ritaglio */
+  height: auto;              /* ✅ si adatta proporzionalmente */
+  aspect-ratio: 16 / 9;      /* ✅ mantiene il formato 1280x720 */
+  object-fit: contain;       /* ✅ non ritaglia mai */
   display: block;
   margin: 0 auto;
+  background-color: #f5f5f5; /* ✅ colore neutro di sfondo (evita bande nere) */
   transition: transform 0.6s ease;
 }
 
@@ -313,6 +314,10 @@ body.contact-page {
         </div>
         <div class="swiper-slide">
           <img src="assets/img/portfolio/trappeto-idraulico-11.jpeg" alt="">
+          <div class="caption">Descrizone in lavorazione.</div>
+        </div>
+                <div class="swiper-slide">
+          <img src="assets/img/portfolio/trappeto-idraulico-12.jpeg" alt="">
           <div class="caption">Descrizone in lavorazione.</div>
         </div>
       </div>
