@@ -2,124 +2,147 @@
 <html lang="it">
 
 <head>
-
-  <!-- ✅ Meta base e SEO -->
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>CD Studio Tecnico – Ing. Dario Cucchiara | Ingegneria Civile, Edile e Ambientale</title>
-  <meta name="description" content="Servizi di ingegneria civile, edile e ambientale a Partinico e Montelepre (PA). CD Studio Tecnico – Ing. Dario Cucchiara offre consulenze e pratiche tecniche online in tutta Italia.">
-  <meta name="keywords" content="studio tecnico, ingegnere civile, ingegnere edile, Partinico, Montelepre, Palermo, progettazione, perizie, certificazione energetica, sanatorie edilizie, APE, ingegneria online">
+  <title>Pagina in Costruzione | CD Studio Tecnico – Ing. Dario Cucchiara</title>
+  <meta name="description" content="Questa sezione del sito CD Studio Tecnico è in fase di sviluppo. Presto saranno disponibili nuovi contenuti.">
+  <meta name="robots" content="noindex, follow">
 
-  <!-- ✅ Favicon e Logo unificati -->
-  <link rel="icon" href="https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg" type="image/jpeg">
-  <link rel="apple-touch-icon" href="https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg">
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/logo-cdstudiotecnico.jpeg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="assets/img/logo-cdstudiotecnico.jpeg">
 
-  <!-- 🛡️ Sicurezza -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self' https:;">
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), interest-cohort=()">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS -->
+  <!-- CSS Vendor -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <style>
+    body {
+      background: linear-gradient(135deg, #f5f7f7 0%, #e9f0f0 100%);
+      font-family: 'Raleway', sans-serif;
+      color: #356c6c;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .construction-box {
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 18px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      padding: 50px 40px;
+      max-width: 600px;
+      width: 100%;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .construction-box img {
+      max-width: 150px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.2));
+    }
+
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      color: #2f6565;
+      margin-bottom: 10px;
+    }
+
+    .underline {
+      width: 50px;
+      height: 3px;
+      background: #2f6565;
+      margin: 0 auto 20px auto;
+      border-radius: 2px;
+    }
+
+    p {
+      color: #444;
+      font-size: 1.05rem;
+      margin-bottom: 25px;
+    }
+
+    .icon {
+      font-size: 3rem;
+      color: #2f6565;
+      margin-bottom: 20px;
+      animation: pulse 1.5s infinite;
+    }
+
+    .back-btn {
+      display: inline-block;
+      border: 1.8px solid #356c6c;
+      color: #356c6c;
+      text-decoration: none;
+      border-radius: 30px;
+      padding: 10px 28px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: #356c6c;
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      padding: 15px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.15); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.8; }
+    }
+
+    @media (max-width: 576px) {
+      .construction-box { padding: 35px 25px; }
+      p { font-size: 0.95rem; }
+      .icon { font-size: 2.6rem; }
+    }
+  </style>
 </head>
 
-<body class="starter-page-page">
+<body>
 
-  <!-- ✅ HEADER COERENTE -->
-  <header id="header" class="header d-flex align-items-center light-background sticky-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0 text-decoration-none">
-        <div class="d-flex flex-column">
-          <h1 class="sitename mb-0">Ing. Dario Cucchiara</h1>
-          <span class="subtitle">Ingegneria Civile, Edile & Ambientale</span>
-        </div>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Curriculum</a></li>
-          <li><a href="services.html">Servizi</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="preventivo.html">Richiedi Preventivo</a></li>
-          <li><a href="contact.html">Contatti</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <div class="header-social-links">
-        <a href="mailto:cdstudiotecnico@hotmail.com" class="email"><i class="bi bi-envelope"></i></a>
-        <a href="tel:+393289250353" class="phone"><i class="bi bi-telephone"></i></a>
-      </div>
+  <main>
+    <div class="construction-box" data-aos="fade-up">
+      <img src="assets/img/logo.png" alt="Logo CD Studio Tecnico">
+      <div class="icon"><i class="bi bi-gear-fill"></i></div>
+      <h2>Pagina in Costruzione</h2>
+      <div class="underline"></div>
+      <p>Questa sezione del sito è attualmente in fase di sviluppo.<br> Presto saranno disponibili nuovi contenuti e servizi.</p>
+      <a href="index.html" class="back-btn">← Torna alla Home</a>
     </div>
-  </header>
-
-  <!-- ✅ CONTENUTO PRINCIPALE -->
-  <main class="main">
-    <section id="starter-section" class="starter-section section">
-      <div class="container section-title" data-aos="fade-up" style="text-align:center;">
-        <img src="assets/img/logo-cdstudiotecnico.jpeg" alt="Logo CD Studio Tecnico"
-             style="max-width:180px; margin-bottom:15px; filter:drop-shadow(0 2px 6px rgba(0,0,0,0.2));">
-        <h2 style="font-weight:700; color:#356c6c;">Pagina in Costruzione</h2>
-        <p>Questa sezione del sito è in fase di sviluppo. Presto saranno disponibili nuovi contenuti.</p>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="200">
-        <p style="text-align:center;">CD Studio Tecnico – Ing. Dario Cucchiara offre servizi di ingegneria civile, edile e ambientale con la stessa qualità e attenzione su tutto il territorio nazionale.</p>
-      </div>
-    </section>
   </main>
 
-  <!-- ✅ FOOTER UNIFICATO -->
-  <footer id="footer" class="footer light-background">
-    <div class="container text-center">
-      <p><strong>Sede Operativa:</strong> Via J.F. Kennedy n. 42, Partinico (PA)</p>
-      <p><strong>Sede Legale:</strong> Via Paolo Marchese n. 3, Montelepre (PA)</p>
-      <p>P.IVA: 06513140829</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://www.facebook.com/share/1BKxwNRBsj/?mibextid=wwXIfr" target="_blank"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/cd_studio.tecnico" target="_blank"><i class="bi bi-instagram"></i></a>
-        <a href="mailto:cdstudiotecnico@hotmail.com"><i class="bi bi-envelope"></i></a>
-        <a href="tel:+393289250353"><i class="bi bi-telephone"></i></a>
-      </div>
-      <p style="margin-top: 10px;">Designed by <strong>Ing. Dario Cucchiara</strong></p>
-    </div>
+  <footer>
+    © 2025 CD Studio Tecnico – Ing. Dario Cucchiara
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS -->
+  <!-- JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS -->
-  <script src="assets/js/main.js"></script>
-
+  <script>AOS.init();</script>
 </body>
 </html>
