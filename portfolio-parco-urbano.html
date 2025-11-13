@@ -54,9 +54,9 @@
     font-size: 1.05rem;
   }
 
-  /* ===============================
-     SLIDER (come portfolio details)
-  =============================== */
+  /* ==========================
+     SLIDER – formato 16:9
+  ========================== */
   .swiper {
     margin-top: 25px;
     border-radius: 14px;
@@ -69,20 +69,14 @@
     padding: 0;
   }
 
-  .swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
   .swiper-slide img {
     width: 100%;
-    aspect-ratio: 16 / 9;     /* ✅ mantiene 1280x720 */
+    aspect-ratio: 16 / 9;      /* ✅ mantiene il formato 1280x720 */
     height: auto;
-    object-fit: contain;      /* ✅ nessun ritaglio */
+    object-fit: contain;       /* ✅ mostra l’intera immagine */
     display: block;
     margin: 0 auto;
-    background-color: #f5f5f5;
+    background-color: #f5f5f5; /* ✅ sfondo neutro per eventuali bande */
     transition: transform 0.6s ease;
   }
 
@@ -124,8 +118,7 @@
     box-shadow: 0 0 6px rgba(53,108,108,0.6);
   }
 
-  .swiper-button-prev,
-  .swiper-button-next {
+  .swiper-button-prev, .swiper-button-next {
     color: #fff;
     background: rgba(53,108,108,0.75);
     width: 40px;
@@ -137,15 +130,14 @@
     transition: all 0.3s ease;
   }
 
-  .swiper-button-prev:hover,
-  .swiper-button-next:hover {
+  .swiper-button-prev:hover, .swiper-button-next:hover {
     background: rgba(53,108,108,1);
     transform: scale(1.08);
   }
 
-  /* ===============================
+  /* ==========================
      BOX INFORMATIVI
-  =============================== */
+  ========================== */
   .info-box, .description, .quote {
     background: #fff;
     border-radius: 12px;
