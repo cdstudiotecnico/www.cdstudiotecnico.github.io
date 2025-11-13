@@ -558,6 +558,16 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+    <script>
+  // Rende cliccabili tutte le icone dei servizi
+  document.querySelectorAll('.service-item .icon').forEach(icon => {
+    icon.style.cursor = 'pointer';
+    icon.addEventListener('click', () => {
+      window.location.href = 'preventivo.html';
+    });
+  });
+</script>
+
 </body>
 
 </html>
