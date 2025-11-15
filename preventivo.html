@@ -458,8 +458,13 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <form action="https://formspree.io/f/xjkpnylz" method="POST" class="php-email-form" novalidate>
 
-  <!-- Redirect automatico DOPO invio -->
+  <!-- Redirect automatico dopo invio -->
   <input type="hidden" name="_redirect" value="https://www.cdstudiotecnico.it/grazie.html">
+
+  <!-- Google Ads Conversion Event -->
+  <script>
+    gtag('event', 'conversion', {'send_to': 'AW-17708716400/BNN9CKmNrL0bEPCilvxB'});
+  </script>
 
   <div class="row gy-4">
 
@@ -510,15 +515,12 @@
       <textarea name="message" id="message-field" class="form-control" rows="10" required></textarea>
     </div>
 
+    <!-- Nessun messaggio duplicato → rimosso -->
     <div class="col-md-15 text-center">
-      <div class="loading" style="display:none;">Invio in corso...</div>
-      <div class="error-message" style="display:none; color:red;">Errore durante l'invio! Riprova più tardi.</div>
-      <div class="sent-message" style="display:none; color:green;">Messaggio inviato con successo!</div>
       <button type="submit" class="btn btn-primary px-4 py-2 mt-2">Invia</button>
     </div>
 
   </div>
-
 </form>
         
   </div>
@@ -572,9 +574,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector(".php-email-form");
   if (!form) return;
 
-  const loading = form.querySelector(".loading");
-  const errorMessage = form.querySelector(".error-message");
-
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
@@ -583,29 +582,15 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    loading.style.display = "block";
-    errorMessage.style.display = "none";
+    // Invio a Formspree (il redirect avverrà automaticamente)
+    fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: { Accept: "application/json" },
+    });
 
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: new FormData(form),
-        headers: { Accept: "application/json" },
-      });
-
-      if (response.ok) {
-        window.location.href = "https://www.cdstudiotecnico.it/grazie.html";
-      } else {
-        errorMessage.textContent = "Errore durante l'invio. Riprova.";
-        errorMessage.style.display = "block";
-      }
-
-    } catch (error) {
-      errorMessage.textContent = "Errore di connessione.";
-      errorMessage.style.display = "block";
-    }
-
-    loading.style.display = "none";
+    // Submit vero → TRIGGERA Formspree e redirect
+    form.submit();
   });
 });
 </script>
