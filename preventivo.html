@@ -589,10 +589,9 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
-    // ✅ Validazione HTML5 completa (campi vuoti o email errata)
     if (!form.checkValidity()) {
-      form.reportValidity(); // Mostra i messaggi standard del browser
-      return; // Ferma l’invio se non valido
+      form.reportValidity();
+      return;
     }
 
     loading.style.display = "block";
@@ -609,13 +608,13 @@ document.addEventListener("DOMContentLoaded", function () {
       loading.style.display = "none";
 
       if (response.ok) {
+        // mostra conferma
         sentMessage.style.display = "block";
-        form.reset();
 
-        // Nasconde il messaggio verde dopo 3 secondi
+        // REDIRECT AUTOMATICO ALLA PAGINA GRAZIE
         setTimeout(() => {
-          sentMessage.style.display = "none";
-        }, 3000);
+          window.location.href = "https://www.cdstudiotecnico.it/grazie.html";
+        }, 800); // 0.8 secondi
       } else {
         const data = await response.json();
         if (data.errors) {
@@ -624,21 +623,11 @@ document.addEventListener("DOMContentLoaded", function () {
           errorMessage.textContent = "Errore durante l'invio, riprova.";
         }
         errorMessage.style.display = "block";
-
-        // Nasconde il messaggio rosso dopo 3 secondi
-        setTimeout(() => {
-          errorMessage.style.display = "none";
-        }, 3000);
       }
     } catch (error) {
       loading.style.display = "none";
       errorMessage.textContent = "Errore di connessione, controlla la rete.";
       errorMessage.style.display = "block";
-
-      // Nasconde anche in caso di eccezione
-      setTimeout(() => {
-        errorMessage.style.display = "none";
-      }, 3000);
     }
   });
 });
