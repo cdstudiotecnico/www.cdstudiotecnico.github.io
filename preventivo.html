@@ -456,10 +456,8 @@
 
       <!-- Form di Contatto per Preventivo -->
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <form action="https://formspree.io/f/xjkpnylz" method="POST" class="php-email-form" novalidate>
-
-  <!-- Redirect automatico DOPO invio -->
- <input type="hidden" name="_next" value="https://www.cdstudiotecnico.it/grazie.html">
+        <form action="https://formspree.io/f/xjkpnylz" method="POST">
+  <input type="hidden" name="_next" value="https://www.cdstudiotecnico.it/grazie.html">
 
   <div class="row gy-4">
 
@@ -565,50 +563,6 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-<!-- ✅ Script universale per moduli con Formspree + validazione -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector(".php-email-form");
-  if (!form) return;
-
-  const loading = form.querySelector(".loading");
-  const errorMessage = form.querySelector(".error-message");
-
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault();
-
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
-    }
-
-    loading.style.display = "block";
-    errorMessage.style.display = "none";
-
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: new FormData(form),
-        headers: { Accept: "application/json" },
-      });
-
-      if (response.ok) {
-        window.location.href = "https://www.cdstudiotecnico.it/grazie.html";
-      } else {
-        errorMessage.textContent = "Errore durante l'invio. Riprova.";
-        errorMessage.style.display = "block";
-      }
-
-    } catch (error) {
-      errorMessage.textContent = "Errore di connessione.";
-      errorMessage.style.display = "block";
-    }
-
-    loading.style.display = "none";
-  });
-});
-</script>
 
   <!-- Main JS File -->
 <script src="assets/js/main.js"></script>
