@@ -1,3 +1,5 @@
+Questa è la pagina preventivo:
+
 <!DOCTYPE html>
 <html lang="it">
 
@@ -458,21 +460,29 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <form action="https://formspree.io/f/xjkpnylz" method="POST" class="php-email-form" novalidate>
 
-  <!-- Redirect corretto -->
+  <!-- Redirect automatico dopo invio -->
   <input type="hidden" name="_redirect" value="https://www.cdstudiotecnico.it/grazie.html">
+
+  <!-- Google Ads Conversion Event -->
+  <script>
+    gtag('event', 'conversion', {'send_to': 'AW-17708716400/BNN9CKmNrL0bEPCilvxB'});
+  </script>
 
   <div class="row gy-4">
 
+    <!-- Nome e Cognome -->
     <div class="col-md-15">
       <label for="name-field" class="pb-2">Nome e Cognome</label>
       <input type="text" name="name" id="name-field" class="form-control" required>
     </div>
 
+    <!-- Email -->
     <div class="col-md-15">
       <label for="email-field" class="pb-2">e-mail</label>
       <input type="email" name="email" id="email-field" class="form-control" required>
     </div>
 
+    <!-- Servizio Richiesto -->
     <div class="col-md-15">
       <label for="service-field" class="pb-2">Seleziona il Servizio Richiesto</label>
       <select name="service" id="service-field" class="form-control" required>
@@ -500,17 +510,23 @@
       </select>
     </div>
 
+    <!-- Oggetto -->
     <div class="col-md-15">
       <label for="subject-field" class="pb-2">Oggetto</label>
       <input type="text" name="subject" id="subject-field" class="form-control" required>
     </div>
 
+    <!-- Messaggio -->
     <div class="col-md-15">
       <label for="message-field" class="pb-2">Messaggio</label>
       <textarea name="message" id="message-field" class="form-control" rows="10" required></textarea>
     </div>
 
+    <!-- Messaggi e Pulsante -->
     <div class="col-md-15 text-center">
+      <div class="loading" style="display:none;">Invio in corso...</div>
+      <div class="error-message" style="display:none; color:red;">Errore durante l'invio! Riprova più tardi.</div>
+      <div class="sent-message" style="display:none; color:green;">Messaggio inviato con successo! Ti risponderemo al più presto.</div>
       <button type="submit" class="btn btn-primary px-4 py-2 mt-2">Invia</button>
     </div>
 
@@ -561,6 +577,74 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+<!-- ✅ Script universale per moduli con Formspree + validazione -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector(".php-email-form");
+  if (!form) return;
+
+  const loading = form.querySelector(".loading");
+  const errorMessage = form.querySelector(".error-message");
+  const sentMessage = form.querySelector(".sent-message");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    // ✅ Validazione HTML5 completa (campi vuoti o email errata)
+    if (!form.checkValidity()) {
+      form.reportValidity(); // Mostra i messaggi standard del browser
+      return; // Ferma l’invio se non valido
+    }
+
+    loading.style.display = "block";
+    errorMessage.style.display = "none";
+    sentMessage.style.display = "none";
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+
+      loading.style.display = "none";
+
+      if (response.ok) {
+        sentMessage.style.display = "block";
+        form.reset();
+
+        // Nasconde il messaggio verde dopo 3 secondi
+        setTimeout(() => {
+          sentMessage.style.display = "none";
+        }, 3000);
+      } else {
+        const data = await response.json();
+        if (data.errors) {
+          errorMessage.textContent = data.errors.map(e => e.message).join(", ");
+        } else {
+          errorMessage.textContent = "Errore durante l'invio, riprova.";
+        }
+        errorMessage.style.display = "block";
+
+        // Nasconde il messaggio rosso dopo 3 secondi
+        setTimeout(() => {
+          errorMessage.style.display = "none";
+        }, 3000);
+      }
+    } catch (error) {
+      loading.style.display = "none";
+      errorMessage.textContent = "Errore di connessione, controlla la rete.";
+      errorMessage.style.display = "block";
+
+      // Nasconde anche in caso di eccezione
+      setTimeout(() => {
+        errorMessage.style.display = "none";
+      }, 3000);
+    }
+  });
+});
+</script>
 
   <!-- Main JS File -->
 <script src="assets/js/main.js"></script>
