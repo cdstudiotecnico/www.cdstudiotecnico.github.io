@@ -708,6 +708,11 @@ document.addEventListener("DOMContentLoaded", function () {
         sentMessage.style.display = "block";
         form.reset();
 
+        setTimeout(() => {
+  sentMessage.style.display = "none";
+  window.location.href = "https://www.cdstudiotecnico.it/grazie.html";
+}, 3000);
+
         // Nasconde il messaggio verde dopo 3 secondi
         setTimeout(() => {
           sentMessage.style.display = "none";
