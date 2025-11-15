@@ -458,24 +458,32 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <form action="https://formspree.io/f/xjkpnylz" method="POST" class="php-email-form" novalidate>
 
-          <div class="row gy-4">
+  <!-- Redirect automatico dopo invio -->
+  <input type="hidden" name="_redirect" value="https://www.cdstudiotecnico.it/grazie.html">
 
-            <!-- Nome e Cognome -->
-            <div class="col-md-15">
-              <label for="name-field" class="pb-2">Nome e Cognome</label>
-              <input type="text" name="name" id="name-field" class="form-control" required>
-            </div>
+  <!-- Google Ads Conversion Event -->
+  <script>
+    gtag('event', 'conversion', {'send_to': 'AW-17708716400/BNN9CKmNrL0bEPCilvxB'});
+  </script>
 
-            <!-- Email -->
-            <div class="col-md-15">
-              <label for="email-field" class="pb-2">e-mail</label>
-              <input type="email" name="email" id="email-field" class="form-control" required>
-            </div>
+  <div class="row gy-4">
 
-            <!-- Servizio Richiesto -->
-            <div class="col-md-15">
-              <label for="service-field" class="pb-2">Seleziona il Servizio Richiesto</label>
-              <select name="service" id="service-field" class="form-control" required>
+    <!-- Nome e Cognome -->
+    <div class="col-md-15">
+      <label for="name-field" class="pb-2">Nome e Cognome</label>
+      <input type="text" name="name" id="name-field" class="form-control" required>
+    </div>
+
+    <!-- Email -->
+    <div class="col-md-15">
+      <label for="email-field" class="pb-2">e-mail</label>
+      <input type="email" name="email" id="email-field" class="form-control" required>
+    </div>
+
+    <!-- Servizio Richiesto -->
+    <div class="col-md-15">
+      <label for="service-field" class="pb-2">Seleziona il Servizio Richiesto</label>
+      <select name="service" id="service-field" class="form-control" required>
         <option value="">Seleziona</option>
         <option>Perizie Tecniche</option>
         <option>Perizie di Stima</option>
@@ -488,7 +496,7 @@
         <option>Sanatorie Urbanistiche</option>
         <option>Pratiche Autorizzazione Scarico</option>
         <option>Sicurezza Luoghi Lavoro (DVR,POS,PSC)</option>
-        <option>Rilievi Topografici</option>       
+        <option>Rilievi Topografici</option>
         <option>Ristrutturazioni</option>
         <option>Pratiche ENEA e Asseverazioni</option>
         <option>Pratiche Impianti Fotovoltaici</option>
@@ -497,32 +505,32 @@
         <option>Bonus Ristrutturazione/Risparmio Energetico</option>
         <option>Consulenza Tecnica</option>
         <option>Altri Servizi Tecnici</option>
-              </select>
-            </div>
+      </select>
+    </div>
 
-            <!-- Oggetto -->
-            <div class="col-md-15">
-              <label for="subject-field" class="pb-2">Oggetto</label>
-              <input type="text" name="subject" id="subject-field" class="form-control" required>
-            </div>
+    <!-- Oggetto -->
+    <div class="col-md-15">
+      <label for="subject-field" class="pb-2">Oggetto</label>
+      <input type="text" name="subject" id="subject-field" class="form-control" required>
+    </div>
 
-            <!-- Messaggio -->
-            <div class="col-md-15">
-              <label for="message-field" class="pb-2">Messaggio</label>
-              <textarea name="message" id="message-field" class="form-control" rows="10" required></textarea>
-            </div>
+    <!-- Messaggio -->
+    <div class="col-md-15">
+      <label for="message-field" class="pb-2">Messaggio</label>
+      <textarea name="message" id="message-field" class="form-control" rows="10" required></textarea>
+    </div>
 
-            <!-- Messaggi e Pulsante -->
-            <div class="col-md-15 text-center">
-              <div class="loading" style="display:none;">Invio in corso...</div>
-              <div class="error-message" style="display:none; color:red;">Errore durante l'invio! Riprova più tardi.</div>
-              <div class="sent-message" style="display:none; color:green;">Messaggio inviato con successo! Ti risponderemo al più presto.</div>
-              <button type="submit" class="btn btn-primary px-4 py-2 mt-2">Invia</button>
-            </div>
+    <!-- Messaggi e Pulsante -->
+    <div class="col-md-15 text-center">
+      <div class="loading" style="display:none;">Invio in corso...</div>
+      <div class="error-message" style="display:none; color:red;">Errore durante l'invio! Riprova più tardi.</div>
+      <div class="sent-message" style="display:none; color:green;">Messaggio inviato con successo! Ti risponderemo al più presto.</div>
+      <button type="submit" class="btn btn-primary px-4 py-2 mt-2">Invia</button>
+    </div>
 
-          </div>
-        </form>
-
+  </div>
+</form>
+        
   </div>
 </section>
       
