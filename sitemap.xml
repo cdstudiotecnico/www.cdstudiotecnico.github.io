@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
+
   <!-- Homepage -->
   <url>
     <loc>https://www.cdstudiotecnico.it/index.html</loc>
     <priority>1.0</priority>
   </url>
 
-  <!-- Altre pagine del sito -->
+  <!-- Pagine istituzionali -->
   <url>
     <loc>https://www.cdstudiotecnico.it/about.html</loc>
     <priority>0.8</priority>
-  </url>
-    <url>
-    <loc>https://www.cdstudiotecnico.it/resume.html</loc>
-      <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.cdstudiotecnico.it/services.html</loc>
@@ -24,17 +20,47 @@
     <loc>https://www.cdstudiotecnico.it/preventivo.html</loc>
     <priority>0.8</priority>
   </url>
-    <url>
+  <url>
     <loc>https://www.cdstudiotecnico.it/portfolio.html</loc>
-      <priority>0.7</priority>
+    <priority>0.7</priority>
   </url>
-    <url>
-    <loc>https://www.cdstudiotecnico.it/portfolio-details.html</loc>
-      <priority>0.7</priority>
+  <url>
+    <loc>https://www.cdstudiotecnico.it/resume.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.cdstudiotecnico.it/privacy.html</loc>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.cdstudiotecnico.it/contact.html</loc>
     <priority>0.8</priority>
   </url>
-  
+
+  <!-- Schede Portfolio -->
+  <url>
+    <loc>https://www.cdstudiotecnico.it/portfolio-studio-idraulico.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.cdstudiotecnico.it/portfolio-muro-confine-trappeto.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.cdstudiotecnico.it/portfolio-rimozione-amianto-tetto.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.cdstudiotecnico.it/portfolio-parco-urbano.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.cdstudiotecnico.it/portfolio-imhoff.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.cdstudiotecnico.it/portfolio-rotatoria.html</loc>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
