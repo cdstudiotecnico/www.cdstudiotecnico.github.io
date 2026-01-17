@@ -382,6 +382,17 @@
         <img src="assets/img/logo.png" alt="Logo CD Studio Tecnico">
         <h2 style="font-weight: 700; color: #356c6c;">Pagamenti</h2>
 
+        /* Linea sotto il titolo "Pagamenti" come nelle altre pagine */
+#pagamenti h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  margin: 12px auto 0;
+  background: #356c6c;
+  border-radius: 2px;
+}
+        
         <p class="hero-desc">
           Inserisci <strong>esclusivamente l’importo indicato nel preventivo ufficiale</strong>.
           Il sistema calcola automaticamente il <strong>lordo a pagare</strong> applicando:
