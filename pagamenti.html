@@ -2,23 +2,16 @@
 <html lang="it">
 
 <head>
-
-  <!-- Verifica Google Search Console -->
   <meta name="google-site-verification" content="5-kam6aK3nMX8pb5dczefcCj29VOOaRr7Fop8z9jWI8" />
-
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <!-- Titolo e Descrizione -->
   <title>Pagamenti | CD Studio Tecnico – Ing. Dario Cucchiara</title>
-  <meta name="description" content="Effettua il pagamento in modo semplice e sicuro: bonifico bancario, bonifico postale oppure richiesta link Klarna tramite WhatsApp. Causale guidata, copia rapida e invio ricevuta.">
+  <meta name="description" content="Pagamenti semplici e guidati: bonifico bancario, bonifico postale oppure Klarna (3 rate). Causale automatica, copia rapida e invio ricevuta.">
   <meta name="author" content="Ing. Dario Cucchiara">
   <meta name="robots" content="index, follow">
   <meta name="keywords" content="pagamenti, bonifico bancario, bonifico postale, klarna, pagamento rateale, ingegnere, cd studio tecnico, ing dario cucchiara">
-  <meta name="rating" content="general">
-  <meta name="revisit-after" content="7 days">
 
-  <!-- Canonical URL -->
   <link rel="canonical" href="https://www.cdstudiotecnico.it/pagamenti.html">
 
   <!-- Google tag (gtag.js) -->
@@ -30,65 +23,23 @@
     gtag('config', 'AW-17708716400');
   </script>
 
-  <!-- Favicons ufficiali -->
+  <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
   <link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png">
   <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png">
 
-  <!-- Social sharing (OpenGraph / Twitter) -->
-  <meta property="og:image" content="https://www.cdstudiotecnico.it/assets/img/favicon-512.png">
-  <meta name="twitter:image" content="https://www.cdstudiotecnico.it/assets/img/favicon-512.png">
-
-  <!-- Open Graph -->
+  <!-- OpenGraph -->
   <meta property="og:title" content="Pagamenti | CD Studio Tecnico – Ing. Dario Cucchiara">
-  <meta property="og:description" content="Bonifico bancario, bonifico postale o Klarna via WhatsApp: scegli la modalità più comoda e completa i dati in 30 secondi.">
+  <meta property="og:description" content="Bonifico bancario, bonifico postale o Klarna: completa il pagamento con causale guidata e invio ricevuta.">
   <meta property="og:image" content="https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg">
   <meta property="og:url" content="https://www.cdstudiotecnico.it/pagamenti.html">
   <meta property="og:site_name" content="CD Studio Tecnico">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="it_IT">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ing. Dario Cucchiara - CD Studio Tecnico">
-  <meta name="twitter:description" content="Ingegneria civile, edile e ambientale. Servizi tecnici e pratiche online in tutta Italia.">
-  <meta name="twitter:image" content="https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg">
-
-  <!-- ✅ JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": ["ProfessionalService", "LocalBusiness"],
-    "name": "CD Studio Tecnico – Ing. Dario Cucchiara",
-    "image": "https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg",
-    "logo": "https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg",
-    "url": "https://www.cdstudiotecnico.it/",
-    "telephone": "+393289250353",
-    "email": "cdstudiotecnico@hotmail.com",
-    "priceRange": "€€",
-    "paymentAccepted": ["Bonifico", "Klarna"],
-    "address": [
-      {
-        "@type": "PostalAddress",
-        "name": "Sede Operativa",
-        "streetAddress": "Via J.F. Kennedy n. 42",
-        "addressLocality": "Partinico",
-        "addressRegion": "PA",
-        "postalCode": "90047",
-        "addressCountry": "IT"
-      }
-    ]
-  }
-  </script>
-
-  <!-- Meta geolocalizzazione -->
-  <meta name="geo.region" content="IT-PA">
-  <meta name="geo.placename" content="Partinico, Palermo">
-  <meta name="geo.position" content="38.0426;13.1182">
-
-  <!-- Fonts e CSS -->
+  <!-- Fonts + CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -101,697 +52,536 @@
     #pagamenti { background: #f8faf9; padding: 60px 0 80px 0; }
     #pagamenti .container { display: flex; justify-content: center; align-items: flex-start; padding: 0 20px; }
 
-    .pay-box {
-      background: #ffffff;
-      border-radius: 18px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-      padding: 45px 55px;
-      width: 100%;
-      max-width: 980px;
-      margin: 0 auto;
-      transition: all 0.3s ease;
+    .pay-box{
+      background:#fff;border-radius:18px;box-shadow:0 8px 25px rgba(0,0,0,.08);
+      padding:45px 55px;width:100%;max-width:1020px;margin:0 auto;transition:.3s;
     }
-    .pay-box:hover { box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12); transform: translateY(-2px); }
+    .pay-box:hover{box-shadow:0 12px 35px rgba(0,0,0,.12);transform:translateY(-2px);}
 
-    .hero-title { font-weight: 800; color: #356c6c; margin-bottom: 10px; }
-    .hero-sub { color: #555; margin-bottom: 22px; }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 18px;
-      align-items: start;
+    .grid{display:grid;grid-template-columns:1.12fr .88fr;gap:18px;align-items:start;}
+    .panel{border:1px solid #e8efee;border-radius:16px;padding:18px;background:#fff;}
+    .panel h3{
+      font-family:'Poppins',sans-serif;font-weight:800;color:#356c6c;font-size:1.06rem;
+      margin-bottom:14px;display:flex;align-items:center;gap:10px;
     }
 
-    .panel {
-      border: 1px solid #e8efee;
-      border-radius: 16px;
-      padding: 18px;
-      background: #fff;
+    .policy{
+      background:linear-gradient(135deg, rgba(53,108,108,.08), rgba(255,255,255,1));
+      border:1px solid #d7e8e7;border-radius:16px;padding:14px 16px;color:#2b2b2b;
+      margin-bottom:14px;
+    }
+    .policy strong{color:#356c6c;}
+    .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
+    .badge-soft{
+      display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;
+      font-weight:800;font-size:.85rem;background:#eef7f7;color:#356c6c;border:1px solid #d7e8e7;
     }
 
-    .panel h3 {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 800;
-      color: #356c6c;
-      font-size: 1.06rem;
-      margin-bottom: 14px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    .field label{font-weight:800;color:#356c6c;margin-bottom:6px;display:block;}
+    .field input,.field select{
+      width:100%;border:1.3px solid #ccc;border-radius:10px;padding:11px 13px;font-size:1rem;
+      background:#fdfdfd;transition:.3s;box-sizing:border-box;
+    }
+    .field input:focus,.field select:focus{border-color:#356c6c;box-shadow:0 0 0 3px rgba(53,108,108,.1);outline:none;}
+    .hint{color:#666;font-size:.92rem;margin-top:6px;}
+
+    .kpi-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px;}
+    .kpi{
+      border:1px solid #e8efee;border-radius:14px;padding:12px;background:#fff;
+    }
+    .kpi .t{font-weight:900;color:#356c6c;font-size:.86rem;display:flex;align-items:center;gap:8px;}
+    .kpi .v{font-weight:900;color:#222;font-size:1.05rem;margin-top:6px;}
+    .kpi .s{color:#666;font-size:.88rem;margin-top:4px;}
+
+    .method-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px;}
+    .tab-btn{
+      border:1.8px solid #356c6c;color:#356c6c;background:#fff;font-weight:900;
+      padding:10px 14px;border-radius:999px;transition:.25s;display:inline-flex;align-items:center;gap:8px;
+      cursor:pointer;user-select:none;
+    }
+    .tab-btn.active,.tab-btn:hover{background:#356c6c;color:#fff;transform:translateY(-1px);}
+
+    .pay-card{border:1px solid #e8efee;border-radius:16px;padding:16px;background:#fff;margin-top:12px;}
+    .rowline{margin:6px 0;color:#333;font-size:.98rem;}
+    .rowline strong{color:#356c6c;}
+
+    .mono{
+      font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+      background:#f4f7f7;border:1px dashed #cfe0df;padding:10px 12px;border-radius:10px;display:inline-block;
+      word-break:break-all;
     }
 
-    .field label {
-      font-weight: 700;
-      color: #356c6c;
-      margin-bottom: 6px;
-      display: block;
+    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;}
+    .btn-pay{
+      background:#356c6c;color:#fff;font-weight:900;padding:10px 16px;border:none;border-radius:12px;
+      transition:.25s;box-shadow:0 4px 10px rgba(53,108,108,.22);text-decoration:none;display:inline-flex;
+      align-items:center;gap:8px;cursor:pointer;
+    }
+    .btn-pay:hover{background:#2d5858;transform:translateY(-1px);color:#fff;}
+    .btn-outline{
+      border:1.8px solid #356c6c;color:#356c6c;background:#fff;font-weight:900;padding:10px 16px;border-radius:12px;
+      transition:.25s;text-decoration:none;display:inline-flex;align-items:center;gap:8px;cursor:pointer;
+    }
+    .btn-outline:hover{background:#356c6c;color:#fff;transform:translateY(-1px);}
+
+    .note{
+      background:#f7fbfb;border:1px solid #d7e8e7;border-radius:16px;padding:14px 16px;color:#444;
+      font-size:.95rem;margin-top:14px;
+    }
+    .note strong{color:#356c6c;}
+
+    details{border:1px solid #e8efee;border-radius:14px;padding:12px 14px;background:#fff;margin-top:10px;}
+    summary{cursor:pointer;font-weight:900;color:#356c6c;}
+
+    .toastx{
+      position:fixed;right:16px;bottom:16px;z-index:2000;background:rgba(53,108,108,.96);color:#fff;
+      padding:12px 14px;border-radius:12px;box-shadow:0 10px 26px rgba(0,0,0,.18);display:none;
+      max-width:340px;font-weight:900;
     }
 
-    .field input, .field select {
-      width: 100%;
-      border: 1.3px solid #ccc;
-      border-radius: 10px;
-      padding: 11px 13px;
-      font-size: 1rem;
-      background-color: #fdfdfd;
-      transition: all 0.3s ease;
-      box-sizing: border-box;
-    }
-
-    .field input:focus, .field select:focus {
-      border-color: #356c6c;
-      box-shadow: 0 0 0 3px rgba(53, 108, 108, 0.1);
-      outline: none;
-    }
-
-    .hint { color: #666; font-size: 0.92rem; margin-top: 6px; }
-
-    .method-tabs {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 10px;
-    }
-
-    .tab-btn {
-      border: 1.8px solid #356c6c;
-      color: #356c6c;
-      background: #fff;
-      font-weight: 800;
-      padding: 10px 14px;
-      border-radius: 999px;
-      transition: all 0.25s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      cursor: pointer;
-      user-select: none;
-    }
-
-    .tab-btn.active, .tab-btn:hover {
-      background: #356c6c;
-      color: #fff;
-      transform: translateY(-1px);
-    }
-
-    .pay-card {
-      border: 1px solid #e8efee;
-      border-radius: 16px;
-      padding: 16px;
-      background: #fff;
-      margin-top: 12px;
-    }
-
-    .rowline { margin: 6px 0; color: #333; font-size: 0.98rem; }
-    .rowline strong { color: #356c6c; }
-
-    .iban {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
-      background: #f4f7f7;
-      border: 1px dashed #cfe0df;
-      padding: 10px 12px;
-      border-radius: 10px;
-      display: inline-block;
-      word-break: break-all;
-    }
-
-    .actions {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 12px;
-    }
-
-    .btn-pay {
-      background: #356c6c;
-      color: #fff;
-      font-weight: 800;
-      padding: 10px 16px;
-      border: none;
-      border-radius: 12px;
-      transition: all 0.25s ease;
-      box-shadow: 0 4px 10px rgba(53,108,108,0.22);
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      cursor: pointer;
-    }
-    .btn-pay:hover { background: #2d5858; transform: translateY(-1px); color: #fff; }
-
-    .btn-outline {
-      border: 1.8px solid #356c6c;
-      color: #356c6c;
-      background: #fff;
-      font-weight: 800;
-      padding: 10px 16px;
-      border-radius: 12px;
-      transition: all 0.25s ease;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      cursor: pointer;
-    }
-    .btn-outline:hover { background: #356c6c; color: #fff; transform: translateY(-1px); }
-
-    .note {
-      background: #f7fbfb;
-      border: 1px solid #d7e8e7;
-      border-radius: 16px;
-      padding: 14px 16px;
-      color: #444;
-      font-size: 0.95rem;
-      margin-top: 14px;
-    }
-
-    .badge-soft {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      font-weight: 800;
-      font-size: 0.85rem;
-      background: #eef7f7;
-      color: #356c6c;
-      border: 1px solid #d7e8e7;
-    }
-
-    /* Toast */
-    .toastx {
-      position: fixed;
-      right: 16px;
-      bottom: 16px;
-      z-index: 2000;
-      background: rgba(53,108,108,0.96);
-      color: #fff;
-      padding: 12px 14px;
-      border-radius: 12px;
-      box-shadow: 0 10px 26px rgba(0,0,0,0.18);
-      display: none;
-      max-width: 320px;
-      font-weight: 700;
-    }
-
-    /* QR */
-    .qr-wrap {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      margin-top: 10px;
-    }
-    .qr-box {
-      border: 1px solid #e8efee;
-      border-radius: 16px;
-      padding: 14px;
-      background: #fff;
-    }
-    .qr-box canvas {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      max-width: 280px;
-    }
-    .qr-title { font-weight: 800; color: #356c6c; margin-bottom: 6px; }
-
-    /* FAQ */
-    details {
-      border: 1px solid #e8efee;
-      border-radius: 14px;
-      padding: 12px 14px;
-      background: #fff;
-      margin-top: 10px;
-    }
-    summary { cursor: pointer; font-weight: 800; color: #356c6c; }
-
-    @media (max-width: 991px) {
-      .pay-box { padding: 40px 35px; max-width: 94%; }
-      .grid { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 575px) {
-      .pay-box { padding: 28px 22px; border-radius: 15px; max-width: 95%; }
-    }
+    @media (max-width: 991px){ .pay-box{padding:40px 35px;max-width:94%;} .grid{grid-template-columns:1fr;} }
+    @media (max-width: 575px){ .pay-box{padding:28px 22px;border-radius:15px;max-width:95%;} .kpi-row{grid-template-columns:1fr;} }
   </style>
 
 </head>
 
 <body class="contact-page">
 
-  <header id="header" class="header d-flex align-items-center light-background sticky-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0 text-decoration-none">
-        <div class="d-flex flex-column">
-          <h1 class="sitename mb-0">Ing. Dario Cucchiara</h1>
-          <span class="subtitle">Ingegneria Civile, Edile & Ambientale</span>
-        </div>
-      </a>
+<header id="header" class="header d-flex align-items-center light-background sticky-top">
+  <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0 text-decoration-none">
+      <div class="d-flex flex-column">
+        <h1 class="sitename mb-0">Ing. Dario Cucchiara</h1>
+        <span class="subtitle">Ingegneria Civile, Edile & Ambientale</span>
+      </div>
+    </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Curriculum</a></li>
-          <li><a href="services.html">Servizi</a></li>
-          <li><a href="preventivo.html">Richiedi Preventivo</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="pagamenti.html" class="active">Pagamenti</a></li>
-          <li><a href="contact.html">Contatti</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Curriculum</a></li>
+        <li><a href="services.html">Servizi</a></li>
+        <li><a href="preventivo.html">Richiedi Preventivo</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="pagamenti.html" class="active">Pagamenti</a></li>
+        <li><a href="contact.html">Contatti</a></li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
 
-      <div class="header-social-links">
-        <a href="mailto:cdstudiotecnico@hotmail.com" class="email"><i class="bi bi-envelope"></i></a>
-        <a href="tel:+393289250353" class="phone"><i class="bi bi-telephone"></i></a>
+    <div class="header-social-links">
+      <a href="mailto:cdstudiotecnico@hotmail.com" class="email"><i class="bi bi-envelope"></i></a>
+      <a href="tel:+393289250353" class="phone"><i class="bi bi-telephone"></i></a>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+  <h1 style="display:none;">Pagamenti – CD Studio Tecnico – Ing. Dario Cucchiara</h1>
+
+  <section id="pagamenti" class="contact section">
+
+    <div class="section-title" data-aos="fade-up" style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
+      <img src="assets/img/logo.png" alt="Logo CD Studio Tecnico"
+        class="img-fluid"
+        style="max-width: 200px; margin-top: 5px; margin-bottom: 5px; filter: drop-shadow(0 3px 8px rgba(0,0,0,0.2));">
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="font-weight: 900; color: #356c6c;">Pagamenti</h2>
+      </div>
+      <div class="text-center" style="margin-bottom: 26px;">
+        <p style="max-width: 900px; margin: 0 auto;">
+          Pagamenti <strong>guidati</strong> e <strong>senza errori</strong>: causale pronta, dati copiabili, invio ricevuta e richiesta link Klarna in un click.
+        </p>
+        <br>
+        <a href="privacy.html" target="_blank" style="color: #356c6c; font-weight: 700; text-decoration: none;">Privacy Policy</a>
       </div>
     </div>
-  </header>
 
-  <main class="main">
-    <h1 style="display:none;">Pagamenti – CD Studio Tecnico – Ing. Dario Cucchiara</h1>
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="pay-box">
 
-    <section id="pagamenti" class="contact section">
-
-      <div class="section-title" data-aos="fade-up" style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
-        <img src="assets/img/logo.png" alt="Logo CD Studio Tecnico"
-          class="img-fluid"
-          style="max-width: 200px; margin-top: 5px; margin-bottom: 5px; filter: drop-shadow(0 3px 8px rgba(0,0,0,0.2));">
-        <div class="container section-title" data-aos="fade-up">
-          <h2 style="font-weight: 800; color: #356c6c;">Pagamenti</h2>
+        <div class="policy">
+          <strong>Avvio lavorazione:</strong> le pratiche vengono avviate <strong>esclusivamente dopo la ricezione del compenso dovuto</strong>.
+          Per accelerare i tempi, si consiglia <strong>bonifico istantaneo (se disponibile)</strong> oppure invio immediato della <strong>contabile/ricevuta</strong>.
+          <div class="badges">
+            <span class="badge-soft"><i class="bi bi-lightning-charge"></i> Bonifico istantaneo consigliato</span>
+            <span class="badge-soft"><i class="bi bi-clipboard-check"></i> Causale guidata</span>
+            <span class="badge-soft"><i class="bi bi-shield-check"></i> Canali tracciabili</span>
+          </div>
         </div>
-        <div class="text-center" style="margin-bottom: 26px;">
-          <p style="max-width: 840px; margin: 0 auto;">
-            Completa il pagamento in modo rapido e sicuro. La pagina ti guida nella <strong>causale</strong> e ti permette di <strong>copiare IBAN</strong> e
-            <strong>richiedere il link Klarna</strong> con un messaggio già pronto.
-          </p>
-          <br>
-          <a href="privacy.html" target="_blank" style="color: #356c6c; font-weight: 600; text-decoration: none;">Privacy Policy</a>
-        </div>
-      </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="pay-box">
+        <div class="grid">
 
-          <div class="grid">
+          <!-- PANNELLO SINISTRO -->
+          <div class="panel">
+            <h3><i class="bi bi-ui-checks"></i> Dati essenziali</h3>
 
-            <!-- PANEL: Dati pagamento guidati -->
-            <div class="panel">
-              <h3><i class="bi bi-ui-checks"></i> Dati pagamento (compila in 30 secondi)</h3>
-
-              <div class="field" style="margin-bottom: 12px;">
-                <label for="servizio">Tipo di servizio</label>
-                <select id="servizio">
-                  <option value="">Seleziona</option>
-                  <option>Perizia di conformità urbanistico-catastale</option>
-                  <option>APE – Attestato di Prestazione Energetica</option>
-                  <option>Perizia di stima immobiliare</option>
-                  <option>CTP – Consulenza Tecnica di Parte</option>
-                  <option>Pratiche urbanistiche/catastali</option>
-                  <option>Studi idraulici / scarichi / reflui</option>
-                  <option>Altro servizio tecnico</option>
-                </select>
-              </div>
-
-              <div class="field" style="margin-bottom: 12px;">
-                <label for="importo">Importo (EUR)</label>
-                <input id="importo" inputmode="decimal" placeholder="Es. 230,00">
-                <div class="hint">Suggerimento: usa la cifra del preventivo. Se paghi con Klarna, la maggiorazione è del 6%.</div>
-              </div>
-
-              <div class="field" style="margin-bottom: 12px;">
-                <label for="rif">Riferimento (facoltativo)</label>
-                <input id="rif" placeholder="Es. Preventivo n. 12/2026 oppure indirizzo immobile">
-              </div>
-
-              <div class="field" style="margin-bottom: 6px;">
-                <label for="email">Email (per invio ricevuta o link Klarna)</label>
-                <input id="email" type="email" placeholder="Es. nome@dominio.it">
-              </div>
-
-              <div class="note" style="margin-top: 14px;">
-                <div class="badge-soft"><i class="bi bi-info-circle"></i> Causale consigliata</div>
-                <div style="margin-top: 10px;">
-                  <span class="iban" id="causale">
-                    Servizio: [Selezionare] | Riferimento: [Facoltativo]
-                  </span>
-                </div>
-                <div class="actions" style="margin-top: 10px;">
-                  <button class="btn-outline" type="button" onclick="copyId('causale')">
-                    <i class="bi bi-clipboard"></i> Copia causale
-                  </button>
-                </div>
-              </div>
-
-              <div class="note">
-                <strong>Dopo il pagamento:</strong> invia la ricevuta via email oppure avvisa su WhatsApp in caso di urgenza.
-              </div>
-
-              <details>
-                <summary>FAQ rapide</summary>
-                <div style="margin-top:10px; color:#444;">
-                  <p class="rowline"><strong>Quanto tempo impiega un bonifico?</strong> In genere 1–2 giorni lavorativi (dipende dalla banca).</p>
-                  <p class="rowline"><strong>Posso pagare senza inserire importo?</strong> Sì, ma è consigliato indicarlo per velocizzare la gestione.</p>
-                  <p class="rowline"><strong>Klarna:</strong> il link viene generato su richiesta via WhatsApp con i dati essenziali.</p>
-                </div>
-              </details>
+            <div class="field" style="margin-bottom: 12px;">
+              <label for="servizio">Tipo di servizio</label>
+              <select id="servizio">
+                <option value="">Seleziona</option>
+                <option data-min="230">Perizia di conformità urbanistico-catastale (min. € 230)</option>
+                <option data-min="120">APE – Attestato di Prestazione Energetica (min. € 120)</option>
+                <option data-min="250">Perizia di stima immobiliare (min. € 250)</option>
+                <option data-min="200">CTP – Consulenza Tecnica di Parte (min. € 200)</option>
+                <option data-min="180">Pratiche urbanistiche/catastali (min. € 180)</option>
+                <option data-min="300">Studi idraulici / scarichi / reflui (min. € 300)</option>
+                <option data-min="150">Altro servizio tecnico (min. € 150)</option>
+              </select>
+              <div class="hint">Importi minimi indicativi di gestione. L’importo definitivo è quello del preventivo/accordo.</div>
             </div>
 
-            <!-- PANEL: Modalità -->
-            <div class="panel">
-              <h3><i class="bi bi-wallet2"></i> Scegli la modalità</h3>
+            <div class="field" style="margin-bottom: 12px;">
+              <label for="importo">Importo (EUR)</label>
+              <input id="importo" inputmode="decimal" placeholder="Es. 230,00">
+              <div class="hint">Inserisci l’importo del preventivo. Se richiedi Klarna, il totale sarà calcolato con +6%.</div>
+            </div>
 
-              <div class="method-tabs">
-                <div class="tab-btn active" data-tab="banca" onclick="showTab('banca')"><i class="bi bi-bank"></i> Bancario</div>
-                <div class="tab-btn" data-tab="postale" onclick="showTab('postale')"><i class="bi bi-postcard"></i> Postale</div>
-                <div class="tab-btn" data-tab="klarna" onclick="showTab('klarna')"><i class="bi bi-credit-card-2-front"></i> Klarna</div>
+            <div class="field" style="margin-bottom: 12px;">
+              <label for="rif">Riferimento (facoltativo)</label>
+              <input id="rif" placeholder="Es. Preventivo n. 12/2026 oppure indirizzo immobile">
+            </div>
+
+            <div class="field" style="margin-bottom: 6px;">
+              <label for="email">Email (consigliata)</label>
+              <input id="email" type="email" placeholder="Es. nome@dominio.it">
+            </div>
+
+            <div class="kpi-row">
+              <div class="kpi">
+                <div class="t"><i class="bi bi-check2-circle"></i> Stato compilazione</div>
+                <div class="v" id="stato">Incompleto</div>
+                <div class="s" id="stato-sub">Seleziona servizio e inserisci importo.</div>
               </div>
-
-              <!-- Bonifico Bancario -->
-              <div class="pay-card" id="tab-banca">
-                <div class="rowline"><strong>Intestatario:</strong> Ing. Dario Cucchiara</div>
-                <div class="rowline"><strong>Banca:</strong> Banca Don Rizzo</div>
-                <div class="rowline"><strong>IBAN:</strong> <span class="iban" id="iban-banca">IT32F0894643460000000502217</span></div>
-
-                <div class="actions">
-                  <button class="btn-outline" type="button" onclick="copyId('iban-banca')"><i class="bi bi-clipboard"></i> Copia IBAN</button>
-                  <button class="btn-outline" type="button" onclick="makeQR('banca')"><i class="bi bi-qr-code-scan"></i> Genera QR</button>
-                </div>
-
-                <div class="qr-wrap" id="qr-banca" style="display:none;">
-                  <div class="qr-box">
-                    <div class="qr-title">QR bonifico (scansiona con app banca)</div>
-                    <canvas id="qr-banca-canvas" width="320" height="320"></canvas>
-                    <div class="hint">Se la tua app non supporta QR SEPA, usa “Copia IBAN” e “Copia causale”.</div>
-                  </div>
-                </div>
-
-                <div class="actions" style="margin-top: 14px;">
-                  <a class="btn-pay" id="mail-ricevuta-banca" href="#" target="_blank" rel="noopener">
-                    <i class="bi bi-envelope"></i> Invia ricevuta
-                  </a>
-                </div>
+              <div class="kpi">
+                <div class="t"><i class="bi bi-credit-card-2-front"></i> Totale Klarna (+6%)</div>
+                <div class="v" id="klarna-tot">—</div>
+                <div class="s">Valido solo se scegli pagamento rateale.</div>
               </div>
+            </div>
 
-              <!-- Bonifico Postale -->
-              <div class="pay-card" id="tab-postale" style="display:none;">
-                <div class="rowline"><strong>Intestatario:</strong> Ing. Dario Cucchiara</div>
-                <div class="rowline"><strong>IBAN:</strong> <span class="iban" id="iban-postale">IT90U3608105138266873866892</span></div>
-
-                <div class="actions">
-                  <button class="btn-outline" type="button" onclick="copyId('iban-postale')"><i class="bi bi-clipboard"></i> Copia IBAN</button>
-                  <button class="btn-outline" type="button" onclick="makeQR('postale')"><i class="bi bi-qr-code-scan"></i> Genera QR</button>
-                </div>
-
-                <div class="qr-wrap" id="qr-postale" style="display:none;">
-                  <div class="qr-box">
-                    <div class="qr-title">QR bonifico (scansiona con app banca)</div>
-                    <canvas id="qr-postale-canvas" width="320" height="320"></canvas>
-                    <div class="hint">Se la tua app non supporta QR SEPA, usa “Copia IBAN” e “Copia causale”.</div>
-                  </div>
-                </div>
-
-                <div class="actions" style="margin-top: 14px;">
-                  <a class="btn-pay" id="mail-ricevuta-postale" href="#" target="_blank" rel="noopener">
-                    <i class="bi bi-envelope"></i> Invia ricevuta
-                  </a>
-                </div>
+            <div class="note" style="margin-top: 14px;">
+              <div class="badge-soft"><i class="bi bi-info-circle"></i> Causale consigliata</div>
+              <div style="margin-top: 10px;">
+                <span class="mono" id="causale">Servizio: —</span>
               </div>
+              <div class="actions" style="margin-top: 10px;">
+                <button class="btn-outline" type="button" onclick="copyId('causale')">
+                  <i class="bi bi-clipboard"></i> Copia causale
+                </button>
+              </div>
+            </div>
 
-              <!-- Klarna -->
-              <div class="pay-card" id="tab-klarna" style="display:none;">
-                <div class="rowline">
-                  Pagamento in <strong>3 rate con Klarna</strong>: richiedi il link via WhatsApp.
-                </div>
-                <div class="rowline">
-                  <span class="badge-soft"><i class="bi bi-shield-check"></i> Maggiorazione 6% sull’importo totale</span>
-                </div>
+            <details>
+              <summary>FAQ rapide</summary>
+              <div style="margin-top:10px; color:#444;">
+                <p class="rowline"><strong>Quando parte la lavorazione?</strong> Dopo la ricezione del compenso (o dopo invio contabile in caso di urgenza).</p>
+                <p class="rowline"><strong>Bonifico istantaneo:</strong> dipende dalla tua banca. Se disponibile, è la scelta migliore.</p>
+                <p class="rowline"><strong>Klarna:</strong> link generato su richiesta via WhatsApp (3 rate, +6%).</p>
+              </div>
+            </details>
 
-                <div class="actions" style="margin-top: 14px;">
-                  <a class="btn-pay" id="btn-klarna-wa" href="#" target="_blank" rel="noopener">
-                    <i class="bi bi-whatsapp"></i> Richiedi link Klarna su WhatsApp
-                  </a>
-                  <a class="btn-outline" href="contact.html">
-                    <i class="bi bi-chat-dots"></i> Preferisco scrivere dal sito
-                  </a>
-                </div>
+          </div>
 
-                <div class="note">
-                  <strong>Per velocizzare:</strong> nel messaggio indica <strong>servizio</strong>, <strong>importo</strong> ed <strong>email</strong>.
-                  Il testo viene compilato automaticamente in base ai campi inseriti.
-                </div>
+          <!-- PANNELLO DESTRO -->
+          <div class="panel">
+            <h3><i class="bi bi-wallet2"></i> Modalità di pagamento</h3>
+
+            <div class="method-tabs">
+              <div class="tab-btn active" data-tab="banca" onclick="showTab('banca')"><i class="bi bi-bank"></i> Bancario</div>
+              <div class="tab-btn" data-tab="postale" onclick="showTab('postale')"><i class="bi bi-postcard"></i> Postale</div>
+              <div class="tab-btn" data-tab="klarna" onclick="showTab('klarna')"><i class="bi bi-credit-card-2-front"></i> Klarna</div>
+            </div>
+
+            <!-- Bancario -->
+            <div class="pay-card" id="tab-banca">
+              <div class="rowline"><strong>Intestatario:</strong> Ing. Dario Cucchiara</div>
+              <div class="rowline"><strong>Banca:</strong> Banca Don Rizzo</div>
+              <div class="rowline"><strong>IBAN:</strong> <span class="mono" id="iban-banca">IT32F0894643460000000502217</span></div>
+
+              <div class="actions">
+                <button class="btn-outline" type="button" onclick="copyId('iban-banca')"><i class="bi bi-clipboard"></i> Copia IBAN</button>
+                <a class="btn-pay" id="mail-ricevuta-banca" href="#" target="_blank" rel="noopener">
+                  <i class="bi bi-envelope"></i> Invia ricevuta
+                </a>
               </div>
 
               <div class="note">
-                <strong>Assistenza:</strong> <a href="tel:+393289250353" style="color:#356c6c; font-weight:800; text-decoration:none;">+39 328 925 0353</a> –
-                <a href="mailto:cdstudiotecnico@hotmail.com" style="color:#356c6c; font-weight:800; text-decoration:none;">cdstudiotecnico@hotmail.com</a>
+                <strong>Consiglio:</strong> se hai urgenza, effettua bonifico istantaneo (se disponibile) e invia subito la contabile.
+              </div>
+            </div>
+
+            <!-- Postale -->
+            <div class="pay-card" id="tab-postale" style="display:none;">
+              <div class="rowline"><strong>Intestatario:</strong> Ing. Dario Cucchiara</div>
+              <div class="rowline"><strong>IBAN:</strong> <span class="mono" id="iban-postale">IT90U3608105138266873866892</span></div>
+
+              <div class="actions">
+                <button class="btn-outline" type="button" onclick="copyId('iban-postale')"><i class="bi bi-clipboard"></i> Copia IBAN</button>
+                <a class="btn-pay" id="mail-ricevuta-postale" href="#" target="_blank" rel="noopener">
+                  <i class="bi bi-envelope"></i> Invia ricevuta
+                </a>
               </div>
 
+              <div class="note">
+                <strong>Nota:</strong> inserisci sempre la causale (tipo di servizio) per evitare ritardi di riconciliazione.
+              </div>
+            </div>
+
+            <!-- Klarna -->
+            <div class="pay-card" id="tab-klarna" style="display:none;">
+              <div class="rowline">
+                Pagamento in <strong>3 rate con Klarna</strong>: richiedi il link su WhatsApp.
+              </div>
+              <div class="rowline">
+                <span class="badge-soft"><i class="bi bi-shield-check"></i> Maggiorazione 6% sull’importo totale</span>
+              </div>
+
+              <div class="actions" style="margin-top: 14px;">
+                <a class="btn-pay" id="btn-klarna-wa" href="#" target="_blank" rel="noopener">
+                  <i class="bi bi-whatsapp"></i> Richiedi link Klarna su WhatsApp
+                </a>
+                <a class="btn-outline" href="contact.html">
+                  <i class="bi bi-chat-dots"></i> Preferisco scrivere dal sito
+                </a>
+              </div>
+
+              <div class="note">
+                <strong>Veloce:</strong> il messaggio viene compilato automaticamente (servizio, importo, email, riferimento).
+              </div>
+            </div>
+
+            <div class="note">
+              <strong>Assistenza:</strong>
+              <a href="tel:+393289250353" style="color:#356c6c;font-weight:900;text-decoration:none;">+39 328 925 0353</a> –
+              <a href="mailto:cdstudiotecnico@hotmail.com" style="color:#356c6c;font-weight:900;text-decoration:none;">cdstudiotecnico@hotmail.com</a>
             </div>
 
           </div>
 
         </div>
-      </div>
 
-    </section>
-  </main>
-
-  <footer id="footer" class="footer light-background">
-    <div class="container">
-      <div class="copyright text-center ">
-        <p><span>Sede Operativa:</span> <strong>Via J.F. Kennedy n. 42, Partinico (PA)</strong></p>
-        <p><span>Sede Legale:</span> <strong class="px-1 sitename">Via P. Marchese n. 3, Montelepre (PA)</strong></p>
-        <p><span>P.IVA:</span> <strong>06513<span style="display:none;">-</span>140829</strong></p>
-      </div>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://www.facebook.com/share/1BKxwNRBsj/?mibextid=wwXIfr" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/cd_studio.tecnico?igsh=M2d2d2NvdnAwdDgz&utm_source=qr" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="mailto:cdstudiotecnico@hotmail.com" class="email"><i class="bi bi-envelope"></i></a>
-        <a href="tel:+393289250353" class="phone"><i class="bi bi-telephone"></i></a>
-      </div>
-      <div class="credits">
-        <p>Designed by <strong> Ing. Dario Cucchiara </strong></p>
       </div>
     </div>
-  </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  <div id="preloader"></div>
+  </section>
+</main>
 
-  <div class="toastx" id="toastx">Copiato.</div>
+<footer id="footer" class="footer light-background">
+  <div class="container">
+    <div class="copyright text-center ">
+      <p><span>Sede Operativa:</span> <strong>Via J.F. Kennedy n. 42, Partinico (PA)</strong></p>
+      <p><span>Sede Legale:</span> <strong class="px-1 sitename">Via P. Marchese n. 3, Montelepre (PA)</strong></p>
+      <p><span>P.IVA:</span> <strong>06513<span style="display:none;">-</span>140829</strong></p>
+    </div>
+    <div class="social-links d-flex justify-content-center">
+      <a href="https://www.facebook.com/share/1BKxwNRBsj/?mibextid=wwXIfr" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/cd_studio.tecnico?igsh=M2d2d2NvdnAwdDgz&utm_source=qr" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="mailto:cdstudiotecnico@hotmail.com" class="email"><i class="bi bi-envelope"></i></a>
+      <a href="tel:+393289250353" class="phone"><i class="bi bi-telephone"></i></a>
+    </div>
+    <div class="credits">
+      <p>Designed by <strong> Ing. Dario Cucchiara </strong></p>
+    </div>
+  </div>
+</footer>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<div id="preloader"></div>
+<div class="toastx" id="toastx">Copiato.</div>
 
-  <script>
-    AOS.init();
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-    // Tabs
-    function showTab(name) {
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      document.querySelector(`.tab-btn[data-tab="${name}"]`)?.classList.add('active');
+<script>
+  AOS.init();
 
-      document.getElementById('tab-banca').style.display = (name === 'banca') ? 'block' : 'none';
-      document.getElementById('tab-postale').style.display = (name === 'postale') ? 'block' : 'none';
-      document.getElementById('tab-klarna').style.display = (name === 'klarna') ? 'block' : 'none';
+  // Tabs
+  function showTab(name){
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelector(`.tab-btn[data-tab="${name}"]`)?.classList.add('active');
+    document.getElementById('tab-banca').style.display = (name==='banca') ? 'block' : 'none';
+    document.getElementById('tab-postale').style.display = (name==='postale') ? 'block' : 'none';
+    document.getElementById('tab-klarna').style.display = (name==='klarna') ? 'block' : 'none';
+  }
+
+  // Toast
+  const toastEl = document.getElementById('toastx');
+  let toastT;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.style.display = 'block';
+    clearTimeout(toastT);
+    toastT = setTimeout(()=> toastEl.style.display='none', 2400);
+  }
+
+  // Copy helper
+  function copyId(id){
+    const el = document.getElementById(id);
+    if(!el) return;
+    const text = el.textContent.trim();
+
+    if(navigator.clipboard && window.isSecureContext){
+      navigator.clipboard.writeText(text).then(()=> toast("Copiato negli appunti.")).catch(()=> fallbackCopy(text));
+    } else {
+      fallbackCopy(text);
+    }
+  }
+  function fallbackCopy(text){
+    const t=document.createElement("textarea");
+    t.value=text; t.setAttribute("readonly","");
+    t.style.position="absolute"; t.style.left="-9999px";
+    document.body.appendChild(t);
+    t.select(); document.execCommand("copy");
+    document.body.removeChild(t);
+    toast("Copiato negli appunti.");
+  }
+
+  // Dynamic content
+  const servizio = document.getElementById('servizio');
+  const importo = document.getElementById('importo');
+  const rif = document.getElementById('rif');
+  const email = document.getElementById('email');
+
+  const causaleEl = document.getElementById('causale');
+  const statoEl = document.getElementById('stato');
+  const statoSubEl = document.getElementById('stato-sub');
+  const klarnaTotEl = document.getElementById('klarna-tot');
+
+  const mailBanca = document.getElementById('mail-ricevuta-banca');
+  const mailPostale = document.getElementById('mail-ricevuta-postale');
+  const klarnaBtn = document.getElementById('btn-klarna-wa');
+
+  function sanitizeAmount(val){
+    if(!val) return "";
+    return val.replace(/[^\d.,]/g,"").trim();
+  }
+
+  function parseAmount(val){
+    const v = sanitizeAmount(val).replace(/\./g,"").replace(",",".");
+    const n = Number(v);
+    return Number.isFinite(n) ? n : null;
+  }
+
+  function formatEUR(n){
+    return n.toFixed(2).replace(".", ",");
+  }
+
+  function buildCausale(){
+    const s = servizio.value || "—";
+    const r = (rif.value || "").trim();
+    if(r) return `Servizio: ${s} | Riferimento: ${r}`;
+    return `Servizio: ${s}`;
+  }
+
+  function buildMailLink(kind){
+    const s = servizio.value || "Servizio non specificato";
+    const a = sanitizeAmount(importo.value) || "Importo non indicato";
+    const r = (rif.value || "").trim();
+    const e = (email.value || "").trim();
+
+    const subj = encodeURIComponent(`Invio ricevuta pagamento (${kind})`);
+    const bodyLines = [
+      "Buongiorno,",
+      "",
+      "allego la ricevuta del pagamento.",
+      "",
+      `Servizio: ${s}`,
+      `Importo: ${a} EUR`,
+      r ? `Riferimento: ${r}` : null,
+      e ? `Email: ${e}` : null,
+      "",
+      "Cordiali saluti"
+    ].filter(Boolean);
+
+    return `mailto:cdstudiotecnico@hotmail.com?subject=${subj}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
+  }
+
+  function buildKlarnaWhatsApp(){
+    const s = servizio.value || "Servizio non specificato";
+    const aRaw = parseAmount(importo.value);
+    const a = aRaw ? formatEUR(aRaw) : (sanitizeAmount(importo.value) || "Importo non indicato");
+    const r = (rif.value || "").trim();
+    const e = (email.value || "").trim();
+
+    const lines = [
+      "Buongiorno Ing. Cucchiara, desidero pagare con Klarna (3 rate) e richiedere il link di pagamento.",
+      "",
+      `Servizio: ${s}`,
+      `Importo preventivo: ${a} EUR`,
+      r ? `Riferimento: ${r}` : null,
+      e ? `Email per ricevere il link: ${e}` : null,
+      "",
+      "Grazie"
+    ].filter(Boolean);
+
+    return `https://wa.me/393289250353?text=${encodeURIComponent(lines.join("\n"))}`;
+  }
+
+  function enforceMinIfAny(){
+    const opt = servizio.options[servizio.selectedIndex];
+    const min = opt?.getAttribute("data-min");
+    if(!min) return;
+
+    const current = parseAmount(importo.value);
+    if(current === null) return;
+
+    const minN = Number(min);
+    if(Number.isFinite(minN) && current < minN){
+      importo.value = formatEUR(minN);
+      toast(`Importo aggiornato al minimo indicativo (€ ${formatEUR(minN)}).`);
+    }
+  }
+
+  function refresh(){
+    // causale
+    causaleEl.textContent = buildCausale();
+
+    // mail links
+    mailBanca.href = buildMailLink("Bonifico bancario");
+    mailPostale.href = buildMailLink("Bonifico postale");
+
+    // klarna link
+    klarnaBtn.href = buildKlarnaWhatsApp();
+
+    // stato compilazione
+    const hasServizio = !!servizio.value;
+    const amt = parseAmount(importo.value);
+    const hasImporto = (amt !== null && amt > 0);
+
+    if(hasServizio && hasImporto){
+      statoEl.textContent = "Completo";
+      statoSubEl.textContent = "Puoi procedere al pagamento e inviare la ricevuta.";
+    } else if(hasServizio && !hasImporto){
+      statoEl.textContent = "Quasi pronto";
+      statoSubEl.textContent = "Inserisci l’importo per generare tutti i riferimenti.";
+    } else {
+      statoEl.textContent = "Incompleto";
+      statoSubEl.textContent = "Seleziona servizio e inserisci importo.";
     }
 
-    // Toast
-    const toastEl = document.getElementById('toastx');
-    let toastT;
-    function toast(msg) {
-      toastEl.textContent = msg;
-      toastEl.style.display = 'block';
-      clearTimeout(toastT);
-      toastT = setTimeout(() => { toastEl.style.display = 'none'; }, 2400);
+    // klarna total (+6%)
+    if(hasImporto){
+      const tot = amt * 1.06;
+      klarnaTotEl.textContent = `€ ${formatEUR(tot)}`;
+    } else {
+      klarnaTotEl.textContent = "—";
     }
+  }
 
-    // Copy helper
-    function copyId(id) {
-      const el = document.getElementById(id);
-      if (!el) return;
-      const text = el.textContent.trim();
+  servizio.addEventListener('change', ()=>{ enforceMinIfAny(); refresh(); });
+  [importo, rif, email].forEach(el => el.addEventListener('input', refresh));
 
-      if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(text).then(() => toast("Copiato negli appunti.")).catch(() => fallbackCopy(text));
-      } else {
-        fallbackCopy(text);
-      }
-    }
-    function fallbackCopy(text) {
-      const t = document.createElement("textarea");
-      t.value = text;
-      t.setAttribute("readonly", "");
-      t.style.position = "absolute";
-      t.style.left = "-9999px";
-      document.body.appendChild(t);
-      t.select();
-      document.execCommand("copy");
-      document.body.removeChild(t);
-      toast("Copiato negli appunti.");
-    }
+  refresh();
+</script>
 
-    // Dynamic strings
-    const servizio = document.getElementById('servizio');
-    const importo = document.getElementById('importo');
-    const rif = document.getElementById('rif');
-    const email = document.getElementById('email');
-    const causaleEl = document.getElementById('causale');
-
-    const mailBanca = document.getElementById('mail-ricevuta-banca');
-    const mailPostale = document.getElementById('mail-ricevuta-postale');
-    const klarnaBtn = document.getElementById('btn-klarna-wa');
-
-    function sanitizeAmount(val) {
-      if (!val) return "";
-      return val.replace(/[^\d.,]/g, "");
-    }
-
-    function buildCausale() {
-      const s = servizio.value || "—";
-      const r = (rif.value || "").trim();
-      if (r) return `Servizio: ${s} | Riferimento: ${r}`;
-      return `Servizio: ${s}`;
-    }
-
-    function buildMailLink(kind) {
-      const s = servizio.value || "Servizio non specificato";
-      const a = sanitizeAmount(importo.value) || "Importo non indicato";
-      const r = (rif.value || "").trim();
-      const e = (email.value || "").trim();
-
-      const subj = encodeURIComponent(`Invio ricevuta pagamento (${kind})`);
-      const bodyLines = [
-        "Buongiorno,",
-        "",
-        "allego la ricevuta del pagamento.",
-        "",
-        `Servizio: ${s}`,
-        `Importo: ${a} EUR`,
-        r ? `Riferimento: ${r}` : null,
-        e ? `Email: ${e}` : null,
-        "",
-        "Cordiali saluti"
-      ].filter(Boolean);
-
-      const body = encodeURIComponent(bodyLines.join("\n"));
-      return `mailto:cdstudiotecnico@hotmail.com?subject=${subj}&body=${body}`;
-    }
-
-    function buildKlarnaWhatsApp() {
-      const s = servizio.value || "Servizio non specificato";
-      const a = sanitizeAmount(importo.value) || "Importo non indicato";
-      const r = (rif.value || "").trim();
-      const e = (email.value || "").trim();
-
-      const lines = [
-        "Buongiorno Ing. Cucchiara, desidero pagare con Klarna (3 rate) e richiedere il link di pagamento.",
-        "",
-        `Servizio: ${s}`,
-        `Importo preventivo: ${a} EUR`,
-        r ? `Riferimento: ${r}` : null,
-        e ? `Email per ricevere il link: ${e}` : null,
-        "",
-        "Grazie"
-      ].filter(Boolean);
-
-      const text = encodeURIComponent(lines.join("\n"));
-      return `https://wa.me/393289250353?text=${text}`;
-    }
-
-    function refresh() {
-      causaleEl.textContent = buildCausale();
-      mailBanca.href = buildMailLink("Bonifico bancario");
-      mailPostale.href = buildMailLink("Bonifico postale");
-      klarnaBtn.href = buildKlarnaWhatsApp();
-    }
-
-    [servizio, importo, rif, email].forEach(el => el.addEventListener('input', refresh));
-    refresh();
-
-    // QR generator (SEPA / EPC QR)
-    function epcPayload(iban, name, amount, remittance) {
-      const amt = sanitizeAmount(amount).replace(",", ".");
-      const money = amt ? `EUR${amt}` : "";
-      // EPC069-12 format
-      return [
-        "BCD",
-        "001",
-        "1",
-        "SCT",
-        "",         // BIC optional
-        name,
-        iban,
-        money,
-        "",         // purpose
-        remittance || "",
-        ""          // info
-      ].join("\n");
-    }
-
-    function drawQR(canvasId, text) {
-      // Simple QR renderer using minimal algorithm? We avoid external libs.
-      // For production-grade QR, you normally include a small QR lib.
-      // Here we implement a lightweight fallback: show text if canvas unsupported.
-      const canvas = document.getElementById(canvasId);
-      if (!canvas || !canvas.getContext) return;
-
-      // Minimal approach: use a Google Charts QR endpoint would be "web call" (not allowed),
-      // so we keep it local: render payload as text-only fallback on canvas.
-      const ctx = canvas.getContext('2d');
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = "#f4f7f7";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = "#356c6c";
-      ctx.font = "bold 14px Arial";
-      ctx.fillText("QR SEPA non disponibile offline", 18, 40);
-      ctx.fillStyle = "#333";
-      ctx.font = "12px Arial";
-      const lines = text.split("\n");
-      let y = 70;
-      for (let i = 0; i < Math.min(lines.length, 16); i++) {
-        ctx.fillText(lines[i].slice(0, 42), 18, y);
-        y += 16;
-      }
-      ctx.fillStyle = "#666";
-      ctx.font = "11px Arial";
-      ctx.fillText("Suggerimento: usa Copia IBAN/Causale.", 18, canvas.height - 18);
-    }
-
-    function makeQR(which) {
-      const rem = buildCausale();
-      const amt = importo.value || "";
-      if (which === "banca") {
-        const wrap = document.getElementById("qr-banca");
-        wrap.style.display = (wrap.style.display === "none") ? "block" : "none";
-        const payload = epcPayload("IT32F0894643460000000502217", "Ing. Dario Cucchiara", amt, rem);
-        drawQR("qr-banca-canvas", payload);
-        toast("QR pronto. Se non supportato, usa Copia IBAN/Causale.");
-      } else {
-        const wrap = document.getElementById("qr-postale");
-        wrap.style.display = (wrap.style.display === "none") ? "block" : "none";
-        const payload = epcPayload("IT90U3608105138266873866892", "Ing. Dario Cucchiara", amt, rem);
-        drawQR("qr-postale-canvas", payload);
-        toast("QR pronto. Se non supportato, usa Copia IBAN/Causale.");
-      }
-    }
-    window.makeQR = makeQR;
-
-  </script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+<script src="assets/js/main.js"></script>
 </body>
 </html>
