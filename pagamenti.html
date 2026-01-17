@@ -11,10 +11,12 @@
 
   <!-- Titolo e Descrizione -->
   <title>Pagamenti | CD Studio Tecnico – Ing. Dario Cucchiara</title>
-  <meta name="description" content="Effettua il pagamento del compenso come da preventivo ufficiale rilasciato da CD Studio Tecnico. Calcolo automatico del lordo a pagare con marca da bollo, INPS e Inarcassa. Opzioni: bonifico bancario, bonifico postale, Klarna tramite link su WhatsApp.">
+  <meta name="description"
+    content="Effettua il pagamento del compenso come da preventivo ufficiale rilasciato da CD Studio Tecnico. Calcolo automatico del lordo a pagare (INPS 4% + Inarcassa 4%) e marca da bollo solo se dovuta (> € 77,47 per operazioni fuori campo/esenti/escluse IVA). Bonifico bancario, bonifico postale o Klarna tramite link su WhatsApp.">
   <meta name="author" content="Ing. Dario Cucchiara">
   <meta name="robots" content="index, follow">
-  <meta name="keywords" content="pagamenti studio tecnico, bonifico bancario, bonifico postale, klarna 3 rate, ingegnere palermo, servizi tecnici online">
+  <meta name="keywords"
+    content="pagamenti studio tecnico, bonifico bancario, bonifico postale, klarna 3 rate, ingegnere palermo, servizi tecnici online, marca da bollo 77,47">
   <meta name="rating" content="general">
   <meta name="revisit-after" content="7 days">
 
@@ -43,7 +45,8 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Pagamenti | CD Studio Tecnico – Ing. Dario Cucchiara">
-  <meta property="og:description" content="Pagamenti con bonifico bancario, bonifico postale o Klarna. Calcolo automatico del lordo a pagare e invio dati fatturazione via WhatsApp.">
+  <meta property="og:description"
+    content="Pagamenti con bonifico bancario, postale o Klarna. Calcolo automatico del lordo e bollo solo se dovuto (> € 77,47). Invio dati fatturazione via WhatsApp.">
   <meta property="og:image" content="https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg">
   <meta property="og:url" content="https://www.cdstudiotecnico.it/pagamenti.html">
   <meta property="og:site_name" content="CD Studio Tecnico">
@@ -53,11 +56,14 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Pagamenti – Ing. Dario Cucchiara">
-  <meta name="twitter:description" content="Bonifico bancario, postale e Klarna via WhatsApp. Compila i dati fatturazione e invia in un click.">
+  <meta name="twitter:description"
+    content="Bonifico bancario, postale e Klarna via WhatsApp. Compila dati fatturazione e invia in un click.">
   <meta name="twitter:image" content="https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg">
 
   <!-- Fonts e CSS -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600;700&family=Raleway:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -69,11 +75,11 @@
     /* ====== PAGAMENTI: UI premium + mobile-first (NO colonne) ====== */
     #pagamenti {
       background: #f8faf9;
-      padding: 58px 0 86px 0;
+      padding: 58px 0 90px 0;
     }
 
     .hero-wrap {
-      max-width: 980px;
+      max-width: 1040px;
       margin: 0 auto;
       padding: 0 18px;
       text-align: center;
@@ -90,14 +96,37 @@
       -moz-column-count: 1 !important;
     }
 
-    .hero-wrap .note {
-      margin-top: 12px;
+    .hero-badges {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
       font-weight: 900;
+      font-size: 0.9rem;
+      border: 1px solid rgba(53, 108, 108, 0.18);
+      background: rgba(53, 108, 108, 0.06);
       color: #356c6c;
+      white-space: nowrap;
+    }
+
+    .badge-warn {
+      border: 1px solid rgba(199, 60, 60, 0.22);
+      background: rgba(199, 60, 60, 0.06);
+      color: #8a1f1f;
     }
 
     .pay-grid {
-      max-width: 1100px;
+      max-width: 1120px;
       margin: 22px auto 0 auto;
       padding: 0 18px;
       display: grid;
@@ -129,12 +158,89 @@
       margin-top: -6px;
       color: #666;
       font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    .divider {
+      height: 1px;
+      background: #eee;
+      margin: 18px 0;
+    }
+
+    .grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    label {
+      font-weight: 800;
+      color: #356c6c;
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1.3px solid #ccc;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 1rem;
+      background: #fff;
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #356c6c;
+      box-shadow: 0 0 0 3px rgba(53, 108, 108, 0.10);
+      outline: none;
+    }
+
+    .calc-out {
+      border-radius: 14px;
+      background: rgba(53, 108, 108, 0.06);
+      border: 1px solid rgba(53, 108, 108, 0.12);
+      padding: 14px;
+      margin-top: 12px;
+      font-size: 0.98rem;
+      line-height: 1.75;
+    }
+
+    .calc-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .calc-row strong {
+      color: #356c6c;
+    }
+
+    .calc-total {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px dashed rgba(53, 108, 108, 0.25);
+      font-weight: 900;
+      font-size: 1.06rem;
+    }
+
+    .hint {
+      font-size: 0.92rem;
+      color: #666;
       line-height: 1.6;
+      margin-top: 10px;
+      column-count: 1 !important;
+      columns: 1 !important;
     }
 
     .kv {
       display: grid;
-      grid-template-columns: 140px 1fr;
+      grid-template-columns: 150px 1fr;
       gap: 8px 12px;
       margin-top: 14px;
       font-size: 0.98rem;
@@ -170,6 +276,7 @@
       text-decoration: none;
       transition: all .2s ease;
       width: 100%;
+      border: none;
     }
 
     .btn-soft {
@@ -188,7 +295,6 @@
     .btn-cta {
       background: #356c6c;
       color: #fff;
-      border: none;
       box-shadow: 0 10px 22px rgba(53, 108, 108, 0.25);
     }
 
@@ -212,76 +318,53 @@
       white-space: nowrap;
     }
 
-    .divider {
-      height: 1px;
-      background: #eee;
-      margin: 18px 0;
-    }
-
-    /* Calcolatore */
-    .grid2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    label {
+    .alertx {
+      border-radius: 14px;
+      padding: 12px 14px;
+      border: 1px solid rgba(199, 60, 60, 0.20);
+      background: rgba(199, 60, 60, 0.06);
+      color: #7b1f1f;
       font-weight: 800;
-      color: #356c6c;
-      margin-bottom: 6px;
+      line-height: 1.6;
+      margin-top: 14px;
       font-size: 0.95rem;
     }
 
-    input, select, textarea {
-      width: 100%;
-      border: 1.3px solid #ccc;
-      border-radius: 12px;
-      padding: 12px 14px;
-      font-size: 1rem;
-      background: #fff;
-      transition: all 0.2s ease;
-      box-sizing: border-box;
-    }
-
-    input:focus, select:focus, textarea:focus {
-      border-color: #356c6c;
-      box-shadow: 0 0 0 3px rgba(53,108,108,0.10);
-      outline: none;
-    }
-
-    .calc-out {
-      border-radius: 14px;
-      background: rgba(53, 108, 108, 0.06);
-      border: 1px solid rgba(53, 108, 108, 0.12);
-      padding: 14px;
-      margin-top: 12px;
-      font-size: 0.98rem;
-      line-height: 1.7;
-    }
-
-    .calc-out strong { color: #356c6c; }
-
-    .hint {
-      font-size: 0.92rem;
-      color: #666;
-      line-height: 1.6;
-      margin-top: 10px;
-      column-count: 1 !important;
-      columns: 1 !important;
-    }
-
-    /* Mobile: 1 colonna, bottoni full, spazi corretti */
+    /* Mobile */
     @media (max-width: 992px) {
-      .pay-grid { grid-template-columns: 1fr; }
+      .pay-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 575px) {
-      #pagamenti { padding: 50px 0 76px 0; }
-      .cardx { padding: 20px; border-radius: 16px; }
-      .kv { grid-template-columns: 1fr; }
-      .grid2 { grid-template-columns: 1fr; }
-      input, select, textarea { font-size: 0.98rem; padding: 11px 13px; }
-      .hero-wrap { padding: 0 14px; }
+      #pagamenti {
+        padding: 50px 0 82px 0;
+      }
+
+      .cardx {
+        padding: 20px;
+        border-radius: 16px;
+      }
+
+      .kv {
+        grid-template-columns: 1fr;
+      }
+
+      .grid2 {
+        grid-template-columns: 1fr;
+      }
+
+      input,
+      select,
+      textarea {
+        font-size: 0.98rem;
+        padding: 11px 13px;
+      }
+
+      .hero-wrap {
+        padding: 0 14px;
+      }
     }
   </style>
 
@@ -289,7 +372,7 @@
 
 <body class="contact-page">
 
-  <!-- HEADER (stesso del sito) -->
+  <!-- HEADER -->
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0 text-decoration-none">
@@ -330,28 +413,34 @@
           <img src="assets/img/logo.png" alt="Logo CD Studio Tecnico" class="img-fluid"
             style="max-width: 200px; margin-top: 5px; margin-bottom: 5px; filter: drop-shadow(0 3px 8px rgba(0,0,0,0.2));">
         </div>
-        <h2 style="font-weight: 800; color: #356c6c;">Pagamenti</h2>
+        <h2 style="font-weight: 900; color: #356c6c;">Pagamenti</h2>
       </div>
 
       <div class="hero-wrap" data-aos="fade-up" data-aos-delay="80">
         <p>
-          In questa pagina puoi effettuare il pagamento del compenso <strong>esclusivamente</strong> sulla base del
-          <strong>preventivo ufficiale</strong> rilasciato da CD Studio Tecnico.
-          Il sistema calcola automaticamente il <strong>lordo a pagare</strong> applicando:
-          <strong>€ 2,00</strong> di marca da bollo, <strong>INPS 4%</strong> e <strong>Inarcassa 4%</strong>.
-          In caso di pagamento con <strong>Klarna</strong> viene applicata una maggiorazione del <strong>6%</strong> sul lordo.
+          Inserisci <strong>esclusivamente</strong> l’importo indicato nel <strong>preventivo ufficiale</strong>.
+          Il sistema calcola automaticamente il totale applicando <strong>INPS 4%</strong> e <strong>Inarcassa 4%</strong>.
+          La <strong>marca da bollo (€ 2,00)</strong> viene applicata <strong>solo</strong> per operazioni
+          <strong>fuori campo IVA / escluse / esenti IVA</strong> di importo <strong>superiore a € 77,47</strong>.
+          In caso di pagamento con <strong>Klarna</strong>, viene applicata una maggiorazione del <strong>6%</strong> sul lordo.
         </p>
-        <p class="note">
-          Le lavorazioni vengono avviate solo dopo la ricezione del compenso dovuto (preferibilmente con bonifico istantaneo).
-        </p>
+
+        <div class="hero-badges">
+          <span class="badge-pill"><i class="bi bi-lightning-charge"></i> Bonifico istantaneo consigliato</span>
+          <span class="badge-pill"><i class="bi bi-receipt"></i> Causale standard fattura</span>
+          <span class="badge-pill badge-warn"><i class="bi bi-shield-exclamation"></i> Importo da preventivo (vincolante)</span>
+        </div>
       </div>
 
       <div class="pay-grid">
 
-        <!-- COLONNA SX: Calcolo + invio WhatsApp -->
+        <!-- SX: calcolo + fatturazione + WhatsApp -->
         <div class="cardx" data-aos="fade-up" data-aos-delay="120">
-          <h3><i class="bi bi-calculator"></i> Calcolo automatico importo <span class="pill">da preventivo ufficiale</span></h3>
-          <div class="sub">Inserisci l’importo netto indicato nel preventivo. Il sistema calcola il totale da pagare e prepara il messaggio WhatsApp completo di dati fatturazione.</div>
+          <h3><i class="bi bi-calculator"></i> Calcolo automatico <span class="pill">marca da bollo condizionata</span></h3>
+          <div class="sub">
+            Inserisci l’importo netto del preventivo. Se l’importo è ≤ <strong>€ 77,47</strong>, la marca da bollo non viene applicata.
+            La causale è impostata in formato fattura: <strong>“Saldo Fattura n. ___ del __/__/____”</strong>.
+          </div>
 
           <div class="divider"></div>
 
@@ -372,34 +461,51 @@
 
           <div class="grid2" style="margin-top:12px;">
             <div>
-              <label for="preventivo">Numero / riferimento preventivo</label>
-              <input id="preventivo" type="text" placeholder="Es. PREV-2026-015 (opzionale)">
+              <label for="fattura_num">Numero fattura</label>
+              <input id="fattura_num" type="text" placeholder="Es. 15/2026" required>
             </div>
+            <div>
+              <label for="fattura_data">Data fattura</label>
+              <input id="fattura_data" type="date" required>
+            </div>
+          </div>
+
+          <div class="grid2" style="margin-top:12px;">
             <div>
               <label for="servizio">Servizio (facoltativo)</label>
               <input id="servizio" type="text" placeholder="Es. APE / Perizia / Sanatoria...">
             </div>
+            <div>
+              <label for="rif_prev">Riferimento preventivo (facoltativo)</label>
+              <input id="rif_prev" type="text" placeholder="Es. PREV-2026-015">
+            </div>
           </div>
 
           <div class="calc-out" id="output">
-            <div><strong>Marca da bollo:</strong> € <span id="bollo">2,00</span></div>
-            <div><strong>Totale (netto + bollo):</strong> € <span id="tot1">0,00</span></div>
-            <div><strong>+ INPS 4%:</strong> € <span id="tot2">0,00</span></div>
-            <div><strong>+ Inarcassa 4%:</strong> € <span id="tot3">0,00</span></div>
-            <div style="margin-top:8px;"><strong>Lordo a pagare:</strong> € <span id="lordo">0,00</span></div>
-            <div><strong>Lordo con Klarna (+6%):</strong> € <span id="klarna">0,00</span></div>
+            <div class="calc-row"><span><strong>Marca da bollo:</strong></span><span>€ <span id="bollo">0,00</span></span></div>
+            <div class="calc-row"><span><strong>Totale (netto + bollo):</strong></span><span>€ <span id="tot1">0,00</span></span></div>
+            <div class="calc-row"><span><strong>+ INPS 4%:</strong></span><span>€ <span id="tot2">0,00</span></span></div>
+            <div class="calc-row"><span><strong>+ Inarcassa 4%:</strong></span><span>€ <span id="tot3">0,00</span></span></div>
+            <div class="calc-row calc-total"><span><strong>Lordo a pagare:</strong></span><span>€ <span id="lordo">0,00</span></span></div>
+            <div class="calc-row"><span><strong>Lordo con Klarna (+6%):</strong></span><span>€ <span id="klarna">0,00</span></span></div>
+
+            <div class="divider" style="margin:14px 0;"></div>
+
+            <div class="calc-row"><span><strong>Causale:</strong></span><span id="causale" class="mono">Saldo Fattura n. ___ del __/__/____</span></div>
           </div>
 
-          <div class="hint">
-            <strong>Causale consigliata:</strong> “Pagamento servizio tecnico – <em>tipo servizio</em> – Rif. preventivo”.
-            <br>
-            In caso di bonifico, è consigliato il <strong>bonifico istantaneo</strong> per ridurre i tempi di avvio della lavorazione.
+          <div class="alertx" id="alert_importo">
+            <i class="bi bi-exclamation-triangle"></i>
+            Importante: l’importo valido è esclusivamente quello riportato nel preventivo ufficiale.
+            Pagamenti con importo difforme potrebbero ritardare l’avvio della pratica e la richiesta di ulteriori pagamenti compensativi.
           </div>
 
           <div class="divider"></div>
 
-          <h3 style="margin-top: 0;"><i class="bi bi-receipt"></i> Dati di fatturazione</h3>
-          <div class="sub">Compila i dati: verranno inclusi automaticamente nel messaggio WhatsApp per l’emissione della fattura.</div>
+          <h3 style="margin-top:0;"><i class="bi bi-receipt"></i> Dati di fatturazione</h3>
+          <div class="sub">
+            Compila i dati: saranno inclusi nel messaggio WhatsApp per gestire rapidamente emissione e invio fattura.
+          </div>
 
           <div class="divider"></div>
 
@@ -442,26 +548,32 @@
           </div>
 
           <div class="actions" style="margin-top:16px;">
+            <button class="btnx btn-soft" type="button" id="btnCopiaCausale">
+              <i class="bi bi-clipboard"></i> Copia causale
+            </button>
             <button class="btnx btn-soft" type="button" id="btnCopiaIban">
-              <i class="bi bi-clipboard"></i> Copia IBAN Bancario
+              <i class="bi bi-clipboard"></i> Copia IBAN bancario
             </button>
             <button class="btnx btn-soft" type="button" id="btnCopiaIbanPostale">
-              <i class="bi bi-clipboard"></i> Copia IBAN Postale
+              <i class="bi bi-clipboard"></i> Copia IBAN postale
             </button>
             <button class="btnx btn-cta" type="button" id="btnWhatsApp">
-              <i class="bi bi-whatsapp"></i> Invia dati e richiesta su WhatsApp
+              <i class="bi bi-whatsapp"></i> Invia su WhatsApp (pagamento + fatturazione)
             </button>
           </div>
 
           <div class="hint" style="margin-top:12px;">
-            Il tasto WhatsApp apre un messaggio precompilato con importi, metodo scelto e dati di fatturazione.
+            Il pulsante WhatsApp apre un messaggio precompilato con: metodo di pagamento, importi calcolati, causale fattura e dati di fatturazione.
           </div>
         </div>
 
-        <!-- COLONNA DX: metodi pagamento + copy + info operative -->
+        <!-- DX: metodi pagamento -->
         <div class="cardx" data-aos="fade-up" data-aos-delay="160">
-          <h3><i class="bi bi-credit-card-2-front"></i> Metodi di pagamento <span class="pill">rapidi e tracciabili</span></h3>
-          <div class="sub">Scegli il metodo preferito. Per avvio rapido della pratica, è consigliato il bonifico istantaneo.</div>
+          <h3><i class="bi bi-credit-card-2-front"></i> Metodi di pagamento <span class="pill">tracciabili</span></h3>
+          <div class="sub">
+            Scegli il metodo preferito. Per avvio rapido della pratica è consigliato il <strong>bonifico istantaneo</strong>.
+            La causale deve essere: <strong>“Saldo Fattura n. ___ del __/__/____”</strong>.
+          </div>
 
           <div class="divider"></div>
 
@@ -474,7 +586,7 @@
             <div class="k">Intestatario</div>
             <div>Ing. Dario Cucchiara</div>
             <div class="k">Causale</div>
-            <div>Causale: indicare il tipo di servizio (e rif. preventivo se disponibile)</div>
+            <div><strong id="causale_banca">Saldo Fattura n. ___ del __/__/____</strong></div>
           </div>
 
           <div class="divider"></div>
@@ -484,21 +596,24 @@
             <div class="k">IBAN</div>
             <div class="mono" id="ibanPoste">IT90U3608105138266873866892</div>
             <div class="k">Causale</div>
-            <div>Causale: indicare il tipo di servizio (e rif. preventivo se disponibile)</div>
+            <div><strong id="causale_poste">Saldo Fattura n. ___ del __/__/____</strong></div>
           </div>
 
           <div class="divider"></div>
 
           <h3 style="margin-top:0;"><i class="bi bi-bag-check"></i> Klarna (3 rate)</h3>
           <div class="sub">
-            Klarna viene gestita tramite link dedicato. Clicca il pulsante WhatsApp: riceverai assistenza e il link per il pagamento.
+            Klarna viene gestita tramite link dedicato. Usa il pulsante WhatsApp: riceverai assistenza e il link di pagamento.
+            <br><br>
+            <strong>Nota:</strong> Klarna applica una maggiorazione del <strong>6%</strong> sul lordo calcolato.
           </div>
 
           <div class="divider"></div>
 
-          <div class="hint">
-            <strong>Importante:</strong> l’importo valido è esclusivamente quello riportato nel <strong>preventivo ufficiale</strong>.
-            Pagamenti con importo difforme potrebbero ritardare l’avvio della pratica.
+          <div class="alertx">
+            <i class="bi bi-shield-exclamation"></i>
+            Importante: l’importo valido è esclusivamente quello riportato nel preventivo ufficiale.
+            Pagamenti con importo difforme potrebbero ritardare l’avvio della pratica e la richiesta di ulteriori pagamenti compensativi.
           </div>
 
           <div class="actions" style="margin-top:16px;">
@@ -516,12 +631,12 @@
 
     <div style="display:none;">
       <h2>Pagamenti – CD Studio Tecnico</h2>
-      <p>Pagina pagamenti con calcolo automatico del lordo a pagare e invio dati fatturazione via WhatsApp.</p>
+      <p>Pagina pagamenti con calcolo automatico del lordo, bollo condizionato e invio dati fatturazione via WhatsApp.</p>
     </div>
 
   </main>
 
-  <!-- FOOTER (come sito) -->
+  <!-- FOOTER -->
   <footer id="footer" class="footer light-background">
     <div class="container">
       <div class="copyright text-center ">
@@ -542,7 +657,8 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -563,18 +679,31 @@
   <script>
     AOS.init();
 
+    // ===== Config =====
+    const SOGLIA_BOLLO = 77.47; // se netto > 77,47 applica marca da bollo (operazioni fuori campo/esenti/escluse IVA)
+    const BOLLO_IMPORTO = 2.00;
+    const WA_PHONE = "393289250353";
+
     // ===== Utils =====
     function eur(n) {
       return (Math.round((n + Number.EPSILON) * 100) / 100).toFixed(2).replace('.', ',');
     }
-
     function getVal(id) {
       return (document.getElementById(id).value || "").trim();
     }
+    function fmtDateIT(iso) {
+      // input type="date" -> YYYY-MM-DD
+      if (!iso || iso.length !== 10) return "__/__/____";
+      const [y, m, d] = iso.split("-");
+      return `${d}/${m}/${y}`;
+    }
 
-    // ===== Calcolo importi =====
+    // ===== Elements =====
     const nettoEl = document.getElementById('netto');
     const metodoEl = document.getElementById('metodo');
+
+    const fattNumEl = document.getElementById('fattura_num');
+    const fattDataEl = document.getElementById('fattura_data');
 
     const bolloEl = document.getElementById('bollo');
     const tot1El = document.getElementById('tot1');
@@ -583,30 +712,54 @@
     const lordoEl = document.getElementById('lordo');
     const klarnaEl = document.getElementById('klarna');
 
-    function recalc() {
+    const causaleEl = document.getElementById('causale');
+    const causaleBancaEl = document.getElementById('causale_banca');
+    const causalePosteEl = document.getElementById('causale_poste');
+
+    // ===== Calcolo importi + causale =====
+    function compute() {
       const netto = parseFloat(nettoEl.value || "0") || 0;
-      const bollo = 2.00;
+
+      // bollo solo se netto > 77,47
+      const bollo = (netto > SOGLIA_BOLLO) ? BOLLO_IMPORTO : 0.00;
 
       const tot1 = netto + bollo;
       const tot2 = tot1 * 1.04; // INPS 4%
       const tot3 = tot2 * 1.04; // Inarcassa 4%
-
       const lordo = tot3;
       const klarna = lordo * 1.06;
 
-      bolloEl.textContent = eur(bollo);
-      tot1El.textContent = eur(tot1);
-      tot2El.textContent = eur(tot2);
-      tot3El.textContent = eur(tot3);
-      lordoEl.textContent = eur(lordo);
-      klarnaEl.textContent = eur(klarna);
+      return { netto, bollo, tot1, tot2, tot3, lordo, klarna };
     }
 
-    nettoEl.addEventListener('input', recalc);
-    metodoEl.addEventListener('change', recalc);
-    recalc();
+    function buildCausale() {
+      const n = getVal('fattura_num') || "___";
+      const d = fmtDateIT(getVal('fattura_data'));
+      return `Saldo Fattura n. ${n} del ${d}`;
+    }
 
-    // ===== Copia IBAN =====
+    function refresh() {
+      const t = compute();
+
+      bolloEl.textContent = eur(t.bollo);
+      tot1El.textContent = eur(t.tot1);
+      tot2El.textContent = eur(t.tot2);
+      tot3El.textContent = eur(t.tot3);
+      lordoEl.textContent = eur(t.lordo);
+      klarnaEl.textContent = eur(t.klarna);
+
+      const causale = buildCausale();
+      causaleEl.textContent = causale;
+      causaleBancaEl.textContent = causale;
+      causalePosteEl.textContent = causale;
+    }
+
+    nettoEl.addEventListener('input', refresh);
+    metodoEl.addEventListener('change', refresh);
+    fattNumEl.addEventListener('input', refresh);
+    fattDataEl.addEventListener('change', refresh);
+
+    // ===== Clipboard =====
     function copyText(txt) {
       if (navigator.clipboard && window.isSecureContext) {
         return navigator.clipboard.writeText(txt);
@@ -626,25 +779,40 @@
     document.getElementById('btnCopiaIban').addEventListener('click', async () => {
       const iban = document.getElementById('ibanBanca').textContent.trim();
       await copyText(iban);
-      alert("IBAN Bancario copiato.");
+      alert("IBAN bancario copiato.");
     });
 
     document.getElementById('btnCopiaIbanPostale').addEventListener('click', async () => {
       const iban = document.getElementById('ibanPoste').textContent.trim();
       await copyText(iban);
-      alert("IBAN Postale copiato.");
+      alert("IBAN postale copiato.");
     });
 
-    // ===== WhatsApp precompilato (Klarna + dati fatturazione) =====
+    document.getElementById('btnCopiaCausale').addEventListener('click', async () => {
+      const c = buildCausale();
+      await copyText(c);
+      alert("Causale copiata.");
+    });
+
+    // ===== WhatsApp precompilato =====
     document.getElementById('btnWhatsApp').addEventListener('click', () => {
-      const netto = parseFloat(nettoEl.value || "0") || 0;
-      if (netto <= 0) {
+      const t = compute();
+      if (t.netto <= 0) {
         alert("Inserisci l’importo netto indicato nel preventivo ufficiale.");
         nettoEl.focus();
         return;
       }
 
-      // campi fatturazione minimi
+      // fattura obbligatoria per causale
+      const fattNum = getVal('fattura_num');
+      const fattDataIso = getVal('fattura_data');
+      if (!fattNum || !fattDataIso) {
+        alert("Inserisci numero e data fattura per generare la causale corretta.");
+        (!fattNum ? fattNumEl : fattDataEl).focus();
+        return;
+      }
+
+      // dati fatturazione minimi
       const ragione = getVal('ragione');
       const cfpiva = getVal('cfpiva');
       const indirizzo = getVal('indirizzo');
@@ -656,58 +824,56 @@
       }
 
       const metodo = getVal('metodo');
-      const rif = getVal('preventivo');
       const servizio = getVal('servizio');
+      const rifPrev = getVal('rif_prev');
       const pec = getVal('pec');
       const sdi = getVal('sdi');
       const note = getVal('note');
 
-      // Ricalcolo coerente con output
-      const bollo = 2.00;
-      const tot1 = netto + bollo;
-      const tot2 = tot1 * 1.04;
-      const tot3 = tot2 * 1.04;
-      const lordo = tot3;
-      const lordoKlarna = lordo * 1.06;
+      const causale = buildCausale();
+      const fattData = fmtDateIT(fattDataIso);
 
-      const importoDaPagare = metodo.includes("Klarna") ? lordoKlarna : lordo;
+      const importoDaPagare = metodo.includes("Klarna") ? t.klarna : t.lordo;
 
-      const causaleParts = [];
-      if (servizio) causaleParts.push(servizio);
-      if (rif) causaleParts.push(rif);
-      const causale = causaleParts.length ? causaleParts.join(" – ") : "tipo servizio (vedi preventivo)";
+      const bolloInfo = (t.bollo > 0)
+        ? `Marca da bollo (dovuta per importi > € 77,47): € ${eur(t.bollo)}`
+        : `Marca da bollo: non dovuta (importo ≤ € 77,47)`;
 
       const msg =
 `Buongiorno, desidero procedere con il pagamento del compenso come da PREVENTIVO UFFICIALE.
 
 — Riepilogo pagamento —
 Metodo: ${metodo}
-Importo netto da preventivo: € ${eur(netto)}
-Marca da bollo: € ${eur(bollo)}
-Lordo a pagare (INPS 4% + Inarcassa 4%): € ${eur(lordo)}
-Lordo con Klarna (+6%): € ${eur(lordoKlarna)}
+Importo netto da preventivo: € ${eur(t.netto)}
+${bolloInfo}
+Totale (netto + bollo): € ${eur(t.tot1)}
+Totale + INPS 4%: € ${eur(t.tot2)}
+Totale + Inarcassa 4% (LORDO): € ${eur(t.lordo)}
+Lordo con Klarna (+6%): € ${eur(t.klarna)}
 IMPORTO DA PAGARE (in base al metodo): € ${eur(importoDaPagare)}
 
-Causale suggerita: Pagamento servizio tecnico – ${causale}
+Causale: ${causale}
 
-Nota operativa: ho compreso che le lavorazioni vengono avviate solo dopo ricezione del compenso dovuto (bonifico istantaneo consigliato).
+Importante: l’importo valido è esclusivamente quello riportato nel preventivo ufficiale. Pagamenti con importo difforme potrebbero ritardare l’avvio della pratica e la richiesta di ulteriori pagamenti compensativi.
 
-— Dati di fatturazione —
+— Dati fatturazione —
 Intestatario: ${ragione}
 CF / P.IVA: ${cfpiva}
 Indirizzo: ${indirizzo}
 Email: ${email}${pec ? `\nPEC: ${pec}` : ""}${sdi ? `\nCodice SDI: ${sdi}` : ""}
 
-${rif ? `Rif. preventivo: ${rif}\n` : ""}${servizio ? `Servizio: ${servizio}\n` : ""}${note ? `Note: ${note}\n` : ""}
+Fattura: n. ${fattNum} del ${fattData}${servizio ? `\nServizio: ${servizio}` : ""}${rifPrev ? `\nRif. preventivo: ${rifPrev}` : ""}${note ? `\nNote: ${note}` : ""}
 
 Se scelgo Klarna, chiedo cortesemente il link per il pagamento. Grazie.`;
 
-      const phone = "393289250353"; // WhatsApp Studio
-      const waUrl = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
-
+      const waUrl = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(msg)}`;
       window.open(waUrl, "_blank", "noopener,noreferrer");
     });
+
+    // init
+    refresh();
   </script>
 
 </body>
+
 </html>
