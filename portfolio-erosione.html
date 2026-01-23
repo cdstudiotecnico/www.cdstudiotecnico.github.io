@@ -521,17 +521,16 @@
       });
     });
 
-      // WhatsApp (Nocella - pagamento download)
-document.getElementById("btnWhatsapp").addEventListener("click", function () {
-  const phone = "393289250353";
-  const msg =
-    "Buongiorno, allego contabile di pagamento per il download del progetto completo – Caso Studio Fiume Nocella (€ 150,00). " +
-    "Richiedo invio credenziali/link di accesso al download. Grazie. " +
-    "Riferimento: Saldo Fattura n. ___ del __/__/____";
-  const url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(msg);
-  window.open(url, "_blank", "noopener");
-});
-    
+    // WhatsApp (stile e logica coerente)
+    document.getElementById("btnWhatsapp").addEventListener("click", function () {
+      const phone = "+393289250353";
+      const msg =
+        "Buongiorno, allego contabile di pagamento per il download del progetto completo (€ 150,00). " +
+        "Richiedo fattura ed invio progetto completo in file ZIP. Grazie. " +
+        "Riferimento: Indicare il progetto acquistato";
+      const url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(msg);
+      window.open(url, "_blank", "noopener");
+    });
   </script>
 
 </body>
