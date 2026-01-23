@@ -471,6 +471,63 @@
         margin: 50px 15px;
       }
     }
+
+    /* BOX pagamento */
+.download-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  margin-top: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.download-box h3 {
+  color: #356c6c;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Pulsanti coerenti (stesso stile depurazione adattato al Nocella) */
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px auto 0;
+  border: 1.8px solid #356c6c;
+  color: #356c6c;
+  text-decoration: none;
+  border-radius: 30px;
+  padding: 10px 22px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: rgba(255,255,255,0.85);
+  cursor: pointer;
+}
+
+.action-btn:hover {
+  background: #356c6c;
+  color: #fff;
+}
+
+.action-btn.whatsapp {
+  border-color: #1ea85a;
+  color: #1ea85a;
+}
+
+.action-btn.whatsapp:hover {
+  background: #1ea85a;
+  color: #fff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .download-box { padding: 22px; }
+}
+    
   </style>
 
 </head>
