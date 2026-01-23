@@ -641,6 +641,18 @@
         speed: 900,
       });
     });
+
+     // WhatsApp (stile e logica coerente)
+    document.getElementById("btnWhatsapp").addEventListener("click", function () {
+      const phone = "+393289250353";
+      const msg =
+        "Buongiorno, allego contabile di pagamento per il download del progetto completo (€ 150,00). " +
+        "Richiedo fattura ed invio progetto completo in file ZIP. Grazie. " +
+        "Riferimento: Indicare il progetto acquistato";
+      const url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(msg);
+      window.open(url, "_blank", "noopener");
+    });
   </script>
+  
 </body>
 </html>
