@@ -36,6 +36,10 @@
     <loc>https://www.cdstudiotecnico.it/contact.html</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.cdstudiotecnico.it/pagamenti.html</loc>
+    <priority>0.8</priority>
+  </url>
 
   <!-- Schede Portfolio -->
   <url>
@@ -62,5 +66,17 @@
     <loc>https://www.cdstudiotecnico.it/portfolio-rotatoria.html</loc>
     <priority>0.6</priority>
   </url>
+    <url>
+    <loc>https://www.cdstudiotecnico.it/portfolio-nocella.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.cdstudiotecnico.it/portfolio-marsala-depurazione.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.cdstudiotecnico.it/portfolio-erosione.html</loc>
+    <priority>0.6</priority>
+  </url> 
 
 </urlset>
