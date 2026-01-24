@@ -78,5 +78,9 @@
     <loc>https://www.cdstudiotecnico.it/portfolio-erosione.html</loc>
     <priority>0.6</priority>
   </url> 
-
+<url>
+    <loc>https://www.cdstudiotecnico.it/portfolio-solare-termico.html</loc>
+    <priority>0.6</priority>
+  </url>
+  
 </urlset>
