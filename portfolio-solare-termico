@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+  <!-- Verifica Google Search Console -->
+  <meta name="google-site-verification" content="5-kam6aK3nMX8pb5dczefcCj29VOOaRr7Fop8z9jWI8" />
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <!-- Titolo e Descrizione -->
+  <title>Installazione Solare Termico con Conto Termico GSE e Sconto in Fattura | Tecno Impianti – Partinico</title>
+  <meta name="description" content="Intervento di installazione solare termico a tetto: collettori piani + bollitore, integrazione idraulica e messa in esercizio. Incentivo Conto Termico GSE con cessione del credito del Cliente e sconto diretto in fattura applicato da Tecno Impianti (Partinico).">
+  <meta name="author" content="Tecno Impianti – Partinico">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="solare termico, conto termico gse, cessione del credito, sconto in fattura, collettori solari, bollitore, acqua calda sanitaria, risparmio energetico, Tecno Impianti Partinico">
+  <meta name="rating" content="general">
+  <meta name="revisit-after" content="7 days">
+
+  <!-- Canonical URL (aggiorna se cambia filename) -->
+  <link rel="canonical" href="https://www.cdstudiotecnico.it/portfolio-solare-termico.html">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17708716400"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17708716400');
+  </script>
+
+  <!-- Favicons ufficiali -->
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png">
+
+  <!-- Social sharing (OpenGraph / Twitter) -->
+  <meta property="og:image" content="https://www.cdstudiotecnico.it/assets/img/favicon-512.png">
+  <meta name="twitter:image" content="https://www.cdstudiotecnico.it/assets/img/favicon-512.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Solare Termico con Conto Termico GSE | Tecno Impianti – Partinico">
+  <meta property="og:description" content="Installazione solare termico: collettori + bollitore, integrazione e messa in esercizio. Incentivo Conto Termico GSE con cessione del credito e sconto in fattura.">
+  <meta property="og:image" content="https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg">
+  <meta property="og:url" content="https://www.cdstudiotecnico.it/portfolio-solare-termico-conto-termico.html">
+  <meta property="og:site_name" content="Tecno Impianti">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Solare Termico con Conto Termico GSE | Tecno Impianti – Partinico">
+  <meta name="twitter:description" content="Intervento completo: installazione, collegamenti, messa in esercizio. Incentivo GSE con cessione del credito e sconto in fattura.">
+  <meta name="twitter:image" content="https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg">
+
+  <!-- ✅ JSON-LD (coerente col modello) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "ProfessionalService"],
+    "name": "Tecno Impianti – Partinico",
+    "image": "https://www.cdstudiotecnico.it/assets/img/logo-cdstudiotecnico.jpeg",
+    "url": "https://www.cdstudiotecnico.it/",
+    "description": "Installazione impianti e soluzioni per l’efficienza energetica: solare termico, interventi impiantistici e supporto alle pratiche di incentivo (Conto Termico GSE).",
+    "areaServed": ["Partinico", "Provincia di Palermo", "Sicilia", "Italia"]
+  }
+  </script>
+
+  <!-- Meta geolocalizzazione -->
+  <meta name="geo.region" content="IT-PA">
+  <meta name="geo.placename" content="Provincia di Palermo">
+  <meta name="geo.position" content="38.046;13.117">
+
+  <!-- Fonts e CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: url("assets/img/background-pattern.jpg") no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Raleway', sans-serif;
+      color: #333;
+    }
+
+    .page-wrapper {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 18px;
+      max-width: 880px;
+      margin: 70px auto;
+      padding: 40px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .section-title img {
+      max-width: 190px;
+      margin-bottom: 15px;
+      filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.15));
+    }
+
+    .section-title h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      color: #356c6c;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #555;
+      font-size: 1.05rem;
+      margin-bottom: 0;
+    }
+
+    .badge-row {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(53,108,108,0.10);
+      color: #356c6c;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      border: 1px solid rgba(53,108,108,0.16);
+    }
+
+    /* SLIDER – formato 16:9 */
+    .swiper {
+      margin-top: 25px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+      position: relative;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+      background-color: #f5f5f5;
+      transition: transform 0.6s ease;
+    }
+
+    .swiper-slide img:hover {
+      transform: scale(1.02);
+    }
+
+    .caption {
+      background: rgba(255,255,255,0.96);
+      text-align: center;
+      padding: 8px 12px;
+      font-size: 0.9rem;
+      color: #444;
+      font-style: italic;
+      border-top: 1px solid #eee;
+    }
+
+    .swiper-pagination {
+      position: relative;
+      bottom: 0;
+      margin-top: 4px;
+      margin-bottom: 0;
+    }
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background: rgba(53,108,108,0.9);
+      border: 2px solid rgba(255,255,255,0.8);
+      opacity: 0.45;
+      margin: 0 5px;
+      transition: all 0.3s ease;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #356c6c;
+      opacity: 1;
+      box-shadow: 0 0 6px rgba(53,108,108,0.6);
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+      color: #fff;
+      background: rgba(53,108,108,0.75);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .swiper-button-prev:hover, .swiper-button-next:hover {
+      background: rgba(53,108,108,1);
+      transform: scale(1.08);
+    }
+
+    /* BOX */
+    .info-box, .description, .quote {
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px 40px;
+      margin-top: 40px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .info-box h3, .description h3 {
+      color: #356c6c;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .info-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .info-box li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .info-box strong {
+      color: #356c6c;
+    }
+
+    .quote {
+      border-left: 4px solid #356c6c;
+      font-style: italic;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    .quote strong {
+      display: block;
+      margin-top: 10px;
+      color: #356c6c;
+      font-style: normal;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin: 50px auto 0;
+      border: 1.8px solid #356c6c;
+      color: #356c6c;
+      text-decoration: none;
+      border-radius: 30px;
+      padding: 10px 26px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: #356c6c;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .swiper-slide img { max-height: 260px; }
+      .info-box, .description, .quote { padding: 22px; }
+      .page-wrapper { padding: 25px; margin: 50px 15px; }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- X in alto (stile identico) -->
+  <a href="portfolio.html" class="close-btn" title="Torna al Portfolio"
+     style="position: fixed; top: 18px; right: 25px; z-index: 1000; background: #356c6c; color: #fff; border-radius: 50%; width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; font-size: 20px; text-decoration: none; transition: 0.3s; box-shadow: 0 3px 8px rgba(0,0,0,0.2);">
+    <i class="bi bi-x-lg"></i>
+  </a>
+
+  <div class="page-wrapper" data-aos="fade-up">
+
+    <!-- TITOLO -->
+    <div class="section-title">
+      <img src="assets/img/logo.png" alt="Logo">
+      <h2>Solare Termico – Conto Termico GSE (Cessione del Credito)</h2>
+      <p>Installazione completa a tetto con incentivo <strong>Conto Termico GSE</strong>, cessione del credito del Cliente e <strong>sconto diretto in fattura</strong> applicato da <strong>Tecno Impianti</strong> (Partinico).</p>
+
+      <div class="badge-row">
+        <span class="pill"><i class="bi bi-sun"></i> Energia solare</span>
+        <span class="pill"><i class="bi bi-droplet"></i> ACS più efficiente</span>
+        <span class="pill"><i class="bi bi-receipt"></i> Sconto in fattura</span>
+        <span class="pill"><i class="bi bi-shield-check"></i> Pratica incentivo</span>
+      </div>
+    </div>
+
+    <!-- SLIDER IMMAGINI -->
+    <div class="swiper solareSwiper">
+      <div class="swiper-wrapper">
+
+        <!-- SUGGERIMENTO: salva le foto in assets/img/portfolio/solare-termico/ -->
+        <!-- e rinomina come sotto per mantenere ordine e facilità -->
+
+        <div class="swiper-slide">
+          <img src="assets/img/portfolio/solare-01.jpg" alt="Solare termico installato su tetto – vista al tramonto">
+          <div class="caption">Installazione dei collettori e bollitore: integrazione pulita e ordinata sul lastrico solare.</div>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="assets/img/portfolio/solare-02.jpg" alt="Collettori solari termici – vista frontale">
+          <div class="caption">Collettori solari termici in configurazione a doppio pannello: massima captazione e resa stagionale.</div>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="assets/img/portfolio/solare-03.jpg" alt="Dettaglio collegamenti idraulici e valvole di sicurezza del solare termico">
+          <div class="caption">Dettaglio collegamenti idraulici: componentistica, valvole e linea coibentata per ridurre le dispersioni.</div>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="assets/img/portfolio/solare-04.jpg" alt="Bollitore solare termico su struttura metallica">
+          <div class="caption">Bollitore su telaio metallico: installazione stabile e accessibile per manutenzione e controlli.</div>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="assets/img/portfolio/solare-05.jpg" alt="Impianto solare termico completato – vista laterale al tramonto">
+          <div class="caption">Impianto completato e pronto alla messa in esercizio: estetica curata e funzionalità al centro.</div>
+        </div>
+
+      </div>
+
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <!-- DATI INTERVENTO -->
+    <div class="info-box">
+      <h3><i class="bi bi-building"></i> Dati Intervento</h3>
+      <ul>
+        <li><strong>Ditta esecutrice:</strong> Tecno Impianti – Partinico (PA)</li>
+        <li><strong>Tipologia:</strong> Installazione impianto <strong>solare termico</strong> per produzione di acqua calda sanitaria (ACS)</li>
+        <li><strong>Componenti principali:</strong> Collettori solari piani + bollitore di accumulo + linee coibentate + sicurezza e valvole</li>
+        <li><strong>Obiettivo:</strong> Riduzione dei consumi tradizionali e incremento dell’autonomia energetica per ACS</li>
+        <li><strong>Incentivo:</strong> <strong>Conto Termico GSE</strong></li>
+        <li><strong>Formula economica:</strong> Cessione del credito del Cliente + <strong>sconto diretto in fattura</strong> applicato da Tecno Impianti</li>
+        <li><strong>Plus di intervento:</strong> Installazione ordinata, componentistica accessibile e attenzione alla coibentazione per minimizzare perdite</li>
+      </ul>
+    </div>
+
+    <!-- DESCRIZIONE TECNICA / POST ATTRAENTE -->
+    <div class="description">
+      <h3><i class="bi bi-gear"></i> Descrizione Tecnica</h3>
+
+      <p>
+        In questo intervento abbiamo realizzato un’installazione di <strong>solare termico a tetto</strong>, progettata per massimizzare la resa nella produzione di
+        <strong>acqua calda sanitaria</strong> e migliorare il comfort quotidiano. La configurazione con <strong>doppio collettore</strong> e <strong>bollitore di accumulo</strong>
+        consente di sfruttare in modo efficiente l’energia del sole, riducendo in modo sensibile l’utilizzo di energia da fonte tradizionale.
+      </p>
+
+      <p>
+        La posa è stata curata sia sul piano funzionale che su quello estetico: <strong>linee ben ordinate</strong>, <strong>coibentazioni continue</strong> per limitare le dispersioni,
+        componentistica selezionata e collegamenti realizzati per facilitare ispezione e manutenzione. Il risultato è un impianto pulito, performante e pronto a lavorare
+        in sicurezza in tutte le condizioni meteo.
+      </p>
+
+      <p>
+        Un valore aggiunto fondamentale dell’intervento è la gestione dell’incentivo <strong>Conto Termico GSE</strong> con una formula estremamente vantaggiosa:
+        <strong>cessione del credito</strong> da parte del Cliente e <strong>sconto diretto in fattura</strong> applicato da Tecno Impianti.
+        In pratica, il Cliente ottiene un percorso più semplice e trasparente, con un impatto economico immediato e senza complicazioni operative.
+      </p>
+
+      <p style="margin-bottom:0;">
+        Se vuoi un impianto che “si vede poco ma lavora tanto”, il solare termico resta una delle soluzioni più intelligenti per l’efficienza domestica:
+        energia gratuita dal sole, minori consumi e un comfort stabile tutto l’anno.
+      </p>
+    </div>
+
+    <!-- CITAZIONE -->
+    <div class="quote">
+      “Un buon solare termico non è solo pannelli sul tetto: è una posa curata, collegamenti fatti bene e dispersioni ridotte al minimo.
+      Quando impianto e incentivo vengono gestiti in modo semplice, il beneficio per il Cliente diventa immediato e concreto.”
+      <br><br>
+      <strong>Il Responsabile Tecnico – Ing. Dario Cucchiara</strong>
+    </div>
+
+    <div class="text-center">
+      <a href="portfolio.html" class="back-btn">← Torna al Portfolio</a>
+    </div>
+
+  </div>
+
+  <!-- JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script>
+    AOS.init();
+    document.querySelectorAll('.swiper').forEach(swiperEl => {
+      new Swiper(swiperEl, {
+        loop: true,
+        effect: 'fade',
+        autoplay: { delay: 3600, disableOnInteraction: false, pauseOnMouseEnter: true },
+        pagination: { el: swiperEl.querySelector('.swiper-pagination'), clickable: true },
+        navigation: {
+          nextEl: swiperEl.querySelector('.swiper-button-next'),
+          prevEl: swiperEl.querySelector('.swiper-button-prev'),
+        },
+        speed: 900,
+      });
+    });
+  </script>
+
+</body>
+</html>
