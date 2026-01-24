@@ -332,27 +332,27 @@
         <!-- e rinomina come sotto per mantenere ordine e facilità -->
 
         <div class="swiper-slide">
-          <img src="assets/img/portfolio/solare-01.jpg" alt="Solare termico installato su tetto – vista al tramonto">
+          <img src="assets/img/portfolio/solare1.jpg" alt="Solare termico installato su tetto – vista al tramonto">
           <div class="caption">Installazione dei collettori e bollitore: integrazione pulita e ordinata sul lastrico solare.</div>
         </div>
 
         <div class="swiper-slide">
-          <img src="assets/img/portfolio/solare-02.jpg" alt="Collettori solari termici – vista frontale">
+          <img src="assets/img/portfolio/solare2.jpg" alt="Collettori solari termici – vista frontale">
           <div class="caption">Collettori solari termici in configurazione a doppio pannello: massima captazione e resa stagionale.</div>
         </div>
 
         <div class="swiper-slide">
-          <img src="assets/img/portfolio/solare-03.jpg" alt="Dettaglio collegamenti idraulici e valvole di sicurezza del solare termico">
+          <img src="assets/img/portfolio/solare3.jpg" alt="Dettaglio collegamenti idraulici e valvole di sicurezza del solare termico">
           <div class="caption">Dettaglio collegamenti idraulici: componentistica, valvole e linea coibentata per ridurre le dispersioni.</div>
         </div>
 
         <div class="swiper-slide">
-          <img src="assets/img/portfolio/solare-04.jpg" alt="Bollitore solare termico su struttura metallica">
+          <img src="assets/img/portfolio/solare4.jpg" alt="Bollitore solare termico su struttura metallica">
           <div class="caption">Bollitore su telaio metallico: installazione stabile e accessibile per manutenzione e controlli.</div>
         </div>
 
         <div class="swiper-slide">
-          <img src="assets/img/portfolio/solare-05.jpg" alt="Impianto solare termico completato – vista laterale al tramonto">
+          <img src="assets/img/portfolio/solare5.jpg" alt="Impianto solare termico completato – vista laterale al tramonto">
           <div class="caption">Impianto completato e pronto alla messa in esercizio: estetica curata e funzionalità al centro.</div>
         </div>
 
