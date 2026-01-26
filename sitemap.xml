@@ -82,5 +82,17 @@
     <loc>https://www.cdstudiotecnico.it/portfolio-solare-termico.html</loc>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://www.cdstudiotecnico.it/portfolio-perizia-stima-giurata-abitazione.html</loc>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>https://www.cdstudiotecnico.it/portfolio-perizia-danni-infiltrazioni.html</loc>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>https://www.cdstudiotecnico.it/portfolio-potabilizzazione.html</loc>
+    <priority>0.6</priority>
+  </url>
   
 </urlset>
