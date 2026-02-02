@@ -2218,3 +2218,12 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 6px 16px rgba(0,0,0,0.10);
   text-decoration:none;
 }
+
+/* =========================
+   CUSTOM CTA TWEAKS
+   ========================= */
+
+.btn.btn-dark{
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
