@@ -2232,23 +2232,47 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   bottom: 22px;
   left: 22px;
-  width: 52px;
-  height: 52px;
-  background: #2f6f6f; /* verde coerente col brand */
+  width: 44px;
+  height: 44px;
+  background: #3a6f6f; /* verde coerente col brand */
   color: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 26px;
+  font-size: 22px;
   z-index: 999;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
   transition: all .2s ease-in-out;
-  opacity: 0.92;
+  opacity: 0.88;
 }
 
 .whatsapp-float:hover{
   transform: translateY(-2px);
   opacity: 1;
   background: #2a6161;
+}
+
+/* Reset stati WhatsApp */
+.whatsapp-float,
+.whatsapp-float:visited,
+.whatsapp-float:active,
+.whatsapp-float:focus{
+  color: #ffffff !important;
+  background: #3a6f6f !important;
+  opacity: 0.88 !important;
+  outline: none !important;
+}
+
+.whatsapp-float{
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity .4s ease, transform .4s ease;
+}
+
+.whatsapp-float.show{
+  opacity: 0.88;
+  visibility: visible;
+  transform: translateY(0);
 }
