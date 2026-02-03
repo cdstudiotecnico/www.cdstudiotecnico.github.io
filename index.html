@@ -325,6 +325,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    aria-label="Chat WhatsApp">
    <i class="bi bi-whatsapp"></i>
 </a>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+      const wa = document.querySelector('.whatsapp-float');
+      if (wa) wa.classList.add('show');
+    }, 2500); // 2.5 secondi
+  });
+</script>
   
 </body>
 
