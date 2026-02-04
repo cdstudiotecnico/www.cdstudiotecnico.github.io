@@ -2276,3 +2276,35 @@ h1, h2, h3, h4, h5, h6 {
   visibility: visible;
   transform: translateY(0);
 }
+
+/* WhatsApp: nascosto di default */
+.whatsapp-float{
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity .35s ease, transform .35s ease, visibility .35s ease;
+}
+
+/* WhatsApp: visibile */
+.whatsapp-float.show{
+  opacity: 0.88;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* WhatsApp: nascosto quando footer visibile */
+.whatsapp-float.hide{
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(10px);
+}
+
+/* Evita effetto "oscurato" dopo click */
+.whatsapp-float,
+.whatsapp-float:visited,
+.whatsapp-float:active,
+.whatsapp-float:focus{
+  color: #fff !important;
+  outline: none !important;
+}
+
