@@ -599,22 +599,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="form-box">
           <form action="https://formspree.io/f/xjkpnylz" method="POST" class="php-email-form" novalidate>
             <div class="row gy-3">
+              
               <div class="col-md-12">
                 <label for="name-field" class="pb-2" style="text-align: left;"> Nome e Cognome</label>
                 <input type="text" name="name" id="name-field" class="form-control" required>
               </div>
+
+              <div class="col-md-12">
+                <label for="cellulare-field" class="pb-2" style="text-align: left;"> Cellulare</label>
+                <input type="text" name="cellulare" id="cellulare-field" class="form-control" required>
+              </div>
+              
               <div class="col-md-12">
                 <label for="email-field" class="pb-2" style="text-align: left;"> e-mail</label>
                 <input type="email" name="email" id="email-field" class="form-control" required>
               </div>
+              
               <div class="col-md-12">
                 <label for="subject-field" class="pb-2" style="text-align: left;"> Oggetto</label>
                 <input type="text" name="subject" id="subject-field" class="form-control" required>
               </div>
+              
               <div class="col-md-12">
                 <label for="message-field" class="pb-2" style="text-align: left;"> Messaggio</label>
                 <textarea name="message" id="message-field" class="form-control" rows="8" required></textarea>
               </div>
+              
               <div class="col-md-12 text-center">
                 <button type="submit" class="btn-send mt-3">Invia</button>
                 <div class="loading" style="display:none;">Invio in corso...</div>
